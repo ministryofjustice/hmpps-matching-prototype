@@ -53,7 +53,27 @@ module.exports = function(router) {
 
   // q5 Vocational and other qualifications
   router.post(version + 'q5-vocational', function (req, res) {
-    res.redirect(version + 'q5-vocational')
+    res.redirect(version + 'q6-work-before')
+  })
+
+  // FULL q6 Work before?
+  router.post(version + 'q6-work-before', function (req, res) {
+    res.redirect(version + 'q7a-experience-sectors')
+  })
+
+  // FULL q7a Experience sectors
+  router.post(version + 'q7a-experience-sectors', function (req, res) {
+    res.redirect(version + 'q7b-experience-details')
+  })
+
+  // FULL q7b Experience details (one of this screen per sectors checkbox selected?? Not working yet)
+  router.post(version + 'q7b-experience-details', function (req, res) {
+    res.redirect(version + 'q8a-job-sectors')
+  })
+
+  // FULL q8a Experience details (one of this screen per sectors checkbox selected?? Not working yet)
+  router.post(version + 'q8a-job-sectors', function (req, res) {
+    res.redirect(version + 'q8b-job-details')
   })
 
 module.exports = router

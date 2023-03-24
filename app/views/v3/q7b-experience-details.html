@@ -1,0 +1,43 @@
+{% extends "./includes/template.html" %}
+
+{% block content %}
+
+
+
+
+<div class="govuk-width-container">
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">
+        What did Damien Adams do in their <span style="text-transform: lowercase">{{ data['experience-sectors'] }}</span>  job?
+        </h1>
+
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-body" for="add-role">
+              Job role
+            </label>
+            <input class="govuk-input govuk-!-width-one-half" id="add-role" name="add-role" type="text" aria-describedby="add-role-hint">
+          </div>
+          <div class="govuk-form-group govuk-!-margin-bottom-6">
+            <label class="govuk-label govuk-body" for="add-tasks">
+              Main tasks and responsibilities
+            </label>
+            <textarea class="govuk-textarea" id="add-tasks" name="add-tasks" rows="4" aria-describedby="add-tasks-hint"></textarea>
+          </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}
