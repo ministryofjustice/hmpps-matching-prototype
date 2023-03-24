@@ -71,9 +71,39 @@ module.exports = function(router) {
     res.redirect(version + 'q8a-job-sectors')
   })
 
-  // FULL q8a Experience details (one of this screen per sectors checkbox selected?? Not working yet)
+  // FULL q8a Job sectors
   router.post(version + 'q8a-job-sectors', function (req, res) {
     res.redirect(version + 'q8b-job-details')
+  })
+
+  // FULL q8b Job details
+  router.post(version + 'q8b-job-details', function (req, res) {
+    res.redirect(version + 'q9a-skills')
+  })
+
+  // FULL q9a Skills
+  router.post(version + 'q9a-skills', function (req, res) {
+    res.redirect(version + 'q9b-interests')
+  })
+
+  // FULL q9b Interests
+  router.post(version + 'q9b-interests', function (req, res) {
+    res.redirect(version + 'q10a-goals-type')
+  })
+
+  // q10a Goals type
+  router.post(version + 'q10a-goals-type', function (req, res) {
+    res.redirect(version + 'q10b-goals-add')
+  })
+
+  // q10b Goals add
+  router.post(version + 'q10b-goals-add', function (req, res) {
+    res.redirect(version + 'q10c-goals-overview')
+  })
+
+  // q10c Goals overview
+  router.post(version + 'q10c-goals-overview', function (req, res) {
+    res.redirect(version + 'q10c-goals-overview')
   })
 
 module.exports = router
