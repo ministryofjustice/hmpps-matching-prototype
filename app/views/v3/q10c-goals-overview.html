@@ -1,0 +1,90 @@
+{% extends "./includes/template.html" %}
+
+{% block content %}
+
+
+
+
+<div class="govuk-width-container">
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">
+          Damian Adams's goals
+        </h1>
+
+        <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">Goal 1</caption>
+          <caption class="govuk-table__caption govuk-!-font-weight-regular govuk-body">
+            {% if data['goal'] == '' %}
+              To set up my own mobile barbering business in the first 3 months after leaving prison.
+            {% else %}
+              {{ data['goal'] }}
+            {% endif %}
+            </caption>
+
+          {% if data['step1'] == '' %}
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Steps</th>
+                <th scope="col" class="govuk-table__header">Target date</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">1. Get my Level 2 English award</td>
+                <td class="govuk-table__cell">3 August 2023</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">2. Complete my barber training course</td>
+                <td class="govuk-table__cell">3 August 2023</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">3. Complete the business training course </td>
+                <td class="govuk-table__cell">1 March 2024</td>
+              </tr>
+            </tbody>
+          </table>
+        {% else %}
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Steps</th>
+              <th scope="col" class="govuk-table__header">Target date</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">{{ data['step1'] }}</td>
+              <td class="govuk-table__cell">{{ data['step1-date-day'] }} March {{ data['step1-date-year'] }}</td>
+            </tr>
+          </tbody>
+        </table>
+        {% endif %}
+
+        <p class="govuk-body">
+          <a href="q10b-goals-add" class="govuk-link">
+          Edit goal
+          </a>
+        </p>
+
+        <a href="#" class="govuk-button govuk-button--secondary" style="color: #0b0c0c">
+          Add another goal
+        </a>
+
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}
