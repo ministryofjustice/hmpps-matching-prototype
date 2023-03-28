@@ -15,6 +15,23 @@ module.exports = function(router) {
   }
   })
 
+  // LIGHT q2 Why not work
+  router.post(version + 'light-q2-why-not-work', function (req, res) {
+    res.redirect(version + 'light-q3-qualifications-overview')
+  })
+
+  // LIGHT q3 Qualifications overview (with question around adding)
+  router.post(version + 'light-q3-qualifications-overview', function (req, res) {
+    if (req.session.data['add-quals-decision'] == "Yes")
+  {
+    res.redirect(version + 'q4a-level-of-qual')
+  }
+  else
+  {
+    res.redirect(version + 'q5-vocational')
+  }
+  })
+
   // FULL q2 Qualifications overview
   router.post(version + 'q2-qualifications-overview', function (req, res) {
     res.redirect(version + 'q3-highest-education')
@@ -53,7 +70,14 @@ module.exports = function(router) {
 
   // q5 Vocational and other qualifications
   router.post(version + 'q5-vocational', function (req, res) {
+    if (req.session.data['work-on-release'] == "Yes")
+  {
     res.redirect(version + 'q6-work-before')
+  }
+  else
+  {
+    res.redirect(version + 'light-q4-in-prison-work')
+  }
   })
 
   // FULL q6 Work before?

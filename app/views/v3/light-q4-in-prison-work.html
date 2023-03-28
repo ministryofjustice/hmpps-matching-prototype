@@ -1,0 +1,126 @@
+{% extends "./includes/template.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">
+            What type of work would Damien Adams like to do in prison?
+        </h1>
+
+        <form class="form" method="post" novalidate>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="in-prison-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              </legend>
+              <div id="in-prison-hint" class="govuk-hint">
+                Select all that apply.
+              </div>
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="in-prison-1" name="in-prison" type="checkbox" value="Cleaning and hygeine">
+                  <label class="govuk-label govuk-checkboxes__label" for="in-prison-1">
+                    Cleaning and hygeine
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="in-prison-2" name="in-prison" type="checkbox" value="Computers or desk-based">
+                  <label class="govuk-label govuk-checkboxes__label" for="in-prison-2">
+                    Computers or desk-based
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="in-prison-3" name="in-prison" type="checkbox" value="Gardening and outdoors">
+                  <label class="govuk-label govuk-checkboxes__label" for="in-prison-3">
+                    Gardening and outdoors
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="in-prison-4" name="in-prison" type="checkbox" value="Kitchens and cooking">
+                  <label class="govuk-label govuk-checkboxes__label" for="in-prison-4">
+                    Kitchens and cooking
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="in-prison-5" name="in-prison" type="checkbox" value="Maintenance">
+                  <label class="govuk-label govuk-checkboxes__label" for="in-prison-5">
+                    Maintenance
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="in-prison-6" name="in-prison" type="checkbox" value="Prison laundry">
+                  <label class="govuk-label govuk-checkboxes__label" for="in-prison-6">
+                    Prison laundry
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="in-prison-7" name="in-prison" type="checkbox" value="Prison library">
+                  <label class="govuk-label govuk-checkboxes__label" for="in-prison-7">
+                    Prison library
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="in-prison-8" name="in-prison" type="checkbox" value="Textiles and sewing">
+                  <label class="govuk-label govuk-checkboxes__label" for="in-prison-8">
+                    Textiles and sewing
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="in-prison-9" name="in-prison" type="checkbox" value="Welding and metalwork">
+                  <label class="govuk-label govuk-checkboxes__label" for="in-prison-9">
+                    Welding and metalwork
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="in-prison-10" name="in-prison" type="checkbox" value="Woodwork and joinery">
+                  <label class="govuk-label govuk-checkboxes__label" for="in-prison-10">
+                    Woodwork and joinery
+                  </label>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="in-prison-11" name="in-prison" type="checkbox" value="Other" data-aria-controls="conditional-in-prison">
+                  <label class="govuk-label govuk-checkboxes__label" for="in-prison-11">
+                    Other
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-in-prison">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="conditional-in-prison">
+                      Give details
+                    </label>
+                    </h1>
+                    <textarea class="govuk-textarea" id="with-hint" name="with-hint" rows="2" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                  </div>
+                </div>
+
+                <div class="govuk-checkboxes__divider">or</div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="in-prison-notSure" name="in-prison" type="checkbox" value="Not sure" data-behaviour="exclusive">
+                  <label class="govuk-label govuk-checkboxes__label" for="in-prison-notSure">
+                    Not sure
+                  </label>
+                </div>
+
+            </fieldset>
+          </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+
+      </div>
+
+
+    </div>
+  </main>
+</div>
+
+{% endblock %}
