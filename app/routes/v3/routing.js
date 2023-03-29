@@ -32,6 +32,16 @@ module.exports = function(router) {
   }
   })
 
+  // LIGHT q4 In prison work
+  router.post(version + 'light-q4-in-prison-work', function (req, res) {
+    res.redirect(version + 'light-q5-in-prison-training')
+  })
+
+  // LIGHT q5 In prison training
+  router.post(version + 'light-q5-in-prison-training', function (req, res) {
+    res.redirect(version + 'q10a-goals-type')
+  })
+
   // FULL q2 Qualifications overview
   router.post(version + 'q2-qualifications-overview', function (req, res) {
     res.redirect(version + 'q3-highest-education')
