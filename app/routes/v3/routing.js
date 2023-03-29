@@ -57,6 +57,18 @@ module.exports = function(router) {
   {
     res.redirect(version + 'q5-vocational')
   }
+  else if (req.session.data['highest-education'] == "Not sure")
+  {
+    res.redirect(version + 'q5-vocational')
+  }
+  else if (req.session.data['highest-education'] == "Undergraduate degree at university")
+  {
+    res.redirect(version + 'q4b-add-qual')
+  }
+  else if (req.session.data['highest-education'] == "Postgraduate degree at university")
+  {
+    res.redirect(version + 'q4b-add-qual')
+  }
   else
   {
     res.redirect(version + 'q4a-level-of-qual')
