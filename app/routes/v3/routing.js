@@ -137,8 +137,16 @@ module.exports = function(router) {
 
   // q10c Goals overview
   router.post(version + 'q10c-goals-overview', function (req, res) {
+   if (req.session.data['goalsReview'] == "true")
+  {
+    res.redirect(version + 'profile/after-induction/damien-adams')
+  }
+  else
+  {
     res.redirect(version + 'check-answers')
+  }
   })
+
 
   // Check answers
   router.post(version + 'check-answers', function (req, res) {

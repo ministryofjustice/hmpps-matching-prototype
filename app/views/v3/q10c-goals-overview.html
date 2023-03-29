@@ -64,16 +64,24 @@
         </table>
         {% endif %}
 
-        <p class="govuk-body">
-          <a href="q10b-goals-add" class="govuk-link">
-          Edit goal
-          </a>
-        </p>
+        {% if data['goalsReview'] == 'true' %}
+        {% else %}
+        <p class="govuk-body"><a href="q10b-goals-add" class="govuk-link">Edit goal</a></p>
+        {% endif %}
 
         <a href="#" class="govuk-button govuk-button--secondary" style="color: #0b0c0c">
           Add another goal
         </a>
 
+        {% if data['goalsReview'] == 'true' %}
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <button class="govuk-button" data-module="govuk-button">
+              Save to profile
+            </button>
+          </div>
+        </form>
+        {% else %}
         <form method="post" novalidate>
           <div class="govuk-form-group">
             <button class="govuk-button" data-module="govuk-button">
@@ -81,6 +89,7 @@
             </button>
           </div>
         </form>
+        {% endif %}
 
       </div>
     </div>
