@@ -12,7 +12,11 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-        <span class="govuk-caption-l">Goal 1</span>
+        {% if data['goalsReview'] == 'true' %}
+          <span class="govuk-caption-l">Goal 2</span>
+        {% else %}
+          <span class="govuk-caption-l">Goal 1</span>
+        {% endif %}
         <h1 class="govuk-heading-l">
           What is Damien Adams’s goal in relation to <span style="text-transform: lowercase">{{ data['goal-type'] }}</span>?
         </h1>
