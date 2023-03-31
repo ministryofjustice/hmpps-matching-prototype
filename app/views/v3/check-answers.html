@@ -3,188 +3,205 @@
 {% block content %}
 <div class="govuk-width-container">
 
-
-    <!-- <a href="/v20/checklist/scenario-1/q8-qualifications" class="govuk-back-link">Back</a> -->
-
     <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
         <h1 class="govuk-heading-l">Check your answers before saving them to Damien Adams's profile</h1>
 
-        <!-- <h2 class="govuk-heading-m">Prisoner details</h2>
-
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Name
-            </dt>
-            <dd class="govuk-summary-list__value">
-              Damien Adams
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Prison number
-            </dt>
-            <dd class="govuk-summary-list__value">
-              G2911GD
-            </dd>
-          </div>
-        </dl> -->
-
         <h2 class="govuk-heading-m">Work on release</h2>
 
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <dl class="govuk-summary-list govuk-!-margin-bottom-8">
           <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Work on release
+            <dt class="govuk-summary-list__key govuk-!-width-one-quarter">
+              Hoping to work on release
             </dt>
             <dd class="govuk-summary-list__value">
               {{ data['work-on-release'] }}
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="q1-work-on-release">
-                Change<span class="govuk-visually-hidden"> whether they're hoping to get work when they're released</span>
+                Change<span class="govuk-visually-hidden"> whether they're hoping to work when they're released</span>
               </a>
             </dd>
           </div>
         </dl>
 
-        <h2 class="govuk-heading-m">Qualifications and training</h2>
+        <h2 class="govuk-heading-m govuk-!-margin-top-2 govuk-!-margin-bottom-6">Qualifications and training</h2>
 
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <h3 class="govuk-heading-s govuk-!-margin-top-2 govuk-!-margin-bottom-3">
+          Educational qualifications
+          <span><a class="gov-link govuk-!-font-weight-regular" style="float:right; color:#1d70b8" href="#">Change</a></span>
+        </h3>
+
+
+        <table class="govuk-table govuk-!-margin-bottom-6">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Level</th>
+              <th scope="col" class="govuk-table__header">Subject</th>
+              <th scope="col" class="govuk-table__header">Grade</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Level 2</td>
+              <td class="govuk-table__cell">Mathematics</td>
+              <td class="govuk-table__cell">C</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Level 2</td>
+              <td class="govuk-table__cell">English</td>
+              <td class="govuk-table__cell">C</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Level 2</td>
+              <td class="govuk-table__cell">Science</td>
+              <td class="govuk-table__cell">D</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Level 2</td>
+              <td class="govuk-table__cell">Physical Education</td>
+              <td class="govuk-table__cell">B</td>
+            </tr>
+            <tr class="govuk-table__row">
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 class="govuk-heading-s govuk-!-margin-top-2 govuk-!-margin-bottom-3">Other qualifications and history</h3>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-8">
           <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Highest education
+            <dt class="govuk-summary-list__key govuk-!-width-one-quarter ">
+              Highest level of education
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['highest-education'] }}
+              Secondary school, took exams
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="q3-highest-education">
-                Change<span class="govuk-visually-hidden"> their highest level of education</span>
+              <a class="govuk-link govuk-link--no-visited-state" href="#">
+                Change<span class="govuk-visually-hidden"> type of work</span>
               </a>
             </dd>
           </div>
-
           <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Educational qualifications
+            <dt class="govuk-summary-list__key govuk-!-width-one-quarter">
+              Other training or qualifications
             </dt>
             <dd class="govuk-summary-list__value">
-
+              CSCS card<br>
+              Full UK driving licence
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="q3a-ID-type">
-                Change<span class="govuk-visually-hidden"> type of ID they have</span>
+              <a class="govuk-link govuk-link--no-visited-state" href="#">
+                Change<span class="govuk-visually-hidden"> type of work</span>
               </a>
             </dd>
           </div>
-
           <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Other qualifications
-            </dt>
-            <dd class="govuk-summary-list__value">
-              {{ data['qualifications'] }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="q3a-ID-type">
-                Change<span class="govuk-visually-hidden"> </span>
-              </a>
-            </dd>
           </div>
-
-
         </dl>
+
 
         <h2 class="govuk-heading-m">Work experience</h2>
 
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
+            <dt class="govuk-summary-list__key govuk-!-width-one-quarter">
               Worked before
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['work-before'] }}
+              Yes
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="q6-work-before">
-                Change<span class="govuk-visually-hidden"> </span>
+              <a class="govuk-link govuk-link--no-visited-state" href="#">
+                Change<span class="govuk-visually-hidden"></span>
+              </a>
+            </dd>
+
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key govuk-!-width-one-quarter">
+             Type of work experience
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Construction and trade
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link govuk-link--no-visited-state" href="#">
+                Change<span class="govuk-visually-hidden"></span>
               </a>
             </dd>
           </div>
 
           <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Type of work experience
+            <dt class="govuk-summary-list__key govuk-!-width-one-quarter">
+             Construction and trade experience details
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['experience-sectors'] }}
+              <p class="govuk-body">
+                Job role:<br>
+                Plumbing assistant
+              </p>
+              <p class="govuk-body">
+                Roles and responsibilities:<br>
+                Assisting in fitting new heating systems and radiators and general maintenance and servicing.
+              </p>
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="q7a-experience-sectors">
-                Change<span class="govuk-visually-hidden"> </span>
+              <a class="govuk-link govuk-link--no-visited-state" href="#">
+                Change<span class="govuk-visually-hidden"></span>
               </a>
             </dd>
           </div>
-
           <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Work experience details
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <strong>Role</strong> <br>
-              {{ data['add-role'] }} <br>
-              <strong>Tasks and responsibilities</strong> <br>
-              {{ data['add-tasks'] }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="q7a-experience-details">
-                Change<span class="govuk-visually-hidden"> </span>
-              </a>
-            </dd>
           </div>
-
         </dl>
 
         <h2 class="govuk-heading-m">Skills and interests</h2>
 
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <dl class="govuk-summary-list govuk-!-margin-bottom-8">
 
           <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Work types of interest
+            <dt class="govuk-summary-list__key govuk-!-width-one-quarter">
+              Type of work interested in
             </dt>
             <dd class="govuk-summary-list__value">
-              {{ data['job-sectors'] }}
+              Construction and trade<br>
+              Sport and fitness
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="q8a-job-sectors">
+              <a class="govuk-link govuk-link--no-visited-state" href="#">
+                Change<span class="govuk-visually-hidden"> type of work</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key govuk-!-width-one-quarter">
+              Specific job roles of interest
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p class="govuk-body">
+                Construction and trade:<br>
+                None
+              </p>
+              <p class="govuk-body">
+                Sport and fitness:<br>
+                Personal trainer
+              </p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link govuk-link--no-visited-state" href="#">
                 Change<span class="govuk-visually-hidden"></span>
               </a>
             </dd>
           </div>
+
           <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Particular job of interest
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <strong>Construction</strong> <br>
-              {{ data['add-jobRole'] }} <br>
-              <strong>Sport and fitness</strong> <br>
-              {{ data['add-jobRole2'] }}
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="q8b-job-sectors">
-                Change<span class="govuk-visually-hidden"></span>
-              </a>
-            </dd>
-          </div>
-          
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
+            <dt class="govuk-summary-list__key govuk-!-width-one-quarter">
               Skills
             </dt>
             <dd class="govuk-summary-list__value">
@@ -197,7 +214,7 @@
             </dd>
           </div>
           <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
+            <dt class="govuk-summary-list__key govuk-!-width-one-quarter">
               Interests
             </dt>
             <dd class="govuk-summary-list__value">
@@ -213,17 +230,46 @@
 
         <h2 class="govuk-heading-m">Goals</h2>
 
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <dl class="govuk-summary-list govuk-!-margin-bottom-8">
 
           <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
+            <dt class="govuk-summary-list__key govuk-!-width-one-quarter">
               Goal 1
             </dt>
             <dd class="govuk-summary-list__value">
               <p class="govuk-body">To set up my own mobile barbering business in the first 3 months after leaving prison.</p>
-              <!-- Step 1: Get my Level 2 English award <br>
-              Step 2: Complete my barber training course <br>
-              Step 3: Complete the business training course -->
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    View steps
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  <table class="govuk-table ">
+                    <thead class="govuk-table__head">
+                      <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header govuk-!-width-two-thirds">Steps</th>
+                        <th scope="col" class="govuk-table__header">Target date</th>
+                      </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">1. Get my Level 2 English award</td>
+                        <td class="govuk-table__cell">3 Aug 2023</td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">2. Complete my barber training course</td>
+                        <td class="govuk-table__cell">3 Aug 2023</td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">3. Complete the business training course </td>
+                        <td class="govuk-table__cell">1 Mar 2024</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </details>
+
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="q10c-goals-overview">
@@ -232,6 +278,7 @@
             </dd>
           </div>
         </dl>
+
 
 
         <form method="post" novalidate>
