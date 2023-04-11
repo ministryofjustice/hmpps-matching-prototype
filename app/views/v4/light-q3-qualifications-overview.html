@@ -1,0 +1,86 @@
+{% extends "./includes/template.html" %}
+
+{% block content %}
+
+
+
+
+<div class="govuk-width-container">
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">
+          Damian Adams's qualifications
+        </h1>
+
+        <table class="govuk-table govuk-!-margin-bottom-7">
+          <caption class="govuk-table__caption govuk-table__caption--m">Functional skills assessment levels</caption>
+          <caption class="govuk-table__caption govuk-!-font-weight-regular govuk-body">Functional skills assessment levels inform in-prison work and education allocations.</caption>
+
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Assessment</th>
+              <th scope="col" class="govuk-table__header">Level</th>
+              <th scope="col" class="govuk-table__header">Assessment date</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">English</td>
+              <td class="govuk-table__cell">Entry level 2</td>
+              <td class="govuk-table__cell">1 March 2023</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Maths</td>
+              <td class="govuk-table__cell">Entry level 3</td>
+              <td class="govuk-table__cell">1 March 2023</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Digital literacy</td>
+              <td class="govuk-table__cell">Entry level 3</td>
+              <td class="govuk-table__cell">1 March 2023</td>
+            </tr>
+          </tbody>
+        </table>
+
+
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h1 class="govuk-fieldset__heading">
+                  Does Damien Adams have any other educational qualifications they want to be recorded?
+                </h1>
+              </legend>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="add-quals-decision-yes" name="add-quals-decision" type="radio" value="Yes">
+                  <label class="govuk-label govuk-radios__label" for="add-quals-decision-yes">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="add-quals-decision-no" name="add-quals-decision" type="radio" value="No">
+                  <label class="govuk-label govuk-radios__label" for="add-quals-decision-no">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

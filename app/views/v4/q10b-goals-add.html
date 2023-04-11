@@ -1,0 +1,101 @@
+{% extends "./includes/template.html" %}
+
+{% block content %}
+
+
+
+
+<div class="govuk-width-container">
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        {% if data['goalsReview'] == 'true' %}
+          <span class="govuk-caption-l">Goal 2</span>
+        {% else %}
+          <span class="govuk-caption-l">Goal 1</span>
+        {% endif %}
+        <h1 class="govuk-heading-l">
+          What is Damien Adams’s goal in relation to <span style="text-transform: lowercase">{{ data['goal-type'] }}</span>?
+        </h1>
+
+        <p class="govuk-body">Goals should be SMART, meaning ‘specific’, ‘measurable’, ‘achievable’, ‘realistic’ and ‘time-bound’.</p>
+        <p class="govuk-body">SMART goals allow progress to be better measured and evaluated.</p>
+
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--m" for="goal">
+              Describe their goal
+            </label>
+            <textarea class="govuk-textarea" id="goal" name="goal" rows="4" aria-describedby="add-tasks-hint" value="{{ data['goal'] }}"></textarea>
+          </div>
+
+          <h2 class="govuk-heading-m govuk-!-margin-bottom-2">
+            What are the steps to help them achieve their goal?
+          </h2>
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-body" for="step1">
+              Step 1
+            </label>
+            <div id="step1-hint" class="govuk-hint">
+              Describe this step
+            </div>
+            <input class="govuk-input govuk-!-width-two-thirds" id="step1" name="step1" type="text" aria-describedby="step1-hint" value="{{ data['step1'] }}">
+          </div>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="step1-date-hint">
+              <legend class="govuk-fieldset__legend">
+                Date they will achieve this by
+              </legend>
+              <div id="step1-date-hint" class="govuk-hint">
+                For example, 27 3 2007
+              </div>
+              <div class="govuk-date-input" id="step1-date">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="step1-date-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="step1-date-day" name="step1-date-day" type="text" inputmode="numeric" value="{{ data['step1-date-day'] }}">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="step1-date-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="step1-date-month" name="step1-date-month" type="text" inputmode="numeric" value="{{ data['step1-date-month'] }}">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="step1-date-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="step1-date-year" name="step1-date-year" type="text" inputmode="numeric" value="{{ data['step1-date-year'] }}">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="govuk-form-group">
+            <a href="#" class="govuk-button govuk-button--secondary" style="color: #0b0c0c">
+            Add another step
+            </a>
+          </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

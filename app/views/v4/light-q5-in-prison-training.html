@@ -1,0 +1,138 @@
+{% extends "./includes/template.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">
+            What type of training and education activities would Damien Adams like to do in prison?
+        </h1>
+
+        <form class="form" method="post" novalidate>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="in-prison-training-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              </legend>
+              <div id="in-prison-training-hint" class="govuk-hint">
+                Select all that apply.
+              </div>
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="in-prison-training-1" name="in-prison-training" type="checkbox" value="Barbering and hairdressing">
+                  <label class="govuk-label govuk-checkboxes__label" for="in-prison-training-1">
+                    Barbering and hairdressing
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="in-prison-training-2" name="in-prison-training" type="checkbox" value="Catering">
+                  <label class="govuk-label govuk-checkboxes__label" for="in-prison-training-2">
+                    Catering
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="in-prison-training-3" name="in-prison-training" type="checkbox" value="Communication skills">
+                  <label class="govuk-label govuk-checkboxes__label" for="in-prison-training-3">
+                    Communication skills
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="in-prison-training-4" name="in-prison-training" type="checkbox" value="English language skills">
+                  <label class="govuk-label govuk-checkboxes__label" for="in-prison-training-4">
+                    English language skills
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="in-prison-training-5" name="in-prison-training" type="checkbox" value="Forklift driving">
+                  <label class="govuk-label govuk-checkboxes__label" for="in-prison-training-5">
+                    Forklift driving
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="in-prison-training-6" name="in-prison-training" type="checkbox" value="Interview skills">
+                  <label class="govuk-label govuk-checkboxes__label" for="in-prison-training-6">
+                    Interview skills
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="in-prison-training-7" name="in-prison-training" type="checkbox" value="Machinery tickets">
+                  <label class="govuk-label govuk-checkboxes__label" for="in-prison-training-7">
+                    Machinery tickets
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="in-prison-training-8" name="in-prison-training" type="checkbox" value="Numeracy skills">
+                  <label class="govuk-label govuk-checkboxes__label" for="in-prison-training-8">
+                    Numeracy skills
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="in-prison-training-9" name="in-prison-training" type="checkbox" value="Running a business">
+                  <label class="govuk-label govuk-checkboxes__label" for="in-prison-training-9">
+                    Running a business
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="in-prison-training-10" name="in-prison-training" type="checkbox" value="Social and life skills">
+                  <label class="govuk-label govuk-checkboxes__label" for="in-prison-training-10">
+                    Social and life skills
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="in-prison-training-11" name="in-prison-training" type="checkbox" value="Welding and metalwork">
+                  <label class="govuk-label govuk-checkboxes__label" for="in-prison-training-11">
+                    Welding and metalwork
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="in-prison-training-12" name="in-prison-training" type="checkbox" value="Woodwork and joinery">
+                  <label class="govuk-label govuk-checkboxes__label" for="in-prison-training-12">
+                    Woodwork and joinery
+                  </label>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="in-prison-training-13" name="in-prison-training" type="checkbox" value="Other" data-aria-controls="conditional-in-prison-training">
+                  <label class="govuk-label govuk-checkboxes__label" for="in-prison-training-13">
+                    Other
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-in-prison-training">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="conditional-in-prison-training">
+                      Give details
+                    </label>
+                    </h1>
+                    <textarea class="govuk-textarea" id="with-hint" name="with-hint" rows="2" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                  </div>
+                </div>
+
+                <!-- <div class="govuk-checkboxes__divider">or</div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="in-prison-training-notSure" name="in-prison-training" type="checkbox" value="Not sure" data-behaviour="exclusive">
+                  <label class="govuk-label govuk-checkboxes__label" for="in-prison-training-notSure">
+                    Not sure
+                  </label>
+                </div> -->
+
+            </fieldset>
+          </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+
+      </div>
+
+
+    </div>
+  </main>
+</div>
+
+{% endblock %}
