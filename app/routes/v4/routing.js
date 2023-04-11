@@ -132,15 +132,20 @@ module.exports = function(router) {
     res.redirect(version + 'q9b-interests')
   })
 
-  // FULL q9b Interests
+  // FULL q9b Interests // routing changed in v4 to skip 'Goals type' Q and go to new barrier Q
   router.post(version + 'q9b-interests', function (req, res) {
-    res.redirect(version + 'q10a-goals-type')
+    res.redirect(version + 'q9c-barriers')
   })
 
-  // q10a Goals type
-  router.post(version + 'q10a-goals-type', function (req, res) {
+  // FULL q9c Barriers
+  router.post(version + 'q9c-barriers', function (req, res) {
     res.redirect(version + 'q10b-goals-add')
   })
+
+  // // q10a Goals type
+  // router.post(version + 'q10a-goals-type', function (req, res) {
+  //   res.redirect(version + 'q10b-goals-add')
+  // })
 
   // q10b Goals add
   router.post(version + 'q10b-goals-add', function (req, res) {
