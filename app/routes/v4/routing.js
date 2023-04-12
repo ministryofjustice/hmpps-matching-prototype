@@ -39,7 +39,7 @@ module.exports = function(router) {
 
   // LIGHT q5 In prison training
   router.post(version + 'light-q5-in-prison-training', function (req, res) {
-    res.redirect(version + 'q10a-goals-type')
+    res.redirect(version + 'q10b-goals-add')
   })
 
   // FULL q2 Qualifications overview
