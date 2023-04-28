@@ -104,7 +104,14 @@ module.exports = function(router) {
 
   // FULL q6 Work before?
   router.post(version + 'q6-work-before', function (req, res) {
+    if (req.session.data['work-before'] == "Yes")
+  {
     res.redirect(version + 'q7a-experience-sectors')
+  }
+  else
+  {
+    res.redirect(version + 'q8a-job-sectors')
+  }
   })
 
   // FULL q7a Experience sectors
