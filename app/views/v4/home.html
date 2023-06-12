@@ -23,24 +23,35 @@
 
     <div class="govuk-form-group filter-box govuk-!-margin-top-4">
       <div class="govuk-grid-column-one-third">
-          <div class="moj-search">
             <form method="post">
 
               <div class="govuk-form-group">
-                <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+                <label class="govuk-label govuk-!-font-weight-bold" for="search">
                   Search by prisoner's name
                 </label>
-                <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
-              </div>
-
-              <button class="govuk-button moj-search__button" data-module="govuk-button">
+                <input class="govuk-input" id="search" name="search" type="search" aria-describedby="search-hint">
+              <button class="govuk-button govuk-!-margin-top-4 govuk-!-margin-bottom-0" data-module="govuk-button">
                 Search
               </button>
+              </div>
 
             </form>
-          </div>
-        </div>
       </div>
+      <div class="govuk-grid-column-two-thirds">
+            <form method="post">
+
+              <div class="govuk-checkboxes govuk-checkboxes--small govuk-!-margin-top-6" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="filter" name="filter" type="checkbox" value="Show prisoners who have already created their plan">
+                  <label class="govuk-label govuk-checkboxes__label" for="filter">
+                    Show prisoners who already have a plan
+                  </label>
+                </div>
+              </div>
+
+            </form>
+      </div>
+    </div>
 
 <!-- add table of people  -->
 
