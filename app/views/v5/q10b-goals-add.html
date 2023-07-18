@@ -1,0 +1,94 @@
+{% extends "./includes/template.html" %}
+
+{% block content %}
+
+
+
+
+<div class="govuk-width-container">
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        {% if data['goalsReview'] == 'true' %}
+          <span class="govuk-caption-l">Goal 2</span>
+        {% else %}
+          <span class="govuk-caption-l">Goal 1</span>
+        {% endif %}
+        <h1 class="govuk-heading-l">
+          What is Damien Adams’s work or education goal?
+        </h1>
+
+        <p class="govuk-body">Goals should be SMART, meaning ‘specific’, ‘measurable’, ‘achievable’, ‘realistic’ and ‘time-bound’.</p>
+        <p class="govuk-body">SMART goals allow progress to be better measured and evaluated.</p>
+
+        <form method="post" novalidate>
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--m" for="goal">
+              Describe their goal
+            </label>
+            <textarea class="govuk-textarea" id="goal" name="goal" rows="4" aria-describedby="add-tasks-hint" value="{{ data['goal'] }}"></textarea>
+          </div>
+
+          <h2 class="govuk-heading-m govuk-!-margin-bottom-4">
+            What are the steps to help them achieve their goal?
+          </h2>
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-label--s govuk-!-margin-bottom-2" for="step1">
+              Step 1
+            </label>
+            <div id="step1-hint" class="govuk-body govuk-!-margin-bottom-1">
+              Describe this step
+            </div>
+            <input class="govuk-input govuk-!-width-two-thirds" id="step1" name="step1" type="text" aria-describedby="step1-hint" value="{{ data['step1'] }}">
+          </div>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend">
+                <p class="govuk-body govuk-!-margin-bottom-1">
+                  When will they achieve this by?
+                </p>
+              </legend>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="step1-date-1" name="step1-date" type="radio" value="0 to 3 months">
+                  <label class="govuk-label govuk-radios__label" for="step1-date-1">
+                    0 to 3 months
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="step1-date-2" name="step1-date" type="radio" value="3 to 6 months">
+                  <label class="govuk-label govuk-radios__label" for="step1-date-2">
+                    3 to 6 months
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="step1-date-3" name="step1-date" type="radio" value="6 to 12 months">
+                  <label class="govuk-label govuk-radios__label" for="step1-date-3">
+                    6 to 12 months
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="govuk-form-group">
+            <a href="#" class="govuk-button govuk-button--secondary" style="color: #0b0c0c">
+            Add another step
+            </a>
+          </div>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

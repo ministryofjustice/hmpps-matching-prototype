@@ -1,0 +1,137 @@
+{% extends "./includes/template.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">
+          What skills does Damien Adams feel they have?
+        </h1>
+
+        <form class="form" method="post" novalidate>
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="skills-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              </legend>
+              <div id="skills-hint" class="govuk-hint">
+                Select all that apply.
+              </div>
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="skills-1" name="skills" type="checkbox" value="Communication">
+                  <label class="govuk-label govuk-checkboxes__label" for="skills-1">
+                    Communication
+                  </label>
+                  <div id="skills-hint" class="govuk-hint govuk-checkboxes__hint">
+                    listening well and being clear when speaking or writing
+                  </div>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="skills-2" name="skills" type="checkbox" value="Positive attitude">
+                  <label class="govuk-label govuk-checkboxes__label" for="skills-2">
+                    Positive attitude
+                  </label>
+                  <div id="skills-hint" class="govuk-hint govuk-checkboxes__hint">
+                    enthusiastic and willing to work, even when it’s difficult
+                  </div>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="skills-3" name="skills" type="checkbox" value="Resilience">
+                  <label class="govuk-label govuk-checkboxes__label" for="skills-3">
+                    Resilience
+                  </label>
+                  <div id="skills-hint" class="govuk-hint govuk-checkboxes__hint">
+                    stays calm and keeps going even when things are hard
+                  </div>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="skills-4" name="skills" type="checkbox" value="Self-management">
+                  <label class="govuk-label govuk-checkboxes__label" for="skills-4">
+                    Self-management
+                  </label>
+                  <div id="skills-hint" class="govuk-hint govuk-checkboxes__hint">
+                    good at timekeeping, punctual and reliable
+                  </div>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="skills-5" name="skills" type="checkbox" value="Teamwork">
+                  <label class="govuk-label govuk-checkboxes__label" for="skills-5">
+                    Teamwork
+                  </label>
+                  <div id="skills-hint" class="govuk-hint govuk-checkboxes__hint">
+                    likes working with others and happy to help out
+                  </div>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="skills-6" name="skills" type="checkbox" value="Thinking and problem-solving">
+                  <label class="govuk-label govuk-checkboxes__label" for="skills-6">
+                    Thinking and problem-solving
+                  </label>
+                  <div id="skills-hint" class="govuk-hint govuk-checkboxes__hint">
+                    enjoys working things out and seeing how things work
+                  </div>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="skills-7" name="skills" type="checkbox" value="Willingness to learn">
+                  <label class="govuk-label govuk-checkboxes__label" for="skills-7">
+                    Willingness to learn
+                  </label>
+                  <div id="skills-hint" class="govuk-hint govuk-checkboxes__hint">
+                    likes to learn new things and improve skills
+                  </div>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="skills-8" name="skills" type="checkbox" value="Other" data-aria-controls="conditional-skills">
+                  <label class="govuk-label govuk-checkboxes__label" for="skills-8">
+                    Other
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-skills">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="skills-8-details">
+                      Give details
+                    </label>
+                    <textarea class="govuk-textarea" id="with-hint" name="with-hint" rows="2" aria-describedby="with-hint-info with-hint-hint"></textarea>
+                  </div>
+                </div>
+
+                <div class="govuk-checkboxes__divider">or</div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="skills-none" name="skills" type="checkbox" value="None of these" data-behaviour="exclusive">
+                  <label class="govuk-label govuk-checkboxes__label" for="skills-none">
+                    None of these
+                  </label>
+                </div>
+
+              </div>
+
+            </fieldset>
+          </div>
+
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </form>
+
+      </div>
+
+
+    </div>
+  </main>
+</div>
+
+{% endblock %}
