@@ -9,6 +9,8 @@ router.get('/', function (req, res) {
 // Add your routes here - above the module.exports line
 require('./routes/v3/routing.js')(router);
 require('./routes/v4/routing.js')(router);
+require('./routes/v5/routing.js')(router);
+
 
 
 module.exports = router
