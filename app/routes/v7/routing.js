@@ -8,6 +8,11 @@ router.post(version + 'matching-list', function (req, res) {
   res.redirect(version + 'matching-list-expanded')
 })
 
+//  Manage application - updating status
+router.post(version + 'manage-progress-update', function (req, res) {
+  res.redirect(version + 'manage-progress-updated')
+})
+
 
 //   // q1 Work on release
 //   router.post(version + 'q1-work-on-release', function (req, res) {
