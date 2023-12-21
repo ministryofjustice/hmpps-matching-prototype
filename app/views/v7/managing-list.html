@@ -75,15 +75,17 @@
 
         <div class="govuk-grid-column-one-third">
           <div class="govuk-form-group">
-            <label class="govuk-label" for="sort">
+            <label class="govuk-label" for="application-status">
               Application status
             </label>
-            <select class="govuk-select" id="type-of-work-filter" name="type-of-work-filter">
+            <select class="govuk-select" id="application-status" name="application-status">
               <option value="all" selected>All statuses</option>
-              <option value="application">Application submitted</option>
+              <option value="application">Application made</option>
+              <option value="application-unsuccessful">Application unsuccessful</option>
               <option value="interview">Selected for interview</option>
-              <option value="x">Status 3</option>
-              <option value="x">Status 4</option>
+              <option value="interview-booked">Interview booked</option>
+              <option value="interview-unsuccessful">Unsuccessful at interview</option>
+              <option value="job-offer">Job offer</option>
             </select>
           </div>
         </div>
