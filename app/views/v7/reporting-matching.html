@@ -1,0 +1,184 @@
+{% extends "./includes/template.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+  <!-- Breadcrumb -->
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="dps-home">Digital Prison Services</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="home">Work after release</a>
+      </li>
+    </ol>
+  </div>
+
+  <!-- Main page -->
+
+  <main class="govuk-main-wrapper">
+
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">
+      Work after release reporting
+    </h1>
+
+  <!-- TABS -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <nav class="moj-sub-navigation govuk-!-margin-bottom-2" aria-label="Sub navigation">
+        <ul class="moj-sub-navigation__list">
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" aria-current="page" href="#">Matching jobs and applications</a>
+          </li>
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" href="reporting-prepare">Preparing for work progress</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+
+  <!-- FILTERS -->
+
+    <div class="govuk-form-group filter-box govuk-!-margin-top-4">
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <h2 class="govuk-heading-s govuk-!-margin-bottom-2">
+              Select a reporting period
+            </h2>
+          </div>
+      </div>
+
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <form method="post">
+            <button class="govuk-button govuk-!-margin-top-4 govuk-!-margin-bottom-0" data-module="govuk-button">
+              Apply filters
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+<!-- High level summary -->
+
+    <h3 class="govuk-heading-m govuk-!-margin-bottom-7">
+      High level summary
+    </h3>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <div class="reporting-stats">
+          <h4 class="govuk-heading-s">
+            Total number of applicants
+          </h4>
+          <p class="reporting-big-number">
+            26
+          </p>
+          <p class="govuk-body">
+            + 20% increase
+          </p>
+        </div>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <div class="reporting-stats">
+          <h4 class="govuk-heading-s">
+            Percentage of vacancies with at least one application
+          </h4>
+          <p class="reporting-big-number">
+            70%
+          </p>
+          <p class="govuk-body">
+            - 5% decrease
+          </p>
+        </div>
+      </div>
+      <!-- <div class="govuk-grid-column-one-third">
+        <div class="reporting-stats">
+          <h4 class="govuk-heading-s">
+            Total number of applicants
+          </h4>
+          <p class="reporting-big-number">
+            26
+          </p>
+          <p class="govuk-body">
+            20% increase
+          </p>
+        </div>
+      </div> -->
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <div class="reporting-stats">
+          <h4 class="govuk-heading-s">
+            Percentage of applications that made it to interview stage
+          </h4>
+          <p class="reporting-big-number">
+            22%
+          </p>
+          <p class="govuk-body">
+            + 5% increase
+          </p>
+        </div>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <div class="reporting-stats">
+          <h4 class="govuk-heading-s">
+            Percentage of applications where an application was not progressed
+          </h4>
+          <p class="reporting-big-number">
+            45%
+          </p>
+          <p class="govuk-body">
+            20% increase
+          </p>
+        </div>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <div class="reporting-stats">
+          <h4 class="govuk-heading-s">
+            Percentage of applications that resulted in a job offer
+          </h4>
+          <p class="reporting-big-number">
+            15%
+          </p>
+          <p class="govuk-body">
+            No change
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+    <!-- Application by status -->
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h3 class="govuk-heading-m govuk-!-margin-bottom-6">
+          Application by status
+        </h3>
+
+        <img class="govuk-!-margin-bottom-4" style="max-width: 800px" src="/public/images/Graph1.jpg" alt="#">
+
+      </div>
+    </div>
+
+    <p class="govuk-body">For more detail, download the full data as a CSV file.</p>
+
+
+</div>
+
+
+{% endblock %}
