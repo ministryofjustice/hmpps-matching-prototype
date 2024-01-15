@@ -32,7 +32,7 @@
       <nav class="moj-sub-navigation govuk-!-margin-bottom-2" aria-label="Sub navigation">
         <ul class="moj-sub-navigation__list">
           <li class="moj-sub-navigation__item">
-            <a class="moj-sub-navigation__link" aria-current="page" href="#">Matching jobs and applications</a>
+            <a class="moj-sub-navigation__link" aria-current="page" href="#">Match jobs and manage applications</a>
           </li>
           <li class="moj-sub-navigation__item">
             <a class="moj-sub-navigation__link" href="reporting-prepare">Preparing for work progress</a>
@@ -47,20 +47,33 @@
 
     <div class="govuk-form-group filter-box govuk-!-margin-top-4">
       <div class="govuk-grid-row">
-          <div class="govuk-grid-column-full">
-            <h2 class="govuk-heading-s govuk-!-margin-bottom-2">
+          <div class="govuk-grid-column-full govuk-!-margin-bottom-2">
+            <h2 class="govuk-heading-s govuk-!-margin-bottom-3">
               Select a reporting period
             </h2>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="sort">
+              </label>
+              <select class="govuk-select" id="sort" name="sort">
+                <option value="updated" selected>Date from</option>
+              </select>
+              <span class="govuk-body" style="margin-right: 15px; margin-left: 15px">to</span>
+              <select class="govuk-select" id="sort" name="sort">
+                <option value="updated" selected>Date to</option>
+              </select>
+            </div>
           </div>
       </div>
-
 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
           <form method="post">
-            <button class="govuk-button govuk-!-margin-top-4 govuk-!-margin-bottom-0" data-module="govuk-button">
-              Apply filters
-            </button>
+            <div class="govuk-button-group govuk-!-margin-top-4 govuk-!-margin-bottom-0">
+              <button class="govuk-button" data-module="govuk-button">
+                View reports
+              </button>
+              <a class="govuk-link" href="#">Download all data (CSV)</a>
+            </div>
           </form>
         </div>
       </div>
@@ -70,7 +83,7 @@
 <!-- High level summary -->
 
     <h3 class="govuk-heading-m govuk-!-margin-bottom-7">
-      High level summary
+      Summary
     </h3>
 
     <div class="govuk-grid-row">
@@ -121,7 +134,7 @@
       <div class="govuk-grid-column-one-third">
         <div class="reporting-stats">
           <h4 class="govuk-heading-s">
-            Percentage of applications that made it to interview stage
+            Percentage of applications that reached interview stage
           </h4>
           <p class="reporting-big-number">
             22%
@@ -140,7 +153,7 @@
             45%
           </p>
           <p class="govuk-body">
-            20% increase
+            + 20% increase
           </p>
         </div>
       </div>

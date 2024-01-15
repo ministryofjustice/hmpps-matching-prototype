@@ -32,7 +32,7 @@
       <nav class="moj-sub-navigation govuk-!-margin-bottom-2" aria-label="Sub navigation">
         <ul class="moj-sub-navigation__list">
           <li class="moj-sub-navigation__item">
-            <a class="moj-sub-navigation__link" href="reporting-matching">Matching jobs and applications</a>
+            <a class="moj-sub-navigation__link" href="reporting-matching">Match jobs and manage applications</a>
           </li>
           <li class="moj-sub-navigation__item">
             <a class="moj-sub-navigation__link" aria-current="page" href="#">Preparing for work progress</a>
@@ -47,20 +47,33 @@
 
     <div class="govuk-form-group filter-box govuk-!-margin-top-4">
       <div class="govuk-grid-row">
-          <div class="govuk-grid-column-full">
-            <h2 class="govuk-heading-s govuk-!-margin-bottom-2">
+          <div class="govuk-grid-column-full govuk-!-margin-bottom-2">
+            <h2 class="govuk-heading-s govuk-!-margin-bottom-3">
               Select a reporting period
             </h2>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="sort">
+              </label>
+              <select class="govuk-select" id="sort" name="sort">
+                <option value="updated" selected>Date from</option>
+              </select>
+              <span class="govuk-body" style="margin-right: 15px; margin-left: 15px">to</span>
+              <select class="govuk-select" id="sort" name="sort">
+                <option value="updated" selected>Date to</option>
+              </select>
+            </div>
           </div>
       </div>
-
 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
           <form method="post">
-            <button class="govuk-button govuk-!-margin-top-4 govuk-!-margin-bottom-0" data-module="govuk-button">
-              Apply filters
-            </button>
+            <div class="govuk-button-group govuk-!-margin-top-4 govuk-!-margin-bottom-0">
+              <button class="govuk-button" data-module="govuk-button">
+                View reports
+              </button>
+              <a class="govuk-link" href="#">Download all data (CSV)</a>
+            </div>
           </form>
         </div>
       </div>
@@ -70,7 +83,7 @@
 <!-- High level summary -->
 
     <h3 class="govuk-heading-m govuk-!-margin-bottom-7">
-      High level summary
+      Summary
     </h3>
 
     <div class="govuk-grid-row">
@@ -134,7 +147,7 @@
       <div class="govuk-grid-column-one-third">
         <div class="reporting-stats">
           <h4 class="govuk-heading-s">
-            Total number who did not want support
+            Total number of prisoners who do not want support
           </h4>
           <p class="reporting-big-number">
             16
@@ -147,7 +160,7 @@
       <div class="govuk-grid-column-one-third">
         <div class="reporting-stats">
           <h4 class="govuk-heading-s">
-            Total number who had no right to work
+            Total number of prisoners with no right to work
           </h4>
           <p class="reporting-big-number">
             21
@@ -162,19 +175,19 @@
     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
 
-    <!-- Application by status -->
+    <!--  Work status progress -->
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <h3 class="govuk-heading-m govuk-!-margin-bottom-6">
-          Application by status
+          Work status progress
         </h3>
 
         <div class="govuk-form-group filter-box govuk-!-margin-top-4">
           <div class="govuk-grid-row">
               <div class="govuk-grid-column-full">
                 <h2 class="govuk-heading-s govuk-!-margin-bottom-2">
-                  Total number of prisoners who have changed  status
+                  Total number of prisoners who have changed status
                 </h2>
                 <p class="reporting-big-number">21</p>
                 <p class="govuk-body govuk-!-margin-bottom-2">This is approximately <span class="govuk-!-font-weight-bold">82%</span> of your caseload for this period.</p>
@@ -247,7 +260,7 @@
           Documentation and support needed
         </h3>
 
-        <p class="govuk-body">Number of prisoners seen with preparing for work needs for this period. </p>
+        <p class="govuk-body">Number of prisoners seen with preparing for work needs in this period. </p>
 
         <dl class="govuk-summary-list">
           <div class="govuk-summary-list__row">
@@ -284,10 +297,18 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Email address or phone number
+              Email address
             </dt>
             <dd class="govuk-summary-list__value">
-              16
+              8
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Phone number
+            </dt>
+            <dd class="govuk-summary-list__value">
+              8
             </dd>
           </div>
           <div class="govuk-summary-list__row">
@@ -343,7 +364,7 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Type of offence
+              Feels type of offence will limit their ability to find work
             </dt>
             <dd class="govuk-summary-list__value">
               12
@@ -351,7 +372,7 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Caring responsibilities
+              Has full-time caring responsibilities
             </dt>
             <dd class="govuk-summary-list__value">
               4
@@ -367,7 +388,7 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Lacks confidence or motivation
+              Lacks confidence or motivation to find work
             </dt>
             <dd class="govuk-summary-list__value">
               3
@@ -375,7 +396,7 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Health condition
+              Not able to work due to a health condition
             </dt>
             <dd class="govuk-summary-list__value">
               4
