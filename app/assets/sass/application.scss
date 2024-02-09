@@ -19,6 +19,7 @@ $govuk-assets-path: '/govuk/assets/';
 
 // Components that aren't in Frontend
 @import "components/timeline";
+@import 'components/date-picker';
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
@@ -42,7 +43,7 @@ $govuk-assets-path: '/govuk/assets/';
 }
 
 .reporting-stats p {
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 }
 
 .reporting-big-number {
