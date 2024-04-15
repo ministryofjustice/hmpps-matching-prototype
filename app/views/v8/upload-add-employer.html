@@ -1,0 +1,77 @@
+{% extends "./includes/template.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+          <h1 class="govuk-heading-l">
+            Add an employer
+          </h1>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="employer-name">
+              Employer name
+            </label>
+            <input class="govuk-input" id="employer-name" name="employerName" type="text">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="employer-sector">
+              Sector
+            </label>
+            <select class="govuk-select" id="employer-sector" name="employerSector">
+              <option value="updated" selected>Choose sector</option>
+              <option value="Animal care and farming">Animal care and farming</option>
+              <option value="Cleaning and maintenance">Cleaning and maintenance</option>
+              <option value="Construction and trade">Construction and trade</option>
+              <option value="Driving and transport">Driving and transport</option>
+              <option value="Hair, beauty and wellbeing">Hair, beauty and wellbeing</option>
+              <option value="Hospitality and catering">Hospitality and catering</option>
+              <option value="IT and digital">IT and digital</option>
+              <option value="Manufacturing and technical">Manufacturing and technical</option>
+              <option value="Office or desk-based">Office or desk-based</option>
+              <option value="Retail and sales">Retail and sales</option>
+              <option value="Sport and fitness">Sport and fitness</option>
+              <option value="Training and support">Training and support</option>
+              <option value="Warehousing and storage">Warehousing and storage</option>
+              <option value="Waste management">Waste management</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="employer-status">
+              Employer status
+            </label>
+            <select class="govuk-select" id="employer-status" name="employer-status">
+              <option value="updated" selected>Choose status</option>
+              <option value="views">XXX</option>
+              <option value="comments">XXX</option>
+            </select>
+          </div>
+
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="employer-bio">
+              Employer bio
+            </label>
+            <textarea class="govuk-textarea" id="employer-bio" name="employerBio" rows="4"></textarea>
+          </div>
+
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Add employer
+          </button>
+
+
+
+
+        </div>
+      </div>
+  </main>
+</div>
+
+{% endblock %}
