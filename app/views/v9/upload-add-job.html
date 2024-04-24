@@ -341,10 +341,88 @@
           </div>
 
 
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend">
+                  How to apply
+              </legend>
+              <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="applyEmail" name="apply" type="radio" value="Email" data-aria-controls="conditional-applyEmail">
+                  <label class="govuk-label govuk-radios__label" for="applyEmail">
+                    Email
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-applyEmail">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="applyEmail-email">
+                      Email address
+                    </label>
+                    <input class="govuk-input" id="applyEmail-email" name="applyEmail-email">
+                  </div>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="applyEmailCV" name="apply" type="radio" value="Email - need CV" data-aria-controls="conditional-applyEmailCV">
+                  <label class="govuk-label govuk-radios__label" for="applyEmailCV">
+                    Email - need CV
+                  </label>
+                </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-applyEmailCV">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="applyEmailCV-email">
+                        Email address
+                      </label>
+                      <input class="govuk-input" id="applyEmailCV-email" name="applyEmailCV-email">
+                    </div>
+                  </div>
+                <!-- <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="rollingNo" name="rolling" type="radio" value="No" data-aria-controls="conditional-rollingNo">
+                  <label class="govuk-label govuk-radios__label" for="rollingNo">
+                    Email - need disclosure letter
+                  </label>
+                </div> -->
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="applyEmailCVDisc" name="apply" type="radio" value="Email - need CV and disclosure letter" data-aria-controls="conditional-applyEmailCVDisc">
+                  <label class="govuk-label govuk-radios__label" for="applyEmailCVDisc">
+                    Email - need CV and disclosure letter
+                  </label>
+                </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-applyEmailCVDisc">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="applyEmailCVDisc-email">
+                        Email address
+                      </label>
+                      <input class="govuk-input" id="applyEmailCVDisc-email" name="applyEmailCVDisc-email">
+                    </div>
+                  </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="online" name="apply" type="radio" value="Online portal" data-aria-controls="conditional-online">
+                  <label class="govuk-label govuk-radios__label" for="online">
+                    Online portal
+                  </label>
+                </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-online">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="online-details">
+                        Link to apply
+                      </label>
+                      <input class="govuk-input" id="online-details" name="online-details">
+                    </div>
+                  </div>
+                </div>
+
+            </fieldset>
+          </div>
 
 
-
-
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="vacancyContact">
+              Vacancy contact
+            </label>
+            <input class="govuk-input" id="vacancyContact" name="vacancyContact" type="text">
+          </div>
 
 
 
