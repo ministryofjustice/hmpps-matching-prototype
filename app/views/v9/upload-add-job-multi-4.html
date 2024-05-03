@@ -1,0 +1,259 @@
+{% extends "./includes/template.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+          <form method="post">
+
+          <span class="govuk-caption-l">Add a job - step 4 of 4</span>
+          <h1 class="govuk-heading-l">
+            How to apply
+          </h1>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend">
+                  Is the job only for prison leavers?
+              </legend>
+              <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="exclusiveYes" name="exclusive" type="radio" value="Yes">
+                  <label class="govuk-label govuk-radios__label" for="exclusiveYes">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="exclusiveNo" name="exclusive" type="radio" value="No">
+                  <label class="govuk-label govuk-radios__label" for="exclusiveNo">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend">
+                  Is it a rolling opportunity?
+              </legend>
+              <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="rollingYes" name="rolling" type="radio" value="Yes">
+                  <label class="govuk-label govuk-radios__label" for="rollingYes">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="rollingNo" name="rolling" type="radio" value="No" data-aria-controls="conditional-rollingNo">
+                  <label class="govuk-label govuk-radios__label" for="rollingNo">
+                    No
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-rollingNo">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="application-date">
+                      Application end date
+                    </label>
+                    <!-- <div id="application-date-hint" class="govuk-hint">
+                      For example, 27 12 2024
+                    </div> -->
+                    <div class="govuk-date-input" id="application-date">
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="application-date-day">
+                            Day
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="application-date-day" name="application-date-day" type="text" inputmode="numeric">
+                        </div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="application-date-month">
+                            Month
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="application-date-month" name="application-date-month" type="text" inputmode="numeric">
+                        </div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="application-date-year">
+                            Year
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="application-date-year" name="application-date-year" type="text" inputmode="numeric">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend">
+                  How to apply
+              </legend>
+              <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="applyEmail" name="apply" type="radio" value="Email" data-aria-controls="conditional-applyEmail">
+                  <label class="govuk-label govuk-radios__label" for="applyEmail">
+                    Email
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-applyEmail">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="applyEmail-email">
+                      Email address
+                    </label>
+                    <input class="govuk-input" id="applyEmail-email" name="applyEmail-email">
+                  </div>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="online" name="apply" type="radio" value="Online portal" data-aria-controls="conditional-online">
+                  <label class="govuk-label govuk-radios__label" for="online">
+                    Online portal
+                  </label>
+                </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-online">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="online-details">
+                        Link to apply
+                      </label>
+                      <input class="govuk-input" id="online-details" name="online-details">
+                    </div>
+                  </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="applyOther" name="apply" type="radio" value="Other" data-aria-controls="applyOther-details">
+                  <label class="govuk-label govuk-radios__label" for="applyOther">
+                    Other
+                  </label>
+                </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="applyOther-details">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="applyOther-details">
+                        Give details
+                      </label>
+                      <input class="govuk-input" id="applyOther-details" name="applyOther-details">
+                    </div>
+                  </div>
+
+                </div>
+
+
+            </fieldset>
+          </div>
+
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend">
+                  Supporting documentation required (optional)
+              </legend>
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="supportingDocs" name="supportingDocs" type="checkbox" value="CV">
+                  <label class="govuk-label govuk-checkboxes__label" for="supportingDocs">
+                    CV
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="supportingDocs-2" name="supportingDocs" type="checkbox" value="Disclosure letter">
+                  <label class="govuk-label govuk-checkboxes__label" for="supportingDocs-2">
+                    Disclosure letter
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="supportingDocs-3" name="supportingDocs" type="checkbox" value="Other" data-aria-controls="conditional-supportingDocs">
+                  <label class="govuk-label govuk-checkboxes__label" for="supportingDocs-3">
+                    Other
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-supportingDocs">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="supportingDocs-otherDetails">
+                      Give details
+                    </label>
+                    <input class="govuk-input govuk-!-width-one-third" id="supportingDocs-otherDetails" name="supportingDocs-otherDetails">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+
+          <!-- <div class="govuk-form-group">
+            <label class="govuk-label" for="vacancyContact">
+              Vacancy contact name
+            </label>
+            <input class="govuk-input" id="vacancyContact" name="vacancyContact" type="text">
+          </div>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="vacancyContactEmail">
+              Vacancy contact email address
+            </label>
+            <input class="govuk-input" id="vacancyContactEmail" name="vacancyContactEmail" type="text">
+          </div> -->
+
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend">
+                  Is there a contact for this vacancy?
+              </legend>
+              <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contactYes" name="contact" type="radio" value="Yes" data-aria-controls="conditional-contactYes">
+                  <label class="govuk-label govuk-radios__label" for="contactYes">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contactYes">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="vacancyContact">
+                      Vacancy contact name
+                    </label>
+                    <input class="govuk-input" id="vacancyContact" name="vacancyContact" type="text">
+                  </div>
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="vacancyContactEmail">
+                      Vacancy contact email address
+                    </label>
+                    <input class="govuk-input" id="vacancyContactEmail" name="vacancyContactEmail" type="text">
+                  </div>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contactNo" name="contact" type="radio" value="No">
+                  <label class="govuk-label govuk-radios__label" for="contactNo">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+
+
+
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+
+        </form>
+
+        </div>
+      </div>
+  </main>
+</div>
+
+{% endblock %}

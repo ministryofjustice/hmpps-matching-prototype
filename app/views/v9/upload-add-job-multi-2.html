@@ -1,0 +1,103 @@
+{% extends "./includes/template.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+          <form method="post">
+
+          <span class="govuk-caption-l">Add a job - step 2 of 4</span>
+          <h1 class="govuk-heading-l">
+            Location and contract details
+          </h1>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="location">
+              Job location
+            </label>
+            <div id="location-hint" class="govuk-hint">
+              Enter postcode
+            </div>
+            <input class="govuk-input govuk-input--width-5" id="location" name="location" type="text">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="salary">
+              Salary
+            </label>
+            <div id="salary-hint" class="govuk-hint">
+              For example, ‘£10.87 per hour’ or ‘£20,000 to £22,000’
+            </div>
+            <input class="govuk-input" id="salary" name="salary" type="text">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="workPattern">
+              Work pattern
+            </label>
+            <select class="govuk-select" id="workPattern" name="workPattern">
+              <option value="1" selected>Choose work pattern</option>
+              <option value="2">XX</option>
+              <option value="3">XX</option>
+              <option value="4">XX</option>
+              <option value="5">XX</option>
+            </select>
+          </div>
+
+          <!-- <div class="govuk-form-group">
+            <label class="govuk-label" for="base">
+              Work location
+            </label>
+            <select class="govuk-select" id="base" name="base">
+              <option value="1" selected>Choose work location</option>
+              <option value="2">XX</option>
+              <option value="3">XX</option>
+              <option value="4">XX</option>
+              <option value="5">XX</option>
+            </select>
+          </div> -->
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="hours">
+              Hours
+            </label>
+            <select class="govuk-select" id="hours" name="hours">
+              <option value="1" selected>Choose hours</option>
+              <option value="2">XX</option>
+              <option value="3">XX</option>
+              <option value="4">XX</option>
+              <option value="5">XX</option>
+            </select>
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="contract">
+              Contract type (optional)
+            </label>
+            <select class="govuk-select" id="contract" name="contract">
+              <option value="1" selected>Choose contract type</option>
+              <option value="2">XX</option>
+              <option value="3">XX</option>
+              <option value="4">XX</option>
+              <option value="5">XX</option>
+            </select>
+          </div>
+
+
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+        </form>
+
+
+        </div>
+      </div>
+  </main>
+</div>
+
+{% endblock %}

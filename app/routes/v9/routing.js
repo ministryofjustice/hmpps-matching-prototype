@@ -13,6 +13,26 @@ router.post(version + 'manage-progress-update', function (req, res) {
   res.redirect(version + 'manage-progress-updated')
 })
 
+//  Job upload - multi page 1
+router.post(version + 'upload-add-job-multi-1', function (req, res) {
+  res.redirect(version + 'upload-add-job-multi-2')
+})
+
+//  Job upload - multi page 2
+router.post(version + 'upload-add-job-multi-2', function (req, res) {
+  res.redirect(version + 'upload-add-job-multi-3')
+})
+
+//  Job upload - multi page 3
+router.post(version + 'upload-add-job-multi-3', function (req, res) {
+  res.redirect(version + 'upload-add-job-multi-4')
+})
+
+//  Job upload - multi page 4
+router.post(version + 'upload-add-job-multi-4', function (req, res) {
+  res.redirect(version + 'upload-add-job-multi-check')
+})
+
 
 //   // q1 Work on release
 //   router.post(version + 'q1-work-on-release', function (req, res) {
