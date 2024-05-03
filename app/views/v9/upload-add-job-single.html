@@ -89,10 +89,10 @@
 
           <div class="govuk-form-group">
             <label class="govuk-label" for="charity">
-              Charity (optional)
+              Is this vacancy supported by a charity? (optional)
             </label>
             <div id="charity-hint" class="govuk-hint">
-              Enter the name of the Third Sector offenceExclusions supporting the vacancy.
+              Enter the name of the Third Sector organisation supporting the vacancy 
             </div>
             <input class="govuk-input" id="charity" name="charity" type="text">
           </div>
@@ -103,6 +103,19 @@
             </label>
             <select class="govuk-select" id="workPattern" name="workPattern">
               <option value="1" selected>Choose work pattern</option>
+              <option value="2">XX</option>
+              <option value="3">XX</option>
+              <option value="4">XX</option>
+              <option value="5">XX</option>
+            </select>
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="base">
+              Work location
+            </label>
+            <select class="govuk-select" id="base" name="base">
+              <option value="1" selected>Choose work location</option>
               <option value="2">XX</option>
               <option value="3">XX</option>
               <option value="4">XX</option>
@@ -125,7 +138,7 @@
 
           <div class="govuk-form-group">
             <label class="govuk-label" for="contract">
-              Contract type
+              Contract type (optional)
             </label>
             <select class="govuk-select" id="contract" name="contract">
               <option value="1" selected>Choose contract type</option>
@@ -147,19 +160,6 @@
           </div>
 
           <div class="govuk-form-group">
-            <label class="govuk-label" for="base">
-              Base location
-            </label>
-            <select class="govuk-select" id="base" name="base">
-              <option value="1" selected>Choose base location</option>
-              <option value="2">XX</option>
-              <option value="3">XX</option>
-              <option value="4">XX</option>
-              <option value="5">XX</option>
-            </select>
-          </div>
-
-          <div class="govuk-form-group">
             <label class="govuk-label" for="location">
               Job location
             </label>
@@ -167,6 +167,17 @@
               Enter postcode
             </div>
             <input class="govuk-input govuk-input--width-5" id="location" name="location" type="text">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="keyCriteria">
+              Add essential job requirement
+            </label>
+            <div id="keyCriteria-hint" class="govuk-hint">
+              For example, full UK driving licence.
+            </div>
+            <input class="govuk-input" id="keyCriteria" name="keyCriteria" type="text">
+            <p class="govuk-body govuk-!-margin-top-4"><a class="govuk-link" href="#">Add another essential job requirement</a></p>
           </div>
 
           <div class="govuk-form-group">
@@ -180,19 +191,8 @@
           </div>
 
           <div class="govuk-form-group">
-            <label class="govuk-label" for="keyCriteria">
-              Key criteria
-            </label>
-            <div id="keyCriteria-hint" class="govuk-hint">
-              For example, Maths level 1, CSCS card, driving licence, access to a vehicle.
-            </div>
-            <input class="govuk-input" id="keyCriteria" name="keyCriteria" type="text">
-            <p class="govuk-body govuk-!-margin-top-4"><a class="govuk-link" href="#">Add another key criteria</a></p>
-          </div>
-
-          <div class="govuk-form-group">
             <label class="govuk-label" for="desirableCriteria">
-              Desirable criteria
+              Desirable criteria (optional)
             </label>
             <!-- <div id="desirableCriteria-hint" class="govuk-hint">
               A description of the role and key tasks. Include any benefits and training opportunities.
@@ -363,41 +363,6 @@
                 </div>
 
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="applyEmailCV" name="apply" type="radio" value="Email - need CV" data-aria-controls="conditional-applyEmailCV">
-                  <label class="govuk-label govuk-radios__label" for="applyEmailCV">
-                    Email - need CV
-                  </label>
-                </div>
-                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-applyEmailCV">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label" for="applyEmailCV-email">
-                        Email address
-                      </label>
-                      <input class="govuk-input" id="applyEmailCV-email" name="applyEmailCV-email">
-                    </div>
-                  </div>
-                <!-- <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="rollingNo" name="rolling" type="radio" value="No" data-aria-controls="conditional-rollingNo">
-                  <label class="govuk-label govuk-radios__label" for="rollingNo">
-                    Email - need disclosure letter
-                  </label>
-                </div> -->
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="applyEmailCVDisc" name="apply" type="radio" value="Email - need CV and disclosure letter" data-aria-controls="conditional-applyEmailCVDisc">
-                  <label class="govuk-label govuk-radios__label" for="applyEmailCVDisc">
-                    Email - need CV and disclosure letter
-                  </label>
-                </div>
-                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-applyEmailCVDisc">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label" for="applyEmailCVDisc-email">
-                        Email address
-                      </label>
-                      <input class="govuk-input" id="applyEmailCVDisc-email" name="applyEmailCVDisc-email">
-                    </div>
-                  </div>
-
-                <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="online" name="apply" type="radio" value="Online portal" data-aria-controls="conditional-online">
                   <label class="govuk-label govuk-radios__label" for="online">
                     Online portal
@@ -411,19 +376,115 @@
                       <input class="govuk-input" id="online-details" name="online-details">
                     </div>
                   </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="applyOther" name="apply" type="radio" value="Other" data-aria-controls="applyOther-details">
+                  <label class="govuk-label govuk-radios__label" for="applyOther">
+                    Other
+                  </label>
                 </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="applyOther-details">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="applyOther-details">
+                        Give details
+                      </label>
+                      <input class="govuk-input" id="applyOther-details" name="applyOther-details">
+                    </div>
+                  </div>
+
+                </div>
+
 
             </fieldset>
           </div>
 
 
           <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend">
+                  Supporting documentation required (optional)
+              </legend>
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="supportingDocs" name="supportingDocs" type="checkbox" value="CV">
+                  <label class="govuk-label govuk-checkboxes__label" for="supportingDocs">
+                    CV
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="supportingDocs-2" name="supportingDocs" type="checkbox" value="Disclosure letter">
+                  <label class="govuk-label govuk-checkboxes__label" for="supportingDocs-2">
+                    Disclosure letter
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="supportingDocs-3" name="supportingDocs" type="checkbox" value="Other" data-aria-controls="conditional-supportingDocs">
+                  <label class="govuk-label govuk-checkboxes__label" for="supportingDocs-3">
+                    Other
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-supportingDocs">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="supportingDocs-otherDetails">
+                      Give details
+                    </label>
+                    <input class="govuk-input govuk-!-width-one-third" id="supportingDocs-otherDetails" name="supportingDocs-otherDetails">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+
+          <!-- <div class="govuk-form-group">
             <label class="govuk-label" for="vacancyContact">
-              Vacancy contact
+              Vacancy contact name
             </label>
             <input class="govuk-input" id="vacancyContact" name="vacancyContact" type="text">
           </div>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="vacancyContactEmail">
+              Vacancy contact email address
+            </label>
+            <input class="govuk-input" id="vacancyContactEmail" name="vacancyContactEmail" type="text">
+          </div> -->
 
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend">
+                  Is there a contact for this vacancy?
+              </legend>
+              <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contactYes" name="contact" type="radio" value="Yes" data-aria-controls="conditional-contactYes">
+                  <label class="govuk-label govuk-radios__label" for="contactYes">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contactYes">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="vacancyContact">
+                      Vacancy contact name
+                    </label>
+                    <input class="govuk-input" id="vacancyContact" name="vacancyContact" type="text">
+                  </div>
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="vacancyContactEmail">
+                      Vacancy contact email address
+                    </label>
+                    <input class="govuk-input" id="vacancyContactEmail" name="vacancyContactEmail" type="text">
+                  </div>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contactNo" name="contact" type="radio" value="No">
+                  <label class="govuk-label govuk-radios__label" for="contactNo">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
 
 
 
