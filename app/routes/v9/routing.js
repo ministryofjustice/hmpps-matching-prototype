@@ -13,6 +13,11 @@ router.post(version + 'manage-progress-update', function (req, res) {
   res.redirect(version + 'manage-progress-updated')
 })
 
+//  Job upload - add job list
+router.post(version + 'upload-job-list', function (req, res) {
+  res.redirect(version + 'upload-add-job-multi-1')
+})
+
 //  Job upload - multi page 1
 router.post(version + 'upload-add-job-multi-1', function (req, res) {
   res.redirect(version + 'upload-add-job-multi-2')

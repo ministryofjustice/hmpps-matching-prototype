@@ -10,7 +10,7 @@
 
           <form method="post">
 
-          <span class="govuk-caption-l">Add a job - step 2 of 4</span>
+          <span class="govuk-caption-l">Add a job - step 2 of 5</span>
           <h1 class="govuk-heading-l">
             Location and contract details
           </h1>
@@ -35,7 +35,7 @@
             <input class="govuk-input" id="salary" name="salary" type="text">
           </div>
 
-          <div class="govuk-form-group">
+          <!-- <div class="govuk-form-group">
             <label class="govuk-label" for="workPattern">
               Work pattern
             </label>
@@ -46,6 +46,39 @@
               <option value="4">XX</option>
               <option value="5">XX</option>
             </select>
+          </div> -->
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend">
+                  Work pattern
+              </legend>
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="workPattern" name="workPattern" type="checkbox" value="Flexible shifts">
+                  <label class="govuk-label govuk-checkboxes__label" for="workPattern">
+                    Flexible shifts
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="workPattern-2" name="workPattern" type="checkbox" value="Monday to Friday">
+                  <label class="govuk-label govuk-checkboxes__label" for="workPattern-2">
+                    Monday to Friday
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="workPattern-3" name="workPattern" type="checkbox" value="Night shifts">
+                  <label class="govuk-label govuk-checkboxes__label" for="workPattern-3">
+                    Night shifts
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="workPattern-4" name="workPattern" type="checkbox" value="Weekends">
+                  <label class="govuk-label govuk-checkboxes__label" for="workPattern-4">
+                    Weekends
+                  </label>
+                </div>
+              </fieldset>
           </div>
 
           <!-- <div class="govuk-form-group">
@@ -63,18 +96,17 @@
 
           <div class="govuk-form-group">
             <label class="govuk-label" for="hours">
-              Hours
+              Hours per week
             </label>
             <select class="govuk-select" id="hours" name="hours">
               <option value="1" selected>Choose hours</option>
-              <option value="2">XX</option>
-              <option value="3">XX</option>
-              <option value="4">XX</option>
-              <option value="5">XX</option>
+              <option value="2">40 or more</option>
+              <option value="3">30 to 39</option>
+              <option value="4">Less than 30</option>
             </select>
           </div>
 
-          <div class="govuk-form-group">
+          <!-- <div class="govuk-form-group">
             <label class="govuk-label" for="contract">
               Contract type (optional)
             </label>
@@ -85,6 +117,57 @@
               <option value="4">XX</option>
               <option value="5">XX</option>
             </select>
+          </div> -->
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend">
+                  Contract type (optional)
+              </legend>
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="contract" name="contract" type="checkbox" value="Fixed-term">
+                  <label class="govuk-label govuk-checkboxes__label" for="contract">
+                    Fixed-term
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="contract-2" name="contract" type="checkbox" value="Full-time">
+                  <label class="govuk-label govuk-checkboxes__label" for="contract-2">
+                    Full-time
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="contract-3" name="contract" type="checkbox" value="Part-time">
+                  <label class="govuk-label govuk-checkboxes__label" for="contract-3">
+                    Part-time
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="contract-4" name="contract" type="checkbox" value="Permanent">
+                  <label class="govuk-label govuk-checkboxes__label" for="contract-4">
+                    Permanent
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="contract-5" name="contract" type="checkbox" value="Self-employed">
+                  <label class="govuk-label govuk-checkboxes__label" for="contract-5">
+                    Self-employed
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="contract-6" name="contract" type="checkbox" value="Temporary">
+                  <label class="govuk-label govuk-checkboxes__label" for="contract-6">
+                    Temporary
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="contract-7" name="contract" type="checkbox" value="Zero hours">
+                  <label class="govuk-label govuk-checkboxes__label" for="contract-7">
+                    Zero hours
+                  </label>
+                </div>
+              </fieldset>
           </div>
 
 
