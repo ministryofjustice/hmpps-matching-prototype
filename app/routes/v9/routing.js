@@ -38,6 +38,11 @@ router.post(version + 'upload-add-job-multi-4', function (req, res) {
   res.redirect(version + 'upload-add-job-multi-check')
 })
 
+//  Job upload - multi check answers
+router.post(version + 'upload-add-job-multi-check', function (req, res) {
+  res.redirect(version + 'upload-job-list')
+})
+
 
 //   // q1 Work on release
 //   router.post(version + 'q1-work-on-release', function (req, res) {
