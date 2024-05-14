@@ -40,22 +40,16 @@
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend">
-                  Is it a rolling opportunity?
+                  Is there a closing date for this job?
               </legend>
               <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="rollingYes" name="rolling" type="radio" value="Yes">
+                  <input class="govuk-radios__input" id="rollingYes" name="rolling" type="radio" value="Yes" data-aria-controls="conditional-rollingYes">
                   <label class="govuk-label govuk-radios__label" for="rollingYes">
                     Yes
                   </label>
                 </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="rollingNo" name="rolling" type="radio" value="No" data-aria-controls="conditional-rollingNo">
-                  <label class="govuk-label govuk-radios__label" for="rollingNo">
-                    No
-                  </label>
-                </div>
-                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-rollingNo">
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-rollingYes">
                   <div class="govuk-form-group">
                     <label class="govuk-label" for="application-date">
                       Application closing date
@@ -91,6 +85,14 @@
                     </div>
                   </div>
                 </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="rollingNo" name="rolling" type="radio" value="No">
+                  <label class="govuk-label govuk-radios__label" for="rollingNo">
+                    No
+                  </label>
+                </div>
+
               </div>
             </fieldset>
           </div>
@@ -111,16 +113,16 @@
                 <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-applyEmail">
                   <div class="govuk-form-group">
                     <label class="govuk-label" for="applyEmail-email">
-                      Email address
+                      Employer email address
                     </label>
                     <input class="govuk-input" id="applyEmail-email" name="applyEmail-email">
                   </div>
                 </div>
 
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="online" name="apply" type="radio" value="Online portal" data-aria-controls="conditional-online">
+                  <input class="govuk-radios__input" id="online" name="apply" type="radio" value="Employer website" data-aria-controls="conditional-online">
                   <label class="govuk-label govuk-radios__label" for="online">
-                    Online portal
+                    Employer website
                   </label>
                 </div>
                   <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-online">
@@ -205,7 +207,7 @@
           </div> -->
 
 
-          <div class="govuk-form-group">
+          <!-- <div class="govuk-form-group">
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend">
                   Is there a contact for this vacancy?
@@ -240,7 +242,7 @@
               </div>
             </fieldset>
           </div>
-
+ -->
 
 
 
