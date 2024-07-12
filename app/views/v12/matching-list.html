@@ -1,0 +1,221 @@
+{% extends "./includes/template.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+  <!-- Breadcrumb -->
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="dps-home">Digital Prison Services</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="home">Work after release</a>
+      </li>
+    </ol>
+  </div>
+
+  <!-- Main page -->
+
+  <main class="govuk-main-wrapper">
+
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">
+      Match jobs and manage applications
+    </h1>
+
+
+  <!-- TABS -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <nav class="moj-sub-navigation govuk-!-margin-bottom-2" aria-label="Sub navigation">
+        <ul class="moj-sub-navigation__list">
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" aria-current="page" href="#">Match jobs</a>
+          </li>
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" href="managing-list">Manage applications</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+
+  <!-- FILTERS -->
+
+    <div class="govuk-form-group filter-box govuk-!-margin-top-4">
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <h2 class="govuk-heading-s govuk-!-margin-bottom-2">
+              Filter by
+            </h2>
+          </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="search">
+              Prisoner's name
+            </label>
+            <input class="govuk-input" id="search" name="search" type="search" aria-describedby="search-hint">
+          </div>
+        </div>
+
+        <div class="govuk-grid-column-one-third">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="sort">
+              Work types of interest
+            </label>
+            <select class="govuk-select" id="type-of-work-filter" name="type-of-work-filter">
+              <option value="updated" selected>All types of work</option>
+              <option value="Animal care and farming">Animal care and farming</option>
+              <option value="Cleaning and maintenance">Cleaning and maintenance</option>
+              <option value="Construction and trade">Construction and trade</option>
+              <option value="Driving and transport">Driving and transport</option>
+              <option value="Hair, beauty and wellbeing">Hair, beauty and wellbeing</option>
+              <option value="Hospitality and catering">Hospitality and catering</option>
+              <option value="IT and digital">IT and digital</option>
+              <option value="Manufacturing and technical">Manufacturing and technical</option>
+              <option value="Office or desk-based">Office or desk-based</option>
+              <option value="Retail and sales">Retail and sales</option>
+              <option value="Sport and fitness">Sport and fitness</option>
+              <option value="Training and support">Training and support</option>
+              <option value="Warehousing and storage">Warehousing and storage</option>
+              <option value="Waste management">Waste management</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <div class="govuk-checkboxes govuk-checkboxes--small govuk-!-margin-top-3" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="filter" name="filter" type="checkbox" value="Show prisoners who need support">
+              <label class="govuk-label govuk-checkboxes__label" for="filter">
+                Show prisoners who 'Need support'
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <form method="post">
+            <button class="govuk-button govuk-!-margin-top-3 govuk-!-margin-bottom-0" data-module="govuk-button">
+              Apply filters
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+<!-- NUMBER OF RESULTS -->
+
+    <h3 class="govuk-heading-s">
+      3 results
+    </h3>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<!-- TABLE OF RESULTS -->
+
+    <table class="govuk-table govuk-!-margin-top-6" data-module="moj-sortable-table" id="prisonerTable">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header" aria-sort="ascending"><button type="button" data-index="0">Prisoner</button></th>
+          <th scope="col" class="govuk-table__header" aria-sort="none"><button type="button" data-index="1">Release date and type</button></th>
+          <!-- <th scope="col" class="govuk-table__header">Status</th> -->
+          <th scope="col" class="govuk-table__header">Work types of interest</th>
+          <th scope="col" class="govuk-table__header">Release area</th>
+        </tr>
+      </thead>
+
+      <tbody class="govuk-table__body">
+
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Ahmed" href="./profile/tab1-overview">Ahmed, Adam</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G5823GP </span></td>
+          <td class="govuk-table__cell" data-sort-value="2024.02.04">4 Feb 2024<br> <span class="govuk-hint govuk-!-margin-bottom-0">HDC</span></td>
+          <!-- <td class="govuk-table__cell" data-sort-value="Ready to work"><strong class="govuk-tag govuk-tag--green">Ready to work</strong></td> -->
+          <td class="govuk-table__cell">
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Construction and trade</li>
+              <li>Driving</li>
+              <li>Outdoors</li>
+            </ul>
+          </td>
+          <td class="govuk-table__cell">LS11 2AB</td>
+        </tr>
+
+        </tr><tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Charles" href="#">Charles, Jermaine</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G3892UH</span></td>
+          <td class="govuk-table__cell" data-sort-value="2024.03.03">3 Mar 2024<br> <span class="govuk-hint govuk-!-margin-bottom-0">HDC</span></td>
+          <!-- <td class="govuk-table__cell" data-sort-value="Ready to work"><strong class="govuk-tag govuk-tag--green">Ready to work</strong></td> -->
+          <td class="govuk-table__cell">
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Construction and trade</li>
+              <li>Manufacturing</li>
+              <li>Sport and fitness</li>
+              <li>Warehousing and storage</li>
+            </ul>
+          </td>
+          <td class="govuk-table__cell">LS11 2AB</td>
+        </tr>
+
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="McLaughlin" href="#">McLaughlin, Ross</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G0143VW</span></td>
+          <td class="govuk-table__cell" data-sort-value="2024.03.11">11 Mar 2024<br> <span class="govuk-hint govuk-!-margin-bottom-0">HDC</span></td>
+          <!-- <td class="govuk-table__cell" data-sort-value="Ready to work"><strong class="govuk-tag govuk-tag--green">Ready to work</strong></td> -->
+          <td class="govuk-table__cell">
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Construction and trade</li>
+            </ul>
+          </td>
+          <td class="govuk-table__cell">LS11 2AB</td>
+        </tr>
+
+
+
+      </tbody>
+    </table>
+
+
+</div>
+
+
+
+<script>
+  function myFunction() {
+    // Declare variables
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("filterName");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("prisonerTable");
+    tr = table.getElementsByTagName("tr");
+
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+</script>
+
+
+
+{% endblock %}
