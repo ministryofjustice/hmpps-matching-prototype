@@ -1,0 +1,359 @@
+{% extends "./includes/template.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+  <!-- Breadcrumb -->
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="dps-home">Digital Prison Services</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="home">Work after release</a>
+      </li>
+    </ol>
+  </div>
+
+  <!-- Main page -->
+
+  <main class="govuk-main-wrapper">
+
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">
+      Work after release reporting
+    </h1>
+
+
+  <!-- TABS -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <nav class="moj-sub-navigation govuk-!-margin-bottom-2" aria-label="Sub navigation">
+        <ul class="moj-sub-navigation__list">
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" aria-current="page" href="#">Match jobs and manage applications</a>
+          </li>
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" href="reporting-prepare">Preparing for work progress</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+
+  <!-- FILTERS -->
+
+    <div class="govuk-form-group filter-box govuk-!-margin-top-4">
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+            <!-- <h2 class="govuk-heading-s govuk-!-margin-bottom-3">
+              Select a reporting period
+            </h2> -->
+            <!-- <div class="govuk-form-group">
+              <label class="govuk-label" for="sort">
+              </label>
+              <select class="govuk-select" id="sort" name="sort">
+                <option value="updated" selected>Date from</option>
+              </select>
+              <span class="govuk-body" style="margin-right: 15px; margin-left: 15px">to</span>
+              <select class="govuk-select" id="sort" name="sort">
+                <option value="updated" selected>Date to</option>
+              </select>
+            </div> -->
+            {% from 'components/datepicker/macro.njk' import hmppsDatepicker %}
+            {{ hmppsDatepicker({
+                id: "date-from",
+                name: "date-from",
+                label: {
+                    text: "Date from (earliest)",
+                    classes: "govuk-label--s"
+                },
+                hint: {
+                  text: "For example, 31/3/2024"
+                },
+                classes: 'hmpps-datepicker--fixed-width',
+                value: formValues.date,
+                maxDate: '2023-09-20'
+            }) }}
+          </div>
+
+          <div class="govuk-grid-column-one-quarter">
+
+            {% from 'components/datepicker/macro.njk' import hmppsDatepicker %}
+            {{ hmppsDatepicker({
+                id: "date-to",
+                name: "date-to",
+                label: {
+                    text: "Date to (latest)",
+                    classes: "govuk-label--s"
+                },
+                hint: {
+                  text: "For example, 31/3/2024"
+                },
+                classes: 'hmpps-datepicker--fixed-width',
+                value: formValues.date,
+                maxDate: '2023-09-20'
+            }) }}
+          </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <form method="post">
+            <div class="govuk-button-group govuk-!-margin-top-2 govuk-!-margin-bottom-0">
+              <button class="govuk-button" data-module="govuk-button">
+                View reports
+              </button>
+              <a class="govuk-link" href="#">Download all data (CSV)</a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+<!-- High level summary -->
+
+    <p class="govuk-body">
+      Report period: 1 January 2024 to 1 February 2024
+    </p>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <h3 class="govuk-heading-m govuk-!-margin-bottom-7">
+      Summary
+    </h3>
+
+    <div class="govuk-grid-row govuk-!-margin-bottom-3">
+      <div class="govuk-grid-column-one-third">
+        <div class="reporting-stats">
+          <h4 class="govuk-heading-s">
+            Total number of applicants
+          </h4>
+          <p class="reporting-big-number">
+            16
+          </p>
+          <!-- <p class="govuk-body">
+            + 20% increase
+          </p> -->
+        </div>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <div class="reporting-stats">
+          <h4 class="govuk-heading-s">
+            Number of vacancies with at least one application
+          </h4>
+          <p class="reporting-big-number">
+            12
+          </p>
+          <!-- <p class="govuk-body">
+            - 5% decrease
+          </p> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <div class="reporting-stats">
+          <h4 class="govuk-heading-s">
+            Percentage of applications that reached interview stage
+          </h4>
+          <p class="reporting-big-number">
+            22%
+          </p>
+          <p class="govuk-body">
+            + 5% increase
+          </p>
+        </div>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <div class="reporting-stats">
+          <h4 class="govuk-heading-s">
+            Percentage of applications where an application was not progressed
+          </h4>
+          <p class="reporting-big-number">
+            45%
+          </p>
+          <p class="govuk-body">
+            + 20% increase
+          </p>
+        </div>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <div class="reporting-stats">
+          <h4 class="govuk-heading-s">
+            Percentage of applications that resulted in a job offer
+          </h4>
+          <p class="reporting-big-number">
+            15%
+          </p>
+          <p class="govuk-body">
+            No change
+          </p>
+        </div>
+      </div>
+    </div> -->
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+    <!-- Application by status - event count -->
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h3 class="govuk-heading-m">
+          Total applications by application stage
+        </h3>
+        <p class="govuk-body govuk-!-margin-bottom-6">Shows total number of open applications recorded at each stage of the application process.</p>
+
+        <div class="govuk-tabs" data-module="govuk-tabs">
+          <h2 class="govuk-tabs__title">
+            Contents
+          </h2>
+          <ul class="govuk-tabs__list">
+            <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+              <a class="govuk-tabs__tab" href="#event-chart">
+                Total applications chart view
+              </a>
+            </li>
+            <li class="govuk-tabs__list-item">
+              <a class="govuk-tabs__tab" href="#event-table">
+                Total applications table view
+              </a>
+            </li>
+          </ul>
+          <div class="govuk-tabs__panel" id="event-chart">
+            <!-- <h4 class="govuk-heading-s">Chart view</h4> -->
+            <img class="govuk-!-margin-bottom-4" style="max-width: 700px" src="/public/images/Chart1.jpg" alt="#">
+          </div>
+
+          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="event-table">
+            <!-- <h4 class="govuk-heading-s">Table view</h4> -->
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Application status</th>
+                  <th scope="col" class="govuk-table__header">Total</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Application submitted</td>
+                  <td class="govuk-table__cell">26</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Application unsuccessful</td>
+                  <td class="govuk-table__cell">16</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Selected for interview</td>
+                  <td class="govuk-table__cell">10</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Interview booked</td>
+                  <td class="govuk-table__cell">6</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Unsuccessful at interview</td>
+                  <td class="govuk-table__cell">2</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">Job offer</td>
+                  <td class="govuk-table__cell">4</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+        </div>
+      </div>
+
+
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+      <!-- Application by status - latest view -->
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <h3 class="govuk-heading-m">
+            Latest recorded application status
+          </h3>
+          <p class="govuk-body govuk-!-margin-bottom-6">Shows latest recorded status for each open application in the reporting period.</p>
+
+
+          <div class="govuk-tabs" data-module="govuk-tabs">
+            <h2 class="govuk-tabs__title">
+              Contents
+            </h2>
+            <ul class="govuk-tabs__list">
+              <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                <a class="govuk-tabs__tab" href="#latest-chart">
+                  Latest application status chart view
+                </a>
+              </li>
+              <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#latest-table">
+                  Latest application status table view
+                </a>
+              </li>
+            </ul>
+            <div class="govuk-tabs__panel" id="latest-chart">
+              <!-- <h4 class="govuk-heading-s">Chart view</h4> -->
+              <img class="govuk-!-margin-bottom-4" style="max-width: 700px" src="/public/images/Chart2.jpg" alt="#">
+            </div>
+
+            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="latest-table">
+              <!-- <h4 class="govuk-heading-s">Table view</h4> -->
+              <table class="govuk-table">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Application status</th>
+                    <th scope="col" class="govuk-table__header">Total</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Application submitted</td>
+                    <td class="govuk-table__cell">2</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Application unsuccessful</td>
+                    <td class="govuk-table__cell">16</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Selected for interview</td>
+                    <td class="govuk-table__cell">2</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Interview booked</td>
+                    <td class="govuk-table__cell">0</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Unsuccessful at interview</td>
+                    <td class="govuk-table__cell">2</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">Job offer</td>
+                    <td class="govuk-table__cell">4</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+          </div>
+        </div>
+
+    <p class="govuk-body">For more detail, download the full data as a CSV file.</p>
+
+
+</div>
+
+
+{% endblock %}

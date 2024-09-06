@@ -1,0 +1,121 @@
+{% extends "./includes/template.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+        <form method="post">
+
+          <span class="govuk-caption-l">Add a job - step 1 of 5</span>
+          <h1 class="govuk-heading-l">
+            Job role and source
+          </h1>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="employerNameJob">
+              Employer name
+            </label>
+            <div id="employernameJob-hint" class="govuk-hint">
+              Start typing the name of the employer
+            </div>
+            <input class="govuk-input" id="employerNameJob" name="employerNameJob" type="text">
+
+            <details class="govuk-details govuk-!-margin-top-4">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  The employer isn't listed
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <p class="govuk-body">You must <a class="govuk-link" href="upload-add-employer">add the employer</a> before adding a job.</p>
+                <p class="govuk-body">Any data you’ve already entered on this screen will be lost.</p>
+              </div>
+            </details>
+
+          </div>
+
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="jobTitle">
+              Job title
+            </label>
+            <input class="govuk-input" id="jobTitle" name="jobTitle" type="text">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="jobSector">
+              Job sector
+            </label>
+            <select class="govuk-select" id="jobSector" name="jobSector">
+              <option value="updated" selected>Choose job sector</option>
+              <option value="Animal care and farming">Animal care and farming</option>
+              <option value="Cleaning and maintenance">Cleaning and maintenance</option>
+              <option value="Construction and trade">Construction and trade</option>
+              <option value="Driving and transport">Driving and transport</option>
+              <option value="Hair, beauty and wellbeing">Hair, beauty and wellbeing</option>
+              <option value="Hospitality and catering">Hospitality and catering</option>
+              <option value="IT and digital">IT and digital</option>
+              <option value="Manufacturing and technical">Manufacturing and technical</option>
+              <option value="Office or desk-based">Office or desk-based</option>
+              <option value="Retail and sales">Retail and sales</option>
+              <option value="Sport and fitness">Sport and fitness</option>
+              <option value="Training and support">Training and support</option>
+              <option value="Warehousing and storage">Warehousing and storage</option>
+              <option value="Waste management">Waste management</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="vacancyNumber">
+              Number of vacancies
+            </label>
+            <input class="govuk-input govuk-input--width-5" id="vacancyNumber" name="vacancyNumber" type="text" inputmode="numeric">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="jobSource">
+              Job source
+            </label>
+            <select class="govuk-select" id="jobSource" name="jobSource">
+              <option value="1" selected>Choose job source</option>
+              <option value="2">Department for Work and Pensions (DWP)</option>
+              <option value="3">Education</option>
+              <option value="4">Employment advisory board (EAB)</option>
+              <option value="5">Information, Advice and Guidance (IAG)</option>
+              <option value="6">New Futures Network (NFN)</option>
+              <option value="7">Prison</option>
+              <option value="8">Prison Employment Lead (PEL)</option>
+              <option value="9">Third Sector</option>
+              <option value="10">Other</option>
+            </select>
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="charity">
+              Is this job supported by a charity? (optional)
+            </label>
+            <div id="charity-hint" class="govuk-hint">
+              Enter the name of the Third Sector organisation supporting the job
+            </div>
+            <input class="govuk-input" id="charity" name="charity" type="text">
+          </div>
+
+
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+
+        </form>
+
+        </div>
+      </div>
+  </main>
+</div>
+
+{% endblock %}
