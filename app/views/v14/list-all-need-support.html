@@ -24,87 +24,69 @@
       Get someone ready to work
     </h1>
 
-      <div class="govuk-form-group">
-        <div class="govuk-form-group filter-box govuk-!-margin-top-4">
+    <!-- Filter -->
 
-        <div class="govuk-grid-column-full govuk-!-margin-bottom-3">
-          <fieldset class="govuk-fieldset" aria-describedby="simple-filter-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s govuk-!-margin-bottom-0">
-              Status
-            </legend>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <div class="govuk-form-group">
+            <div class="govuk-form-group filter-box govuk-!-margin-top-4">
 
-            <div class="govuk-radios govuk-radios--inline govuk-radios govuk-radios--small">
-              <div class="govuk-radios__item">
-                <input onclick="document.location.href='./list-all'" class="govuk-radios__input" id="simple-filter" name="simple-filter" type="radio" value="All">
-                <label class="govuk-label govuk-radios__label" for="simple-filter">All</a>
-                </label>
-              </div>
+              <form method="post">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s govuk-!-margin-bottom-2">
+                    Filter by
+                  </legend>
 
-              <div class="govuk-radios__item">
-                  <input onclick="document.location.href='./list-all-no-profile'" class="govuk-radios__input" id="simple-filter-2" name="simple-filter" type="radio" value="Not started">
-                  <label class="govuk-label govuk-radios__label" for="simple-filter-2">Not started</label>
-              </div>
+                <div class="govuk-grid-row govuk-!-margin-bottom-4">
 
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="simple-filter-3" name="simple-filter" type="radio" value="Needs support" checked="true">
-                <label class="govuk-label govuk-radios__label" for="simple-filter-3">Needs support</label>
-              </div>
+                  <div class="govuk-grid-column-one-third">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="search">
+                        Prisoner's name
+                      </label>
+                      <input class="govuk-input" id="search" name="search" type="search" aria-describedby="search-hint">
+                    </div>
+                  </div>
 
-              <div class="govuk-radios__item">
-                <input onclick="document.location.href='./list-all-ready'" class="govuk-radios__input" id="simple-filter-4" name="simple-filter" type="radio" value="Ready to work">
-                <label class="govuk-label govuk-radios__label" for="simple-filter-4">Ready to work</label>
-              </div>
+                  <div class="govuk-grid-column-one-third">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="TimeUntilRelease">
+                        Time until release
+                      </label>
+                      <select class="govuk-select" id="TimeUntilRelease" name="TimeUntilRelease">
+                        <option value="induction">Entered prison within the last 14 days</option>
+                        <option value="12weeks" selected>Prisoners 12 weeks from release</option>
+                        <option value="24weeks">Prisoners 24 weeks from release</option>
+                        <option value="all">All prisoners</option>
+                      </select>
+                    </div>
+                  </div>
 
-              <div class="govuk-radios__item">
-                <input onclick="document.location.href='./list-all-doesnt-want-support'" class="govuk-radios__input" id="simple-filter-5" name="simple-filter" type="radio" value="Does not want support">
-                <label class="govuk-label govuk-radios__label" for="simple-filter-5">Does not want support</label>
-              </div>
+                  <div class="govuk-grid-column-one-third">
+                    <div class="govuk-form-group">
+                    <label class="govuk-label" for="status">
+                      Status
+                    </label>
+                      <select class="govuk-select" id="status" name="status">
+                        <option value="All">All</option>
+                        <option value="Not started">Not started</option>
+                        <option value="Needs support" selected>Needs support</option>
+                        <option value="Ready to work">Ready to work</option>
+                        <option value="Does not want support">Does not want support</option>
+                        <option value="No right to work">No right to work</option>
+                      </select>
+                    </div>
+                  </div>
 
-              <div class="govuk-radios__item">
-                <input onclick="document.location.href='./list-all-ineligible'" class="govuk-radios__input" id="simple-filter-6" name="simple-filter" type="radio" value="No right to work">
-                <label class="govuk-label govuk-radios__label" for="simple-filter-6">No right to work</label>
-              </div>
+                </div>
+
+                <button class="govuk-button govuk-!-margin-bottom-0" data-module="govuk-button">
+                  Apply filters
+                </button>
+                </form>
+
             </div>
-          </fieldset>
-        </div>
-
-
-        <div class="govuk-grid-column-one-third">
-
-          <!-- <div class="moj-search">
-            <form method="post">
-              <div class="govuk-form-group">
-                <label class="govuk-label govuk-!-font-weight-bold moj-search__label" for="filterName">
-                  Filter by prisoner's name
-                </label>
-                <input class="govuk-input moj-search__input " onkeyup="myFunction()" id="filterName" name="filterName" type="text" aria-describedby="search-hint">
-              </div>
-            </form>
-          </div> -->
-
-          <div class="moj-search">
-            <form method="post">
-
-              <div class="govuk-form-group">
-                <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
-                  Search by prisoner's name
-                </label>
-                <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
-              </div>
-
-              <button class="govuk-button moj-search__button " data-module="govuk-button">
-                Search
-              </button>
-
-            </form>
           </div>
-
-
         </div>
-
-
-    </div>
-  </div>
 
 <!-- add table of people  -->
 

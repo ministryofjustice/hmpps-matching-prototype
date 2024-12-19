@@ -43,6 +43,178 @@ router.post(version + 'upload-add-job-multi-check', function (req, res) {
   res.redirect(version + 'upload-job-list')
 })
 
+/////  GSRTW list views  /////
+
+
+// list all
+  router.post(version + 'list-all', function (req, res) {
+    if (req.session.data['status'] == "Not started")
+  {
+    res.redirect(version + 'list-all-no-profile')
+  }
+    else if (req.session.data['status'] == "Needs support")
+  {
+    res.redirect(version + 'list-all-need-support')
+  }
+    else if (req.session.data['status'] == "Ready to work")
+  {
+  res.redirect(version + 'list-all-ready')
+  }
+    else if (req.session.data['status'] == "Does not want support")
+  {
+  res.redirect(version + 'list-all-doesnt-want-support')
+  }
+  else if (req.session.data['status'] == "No right to work")
+    {
+  res.redirect(version + 'list-all-ineligible')
+  }
+    else
+  {
+    res.redirect(version + 'list-all')
+  }
+  })
+
+// list all - Not started
+  router.post(version + 'list-all-no-profile', function (req, res) {
+    if (req.session.data['status'] == "All")
+  {
+    res.redirect(version + 'list-all')
+  }
+    else if (req.session.data['status'] == "Needs support")
+  {
+    res.redirect(version + 'list-all-need-support')
+  }
+    else if (req.session.data['status'] == "Ready to work")
+  {
+  res.redirect(version + 'list-all-ready')
+  }
+    else if (req.session.data['status'] == "Does not want support")
+  {
+  res.redirect(version + 'list-all-doesnt-want-support')
+  }
+  else if (req.session.data['status'] == "No right to work")
+    {
+  res.redirect(version + 'list-all-ineligible')
+  }
+    else
+  {
+    res.redirect(version + 'list-all-no-profile')
+  }
+  })
+
+// list all - Needs support
+  router.post(version + 'list-all-need-support', function (req, res) {
+    if (req.session.data['status'] == "All")
+  {
+    res.redirect(version + 'list-all')
+  }
+    else if (req.session.data['status'] == "Not started")
+  {
+    res.redirect(version + 'list-all-no-profile')
+  }
+    else if (req.session.data['status'] == "Ready to work")
+  {
+  res.redirect(version + 'list-all-ready')
+  }
+    else if (req.session.data['status'] == "Does not want support")
+  {
+  res.redirect(version + 'list-all-doesnt-want-support')
+  }
+  else if (req.session.data['status'] == "No right to work")
+    {
+  res.redirect(version + 'list-all-ineligible')
+  }
+    else
+  {
+    res.redirect(version + 'list-all-need-support')
+  }
+  })
+
+  // list all - Ready to work
+    router.post(version + 'list-all-ready', function (req, res) {
+      if (req.session.data['status'] == "All")
+    {
+      res.redirect(version + 'list-all')
+    }
+      else if (req.session.data['status'] == "Not started")
+    {
+      res.redirect(version + 'list-all-no-profile')
+    }
+      else if (req.session.data['status'] == "Needs support")
+    {
+    res.redirect(version + 'list-all-need-support')
+    }
+      else if (req.session.data['status'] == "Does not want support")
+    {
+    res.redirect(version + 'list-all-doesnt-want-support')
+    }
+    else if (req.session.data['status'] == "No right to work")
+      {
+    res.redirect(version + 'list-all-ineligible')
+    }
+      else
+    {
+      res.redirect(version + 'list-all-ready')
+    }
+    })
+
+  // list all - Does not want support
+    router.post(version + 'list-all-doesnt-want-support', function (req, res) {
+      if (req.session.data['status'] == "All")
+    {
+      res.redirect(version + 'list-all')
+    }
+      else if (req.session.data['status'] == "Not started")
+    {
+      res.redirect(version + 'list-all-no-profile')
+    }
+      else if (req.session.data['status'] == "Needs support")
+    {
+    res.redirect(version + 'list-all-need-support')
+    }
+      else if (req.session.data['status'] == "Does not want support")
+    {
+    res.redirect(version + 'list-all-doesnt-want-support')
+    }
+    else if (req.session.data['status'] == "No right to work")
+      {
+    res.redirect(version + 'list-all-ineligible')
+    }
+      else
+    {
+      res.redirect(version + 'list-all-doesnt-want-support')
+    }
+    })
+
+
+  // list all - No right to work
+    router.post(version + 'list-all-ineligible', function (req, res) {
+      if (req.session.data['status'] == "All")
+    {
+      res.redirect(version + 'list-all')
+    }
+      else if (req.session.data['status'] == "Not started")
+    {
+      res.redirect(version + 'list-all-no-profile')
+    }
+      else if (req.session.data['status'] == "Needs support")
+    {
+    res.redirect(version + 'list-all-need-support')
+    }
+      else if (req.session.data['status'] == "Does not want support")
+    {
+    res.redirect(version + 'list-all-doesnt-want-support')
+    }
+    else if (req.session.data['status'] == "No right to work")
+      {
+    res.redirect(version + 'list-all-doesnt-want-support')
+    }
+      else
+    {
+      res.redirect(version + 'list-all-ineligible')
+    }
+    })
+
 
 //   // q1 Work on release
 //   router.post(version + 'q1-work-on-release', function (req, res) {
