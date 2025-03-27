@@ -1,0 +1,197 @@
+{% extends "../includes/template.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+  <!-- Breadcrumb -->
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="../dps-home">Digital Prison Services</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="../home">Work after leaving prison</a>
+      </li>
+    </ol>
+  </div>
+
+  <!-- Main page -->
+
+  <main class="govuk-main-wrapper">
+
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">
+      Add jobs and employers
+    </h1>
+
+  <!-- TABS -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <nav class="moj-sub-navigation govuk-!-margin-bottom-2" aria-label="Sub navigation">
+        <ul class="moj-sub-navigation__list">
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" aria-current="page" href="#">Employers</a>
+          </li>
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link"  href="jobs-list">Jobs</a>
+          </li>
+    
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+
+  <!-- FILTERS -->
+
+    <div class="govuk-form-group filter-box govuk-!-margin-top-4">
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <h2 class="govuk-heading-s govuk-!-margin-bottom-2">
+              Filter by
+            </h2>
+          </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="search">
+              Employer name
+            </label>
+            <input class="govuk-input" id="search" name="search" type="search" aria-describedby="search-hint">
+          </div>
+        </div>
+
+
+        <div class="govuk-grid-column-one-third">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="application-status">
+              Employer sector
+            </label>
+            <select class="govuk-select" id="application-status" name="application-status">
+              <option value="all" selected>All</option>
+              <option value="application">Application submitted</option>
+              <option value="application-unsuccessful">Application unsuccessful</option>
+              <option value="interview">Selected for interview</option>
+              <option value="interview-booked">Interview booked</option>
+              <option value="interview-unsuccessful">Unsuccessful at interview</option>
+              <option value="job-offer">Job offer</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <div class="govuk-checkboxes govuk-checkboxes--small govuk-!-margin-top-3" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="filter" name="filter" type="checkbox" value="Show prisoners who need support">
+              <label class="govuk-label govuk-checkboxes__label" for="filter">
+                Show prisoners who 'Need support'
+              </label>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <form method="post">
+            <button class="govuk-button govuk-!-margin-top-4 govuk-!-margin-bottom-0" data-module="govuk-button">
+              Apply filters
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+<!-- NUMBER OF RESULTS -->
+
+<div class="govuk-button-group">
+  <button type="submit" class="govuk-button govuk-button--secondary right" data-module="govuk-button">
+    Add an employer
+  </button>
+</div>
+<!-- TABLE OF RESULTS -->
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header" aria-sort="ascending"><button type="button" data-index="0">Employer</button></th>
+          <th scope="col" class="govuk-table__header">Employer sector</th>
+          <!-- <th scope="col" class="govuk-table__header">Status</th> -->
+          <th scope="col" class="govuk-table__header">Employer status</th>
+          <th scope="col" class="govuk-table__header" aria-sort="ascending"><button type="button" data-index="0">Date added</button></th>
+        </tr>
+      </thead>
+
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">ABC Construction</td>
+          <td class="govuk-table__cell">Construction and trade</td>
+          <td class="govuk-table__cell">Regional</td>
+          <td class="govuk-table__cell">4 Feb 2024</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Amazon</td>
+          <td class="govuk-table__cell">Warehousing and storage</td>
+          <td class="govuk-table__cell">Key partner</td>
+          <td class="govuk-table__cell">30 Dec 2023</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Axis Ltd</td>
+          <td class="govuk-table__cell">Construction and trade</td>
+          <td class="govuk-table__cell">Local</td>
+          <td class="govuk-table__cell">14 Feb 2024</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">BB Builders</td>
+          <td class="govuk-table__cell">Construction and trade</td>
+          <td class="govuk-table__cell">Local</td>
+          <td class="govuk-table__cell">1 Mar 2024</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">BMW cars</td>
+          <td class="govuk-table__cell">Retail and sales</td>
+          <td class="govuk-table__cell">Gold</td>
+          <td class="govuk-table__cell">20 Dec 2023</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+</div>
+
+
+
+<script>
+  function myFunction() {
+    // Declare variables
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("filterName");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("prisonerTable");
+    tr = table.getElementsByTagName("tr");
+
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+</script>
+
+
+
+{% endblock %}
