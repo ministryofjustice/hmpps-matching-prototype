@@ -114,7 +114,7 @@
 <!-- NUMBER OF RESULTS -->
 
 <div class="govuk-button-group right">
-  <a class="govuk-link govuk-button govuk-button--secondary" href="./add-job-source">Add an employer</a>
+  <a class="govuk-link govuk-button govuk-button--secondary" href="./add-employer-details">Add an employer</a>
 
 </div>
 <!-- TABLE OF RESULTS -->
@@ -130,7 +130,24 @@
       </thead>
 
       <tbody class="govuk-table__body">
+        {% if (data['new-employer'] == "true" ) %}
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="./employer-detail?name=XYZ Property Ltd" data-sort-value="XYZ Property Ltd">XYZ Property Ltd</a></td>
+          <td class="govuk-table__cell">Facilities management</td>
+          <td class="govuk-table__cell">Regional</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1 April 2025">1 April 2025</td>
+        </tr>
 
+    
+        {% for employer in data.employers %}
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="./employer-detail?name={{ employer.name }}" data-sort-value="{{ employer.name }}">{{ employer.name }}</a></td>
+          <td class="govuk-table__cell">{{ employer.sector }}</td>
+          <td class="govuk-table__cell">{{ employer.status }}</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1 April 2025">{{ employer.dateAdded }}</td>
+        </tr>
+      {% endfor %}
+        {% else %}
         {% for employer in data.employers %}
         <tr class="govuk-table__row">
           <td class="govuk-table__cell"><a href="./employer-detail?name={{ employer.name }}" data-sort-value="{{ employer.name }}">{{ employer.name }}</a></td>
@@ -139,6 +156,9 @@
           <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ employer.date }}">{{ employer.dateAdded }}</td>
         </tr>
       {% endfor %}
+        {% endif %}
+
+
 
       
       </tbody>
