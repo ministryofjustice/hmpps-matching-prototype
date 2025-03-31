@@ -1,0 +1,115 @@
+{% extends "../includes/template-slim.html" %}
+
+{% block content %}
+<div class="govuk-width-container govuk-!-static-padding-top-5">
+
+  <!-- Breadcrumb -->
+
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+    <span class="govuk-caption-l">Add a job - step 2 of 5</span>
+
+  <h1 class="govuk-heading-l">Location and contract details</h1>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form method="post" action="/add-job-description">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="job-location">
+            Job location
+          </label>
+          <span id="job-location-hint" class="govuk-hint">
+            Enter postcode.
+          </span>
+          <input class="govuk-input" id="job-location" name="job-location" type="text" aria-describedby="job-location-hint">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="salary-from">
+            Salary from
+          </label>
+          <span id="salary-from-hint" class="govuk-hint">
+            Enter minimum salary amount using numbers.
+          </span>
+          <input class="govuk-input" id="salary-from" name="salary-from" type="text" aria-describedby="salary-from-hint">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="salary-to">
+            Salary to (optional)
+          </label>
+          <input class="govuk-input" id="salary-to" name="salary-to" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="additional-salary-info">
+            Additional salary information (optional)
+          </label>
+          <input class="govuk-input" id="additional-salary-info" name="additional-salary-info" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              Does salary pay at least minimum wage?
+            </legend>
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="minimum-wage-yes" name="minimum-wage" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="minimum-wage-yes">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="minimum-wage-no" name="minimum-wage" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="minimum-wage-no">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="hours-per-week">
+            Hours per week
+          </label>
+          <select class="govuk-select" id="hours-per-week" name="hours-per-week">
+            <option value="">Choose hours per week</option>
+            <!-- Add other options here -->
+          </select>
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contract-type">
+            Contract type
+          </label>
+          <select class="govuk-select" id="contract-type" name="contract-type">
+            <option value="">Choose contract type</option>
+            <!-- Add other options here -->
+          </select>
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="base-location">
+            Base location (optional)
+          </label>
+          <span id="base-location-hint" class="govuk-hint">
+            Enter base location.
+          </span>
+          <input class="govuk-input" id="base-location" name="base-location" type="text" aria-describedby="base-location-hint">
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}

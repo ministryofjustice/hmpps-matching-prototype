@@ -1,0 +1,91 @@
+{% extends "../includes/template-slim.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+
+  <!-- Breadcrumb -->
+
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+
+    <span class="govuk-caption-l">Add a job - step 1 of 5</span>
+  <h1 class="govuk-heading-l">Job role and source</h1>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form method="post" action="/add-job-location">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="employer-name">
+            Employer name
+          </label>
+          <span id="employer-name-hint" class="govuk-hint">
+            Start typing the name of the employer.
+          </span>
+          <input class="govuk-input" id="employer-name" name="employer-name" type="text" aria-describedby="employer-name-hint">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="job-title">
+            Job title
+          </label>
+          <input class="govuk-input" id="job-title" name="job-title" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="job-sector-1">
+            Job sector (optional)
+          </label>
+          <select class="govuk-select" id="job-sector-1" name="job-sector-1">
+            <option value="">Choose HMPPS industry sector</option>
+            <!-- Add other options here -->
+          </select>
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="hmpps-reporting-industry-sector">
+            HMPPS reporting industry sector (optional)
+          </label>
+          <select class="govuk-select" id="hmpps-reporting-industry-sector" name="hmpps-reporting-industry-sector">
+            <option value="">Choose HMPPS reporting industry sector</option>
+            <!-- Add other options here -->
+          </select>
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="number-of-vacancies">
+            Number of vacancies (optional)
+          </label>
+          <input class="govuk-input" id="number-of-vacancies" name="number-of-vacancies" type="number">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="job-source-2">
+            Job source (optional)
+          </label>
+          <select class="govuk-select" id="job-source-2" name="job-source-2">
+            <option value="">Choose source</option>
+            <!-- Add other options here -->
+          </select>
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="charity-supported">
+            Is this job supported by a charity? (Optional)
+          </label>
+          <input class="govuk-input" id="charity-supported" name="charity-supported" type="text">
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}

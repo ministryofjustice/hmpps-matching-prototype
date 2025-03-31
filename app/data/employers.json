@@ -1,0 +1,62 @@
+[
+    {
+        "name": "ABC Construction",
+        "sector": "Construction and trade",
+        "status": "Regional",
+        "dateAdded": "4 Feb 2024"
+    },
+    {
+        "name": "Amazon",
+        "sector": "Warehousing and storage",
+        "status": "Key partner",
+        "dateAdded": "30 Dec 2023"
+    },
+    {
+        "name": "Axis Ltd",
+        "sector": "Construction and trade",
+        "status": "Local",
+        "dateAdded": "14 Feb 2024"
+    },
+    {
+        "name": "BB Builders",
+        "sector": "Construction and trade",
+        "status": "Local",
+        "dateAdded": "1 Mar 2024"
+    },
+    {
+        "name": "BMW cars",
+        "sector": "Retail and sales",
+        "status": "Gold",
+        "dateAdded": "20 Dec 2023"
+    },
+    {
+        "name": "Timpson",
+        "sector": "Retail and services",
+        "status": "Inclusive employer",
+        "dateAdded": "10 Jan 2024"
+    },
+    {
+        "name": "Greggs",
+        "sector": "Food production and retail",
+        "status": "Inclusive employer",
+        "dateAdded": "15 Jan 2024"
+    },
+    {
+        "name": "Virgin Group",
+        "sector": "Various sectors",
+        "status": "Inclusive employer",
+        "dateAdded": "20 Jan 2024"
+    },
+    {
+        "name": "Tesco",
+        "sector": "Retail and sales",
+        "status": "Inclusive employer",
+        "dateAdded": "25 Jan 2024"
+    },
+    {
+        "name": "Green Spaces Ltd",
+        "sector": "Facilities management",
+        "status": "Local",
+        "dateAdded": "30 Jan 2024"
+    }
+]

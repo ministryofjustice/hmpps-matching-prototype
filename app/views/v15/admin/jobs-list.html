@@ -134,34 +134,19 @@
   </thead>
 
   <tbody class="govuk-table__body">
+
+    {% for job in data.jobs %}
     <tr class="govuk-table__row">
-      <td class="govuk-table__cell">Apprentice plasterer</td>
-      <td class="govuk-table__cell">1</td>
-      <td class="govuk-table__cell">Construction and trade</td>
-      <td class="govuk-table__cell">ABC Construction Ltd</td>
-      <td class="govuk-table__cell">4 Feb 2024</td>
+      <td class="govuk-table__cell"><a href="./job-detail?name={{ job.title }}">{{ job.title }}</a></td>
+      <td class="govuk-table__cell">{{ job.vacancies }}</td>
+      <td class="govuk-table__cell">{{ job.sector }}</td>
+      <td class="govuk-table__cell">{{ job.employer }}</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ job.dateAdded }}">{{ job.dateAdded }}</td>
     </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">Forklift operator</td>
-      <td class="govuk-table__cell">1</td>
-      <td class="govuk-table__cell">Warehousing and storage</td>
-      <td class="govuk-table__cell">Amazon</td>
-      <td class="govuk-table__cell">30 Dec 2023</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">Plumbing assistant</td>
-      <td class="govuk-table__cell">1</td>
-      <td class="govuk-table__cell">Construction and trade</td>
-      <td class="govuk-table__cell">Axis Ltd</td>
-      <td class="govuk-table__cell">14 Feb 2024</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">Warehouse handler</td>
-      <td class="govuk-table__cell">1</td>
-      <td class="govuk-table__cell">Retail and sales</td>
-      <td class="govuk-table__cell">Tesco</td>
-      <td class="govuk-table__cell">20 Dec 2023</td>
-    </tr>
+  {% endfor %}
+
+
+
   </tbody>
 </table>
 

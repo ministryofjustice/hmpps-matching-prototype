@@ -25,6 +25,7 @@
     </h1>
 
   <!-- TABS -->
+   
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
@@ -54,6 +55,7 @@
             </h2>
           </div>
       </div>
+
 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-one-third">
@@ -117,7 +119,6 @@
   </button>
 </div>
 <!-- TABLE OF RESULTS -->
-
     <table class="govuk-table">
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
@@ -130,36 +131,17 @@
       </thead>
 
       <tbody class="govuk-table__body">
+
+        {% for employer in data.employers %}
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell">ABC Construction</td>
-          <td class="govuk-table__cell">Construction and trade</td>
-          <td class="govuk-table__cell">Regional</td>
-          <td class="govuk-table__cell">4 Feb 2024</td>
+          <td class="govuk-table__cell"><a href="./employer-detail?name={{ employer.name }}" data-sort-value="{{ employer.name }}">{{ employer.name }}</a></td>
+          <td class="govuk-table__cell">{{ employer.sector }}</td>
+          <td class="govuk-table__cell">{{ employer.status }}</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ employer.date }}">{{ employer.dateAdded }}</td>
         </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Amazon</td>
-          <td class="govuk-table__cell">Warehousing and storage</td>
-          <td class="govuk-table__cell">Key partner</td>
-          <td class="govuk-table__cell">30 Dec 2023</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Axis Ltd</td>
-          <td class="govuk-table__cell">Construction and trade</td>
-          <td class="govuk-table__cell">Local</td>
-          <td class="govuk-table__cell">14 Feb 2024</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">BB Builders</td>
-          <td class="govuk-table__cell">Construction and trade</td>
-          <td class="govuk-table__cell">Local</td>
-          <td class="govuk-table__cell">1 Mar 2024</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">BMW cars</td>
-          <td class="govuk-table__cell">Retail and sales</td>
-          <td class="govuk-table__cell">Gold</td>
-          <td class="govuk-table__cell">20 Dec 2023</td>
-        </tr>
+      {% endfor %}
+
+      
       </tbody>
     </table>
 

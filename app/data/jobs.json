@@ -1,0 +1,142 @@
+[
+    {
+        "title": "Apprentice plasterer",
+        "vacancies": "1",
+        "sector": "Construction and trade",
+        "employer": "ABC Construction Ltd",
+        "dateAdded": "4 Feb 2024"
+    },
+    {
+        "title": "Forklift operator",
+        "vacancies": "1",
+        "sector": "Warehousing and storage",
+        "employer": "Amazon",
+        "dateAdded": "30 Dec 2023"
+    },
+    {
+        "title": "Plumbing assistant",
+        "vacancies": "1",
+        "sector": "Construction and trade",
+        "employer": "Axis Ltd",
+        "dateAdded": "14 Feb 2024"
+    },
+    {
+        "title": "Warehouse handler",
+        "vacancies": "1",
+        "sector": "Retail and sales",
+        "employer": "Tesco",
+        "dateAdded": "20 Dec 2023"
+    },
+    {
+        "title": "Kitchen assistant",
+        "vacancies": "2",
+        "sector": "Hospitality",
+        "employer": "Prison Catering Services",
+        "dateAdded": "10 Jan 2024"
+    },
+    {
+        "title": "Grounds maintenance worker",
+        "vacancies": "3",
+        "sector": "Facilities management",
+        "employer": "Green Spaces Ltd",
+        "dateAdded": "5 Jan 2024"
+    },
+    {
+        "title": "Cleaning operative",
+        "vacancies": "4",
+        "sector": "Cleaning services",
+        "employer": "CleanCo",
+        "dateAdded": "15 Jan 2024"
+    },
+    {
+        "title": "Recycling operative",
+        "vacancies": "2",
+        "sector": "Waste management",
+        "employer": "Eco Recycle",
+        "dateAdded": "22 Jan 2024"
+    },
+    {
+        "title": "Laundry assistant",
+        "vacancies": "1",
+        "sector": "Facilities management",
+        "employer": "Laundry Services Ltd",
+        "dateAdded": "18 Jan 2024"
+    },
+    {
+        "title": "Warehouse packer",
+        "vacancies": "3",
+        "sector": "Warehousing and storage",
+        "employer": "Logistics Solutions",
+        "dateAdded": "25 Jan 2024"
+    },
+    {
+        "title": "Gardener",
+        "vacancies": "2",
+        "sector": "Horticulture",
+        "employer": "Green Thumb",
+        "dateAdded": "12 Jan 2024"
+    },
+    {
+        "title": "Painter and decorator",
+        "vacancies": "1",
+        "sector": "Construction and trade",
+        "employer": "Home Improvements Ltd",
+        "dateAdded": "8 Jan 2024"
+    },
+    {
+        "title": "Catering assistant",
+        "vacancies": "2",
+        "sector": "Hospitality",
+        "employer": "Food Services Inc.",
+        "dateAdded": "20 Jan 2024"
+    },
+    {
+        "title": "Maintenance worker",
+        "vacancies": "1",
+        "sector": "Facilities management",
+        "employer": "FixIt Ltd",
+        "dateAdded": "28 Jan 2024"
+    },
+    {
+        "title": "Production line worker",
+        "vacancies": "3",
+        "sector": "Manufacturing",
+        "employer": "Factory Solutions",
+        "dateAdded": "2 Feb 2024"
+    },
+    {
+        "title": "Retail assistant",
+        "vacancies": "2",
+        "sector": "Retail and sales",
+        "employer": "High Street Retailers",
+        "dateAdded": "6 Feb 2024"
+    },
+    {
+        "title": "Delivery driver",
+        "vacancies": "1",
+        "sector": "Logistics",
+        "employer": "Quick Deliveries",
+        "dateAdded": "9 Feb 2024"
+    },
+    {
+        "title": "Warehouse operative",
+        "vacancies": "2",
+        "sector": "Warehousing and storage",
+        "employer": "Storage Solutions",
+        "dateAdded": "11 Feb 2024"
+    },
+    {
+        "title": "Construction laborer",
+        "vacancies": "3",
+        "sector": "Construction and trade",
+        "employer": "BuildIt Ltd",
+        "dateAdded": "13 Feb 2024"
+    },
+    {
+        "title": "Office cleaner",
+        "vacancies": "2",
+        "sector": "Cleaning services",
+        "employer": "Sparkle Clean",
+        "dateAdded": "16 Feb 2024"
+    }
+]
