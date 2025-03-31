@@ -1,0 +1,55 @@
+{% extends "../includes/template-slim.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+  <!-- Breadcrumb -->
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">ABC Construction</h1>
+      <h2 class="govuk-heading-m">Employer details</h2>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Employer name</dt>
+    <dd class="govuk-summary-list__value">ABC Construction</dd>
+    <dd class="govuk-summary-list__actions">
+      <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> employer name</span></a>
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Employer sector</dt>
+    <dd class="govuk-summary-list__value">Construction</dd>
+    <dd class="govuk-summary-list__actions">
+      <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> employer sector</span></a>
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Employer status</dt>
+    <dd class="govuk-summary-list__value">Silver</dd>
+    <dd class="govuk-summary-list__actions">
+      <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> employer status</span></a>
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">Employer description</dt>
+    <dd class="govuk-summary-list__value">Construction firm based in Liverpool.</dd>
+    <dd class="govuk-summary-list__actions">
+      <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> employer description</span></a>
+    </dd>
+  </div>
+</dl>
+
+<form method="post" action="./employer-list?new-employer=true">
+  <button class="govuk-button">Update employer and save</button>
+</form>
+    </div>
+  </div>
+
+</div>
+{% endblock %}
