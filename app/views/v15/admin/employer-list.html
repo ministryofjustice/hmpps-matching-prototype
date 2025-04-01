@@ -141,7 +141,7 @@
     
         {% for employer in data.employers %}
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a href="./employer-detail?name={{ employer.name }}" data-sort-value="{{ employer.name }}">{{ employer.name }}</a></td>
+          <td class="govuk-table__cell"><a href="./employer-detail?name={{ employer.name }}&?sector={{ employer.sector }}" data-sort-value="{{ employer.name }}">{{ employer.name }}</a></td>
           <td class="govuk-table__cell">{{ employer.sector }}</td>
           <td class="govuk-table__cell">{{ employer.status }}</td>
           <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1 April 2025">{{ employer.dateAdded }}</td>

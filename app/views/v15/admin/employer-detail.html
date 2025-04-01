@@ -8,7 +8,23 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">ABC Construction</h1>
+
+      {% set count = 0 %}
+  {% for employer in data.employers %}
+    {% if employer.id == id %}
+      {% set current_id = employer.id %}
+      {% if id == "2220987654321" and not included_2220987654321 %}
+        {% include('../includes/employer-detail.html') %}
+        {% set included_2220987654321 = true %}
+      {% elif id != "2220987654321" %}
+        {% include('../includes/employer-detail.html') %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+
+
+      <h1 class="govuk-heading-l"> {{ data['emp-name'] }}</h1>
       <h2 class="govuk-heading-m">Employer details</h2>
 
 <dl class="govuk-summary-list">
