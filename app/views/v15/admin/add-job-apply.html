@@ -36,27 +36,27 @@
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
 
                 <div class="govuk-form-group">
-                  <fieldset class="govuk-fieldset" role="group" aria-describedby="start-date-hint">
+                  <fieldset class="govuk-fieldset" role="group" aria-describedby="closing-date-hint">
                     <label class="govuk-label">
-                      Job start date (optional)
+                      Closing date
                     </label>
-                    <div class="govuk-date-input" id="start-date">
+                    <div class="govuk-date-input" id="closing-date">
                       <div class="govuk-date-input__item">
                         <div class="govuk-form-group">
-                          <label class="govuk-label govuk-date-input__label" for="start-day">Day</label>
-                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-day" name="start-day" type="text" inputmode="numeric">
+                          <label class="govuk-label govuk-date-input__label" for="closing-day">Day</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="closing-day" name="closing-day" type="text" inputmode="numeric">
                         </div>
                       </div>
                       <div class="govuk-date-input__item">
                         <div class="govuk-form-group">
-                          <label class="govuk-label govuk-date-input__label" for="start-month">Month</label>
-                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-month" name="start-month" type="text" inputmode="numeric">
+                          <label class="govuk-label govuk-date-input__label" for="closing-month">Month</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="closing-month" name="closing-month" type="text" inputmode="numeric">
                         </div>
                       </div>
                       <div class="govuk-date-input__item">
                         <div class="govuk-form-group">
-                          <label class="govuk-label govuk-date-input__label" for="start-year">Year</label>
-                          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="start-year" name="start-year" type="text" inputmode="numeric">
+                          <label class="govuk-label govuk-date-input__label" for="closing-year">Year</label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="closing-year" name="closing-year" type="text" inputmode="numeric">
                         </div>
                       </div>
                     </div>
@@ -136,10 +136,25 @@
                 <input class="govuk-checkboxes__input" id="disclosure" name="supporting-docs" type="checkbox" value="disclosure-letter">
                 <label class="govuk-label govuk-checkboxes__label" for="disclosure">Disclosure letter</label>
               </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="other" name="supporting-docs" type="checkbox" value="other">
-                <label class="govuk-label govuk-checkboxes__label" for="other">Other</label>
+   
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="other" name="other" type="checkbox" value="other" data-aria-controls="supporting-docs-other">
+                  <label class="govuk-label govuk-checkboxes__label" for="supporting-docs-other">
+                    Other
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="supporting-docs-other">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="supporting-docs-other-other">
+                      Give details
+                    </label>
+                    <textarea class="govuk-textarea" id="supporting-docs-other-other" name="offenceexclusionsother" rows="5" aria-describedby="job-description-hint"></textarea>
+                  </div>
+                </div>
+  
               </div>
+
             </div>
           </fieldset>
         </div>
