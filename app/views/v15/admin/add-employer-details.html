@@ -18,17 +18,29 @@
 <form action="./add-employer-cya" method="post">
   <div class="govuk-form-group">
     <label class="govuk-label" for="employer-name">Employer name</label>
-    <input class="govuk-input" id="employer-name" name="employer-name" type="text">
+   
+  
+      {% if (data['name'] != "empty") %}
+      <input class="govuk-input" id="employer-name" name="employer-name" type="text" value=" {{ data['name'] }}">
+      {% else %}
+      <input class="govuk-input" id="employer-name" name="employer-name" type="text" value="">
+      {% endif %}
+
   </div>
 
   <div class="govuk-form-group">
     <label class="govuk-label" for="employer-sector">Employer sector</label>
     <select class="govuk-select" id="employer-sector" name="employer-sector">
+
       <option value="">Choose employer sector</option>
       <option value="administration-support-services">Administration and support services</option>
       <option value="agriculture">Agriculture (including horticulture, forestry and fishing)</option>
       <option value="arts-entertainment">Arts and entertainment</option>
+      {% if (data['name'] != "empty") %}
+      <option value="construction" selected>Construction</option>
+      {% else %}
       <option value="construction">Construction</option>
+      {% endif %}
       <option value="education">Education</option>
       <option value="energy">Energy</option>
       <option value="finance">Finance (including insurance)</option>
@@ -44,6 +56,8 @@
       <option value="recycling-waste-management">Recycling and waste management (including water supply)</option>
       <option value="retail">Retail (includes wholesale and motor vehicle repair)</option>
       <option value="technology">Technology (includes information and communication)</option>
+     
+     
     </select>
     
   </div>
@@ -54,14 +68,24 @@
       <option value="">Choose employer status</option>
       <option value="platinum">Platinum (key partner)</option>
       <option value="gold">Gold</option>
+      {% if (data['name'] != "empty") %}
+      <option value="silver" selected>Silver</option>
+      {% else %}
       <option value="silver">Silver</option>
+      {% endif %}
     </select>
     
   </div>
 
   <div class="govuk-form-group">
     <label class="govuk-label" for="employer-description">Employer description</label>
+    {% if (data['name'] != "empty") %}
+    <textarea class="govuk-textarea" id="employer-description" name="employer-description" rows="5">A regional construction company specialising in trade services.
+    </textarea>
+    {% else %}
     <textarea class="govuk-textarea" id="employer-description" name="employer-description" rows="5"></textarea>
+    {% endif %}
+    
   </div>
 
   <button class="govuk-button" type="submit">Continue</button>
