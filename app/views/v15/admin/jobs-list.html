@@ -62,7 +62,7 @@
         <div class="govuk-grid-column-one-third">
           <div class="govuk-form-group">
             <label class="govuk-label" for="job">
-              Job title or employer
+              Job title or employer name
             </label>
             <input class="govuk-input" id="job" name="job" type="search" aria-describedby="employer-hint">
           </div>
@@ -70,17 +70,26 @@
 
         <div class="govuk-grid-column-one-third">
           <div class="govuk-form-group">
-            <label class="govuk-label" for="application-status">
+            <label class="govuk-label" for="job-sector">
               Job sector
             </label>
-            <select class="govuk-select" id="application-status" name="application-status">
-              <option value="all" selected>All</option>
-              <option value="application">Application submitted</option>
-              <option value="application-unsuccessful">Application unsuccessful</option>
-              <option value="interview">Selected for interview</option>
-              <option value="interview-booked">Interview booked</option>
-              <option value="interview-unsuccessful">Unsuccessful at interview</option>
-              <option value="job-offer">Job offer</option>
+            <select class="govuk-select" id="job-sector" name="job-sector">
+              <option value="">All job sectors</option>
+              <option value="animal-care-and-farming">Animal care and farming</option>
+              <option value="cleaning-and-maintenance">Cleaning and maintenance</option>
+              <option value="construction-and-trade">Construction and trade</option>
+              <option value="driving-and-transport">Driving and transport</option>
+              <option value="hair-beauty-and-wellbeing">Hair, beauty and wellbeing</option>
+              <option value="hospitality-and-catering">Hospitality and catering</option>
+              <option value="it-and-digital">IT and digital</option>
+              <option value="manufacturing-and-technical">Manufacturing and technical</option>
+              <option value="office-or-desk-based">Office or desk-based</option>
+              <option value="retail-and-sales">Retail and sales</option>
+              <option value="sport-and-fitness">Sport and fitness</option>
+              <option value="training-and-support">Training and support</option>
+              <option value="warehousing-and-storage">Warehousing and storage</option>
+              <option value="waste-management">Waste management</option>
+              <option value="other">Other</option>
             </select>
           </div>
         </div>
