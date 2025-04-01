@@ -9,28 +9,27 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
+      
+      
+
       {% set count = 0 %}
-  {% for employer in data.employers %}
-    {% if employer.id == id %}
-      {% set current_id = employer.id %}
-      {% if id == "2220987654321" and not included_2220987654321 %}
-        {% include('../includes/employer-detail.html') %}
-        {% set included_2220987654321 = true %}
-      {% elif id != "2220987654321" %}
-        {% include('../includes/employer-detail.html') %}
-      {% endif %}
-    {% endif %}
-  {% endfor %}
+      {% set id = data['id'] %}
+      {% set valid_ids = ["520424", "557292", "172526", "536585", "708137", "439670", "596389", "000996", "177266", "123456"] %}
+      {% set included_123456 = false %}
+      
+      {% if id in valid_ids %}
+        {% for employer in data.employers %}
+          {% if employer.id == id %}
+            {% set current_id = employer.id %}
 
 
-
-      <h1 class="govuk-heading-l"> {{ data['emp-name'] }}</h1>
+      <h1 class="govuk-heading-l"> {{ employer.name }}</h1>
       <h2 class="govuk-heading-m">Employer details</h2>
 
 <dl class="govuk-summary-list">
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">Employer name</dt>
-    <dd class="govuk-summary-list__value">ABC Construction</dd>
+    <dd class="govuk-summary-list__value">{{ employer.name }}</dd>
     <dd class="govuk-summary-list__actions">
       <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> employer name</span></a>
     </dd>
@@ -38,7 +37,7 @@
 
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">Employer sector</dt>
-    <dd class="govuk-summary-list__value">Construction</dd>
+    <dd class="govuk-summary-list__value">{{ employer.sector }}</dd>
     <dd class="govuk-summary-list__actions">
       <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> employer sector</span></a>
     </dd>
@@ -46,7 +45,7 @@
 
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">Employer status</dt>
-    <dd class="govuk-summary-list__value">Silver</dd>
+    <dd class="govuk-summary-list__value">{{ employer.status }}</dd>
     <dd class="govuk-summary-list__actions">
       <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> employer status</span></a>
     </dd>
@@ -54,12 +53,20 @@
 
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">Employer description</dt>
-    <dd class="govuk-summary-list__value">Construction firm based in Liverpool.</dd>
+    <dd class="govuk-summary-list__value">{{ employer.description }}</dd>
     <dd class="govuk-summary-list__actions">
       <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> employer description</span></a>
     </dd>
   </div>
 </dl>
+</tr>
+        
+{% endif %}
+{% endfor %}
+
+{% else %}
+<p>Invalid ID provided. No employer details available.</p>
+{% endif %}
 
 <form method="post" action="./employer-list?new-employer=true">
   <button class="govuk-button">Update employer and save</button>

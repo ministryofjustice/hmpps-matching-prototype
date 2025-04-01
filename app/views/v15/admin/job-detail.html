@@ -9,12 +9,26 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">Bricklayer</h1>
+
+
+      {% set count = 0 %}
+      {% set id = data['id'] %}
+      {% set valid_ids = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10","11", "12", "13", "14", "15", "16", "17", "18", "19", "20"] %}
+
+      {% set included_123456 = false %}
+      
+      {% if id in valid_ids %}
+        {% for job in data.jobs %}
+          {% if job.id == id %}
+            {% set current_id = job.id %}
+    
+
+     <h1 class="govuk-heading-l">{{ job.title }}</h1>
       <h2 class="govuk-heading-m">Job role and source</h2>
       <dl class="govuk-summary-list margin-bottom-4">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Employer name</dt>
-          <dd class="govuk-summary-list__value">ABC Construction</dd>
+          <dd class="govuk-summary-list__value">{{ job.employer }}</dd>
           <dd class="govuk-summary-list__actions">
             <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> employer name</span></a>
           </dd>
@@ -22,23 +36,24 @@
       
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Job title</dt>
-          <dd class="govuk-summary-list__value">Bricklayer</dd>
+          <dd class="govuk-summary-list__value">{{ job.title }}</dd>
           <dd class="govuk-summary-list__actions">
             <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job title</span></a>
           </dd>
         </div>
       
+  
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Job sector</dt>
-          <dd class="govuk-summary-list__value">Construction and trade</dd>
+          <dd class="govuk-summary-list__value">{{ job.sector }}</dd>
           <dd class="govuk-summary-list__actions">
             <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job sector</span></a>
           </dd>
         </div>
-      
+
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">NFN industry sector</dt>
-          <dd class="govuk-summary-list__value">Construction</dd>
+          <dd class="govuk-summary-list__value">{{ job.industrySector }}</dd>
           <dd class="govuk-summary-list__actions">
             <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> NFN industry sector</span></a>
           </dd>
@@ -46,7 +61,7 @@
       
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Number of vacancies</dt>
-          <dd class="govuk-summary-list__value">1</dd>
+          <dd class="govuk-summary-list__value">{{ job.vacancies }}</dd>
           <dd class="govuk-summary-list__actions">
             <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> number of vacancies</span></a>
           </dd>
@@ -54,12 +69,13 @@
       
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Job source</dt>
-          <dd class="govuk-summary-list__value">PEL</dd>
+          <dd class="govuk-summary-list__value">{{ job.source }}</dd>
           <dd class="govuk-summary-list__actions">
             <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job source</span></a>
           </dd>
         </div>
-      
+
+
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Job source 2 (optional)</dt>
           <dd class="govuk-summary-list__value">Not provided</dd>
@@ -82,7 +98,7 @@
       <dl class="govuk-summary-list margin-bottom-4">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Job location</dt>
-          <dd class="govuk-summary-list__value">L1 0AA</dd>
+          <dd class="govuk-summary-list__value">{{ job.location }}</dd>
           <dd class="govuk-summary-list__actions">
             <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job location</span></a>
           </dd>
@@ -90,7 +106,7 @@
       
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Salary from</dt>
-          <dd class="govuk-summary-list__value">£12.00</dd>
+          <dd class="govuk-summary-list__value">{{ job.salaryFrom }}</dd>
           <dd class="govuk-summary-list__actions">
             <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> salary from</span></a>
           </dd>
@@ -255,6 +271,15 @@
           </dd>
         </div>
       </dl>
+
+           
+{% endif %}
+{% endfor %}
+
+{% else %}
+<p>Invalid ID provided. No job details available.</p>
+{% endif %}
+
       <form method="post" action="./jobs-list?new-job=true">
 
       <button class="govuk-button">Update job and save</button>

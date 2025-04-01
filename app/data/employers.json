@@ -4,68 +4,79 @@
         "sector": "Construction and trade",
         "status": "Regional",
         "dateAdded": "4 Feb 2024",
-        "id":"123456"
+        "id": "520424",
+        "description": "A regional construction company specialising in trade services."
     },
     {
         "name": "Amazon",
         "sector": "Warehousing and storage",
         "status": "Key partner",
         "dateAdded": "30 Dec 2023",
-        "id":"543345"
+        "id": "557292",
+        "description": "A major player in warehousing and storage, recognized as a key partner."
     },
     {
         "name": "Axis Ltd",
         "sector": "Construction and trade",
         "status": "Local",
         "dateAdded": "14 Feb 2024",
-        "id":"543345"
+        "id": "172526",
+        "description": "A local construction and trade company."
     },
     {
         "name": "BB Builders",
         "sector": "Construction and trade",
         "status": "Local",
         "dateAdded": "1 Mar 2024",
-        "id":"543345"
+        "id": "536585",
+        "description": "A local builder specialising in construction and trade services."
     },
     {
         "name": "BMW cars",
         "sector": "Retail and sales",
         "status": "Gold",
         "dateAdded": "20 Dec 2023",
-        "id":"543345"
+        "id": "708137",
+        "description": "A gold-status retailer known for selling BMW cars."
     },
     {
         "name": "Timpson",
         "sector": "Retail and services",
         "status": "Inclusive employer",
         "dateAdded": "10 Jan 2024",
-        "id":"543345"
+        "id": "439670",
+        "description": "A retail and services company recognized as an inclusive employer."
     },
     {
         "name": "Greggs",
         "sector": "Food production and retail",
         "status": "Inclusive employer",
         "dateAdded": "15 Jan 2024",
-        "id":"543345"
+        "id": "596389",
+        "description": "A food production and retail company known for being an inclusive employer."
     },
     {
         "name": "Virgin Group",
         "sector": "Various sectors",
         "status": "Inclusive employer",
         "dateAdded": "20 Jan 2024",
-        "id":"543345"
+        "id": "000996",
+        "description": "A diverse conglomerate operating in various sectors, recognized as an inclusive employer."
     },
     {
         "name": "Tesco",
         "sector": "Retail and sales",
         "status": "Inclusive employer",
         "dateAdded": "25 Jan 2024",
-        "id":"543345"
+        "id": "177266",
+        "description": "A major retail and sales company known for its inclusive employment practices."
     },
     {
         "name": "Green Spaces Ltd",
         "sector": "Facilities management",
         "status": "Local",
-        "dateAdded": "30 Jan 2024"
+        "dateAdded": "30 Jan 2024",
+        "id": "123456",
+        "description": "A local facilities management company."
     }
 ]
