@@ -15,6 +15,8 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
+   
+
       <form method="post" action="./add-job-location">
 
         <div class="govuk-form-group">
@@ -24,7 +26,14 @@
           <span id="employer-name-hint" class="govuk-hint">
             Start typing the name of the employer.
           </span>
+          {% if (data['title'] != "empty") %}
+          <input class="govuk-input" id="employer-name" value="{{ data['employer'] }}" name="employer-name" type="text" aria-describedby="employer-name-hint">
+
+          {% else %}
           <input class="govuk-input" id="employer-name" name="employer-name" type="text" aria-describedby="employer-name-hint">
+
+          {% endif %}
+
         </div>
 
         <details class="govuk-details">
@@ -45,7 +54,13 @@
           <label class="govuk-label" for="job-title">
             Job title
           </label>
+          {% if (data['title'] != "empty") %}
+          <input class="govuk-input" value="{{ data['title'] }}"  id="job-title" name="job-title" type="text">
+
+          {% else %}
           <input class="govuk-input" id="job-title" name="job-title" type="text">
+
+          {% endif %}
         </div>
 
         <div class="govuk-form-group">
@@ -53,6 +68,9 @@
             Job sector
           </label>
           <select class="govuk-select" id="employer-sector" name="employer-sector">
+            {% if (data['title'] != "empty") %}
+            <option value="construction-and-trade">Construction and trade</option>
+            {% endif %}
             <option value="">Choose job sector</option>
             <option value="animal-care-and-farming">Animal care and farming</option>
             <option value="cleaning-and-maintenance">Cleaning and maintenance</option>
@@ -77,6 +95,9 @@
             HMPPS reporting industry sector
           </label>
           <select class="govuk-select" id="hmpps-reporting-industry-sector" name="hmpps-reporting-industry-sector">
+            {% if (data['title'] != "empty") %}
+            <option value="construction">Construction</option>
+            {% endif %}
             <option value="">Choose HMPPS reporting industry sector</option>
             <option value="administration">Administration and support services</option>
             <option value="agriculture">Agriculture (including horticulture, forestry and fishing)</option>
@@ -105,7 +126,12 @@
           <label class="govuk-label" for="number-of-vacancies">
             Number of vacancies
           </label>
+          {% if (data['title'] != "empty") %}
+          <input value="2" class="govuk-input govuk-input--width-10" id="number-of-vacancies" name="number-of-vacancies" type="number">
+          {% else %}
           <input class="govuk-input govuk-input--width-10" id="number-of-vacancies" name="number-of-vacancies" type="number">
+
+          {% endif %}
         </div>
 
         <div class="govuk-form-group">
@@ -113,6 +139,9 @@
             Job source
           </label>
           <select class="govuk-select" id="job-source-2" name="job-source-2">
+            {% if (data['title'] != "empty") %}
+            <option value="nfn">NFN</option>
+            {% endif %}
             <option value="">Choose source</option>
             <option value="dwp">DWP</option>
             <option value="eab">EAB</option>
@@ -130,6 +159,7 @@
             Job source 2 (optional)
           </label>
           <select class="govuk-select" id="job-source-2" name="job-source-2">
+
             <option value="">Choose source</option>
             <option value="dwp">DWP</option>
             <option value="eab">EAB</option>
