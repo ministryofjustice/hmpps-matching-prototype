@@ -45,8 +45,11 @@
 
   <!-- FILTERS -->
 
+  
     <div class="govuk-form-group filter-box govuk-!-margin-top-4">
+      
       <div class="govuk-grid-row">
+        
           <div class="govuk-grid-column-one-quarter">
             <!-- <h2 class="govuk-heading-s govuk-!-margin-bottom-3">
               Select a reporting period
@@ -97,6 +100,7 @@
                 maxDate: '2023-09-20'
             }) }}
           </div>
+
       </div>
 
       <div class="govuk-grid-row">
@@ -142,6 +146,8 @@
           </p> -->
         </div>
       </div>
+
+
 
       <div class="govuk-grid-column-one-third">
         <div class="reporting-stats">
@@ -195,9 +201,9 @@
           <p class="reporting-big-number">
             34
           </p>
-          <!-- <p class="govuk-body">
-            - 10% decrease
-          </p> -->
+          <p class="govuk-body">
+            More than 12 weeks<br>from release
+          </p>
         </div>
       </div>
       <div class="govuk-grid-column-one-third">
@@ -208,9 +214,9 @@
           <p class="reporting-big-number">
             16
           </p>
-          <!-- <p class="govuk-body">
-            + 10% increase
-          </p> -->
+          <p class="govuk-body">
+            Within 12<br>weeks of release
+          </p>
         </div>
       </div>
       <div class="govuk-grid-column-one-third">
@@ -251,57 +257,44 @@
           </div>
         </div>
 
-        <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Status
-            </dt>
-            <dd class="govuk-summary-list__key">
-              Total
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Not started
-            </dt>
-            <dd class="govuk-summary-list__value">
-              2
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Needs support
-            </dt>
-            <dd class="govuk-summary-list__value">
-              22
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Ready to work
-            </dt>
-            <dd class="govuk-summary-list__value">
-              12
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Does not want support
-            </dt>
-            <dd class="govuk-summary-list__value">
-              16
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              No right to work
-            </dt>
-            <dd class="govuk-summary-list__value">
-              21
-            </dd>
-          </div>
-        </dl>
 
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Status</th>
+              <th scope="col" class="govuk-table__header">Within 12 weeks of release</th>
+              <th scope="col" class="govuk-table__header">More than 12 weeks from release</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><strong>Not started</strong></td>
+              <td class="govuk-table__cell">2</td>
+              <td class="govuk-table__cell">450</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><strong>Needs support</strong></td>
+              <td class="govuk-table__cell">22</td>
+              <td class="govuk-table__cell">6</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><strong>Ready to work</strong></td>
+          </td>
+              <td class="govuk-table__cell">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><strong>Does not want support</strong></td>
+              <td class="govuk-table__cell">16</td>
+              <td class="govuk-table__cell">2</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><strong>No right to work</strong></td>
+              <td class="govuk-table__cell">21</td>
+              <td class="govuk-table__cell">0</td>
+            </tr>
+          </tbody>
+        </table>
+        
       </div>
     </div>
 
@@ -318,72 +311,53 @@
 
         <p class="govuk-body govuk-!-margin-bottom-6">Number of prisoners seen with preparing for work needs in this period. </p>
 
-        <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Type
-            </dt>
-            <dd class="govuk-summary-list__key">
-              Total
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Bank account
-            </dt>
-            <dd class="govuk-summary-list__value">
-              2
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              CV
-            </dt>
-            <dd class="govuk-summary-list__value">
-              22
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Disclosure letter
-            </dt>
-            <dd class="govuk-summary-list__value">
-              12
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Email address
-            </dt>
-            <dd class="govuk-summary-list__value">
-              8
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Housing
-            </dt>
-            <dd class="govuk-summary-list__value">
-              21
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              ID
-            </dt>
-            <dd class="govuk-summary-list__value">
-              18
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Phone number
-            </dt>
-            <dd class="govuk-summary-list__value">
-              8
-            </dd>
-          </div>
-        </dl>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Type</th>
+              <th scope="col" class="govuk-table__header">Within 12 weeks of release</th>
+              <th scope="col" class="govuk-table__header">More than 12 weeks from release</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><strong>Bank account</strong></td>
+              <td class="govuk-table__cell">2</td>
+              <td class="govuk-table__cell">1</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><strong>CV</strong></td>
+              <td class="govuk-table__cell">22</td>
+              <td class="govuk-table__cell">6</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><strong>Disclosure letter</strong></td>
+              <td class="govuk-table__cell">12</td>
+              <td class="govuk-table__cell">6</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><strong>Email address</strong></td>
+              <td class="govuk-table__cell">16</td>
+              <td class="govuk-table__cell">6</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><strong>Housing</strong></td>
+              <td class="govuk-table__cell">21</td>
+              <td class="govuk-table__cell">6</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><strong>ID</strong></td>
+              <td class="govuk-table__cell">18</td>
+              <td class="govuk-table__cell">4</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><strong>Phone number</strong></td>
+              <td class="govuk-table__cell">4</td>
+              <td class="govuk-table__cell">5</td>
+            </tr>
+          </tbody>
+        </table>
+        
 
       </div>
     </div>
@@ -401,104 +375,73 @@
           Reasons for not wanting support
         </h3>
 
-        <dl class="govuk-summary-list">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Type
-            </dt>
-            <dd class="govuk-summary-list__key">
-              Total
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Already has Work after leaving prison in place
-            </dt>
-            <dd class="govuk-summary-list__value">
-              4
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Feels type of offence will limit their ability to find work
-            </dt>
-            <dd class="govuk-summary-list__value">
-              12
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Has full-time caring responsibilities
-            </dt>
-            <dd class="govuk-summary-list__value">
-              4
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Housing not in place
-            </dt>
-            <dd class="govuk-summary-list__value">
-              11
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Lacks confidence or motivation to find work
-            </dt>
-            <dd class="govuk-summary-list__value">
-              3
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Not able to work due to a health condition
-            </dt>
-            <dd class="govuk-summary-list__value">
-              4
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Refused support with no reason
-            </dt>
-            <dd class="govuk-summary-list__value">
-              2
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Retired
-            </dt>
-            <dd class="govuk-summary-list__value">
-              7
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Returning to work they had before prison
-            </dt>
-            <dd class="govuk-summary-list__value">
-              2
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Self-employed
-            </dt>
-            <dd class="govuk-summary-list__value">
-              13
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Other
-            </dt>
-            <dd class="govuk-summary-list__value">
-              0
-            </dd>
-          </div>
-        </dl>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Reason</th>
+              <th scope="col" class="govuk-table__header">Within 12 weeks of release</th>
+              <th scope="col" class="govuk-table__header">More than 12 weeks from release</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><strong>Already has work after release in place</strong></td>
+              <td class="govuk-table__cell">4</td>
+              <td class="govuk-table__cell">1</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><strong>Type of offence</strong></td>
+              <td class="govuk-table__cell">12</td>
+              <td class="govuk-table__cell">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><strong>Caring responsibilities</strong></td>
+              <td class="govuk-table__cell">1</td>
+              <td class="govuk-table__cell">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><strong>Housing not in place</strong></td>
+              <td class="govuk-table__cell">11</td>
+              <td class="govuk-table__cell">1</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><strong>Lacks confidence or motivation</strong></td>
+              <td class="govuk-table__cell">3</td>
+              <td class="govuk-table__cell">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><strong>Health condition</strong></td>
+              <td class="govuk-table__cell">6</td>
+              <td class="govuk-table__cell">4</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><strong>Refused support with no reason</strong></td>
+              <td class="govuk-table__cell">2</td>
+              <td class="govuk-table__cell">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><strong>Retired</strong></td>
+              <td class="govuk-table__cell">7</td>
+              <td class="govuk-table__cell">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><strong>Returning to work they had before prison</strong></td>
+              <td class="govuk-table__cell">2</td>
+              <td class="govuk-table__cell">0</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><strong>Self-employed</strong></td>
+              <td class="govuk-table__cell">13</td>
+              <td class="govuk-table__cell">1</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><strong>Other</strong></td>
+              <td class="govuk-table__cell">8</td>
+              <td class="govuk-table__cell">3</td>
+            </tr>
+          </tbody>
+        </table>
+        
 
       </div>
     </div>
