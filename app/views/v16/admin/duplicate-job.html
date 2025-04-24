@@ -1,0 +1,96 @@
+{% extends "../includes/template-slim.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+  <!-- Breadcrumb -->
+
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+  <h1 class="govuk-heading-l">Duplicate Apprentice plasterer</h1>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form method="post" action="./jobs-list?duplicate=true">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--s" for="job-title">
+            Job title
+          </label>
+     
+            <input class="govuk-input" id="job-title" name="eventName" type="text" value="Duplicate - Apprentice plasterer">
+          </div>
+
+  
+
+          
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="duplicate-include">
+            <label class="govuk-label govuk-label--s" for="duplicate-include">
+              Include
+            </label>
+            <div id="offence-exclusions" class="govuk-hint">
+              Select the details you want to include in the new job
+            </div>
+          
+          <!-- Checklist items -->
+          <div class="govuk-checkboxes">
+              <!-- Job role and source -->
+              <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" type="checkbox" id="job-role-source" name="job-checklist" value="job-role-source">
+                  <label class="govuk-label govuk-checkboxes__label" for="job-role-source">Job role and source</label>
+              </div>
+
+              <!-- Location and contract details -->
+              <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" type="checkbox" id="location-contract-details" name="job-checklist" value="location-contract-details">
+                  <label class="govuk-label govuk-checkboxes__label" for="location-contract-details">Location and contract details</label>
+              </div>
+
+              <!-- Requirements and job description -->
+              <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" type="checkbox" id="requirements-job-description" name="job-checklist" value="requirements-job-description">
+                  <label class="govuk-label govuk-checkboxes__label" for="requirements-job-description">Requirements and job description</label>
+              </div>
+
+              <!-- How to apply -->
+              <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" type="checkbox" id="how-to-apply" name="job-checklist" value="how-to-apply">
+                  <label class="govuk-label govuk-checkboxes__label" for="how-to-apply">How to apply</label>
+              </div>
+
+              <!-- Job status -->
+              <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" type="checkbox" id="job-status" name="job-checklist" value="job-status">
+                  <label class="govuk-label govuk-checkboxes__label" for="job-status">Job status</label>
+              </div>
+          </div>
+
+       
+
+
+          </fieldset>
+          
+        </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">
+          Duplicate job
+        </button>
+
+        <p class="govuk-body">
+          <a href="#" class="govuk-link govuk-link--no-visited-state">Cancel and go back to Manage jobs and employers</a>
+        </p>
+        
+
+
+
+      </form>
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}

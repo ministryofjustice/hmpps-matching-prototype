@@ -207,3 +207,22 @@ dl dd,dl,p,.govuk-body,.govuk-body-m {
 .margin-bottom-4 {
     margin-bottom: 40px;;
 }
+
+
+.two-form-group {
+    float: left;
+    width: 300px;
+    margin-bottom: 0px;
+}
+
+.two-form-group .govuk-select {
+    max-width: 270px;
+}
+
+.govuk-tag {
+    font-weight: normal;
+}
+
+.govuk-button.right {
+    float: right;
+}

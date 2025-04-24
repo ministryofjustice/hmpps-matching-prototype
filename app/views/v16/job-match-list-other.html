@@ -1,0 +1,121 @@
+{% extends "./includes/template.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+  <!-- Breadcrumb -->
+
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+  <!-- Main page -->
+
+  <main class="govuk-main-wrapper">
+
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">
+      Jobs for Adam Ahmed
+      <span style="float: right"> <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">Print</button></span>
+    </h1>
+
+
+  <!-- TABS -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <nav class="moj-sub-navigation govuk-!-margin-bottom-7" aria-label="Sub navigation">
+        <ul class="moj-sub-navigation__list">
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" href="job-match-list-suggested">Matched jobs</a>
+          </li>
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" aria-current="page" href="#">Other jobs chosen by the prisoner</a>
+          </li>
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" href="job-match-list-archived">Archived jobs</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+
+  <h2 class="govuk-heading-m">
+    Other jobs chosen by the prisoner
+  </h2>
+
+  <p class="govuk-body">Other jobs the prisoner noted an interest in on the jobs board.</p>
+
+
+<!-- TABLE OF RESULTS -->
+
+    <table class="govuk-table govuk-!-margin-top-6" data-module="moj-sortable-table" id="prisonerTable">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header" aria-sort="ascending">Job role</th>
+          <th scope="col" class="govuk-table__header">Type of work</th>
+          <th scope="col" class="govuk-table__header" aria-sort="ascending">Job location</th>
+          <th scope="col" class="govuk-table__header" aria-sort="ascending">Closing date</th>
+        </tr>
+      </thead>
+
+      <tbody class="govuk-table__body">
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Workshop operative / handler" href="#">Bricklayer</a>
+            <br> <span class="govuk-hint govuk-!-margin-bottom-0"> ABC Construction</span>
+            <br> <strong class="govuk-tag govuk-tag--grey govuk-!-margin-top-3" style="text-transform: none; font-weight: 400; font-size: 19px; letter-spacing: 0px">Prisoner choice</strong>
+          </td>
+          <td class="govuk-table__cell">Construction and trade</td>
+          <td class="govuk-table__cell" data-sort-value="44.4">
+            Manchester, M1 1AW
+            <div class="timeline">
+               <ul>
+                 <li>
+                   <!-- <h3>1.5 miles<h3>
+                   <p>Public transport: 31 minutes</p>
+                   <p style="margin-bottom: 0px">Car: 27 minutes</p> -->
+                   <p class="govuk-!-padding-top-4 govuk-!-padding-bottom-1">44.4 miles</p>
+                 </li>
+                 <li>
+                 </li>
+               </ul>
+             </div>
+          </td>
+          <td class="govuk-table__cell" data-sort-value="2024.01.31">31 Jan 2024</td>
+        </tr>
+
+      </tbody>
+    </table>
+
+
+</div>
+
+
+
+<script>
+  function myFunction() {
+    // Declare variables
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("filterName");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("prisonerTable");
+    tr = table.getElementsByTagName("tr");
+
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+</script>
+
+
+
+{% endblock %}

@@ -9,7 +9,9 @@
         "source": "NFN",
         "industrySector": "Construction",
         "location": "London",
-        "salaryFrom": "£18,000"
+        "salaryFrom": "£18,000",
+        "status": "Open",
+        "statusColor": "green"
     },
     {
         "title": "Forklift operator",
@@ -21,7 +23,9 @@
         "source": "DWP",
         "industrySector": "Logistics (including transportation and storage)",
         "location": "Manchester",
-        "salaryFrom": "£20,000"
+        "salaryFrom": "£20,000",
+        "status": "Filled",
+        "statusColor": "yellow"
     },
     {
         "title": "Plumbing assistant",
@@ -33,7 +37,9 @@
         "source": "Education",
         "industrySector": "Construction",
         "location": "Birmingham",
-        "salaryFrom": "£19,000"
+        "salaryFrom": "£19,000",
+        "status": "Closed",
+        "statusColor": "orange"
     },
     {
         "title": "Warehouse handler",
@@ -45,7 +51,9 @@
         "source": "IAG",
         "industrySector": "Retail (includes wholesale and motor vehicle repair)",
         "location": "Leeds",
-        "salaryFrom": "£18,500"
+        "salaryFrom": "£18,500",
+        "status": "Closed",
+        "statusColor": "orange"
     },
     {
         "title": "Kitchen assistant",
@@ -57,7 +65,9 @@
         "source": "Prison",
         "industrySector": "Hospitality and catering",
         "location": "Liverpool",
-        "salaryFrom": "£17,000"
+        "salaryFrom": "£17,000",
+        "status": "Draft",
+        "statusColor": "grey"
     },
     {
         "title": "Grounds maintenance worker",
@@ -69,7 +79,9 @@
         "source": "Third Sector",
         "industrySector": "Other services",
         "location": "Bristol",
-        "salaryFrom": "£18,000"
+        "salaryFrom": "£18,000",
+        "status": "Open",
+        "statusColor": "green"
     },
     {
         "title": "Cleaning operative",
@@ -81,7 +93,9 @@
         "source": "PEL",
         "industrySector": "Other services",
         "location": "Sheffield",
-        "salaryFrom": "£16,500"
+        "salaryFrom": "£16,500",
+        "status": "Filled",
+        "statusColor": "yellow"
     },
     {
         "title": "Recycling operative",
@@ -93,7 +107,9 @@
         "source": "Other",
         "industrySector": "Recycling and waste management (including water supply)",
         "location": "Nottingham",
-        "salaryFrom": "£17,500"
+        "salaryFrom": "£17,500",
+        "status": "Closed",
+        "statusColor": "orange"
     },
     {
         "title": "Laundry assistant",
@@ -105,7 +121,9 @@
         "source": "NFN",
         "industrySector": "Other services",
         "location": "Leicester",
-        "salaryFrom": "£16,000"
+        "salaryFrom": "£16,000",
+        "status": "Closed",
+        "statusColor": "orange"
     },
     {
         "title": "Warehouse packer",
@@ -117,7 +135,9 @@
         "source": "DWP",
         "industrySector": "Logistics (including transportation and storage)",
         "location": "Coventry",
-        "salaryFrom": "£18,000"
+        "salaryFrom": "£18,000",
+        "status": "Draft",
+        "statusColor": "grey"
     },
     {
         "title": "Gardener",
@@ -129,7 +149,9 @@
         "source": "EAB",
         "industrySector": "Agriculture (including horticulture, forestry and fishing)",
         "location": "Southampton",
-        "salaryFrom": "£17,000"
+        "salaryFrom": "£17,000",
+        "status": "Open",
+        "statusColor": "green"
     },
     {
         "title": "Painter and decorator",
@@ -141,7 +163,9 @@
         "source": "Education",
         "industrySector": "Construction",
         "location": "Oxford",
-        "salaryFrom": "£19,000"
+        "salaryFrom": "£19,000",
+        "status": "Filled",
+        "statusColor": "yellow"
     },
     {
         "title": "Catering assistant",
@@ -153,7 +177,9 @@
         "source": "IAG",
         "industrySector": "Hospitality and catering",
         "location": "Cambridge",
-        "salaryFrom": "£17,500"
+        "salaryFrom": "£17,500",
+        "status": "Closed",
+        "statusColor": "orange"
     },
     {
         "title": "Maintenance worker",
@@ -165,7 +191,9 @@
         "source": "Prison",
         "industrySector": "Other services",
         "location": "Reading",
-        "salaryFrom": "£18,000"
+        "salaryFrom": "£18,000",
+        "status": "Closed",
+        "statusColor": "orange"
     },
     {
         "title": "Production line worker",
@@ -177,7 +205,9 @@
         "source": "Third Sector",
         "industrySector": "Manufacturing",
         "location": "Derby",
-        "salaryFrom": "£18,500"
+        "salaryFrom": "£18,500",
+        "status": "Draft",
+        "statusColor": "grey"
     },
     {
         "title": "Retail assistant",
@@ -189,7 +219,9 @@
         "source": "PEL",
         "industrySector": "Retail (includes wholesale and motor vehicle repair)",
         "location": "Brighton",
-        "salaryFrom": "£17,500"
+        "salaryFrom": "£17,500",
+        "status": "Open",
+        "statusColor": "green"
     },
     {
         "title": "Delivery driver",
@@ -201,7 +233,9 @@
         "source": "Other",
         "industrySector": "Logistics (including transportation and storage)",
         "location": "Hull",
-        "salaryFrom": "£19,000"
+        "salaryFrom": "£19,000",
+        "status": "Filled",
+        "statusColor": "yellow"
     },
     {
         "title": "Warehouse operative",
@@ -213,30 +247,8 @@
         "source": "DWP",
         "industrySector": "Logistics (including transportation and storage)",
         "location": "York",
-        "salaryFrom": "£18,000"
-    },
-    {
-        "title": "Construction laborer",
-        "vacancies": "3",
-        "sector": "Construction and trade",
-        "employer": "BuildIt Ltd",
-        "dateAdded": "13 Feb 2024",
-        "id": "19",
-        "source": "EAB",
-        "industrySector": "Construction",
-        "location": "Newcastle",
-        "salaryFrom": "£17,500"
-    },
-    {
-        "title": "Office cleaner",
-        "vacancies": "2",
-        "sector": "Cleaning and maintenance",
-        "employer": "Sparkle Clean",
-        "dateAdded": "16 Feb 2024",
-        "id": "20",
-        "source": "Education",
-        "industrySector": "Other services",
-        "location": "Swansea",
-        "salaryFrom": "£16,500"
+        "salaryFrom": "£18,000",
+        "status": "Closed",
+        "statusColor": "orange"
     }
 ]
