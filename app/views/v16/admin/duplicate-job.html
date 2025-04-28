@@ -22,9 +22,7 @@
             <input class="govuk-input" id="duplicate-job-title" name="duplicate-job-title" type="text" value="Duplicate - Apprentice plasterer">
           </div>
 
-  
 
-          
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="duplicate-include">
@@ -62,16 +60,60 @@
               </div>
 
               <!-- Job status -->
-              <div class="govuk-checkboxes__item">
+              <!-- <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" type="checkbox" id="job-status" name="job-checklist" value="job-status">
                   <label class="govuk-label govuk-checkboxes__label" for="job-status">Job status</label>
-              </div>
+              </div> -->
           </div>
 
        
 
 
           </fieldset>
+
+          </div>
+          <div class="govuk-form-group">
+
+          <fieldset class="govuk-fieldset" aria-describedby="job-status-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s"><h2 class="govuk-fieldset__heading">What's the job status?</h2></legend>
+  
+            <!-- Radio buttons for job status -->
+            <div class="govuk-form-group">
+
+            <div class="govuk-radios govuk-radios">
+                <!-- Open -->
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" type="radio" id="status-open" name="job-status" value="open">
+                    <label class="govuk-label govuk-radios__label" for="status-open">Open</label>
+                </div>
+  
+                <!-- Closed -->
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" type="radio" id="status-closed" name="job-status" value="closed">
+                    <label class="govuk-label govuk-radios__label" for="status-closed">Closed</label>
+                </div>
+  
+                <!-- Filled -->
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" type="radio" id="status-filled" name="job-status" value="filled">
+                    <label class="govuk-label govuk-radios__label" for="status-filled">Filled</label>
+                </div>
+  
+                <!-- Draft -->
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" type="radio" id="status-draft" name="job-status" value="draft">
+                    <label class="govuk-label govuk-radios__label" for="status-draft">Draft</label>
+                </div>
+            </div>
+                  </div>
+
+            <!-- Additional information textarea -->
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="additional-info">Add additional information</label>
+                <textarea class="govuk-textarea" rows="5" cols="20" id="additional-info" name="additional-info"></textarea>
+            </div>
+  
+  
           
         </div>
 
@@ -86,6 +128,7 @@
         
 
 
+      </fieldset>
 
       </form>
 
