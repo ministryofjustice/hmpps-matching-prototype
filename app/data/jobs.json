@@ -11,7 +11,9 @@
         "location": "London",
         "salaryFrom": "£18,000",
         "status": "Open",
-        "statusColor": "green"
+        "statusColor": "green",
+        "author": "me"
+
     },
     {
         "title": "Forklift operator",
@@ -25,7 +27,9 @@
         "location": "Manchester",
         "salaryFrom": "£20,000",
         "status": "Filled",
-        "statusColor": "yellow"
+        "statusColor": "yellow",
+        "author": "me"
+
     },
     {
         "title": "Plumbing assistant",
@@ -39,7 +43,9 @@
         "location": "Birmingham",
         "salaryFrom": "£19,000",
         "status": "Closed",
-        "statusColor": "red"
+        "statusColor": "red",
+        "author": "me"
+
     },
     {
         "title": "Warehouse handler",
@@ -53,7 +59,9 @@
         "location": "Leeds",
         "salaryFrom": "£18,500",
         "status": "Closed",
-        "statusColor": "red"
+        "statusColor": "red",
+        "author": "me"
+
     },
     {
         "title": "Kitchen assistant",
@@ -67,7 +75,9 @@
         "location": "Liverpool",
         "salaryFrom": "£17,000",
         "status": "Draft",
-        "statusColor": "grey"
+        "statusColor": "grey",
+        "author": "other"
+
     },
     {
         "title": "Grounds maintenance worker",
@@ -81,7 +91,9 @@
         "location": "Bristol",
         "salaryFrom": "£18,000",
         "status": "Open",
-        "statusColor": "green"
+        "statusColor": "green",
+        "author": "me"
+
     },
     {
         "title": "Cleaning operative",
@@ -95,7 +107,9 @@
         "location": "Sheffield",
         "salaryFrom": "£16,500",
         "status": "Filled",
-        "statusColor": "yellow"
+        "statusColor": "yellow",
+        "author": "other"
+
     },
     {
         "title": "Recycling operative",
@@ -109,7 +123,9 @@
         "location": "Nottingham",
         "salaryFrom": "£17,500",
         "status": "Closed",
-        "statusColor": "red"
+        "statusColor": "red",
+        "author": "other"
+
     },
     {
         "title": "Laundry assistant",
@@ -123,7 +139,9 @@
         "location": "Leicester",
         "salaryFrom": "£16,000",
         "status": "Closed",
-        "statusColor": "red"
+        "statusColor": "red",
+        "author": "other"
+
     },
     {
         "title": "Warehouse packer",
@@ -137,7 +155,9 @@
         "location": "Coventry",
         "salaryFrom": "£18,000",
         "status": "Draft",
-        "statusColor": "grey"
+        "statusColor": "grey",
+        "author": "me"
+
     },
     {
         "title": "Gardener",
@@ -151,7 +171,9 @@
         "location": "Southampton",
         "salaryFrom": "£17,000",
         "status": "Open",
-        "statusColor": "green"
+        "statusColor": "green",
+        "author": "other"
+
     },
     {
         "title": "Painter and decorator",
@@ -165,7 +187,9 @@
         "location": "Oxford",
         "salaryFrom": "£19,000",
         "status": "Filled",
-        "statusColor": "yellow"
+        "statusColor": "yellow",
+        "author": "me"
+
     },
     {
         "title": "Catering assistant",
@@ -179,7 +203,9 @@
         "location": "Cambridge",
         "salaryFrom": "£17,500",
         "status": "Closed",
-        "statusColor": "red"
+        "statusColor": "red",
+        "author": "other"
+
     },
     {
         "title": "Maintenance worker",
@@ -193,7 +219,9 @@
         "location": "Reading",
         "salaryFrom": "£18,000",
         "status": "Closed",
-        "statusColor": "red"
+        "statusColor": "red",
+        "author": "me"
+
     },
     {
         "title": "Production line worker",
@@ -207,7 +235,9 @@
         "location": "Derby",
         "salaryFrom": "£18,500",
         "status": "Draft",
-        "statusColor": "grey"
+        "statusColor": "grey",
+        "author": "me"
+
     },
     {
         "title": "Retail assistant",
@@ -221,7 +251,9 @@
         "location": "Brighton",
         "salaryFrom": "£17,500",
         "status": "Open",
-        "statusColor": "green"
+        "statusColor": "green",
+        "author": "me"
+
     },
     {
         "title": "Delivery driver",
@@ -235,7 +267,9 @@
         "location": "Hull",
         "salaryFrom": "£19,000",
         "status": "Filled",
-        "statusColor": "yellow"
+        "statusColor": "yellow",
+        "author": "me"
+
     },
     {
         "title": "Warehouse operative",
@@ -249,6 +283,8 @@
         "location": "York",
         "salaryFrom": "£18,000",
         "status": "Closed",
-        "statusColor": "red"
+        "statusColor": "red",
+        "author": "other"
+
     }
 ]

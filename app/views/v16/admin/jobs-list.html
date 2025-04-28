@@ -47,6 +47,7 @@
   </div>
 
   <!-- FILTERS -->
+  <form method="post">
 
     <div class="govuk-form-group filter-box govuk-!-margin-top-4">
       <div class="govuk-grid-row">
@@ -123,8 +124,8 @@
         <div class="govuk-grid-column-full">
           <div class="govuk-checkboxes govuk-checkboxes--small govuk-!-margin-top-3" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="filter" name="filter" type="checkbox" value="Show only my jobs">
-              <label class="govuk-label govuk-checkboxes__label" for="filter">
+              <input class="govuk-checkboxes__input" id="my-jobs-filter" name="my-jobs-filter" type="checkbox" value="Show only my jobs">
+              <label class="govuk-label govuk-checkboxes__label" for="my-jobs-filter">
                 Show only my jobs
               </label>
             </div>
@@ -134,15 +135,16 @@
 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
-          <form method="post">
             <button class="govuk-button govuk-!-margin-top-4 govuk-!-margin-bottom-0" data-module="govuk-button">
               Apply filters
             </button>
-          </form>
         </div>
       </div>
 
     </div>
+  </form>
+
+
 
 <!-- NUMBER OF RESULTS -->
 
@@ -165,6 +167,8 @@
   </thead>
 
   <tbody class="govuk-table__body">
+ 
+
     {% if (data['duplicate'] == "true" ) %}
     {% for job in data.dupejob %}
     <tr class="govuk-table__row">
@@ -181,15 +185,19 @@
 
     {% if (data['new-job'] == "true" ) %}
     <tr class="govuk-table__row">
-      <td class="govuk-table__cell"><a href="./job-detail?id=12">{{ data['job-title'] }}</a></td>
-      <td class="govuk-table__cell">{{ data['number-of-vacancies'] }}</td>
+      <td class="govuk-table__cell"><a href="./job-detail?id=12">Grounds Maintenance Operative</a></td>
+      <td class="govuk-table__cell">2</td>
       
-      <td class="govuk-table__cell">{{ data['job-sector'] }}</td>
-      <td class="govuk-table__cell">{{ data['employer-name'] }}</td>
+      <td class="govuk-table__cell">Cleaning and maintenance</td>
+      <td class="govuk-table__cell">Sodexo</td>
       <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ job.dateAdded }}">1 April 2025</td>
       <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--green">Open</span></td>
     </tr>
-    {% for job in data.jobs %}
+
+    {% endif %}
+     
+{% for job in data.jobs %}
+  {% if data['my-jobs-filter'] == "Show only my jobs" and job.author == "me" %}
     <tr class="govuk-table__row">
       <td class="govuk-table__cell"><a href="./job-detail?id={{ job.id }}">{{ job.title }}</a></td>
       <td class="govuk-table__cell">{{ job.vacancies }}</td>
@@ -197,22 +205,19 @@
       <td class="govuk-table__cell">{{ job.employer }}</td>
       <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ job.dateAdded }}">{{ job.dateAdded }}</td>
       <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--{{ job.statusColor }}">{{ job.status }}</span></td>
-
     </tr>
+  {% elif data['my-jobs-filter'] != "Show only my jobs" %}
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="./job-detail?id={{ job.id }}">{{ job.title }}</a></td>
+      <td class="govuk-table__cell">{{ job.vacancies }}</td>
+      <td class="govuk-table__cell">{{ job.sector }}</td>
+      <td class="govuk-table__cell">{{ job.employer }}</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ job.dateAdded }}">{{ job.dateAdded }}</td>
+      <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--{{ job.statusColor }}">{{ job.status }}</span></td>
+    </tr>
+  {% endif %}
 {% endfor %}
 
-{% else %}
-    {% for job in data.jobs %}
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell"><a href="./job-detail?id={{ job.id }}">{{ job.title }}</a></td>
-      <td class="govuk-table__cell">{{ job.vacancies }}</td>
-      <td class="govuk-table__cell">{{ job.sector }}</td>
-      <td class="govuk-table__cell">{{ job.employer }}</td>
-      <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ job.dateAdded }}">{{ job.dateAdded }}</td>
-      <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--{{ job.statusColor }}">{{ job.status }}</span></td>
-    </tr>
-  {% endfor %}
-  {% endif %}
 
 
 
