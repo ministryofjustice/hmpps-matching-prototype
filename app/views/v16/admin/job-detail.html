@@ -37,7 +37,7 @@
           <dt class="govuk-summary-list__key">Employer name</dt>
           <dd class="govuk-summary-list__value">{{ job.employer }}</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="./add-job-source?title={{ job.title }}&employer={{ job.employer }}" class="govuk-link">Change<span class="govuk-visually-hidden"> employer name</span></a>
+            <a href="./add-job-source?job-title={{ job.title }}&employer={{ job.employer }}" class="govuk-link">Change<span class="govuk-visually-hidden"> employer name</span></a>
           </dd>
         </div>
       
@@ -45,7 +45,7 @@
           <dt class="govuk-summary-list__key">Job title</dt>
           <dd class="govuk-summary-list__value">{{ job.title }}</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="./add-job-source?title={{ job.title }}&employer={{ job.employer }}" class="govuk-link">Change<span class="govuk-visually-hidden"> job title</span></a>
+            <a href="./add-job-source?job-title={{ job.title }}&employer={{ job.employer }}" class="govuk-link">Change<span class="govuk-visually-hidden"> job title</span></a>
           </dd>
         </div>
       
@@ -54,7 +54,7 @@
           <dt class="govuk-summary-list__key">Job sector</dt>
           <dd class="govuk-summary-list__value">{{ job.sector }}</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="./add-job-source?title={{ job.title }}&employer={{ job.employer }}" class="govuk-link">Change<span class="govuk-visually-hidden"> job sector</span></a>
+            <a href="./add-job-source?job-title={{ job.title }}&employer={{ job.employer }}" class="govuk-link">Change<span class="govuk-visually-hidden"> job sector</span></a>
           </dd>
         </div>
 
@@ -62,7 +62,7 @@
           <dt class="govuk-summary-list__key">NFN industry sector</dt>
           <dd class="govuk-summary-list__value">{{ job.industrySector }}</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="./add-job-source?title={{ job.title }}&employer={{ job.employer }}" class="govuk-link">Change<span class="govuk-visually-hidden"> NFN industry sector</span></a>
+            <a href="./add-job-source?job-title={{ job.title }}&employer={{ job.employer }}" class="govuk-link">Change<span class="govuk-visually-hidden"> NFN industry sector</span></a>
           </dd>
         </div>
       
@@ -70,7 +70,7 @@
           <dt class="govuk-summary-list__key">Number of vacancies</dt>
           <dd class="govuk-summary-list__value">{{ job.vacancies }}</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="./add-job-source?title={{ job.title }}&employer={{ job.employer }}" class="govuk-link">Change<span class="govuk-visually-hidden"> number of vacancies</span></a>
+            <a href="./add-job-source?job-title={{ job.title }}&employer={{ job.employer }}" class="govuk-link">Change<span class="govuk-visually-hidden"> number of vacancies</span></a>
           </dd>
         </div>
       
@@ -78,7 +78,7 @@
           <dt class="govuk-summary-list__key">Job source</dt>
           <dd class="govuk-summary-list__value">{{ job.source }}</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="./add-job-source?title={{ job.title }}&employer={{ job.employer }}" class="govuk-link">Change<span class="govuk-visually-hidden"> job source</span></a>
+            <a href="./add-job-source?job-title={{ job.title }}&employer={{ job.employer }}" class="govuk-link">Change<span class="govuk-visually-hidden"> job source</span></a>
           </dd>
         </div>
 
@@ -87,7 +87,7 @@
           <dt class="govuk-summary-list__key">Job source 2 (optional)</dt>
           <dd class="govuk-summary-list__value">Not provided</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="./add-job-source?title={{ job.title }}&employer={{ job.employer }}" class="govuk-link">Change<span class="govuk-visually-hidden"> job source 2 (optional)</span></a>
+            <a href="./add-job-source?job-title={{ job.title }}&employer={{ job.employer }}" class="govuk-link">Change<span class="govuk-visually-hidden"> job source 2 (optional)</span></a>
           </dd>
         </div>
       
@@ -95,7 +95,7 @@
           <dt class="govuk-summary-list__key">Supported by a charity? (optional)</dt>
           <dd class="govuk-summary-list__value">Not provided</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="./add-job-source?title={{ job.title }}&employer={{ job.employer }}" class="govuk-link">Change<span class="govuk-visually-hidden"> supported by a charity? (optional)</span></a>
+            <a href="./add-job-source?job-title={{ job.title }}&employer={{ job.employer }}" class="govuk-link">Change<span class="govuk-visually-hidden"> supported by a charity? (optional)</span></a>
           </dd>
         </div>
       </dl>
@@ -279,6 +279,29 @@
         </div>
       </dl>
 
+
+      <h2 class="govuk-heading-m">Job status</h2>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Current status</dt>
+          <dd class="govuk-summary-list__value">Open</dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="add-job-status" class="govuk-link">Change<span class="govuk-visually-hidden"> rolling opportunity?</span></a>
+          </dd>
+        </div>
+      
+
+      
+      
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Additional information</dt>
+          <dd class="govuk-summary-list__value">Not provided</dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="add-job-status" class="govuk-link">Change<span class="govuk-visually-hidden"> supporting documentation required</span></a>
+          </dd>
+        </div>
+</dl>
+
            
 {% endif %}
 {% endfor %}
@@ -290,9 +313,9 @@
       <form method="post" action="./jobs-list?new-job=true">
 
       <button class="govuk-button">Update job and save</button>
-      <a href="are-you-sure" type="submit" class="govuk-button govuk-button--warning" data-module="govuk-button">
+      <!-- <a href="are-you-sure" type="submit" class="govuk-button govuk-button--warning" data-module="govuk-button">
         Remove job
-      </a>
+      </a> -->
     </form>
 
     </div>

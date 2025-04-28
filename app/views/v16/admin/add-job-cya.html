@@ -5,7 +5,7 @@
 
   <!-- Breadcrumb -->
 
-  <span class="govuk-caption-l">Add a job - step 5 of 6</span>
+  <span class="govuk-caption-l">Add a job - step 6 of 6</span>
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -14,7 +14,11 @@
       <dl class="govuk-summary-list margin-bottom-4">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Employer name</dt>
+          {% if (data['employer-name'] == null ) %}
           <dd class="govuk-summary-list__value">ABC Construction</dd>
+          {% else %}
+          <dd class="govuk-summary-list__value">{{ data['employer-name'] }}</dd>
+          {% endif %}
           <dd class="govuk-summary-list__actions">
             <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> employer name</span></a>
           </dd>
@@ -22,7 +26,13 @@
       
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Job title</dt>
+          {% if (data['job-title'] == null ) %}
           <dd class="govuk-summary-list__value">Bricklayer</dd>
+          {% else %}
+          <dd class="govuk-summary-list__value">{{ data['job-title'] }}</dd>
+          {% endif %}
+
+
           <dd class="govuk-summary-list__actions">
             <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job title</span></a>
           </dd>
@@ -30,7 +40,12 @@
       
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Job sector</dt>
+          {% if (data['job-sector'] == null ) %}
           <dd class="govuk-summary-list__value">Construction and trade</dd>
+          {% else %}
+          <dd class="govuk-summary-list__value">{{ data['job-sector'] }}</dd>
+          {% endif %}
+
           <dd class="govuk-summary-list__actions">
             <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job sector</span></a>
           </dd>
@@ -46,7 +61,13 @@
       
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Number of vacancies</dt>
+          
+
+          {% if (data['number-of-vacancies'] == null ) %}
           <dd class="govuk-summary-list__value">1</dd>
+          {% else %}
+          <dd class="govuk-summary-list__value">{{ data['number-of-vacancies'] }}</dd>
+          {% endif %}
           <dd class="govuk-summary-list__actions">
             <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> number of vacancies</span></a>
           </dd>

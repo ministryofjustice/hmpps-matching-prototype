@@ -39,7 +39,7 @@
         "location": "Birmingham",
         "salaryFrom": "£19,000",
         "status": "Closed",
-        "statusColor": "orange"
+        "statusColor": "red"
     },
     {
         "title": "Warehouse handler",
@@ -53,7 +53,7 @@
         "location": "Leeds",
         "salaryFrom": "£18,500",
         "status": "Closed",
-        "statusColor": "orange"
+        "statusColor": "red"
     },
     {
         "title": "Kitchen assistant",
@@ -109,7 +109,7 @@
         "location": "Nottingham",
         "salaryFrom": "£17,500",
         "status": "Closed",
-        "statusColor": "orange"
+        "statusColor": "red"
     },
     {
         "title": "Laundry assistant",
@@ -123,7 +123,7 @@
         "location": "Leicester",
         "salaryFrom": "£16,000",
         "status": "Closed",
-        "statusColor": "orange"
+        "statusColor": "red"
     },
     {
         "title": "Warehouse packer",
@@ -179,7 +179,7 @@
         "location": "Cambridge",
         "salaryFrom": "£17,500",
         "status": "Closed",
-        "statusColor": "orange"
+        "statusColor": "red"
     },
     {
         "title": "Maintenance worker",
@@ -193,7 +193,7 @@
         "location": "Reading",
         "salaryFrom": "£18,000",
         "status": "Closed",
-        "statusColor": "orange"
+        "statusColor": "red"
     },
     {
         "title": "Production line worker",
@@ -249,6 +249,6 @@
         "location": "York",
         "salaryFrom": "£18,000",
         "status": "Closed",
-        "statusColor": "orange"
+        "statusColor": "red"
     }
 ]

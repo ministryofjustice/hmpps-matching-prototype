@@ -21,7 +21,8 @@ module.exports = {
 
   // Insert values here
   employers: require('./employers.json'),
-  jobs: require('./jobs.json')
+  jobs: require('./jobs.json'),
+  dupejob: require('./dupejob.json')
 
 
 

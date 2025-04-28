@@ -165,27 +165,29 @@
   </thead>
 
   <tbody class="govuk-table__body">
-
     {% if (data['duplicate'] == "true" ) %}
-<tr class="govuk-table__row">
-  <td class="govuk-table__cell"><a href="./job-detail?id={{ job.id }}">Apprentice plasterer</a></td>
-  <td class="govuk-table__cell">1</td>
-  <td class="govuk-table__cell">Construction and trade</td>
-  <td class="govuk-table__cell">ABC Construction Ltd</td>
-  <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ job.dateAdded }}">1 April 2025</td>
-  <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--grey">Draft</span></td>
-</tr>
+    {% for job in data.dupejob %}
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="./job-detail?id={{ job.id }}">{{ data['duplicate-job-title'] }}</a></td>
+      <td class="govuk-table__cell">{{ job.vacancies }}</td>
+      <td class="govuk-table__cell">{{ job.sector }}</td>
+      <td class="govuk-table__cell">{{ job.employer }}</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ job.dateAdded }}">{{ job.dateAdded }}</td>
+      <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--{{ job.statusColor }}">{{ job.status }}</span></td>
+    </tr>
+  {% endfor %}
 {% endif %}
 
 
     {% if (data['new-job'] == "true" ) %}
     <tr class="govuk-table__row">
-      <td class="govuk-table__cell"><a href="./job-detail?id={{ job.id }}">Painter and decorator</a></td>
-      <td class="govuk-table__cell">1</td>
-      <td class="govuk-table__cell">Construction and trade</td>
-      <td class="govuk-table__cell">ABC Construction Ltd</td>
+      <td class="govuk-table__cell"><a href="./job-detail?id=12">{{ data['job-title'] }}</a></td>
+      <td class="govuk-table__cell">{{ data['number-of-vacancies'] }}</td>
+      
+      <td class="govuk-table__cell">{{ data['job-sector'] }}</td>
+      <td class="govuk-table__cell">{{ data['employer-name'] }}</td>
       <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ job.dateAdded }}">1 April 2025</td>
-      <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--grey">Draft</span></td>
+      <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--green">Open</span></td>
     </tr>
     {% for job in data.jobs %}
     <tr class="govuk-table__row">

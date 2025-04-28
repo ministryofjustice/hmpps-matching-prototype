@@ -1,0 +1,15 @@
+[
+    {
+        "vacancies": "1",
+        "sector": "Construction and trade",
+        "employer": "ABC Construction Ltd",
+        "dateAdded": "28 Apr 2024",
+        "id": "19",
+        "source": "NFN",
+        "industrySector": "Construction",
+        "location": "London",
+        "salaryFrom": "£18,000",
+        "status": "Draft",
+        "statusColor": "grey"
+    }
+]
