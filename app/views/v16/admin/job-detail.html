@@ -370,7 +370,12 @@
 <p>Invalid ID provided. No job details available.</p>
 {% endif %}
 
-      <form method="post" action="./jobs-list?new-job=true">
+{% if (data['duplicate'] == "true" ) %}
+<form method="post" action="./jobs-list?duplicate-job=true">
+{% else %}
+<form method="post" action="./jobs-list?new-job=true">
+{% endif %}
+
 
       <button class="govuk-button">Update job and save</button>
       <!-- <a href="are-you-sure" type="submit" class="govuk-button govuk-button--warning" data-module="govuk-button">

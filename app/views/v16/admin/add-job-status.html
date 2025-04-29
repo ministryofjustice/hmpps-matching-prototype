@@ -112,10 +112,20 @@
                 </div>
                       </div>
 
+                   
+
+
                 <!-- Additional information textarea -->
                 <div class="govuk-form-group">
                     <label class="govuk-label" for="additional-info">Add additional information</label>
+                    {% if (data['additional-info'] == null) %}
                     <textarea class="govuk-textarea" rows="5" cols="20" id="additional-info" name="additional-info"></textarea>
+
+                    {% else %}
+                    <textarea class="govuk-textarea" rows="5" cols="20" id="additional-info" name="additional-info">{{ data['additional-info'] }}
+                    </textarea>
+
+                    {% endif %}
                 </div>
       
                 <!-- Continue button -->
