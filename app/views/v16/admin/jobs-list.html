@@ -178,12 +178,15 @@
                 <td class="govuk-table__cell">{{ job.employer }}</td>
                 <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ job.dateAdded }}">{{ job.dateAdded }}</td>
                 
-                {% if data['job-status'] == "status-open" %}
+                {% if data['job-status'] == "Open" %}
                     <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--green">Open</span></td>
-                {% elif data['job-status'] == "status-closed" %}
+                {% elif data['job-status'] == "Closed" %}
                     <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--red">Closed</span></td>
-                {% elif data['job-status'] == "status-filled" %}
+                {% elif data['job-status'] == "Filled" %}
                     <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--yellow">Filled</span></td>
+                    {% elif data['job-status'] == "Draft" %}
+                    <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--grey">Draft</span></td>
+
                 {% else %}
                     <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--{{ job.statusColor }}">{{ job.status }}</span></td>
                 {% endif %}

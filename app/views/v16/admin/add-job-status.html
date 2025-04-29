@@ -27,7 +27,7 @@
                 <div class="govuk-form-group">
 
                 <div class="govuk-radios govuk-radios">
-                    {% if (data['status'] == "empty") %}
+                    {% if (data['job-status'] == null) %}
                       <!-- Open -->
                       <div class="govuk-radios__item">
                         <input class="govuk-radios__input" type="radio" id="status-open" name="job-status" value="Open">
@@ -51,6 +51,31 @@
                     <input class="govuk-radios__input" type="radio" id="status-draft" name="job-status" value="Draft">
                     <label class="govuk-label govuk-radios__label" for="status-draft">Draft</label>
                 </div>
+                {% elif (data['job-status'] == "Draft") %}
+                  <!-- Open -->
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" type="radio" id="status-open" name="job-status" value="Open">
+                    <label class="govuk-label govuk-radios__label" for="status-open">Open</label>
+                </div>
+  
+                      <!-- Closed -->
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" type="radio" id="status-closed" name="job-status" value="Closed">
+            <label class="govuk-label govuk-radios__label" for="status-closed">Closed</label>
+        </div>
+
+        <!-- Filled -->
+        <div class="govuk-radios__item">
+            <input class="govuk-radios__input" type="radio" id="status-filled" name="job-status" value="Filled">
+            <label class="govuk-label govuk-radios__label" for="status-filled">Filled</label>
+        </div>
+
+        <!-- Draft -->
+        <div class="govuk-radios__item">
+            <input class="govuk-radios__input" type="radio" id="status-draft" name="job-status" value="Draft" checked>
+            <label class="govuk-label govuk-radios__label" for="status-draft">Draft</label>
+        </div>
+
                 {% else %}
 
 
