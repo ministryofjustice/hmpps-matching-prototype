@@ -9,7 +9,7 @@
         "source": "NFN",
         "industrySector": "Construction",
         "location": "London",
-        "salaryFrom": "£18,000",
+        "salaryFrom": "18,000",
         "status": "Open",
         "statusColor": "green",
         "author": "me"
@@ -25,7 +25,7 @@
         "source": "DWP",
         "industrySector": "Logistics (including transportation and storage)",
         "location": "Manchester",
-        "salaryFrom": "£20,000",
+        "salaryFrom": "20,000",
         "status": "Filled",
         "statusColor": "yellow",
         "author": "me"
@@ -41,7 +41,7 @@
         "source": "Education",
         "industrySector": "Construction",
         "location": "Birmingham",
-        "salaryFrom": "£19,000",
+        "salaryFrom": "19,000",
         "status": "Closed",
         "statusColor": "red",
         "author": "me"
@@ -57,7 +57,7 @@
         "source": "IAG",
         "industrySector": "Retail (includes wholesale and motor vehicle repair)",
         "location": "Leeds",
-        "salaryFrom": "£18,500",
+        "salaryFrom": "18,500",
         "status": "Closed",
         "statusColor": "red",
         "author": "me"
@@ -73,7 +73,7 @@
         "source": "Prison",
         "industrySector": "Hospitality and catering",
         "location": "Liverpool",
-        "salaryFrom": "£17,000",
+        "salaryFrom": "17,000",
         "status": "Draft",
         "statusColor": "grey",
         "author": "other"
@@ -89,7 +89,7 @@
         "source": "Third Sector",
         "industrySector": "Other services",
         "location": "Bristol",
-        "salaryFrom": "£18,000",
+        "salaryFrom": "18,000",
         "status": "Open",
         "statusColor": "green",
         "author": "me"
@@ -105,7 +105,7 @@
         "source": "PEL",
         "industrySector": "Other services",
         "location": "Sheffield",
-        "salaryFrom": "£16,500",
+        "salaryFrom": "16,500",
         "status": "Filled",
         "statusColor": "yellow",
         "author": "other"
@@ -121,7 +121,7 @@
         "source": "Other",
         "industrySector": "Recycling and waste management (including water supply)",
         "location": "Nottingham",
-        "salaryFrom": "£17,500",
+        "salaryFrom": "17,500",
         "status": "Closed",
         "statusColor": "red",
         "author": "other"
@@ -137,7 +137,7 @@
         "source": "NFN",
         "industrySector": "Other services",
         "location": "Leicester",
-        "salaryFrom": "£16,000",
+        "salaryFrom": "16,000",
         "status": "Closed",
         "statusColor": "red",
         "author": "other"
@@ -153,7 +153,7 @@
         "source": "DWP",
         "industrySector": "Logistics (including transportation and storage)",
         "location": "Coventry",
-        "salaryFrom": "£18,000",
+        "salaryFrom": "18,000",
         "status": "Draft",
         "statusColor": "grey",
         "author": "me"
@@ -169,7 +169,7 @@
         "source": "EAB",
         "industrySector": "Agriculture (including horticulture, forestry and fishing)",
         "location": "Southampton",
-        "salaryFrom": "£17,000",
+        "salaryFrom": "17,000",
         "status": "Open",
         "statusColor": "green",
         "author": "other"
@@ -185,7 +185,7 @@
         "source": "Education",
         "industrySector": "Construction",
         "location": "Oxford",
-        "salaryFrom": "£19,000",
+        "salaryFrom": "19,000",
         "status": "Filled",
         "statusColor": "yellow",
         "author": "me"
@@ -201,7 +201,7 @@
         "source": "IAG",
         "industrySector": "Hospitality and catering",
         "location": "Cambridge",
-        "salaryFrom": "£17,500",
+        "salaryFrom": "17,500",
         "status": "Closed",
         "statusColor": "red",
         "author": "other"
@@ -217,7 +217,7 @@
         "source": "Prison",
         "industrySector": "Other services",
         "location": "Reading",
-        "salaryFrom": "£18,000",
+        "salaryFrom": "18,000",
         "status": "Closed",
         "statusColor": "red",
         "author": "me"
@@ -233,7 +233,7 @@
         "source": "Third Sector",
         "industrySector": "Manufacturing",
         "location": "Derby",
-        "salaryFrom": "£18,500",
+        "salaryFrom": "18,500",
         "status": "Draft",
         "statusColor": "grey",
         "author": "me"
@@ -249,10 +249,12 @@
         "source": "PEL",
         "industrySector": "Retail (includes wholesale and motor vehicle repair)",
         "location": "Brighton",
-        "salaryFrom": "£17,500",
+        "salaryFrom": "17,500",
         "status": "Open",
         "statusColor": "green",
-        "author": "me"
+        "contract": "Permanent",
+        "author": "me",
+        "description": "The role of a retail assistant involves multiple tasks. However, the ultimate goal of the job is to provide excellent customer service, maintain store operations, and ensure a pleasant shopping experience for customers."
 
     },
     {
@@ -265,7 +267,7 @@
         "source": "Other",
         "industrySector": "Logistics (including transportation and storage)",
         "location": "Hull",
-        "salaryFrom": "£19,000",
+        "salaryFrom": "19,000",
         "status": "Filled",
         "statusColor": "yellow",
         "author": "me"
@@ -281,7 +283,7 @@
         "source": "DWP",
         "industrySector": "Logistics (including transportation and storage)",
         "location": "York",
-        "salaryFrom": "£18,000",
+        "salaryFrom": "18,000",
         "status": "Closed",
         "statusColor": "red",
         "author": "other"

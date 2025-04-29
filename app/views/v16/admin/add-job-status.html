@@ -12,8 +12,13 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
+        {% if (data['title'] != "empty") %}
+        <form method="post" action="./job-detail">
+          {% else %}
+          <form method="post" action="./add-job-cya">
+            {% endif %}
+  
 
-      <form method="post" action="./add-job-cya">
       
             <fieldset class="govuk-fieldset" aria-describedby="job-status-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--s"><h2 class="govuk-fieldset__heading">What's the current status?</h2></legend>
@@ -22,29 +27,63 @@
                 <div class="govuk-form-group">
 
                 <div class="govuk-radios govuk-radios">
+                    {% if (data['status'] == "empty") %}
+                      <!-- Open -->
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" type="radio" id="status-open" name="job-status" value="Open">
+                        <label class="govuk-label govuk-radios__label" for="status-open">Open</label>
+                    </div>
+
+                <!-- Closed -->
+              <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" type="radio" id="status-closed" name="job-status" value="Closed">
+                    <label class="govuk-label govuk-radios__label" for="status-closed">Closed</label>
+                </div>
+  
+                <!-- Filled -->
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" type="radio" id="status-filled" name="job-status" value="Filled">
+                    <label class="govuk-label govuk-radios__label" for="status-filled">Filled</label>
+                </div>
+  
+                <!-- Draft -->
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" type="radio" id="status-draft" name="job-status" value="Draft">
+                    <label class="govuk-label govuk-radios__label" for="status-draft">Draft</label>
+                </div>
+                {% else %}
+
+
+
                     <!-- Open -->
                     <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" type="radio" id="status-open" name="job-status" value="open">
+                        <input class="govuk-radios__input" type="radio" id="status-open" name="job-status" value="Open" checked>
                         <label class="govuk-label govuk-radios__label" for="status-open">Open</label>
                     </div>
       
-                    <!-- Closed -->
-                    <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" type="radio" id="status-closed" name="job-status" value="closed">
-                        <label class="govuk-label govuk-radios__label" for="status-closed">Closed</label>
-                    </div>
-      
-                    <!-- Filled -->
-                    <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" type="radio" id="status-filled" name="job-status" value="filled">
-                        <label class="govuk-label govuk-radios__label" for="status-filled">Filled</label>
-                    </div>
-      
-                    <!-- Draft -->
-                    <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" type="radio" id="status-draft" name="job-status" value="draft">
-                        <label class="govuk-label govuk-radios__label" for="status-draft">Draft</label>
-                    </div>
+                          <!-- Closed -->
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" type="radio" id="status-closed" name="job-status" value="Closed">
+                <label class="govuk-label govuk-radios__label" for="status-closed">Closed</label>
+            </div>
+
+            <!-- Filled -->
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" type="radio" id="status-filled" name="job-status" value="Filled">
+                <label class="govuk-label govuk-radios__label" for="status-filled">Filled</label>
+            </div>
+
+            <!-- Draft -->
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" type="radio" id="status-draft" name="job-status" value="Draft">
+                <label class="govuk-label govuk-radios__label" for="status-draft">Draft</label>
+            </div>
+
+
+
+
+                    {% endif %}
+
                 </div>
                       </div>
 

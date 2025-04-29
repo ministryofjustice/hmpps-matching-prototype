@@ -14,7 +14,16 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
+
+
+
+      {% if (data['title'] != "empty") %}
+      <form method="post" action="./job-detail">
+        {% else %}
       <form method="post" action="./add-job-description">
+      {% endif %}
+
+        
 
         <div class="govuk-form-group">
           <label class="govuk-label" for="job-location">
@@ -23,7 +32,11 @@
           <div id="job-location-hint" class="govuk-hint">
             Enter postcode.
           </div>
+          {% if (data['title'] != "empty") %}
+          <input class="govuk-input govuk-input--width-10" id="job-location" name="job-location" type="text" aria-describedby="job-location-hint" value="{{ data['location'] }}">
+          {% else %}
           <input class="govuk-input govuk-input--width-10" id="job-location" name="job-location" type="text" aria-describedby="job-location-hint">
+          {% endif %}
         </div>
 
         <div class="govuk-form-group">
@@ -35,9 +48,13 @@
           </div>
           <div class="govuk-input__wrapper">
             <div class="govuk-input__prefix" aria-hidden="true">£</div>
-            <input class="govuk-input govuk-input--width-10" id="salary-from" name="salary-from" type="text" spellcheck="false">
+            {% if (data['title'] != "empty") %}
+            <input class="govuk-input govuk-input--width-10" id="salary-from" name="salary-from" type="text" spellcheck="false" value="{{ data['salary'] }}">
+            {% else %}
+            <input class="govuk-input govuk-input--width-10" id="salary-from" name="salary-from" type="text" spellcheck="false" >
+            {% endif %}
           </div>
-        </div>
+        </div>  
 
         <div class="govuk-form-group">
           <label class="govuk-label" for="salary-to">
@@ -81,19 +98,35 @@
               Does salary pay at least minimum wage?
             </label>
             <div class="govuk-radios">
+           
+              {% if (data['title'] != "empty") %}
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="minimum-wage-yes" name="minimum-wage" type="radio" value="yes" checked>
+              <label class="govuk-label govuk-radios__label" for="minimum-wage-yes">
+                Yes
+              </label>
+            </div>
+    
+            {% else %}
+
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="minimum-wage-yes" name="minimum-wage" type="radio" value="yes">
                 <label class="govuk-label govuk-radios__label" for="minimum-wage-yes">
                   Yes
                 </label>
               </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="minimum-wage-no" name="minimum-wage" type="radio" value="no">
-                <label class="govuk-label govuk-radios__label" for="minimum-wage-no">
-                  No
-                </label>
-              </div>
+        
+
+            {% endif %}
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="minimum-wage-no" name="minimum-wage" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="minimum-wage-no">
+                No
+              </label>
             </div>
+          </div>
+
           </fieldset>
         </div>
 
@@ -101,6 +134,7 @@
           <label class="govuk-label" for="work-pattern">
             Work pattern
           </label>
+          
           <select class="govuk-select" id="work-pattern" name="work-pattern">
             <option value="">Choose work pattern</option>
             <option value="annualised-hours">Annualised hours</option>
@@ -127,17 +161,26 @@
           </select>
         </div>
 
+
+
         <div class="govuk-form-group">
           <label class="govuk-label" for="contract-type">
             Contract type
           </label>
+
+  
           <select class="govuk-select" id="contract-type" name="contract-type">
+            {% if (data['title'] != "empty") %}
+            <option value="{{ data['contract'] }}">{{ data['contract'] }}</option>
+            {% endif %}
             <option value="">Choose contract type</option>
             <option value="fixed-term-contract">Fixed term contract</option>
             <option value="permanent">Permanent</option>
             <option value="self-employment">Self-employment</option>
             <option value="temporary">Temporary</option>
           </select>
+
+    
         </div>
 
         <div class="govuk-form-group">

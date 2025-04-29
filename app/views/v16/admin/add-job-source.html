@@ -17,7 +17,11 @@
 
    
 
+      {% if (data['title'] != "empty") %}
+      <form method="post" action="./job-detail">
+        {% else %}
       <form method="post" action="./add-job-location">
+        {% endif %}
 
         <div class="govuk-form-group">
           <label class="govuk-label" for="employer-name">
@@ -69,7 +73,7 @@
           </label>
           <select class="govuk-select" id="job-sector" name="job-sector">
             {% if (data['title'] != "empty") %}
-            <option value="construction-and-trade">Construction and trade</option>
+            <option value="{{ data['sector'] }}">{{ data['sector'] }}</option>
             {% endif %}
             <option value="">Choose job sector</option>
             <option value="Animal care and farming">Animal care and farming</option>
@@ -96,7 +100,7 @@
           </label>
           <select class="govuk-select" id="hmpps-reporting-industry-sector" name="hmpps-reporting-industry-sector">
             {% if (data['title'] != "empty") %}
-            <option value="construction">Construction</option>
+            <option value="{{ data['sector'] }}">{{ data['sector'] }}</option>
             {% endif %}
             <option value="">Choose HMPPS reporting industry sector</option>
             <option value="administration">Administration and support services</option>

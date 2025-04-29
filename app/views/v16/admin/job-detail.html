@@ -37,7 +37,7 @@
           <dt class="govuk-summary-list__key">Employer name</dt>
           <dd class="govuk-summary-list__value">{{ job.employer }}</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="./add-job-source?job-title={{ job.title }}&employer={{ job.employer }}" class="govuk-link">Change<span class="govuk-visually-hidden"> employer name</span></a>
+            <a href="./add-job-source?job-title={{ job.title }}&employer={{ job.employer }}&sector={{ job.sector }}" class="govuk-link">Change<span class="govuk-visually-hidden"> employer name</span></a>
           </dd>
         </div>
       
@@ -45,7 +45,7 @@
           <dt class="govuk-summary-list__key">Job title</dt>
           <dd class="govuk-summary-list__value">{{ job.title }}</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="./add-job-source?job-title={{ job.title }}&employer={{ job.employer }}" class="govuk-link">Change<span class="govuk-visually-hidden"> job title</span></a>
+            <a href="./add-job-source?job-title={{ job.title }}&employer={{ job.employer }}&sector={{ job.sector }}" class="govuk-link">Change<span class="govuk-visually-hidden"> job title</span></a>
           </dd>
         </div>
       
@@ -54,7 +54,7 @@
           <dt class="govuk-summary-list__key">Job sector</dt>
           <dd class="govuk-summary-list__value">{{ job.sector }}</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="./add-job-source?job-title={{ job.title }}&employer={{ job.employer }}" class="govuk-link">Change<span class="govuk-visually-hidden"> job sector</span></a>
+            <a href="./add-job-source?job-title={{ job.title }}&employer={{ job.employer }}&sector={{ job.sector }}" class="govuk-link">Change<span class="govuk-visually-hidden"> job sector</span></a>
           </dd>
         </div>
 
@@ -62,7 +62,7 @@
           <dt class="govuk-summary-list__key">NFN industry sector</dt>
           <dd class="govuk-summary-list__value">{{ job.industrySector }}</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="./add-job-source?job-title={{ job.title }}&employer={{ job.employer }}" class="govuk-link">Change<span class="govuk-visually-hidden"> NFN industry sector</span></a>
+            <a href="./add-job-source?job-title={{ job.title }}&employer={{ job.employer }}&sector={{ job.sector }}" class="govuk-link">Change<span class="govuk-visually-hidden"> NFN industry sector</span></a>
           </dd>
         </div>
       
@@ -70,7 +70,7 @@
           <dt class="govuk-summary-list__key">Number of vacancies</dt>
           <dd class="govuk-summary-list__value">{{ job.vacancies }}</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="./add-job-source?job-title={{ job.title }}&employer={{ job.employer }}" class="govuk-link">Change<span class="govuk-visually-hidden"> number of vacancies</span></a>
+            <a href="./add-job-source?job-title={{ job.title }}&employer={{ job.employer }}&sector={{ job.sector }}" class="govuk-link">Change<span class="govuk-visually-hidden"> number of vacancies</span></a>
           </dd>
         </div>
       
@@ -78,7 +78,7 @@
           <dt class="govuk-summary-list__key">Job source</dt>
           <dd class="govuk-summary-list__value">{{ job.source }}</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="./add-job-source?job-title={{ job.title }}&employer={{ job.employer }}" class="govuk-link">Change<span class="govuk-visually-hidden"> job source</span></a>
+            <a href="./add-job-source?job-title={{ job.title }}&employer={{ job.employer }}&sector={{ job.sector }}" class="govuk-link">Change<span class="govuk-visually-hidden"> job source</span></a>
           </dd>
         </div>
 
@@ -87,7 +87,7 @@
           <dt class="govuk-summary-list__key">Job source 2 (optional)</dt>
           <dd class="govuk-summary-list__value">Not provided</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="./add-job-source?job-title={{ job.title }}&employer={{ job.employer }}" class="govuk-link">Change<span class="govuk-visually-hidden"> job source 2 (optional)</span></a>
+            <a href="./add-job-source?job-title={{ job.title }}&employer={{ job.employer }}&sector={{ job.sector }}" class="govuk-link">Change<span class="govuk-visually-hidden"> job source 2 (optional)</span></a>
           </dd>
         </div>
       
@@ -95,7 +95,7 @@
           <dt class="govuk-summary-list__key">Supported by a charity? (optional)</dt>
           <dd class="govuk-summary-list__value">Not provided</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="./add-job-source?job-title={{ job.title }}&employer={{ job.employer }}" class="govuk-link">Change<span class="govuk-visually-hidden"> supported by a charity? (optional)</span></a>
+            <a href="./add-job-source?job-title={{ job.title }}&employer={{ job.employer }}&sector={{ job.sector }}" class="govuk-link">Change<span class="govuk-visually-hidden"> supported by a charity? (optional)</span></a>
           </dd>
         </div>
       </dl>
@@ -107,15 +107,23 @@
           <dt class="govuk-summary-list__key">Job location</dt>
           <dd class="govuk-summary-list__value">{{ job.location }}</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job location</span></a>
+            <a href="./add-job-location?{{ job.title }}&location={{ job.location }}&salary={{ job.salaryFrom }}&contract={{ job.contract }}" class="govuk-link">Change<span class="govuk-visually-hidden"> job location</span></a>
           </dd>
         </div>
       
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Salary from</dt>
-          <dd class="govuk-summary-list__value">{{ job.salaryFrom }}</dd>
+          {% if (data['salary-from'] != null ) %}
+          <dd class="govuk-summary-list__value">£{{ data['salary-from'] }}</dd>
+
+          {% else %}
+          <dd class="govuk-summary-list__value">£{{ job.salaryFrom }}</dd>
+
+          {% endif %}
+
+
           <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> salary from</span></a>
+            <a href="./add-job-location?{{ job.title }}&location={{ job.location }}&salary={{ job.salaryFrom }}&contract={{ job.contract }}" class="govuk-link">Change<span class="govuk-visually-hidden"> salary from</span></a>
           </dd>
         </div>
       
@@ -123,7 +131,7 @@
           <dt class="govuk-summary-list__key">Salary to (optional)</dt>
           <dd class="govuk-summary-list__value">Not provided</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> salary to (optional)</span></a>
+            <a href="./add-job-location?{{ job.title }}&location={{ job.location }}&salary={{ job.salaryFrom }}&contract={{ job.contract }}" class="govuk-link">Change<span class="govuk-visually-hidden"> salary to (optional)</span></a>
           </dd>
         </div>
       
@@ -131,7 +139,7 @@
           <dt class="govuk-summary-list__key">Salary period</dt>
           <dd class="govuk-summary-list__value">Per hour</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> salary period</span></a>
+            <a href="./add-job-location?{{ job.title }}&location={{ job.location }}&salary={{ job.salaryFrom }}&contract={{ job.contract }}" class="govuk-link">Change<span class="govuk-visually-hidden"> salary period</span></a>
           </dd>
         </div>
       
@@ -139,7 +147,7 @@
           <dt class="govuk-summary-list__key">Additional salary information (optional)</dt>
           <dd class="govuk-summary-list__value">Not provided</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> additional salary information (optional)</span></a>
+            <a href="./add-job-location?{{ job.title }}&location={{ job.location }}&salary={{ job.salaryFrom }}&contract={{ job.contract }}" class="govuk-link">Change<span class="govuk-visually-hidden"> additional salary information (optional)</span></a>
           </dd>
         </div>
       
@@ -147,7 +155,7 @@
           <dt class="govuk-summary-list__key">Does salary pay minimum wage?</dt>
           <dd class="govuk-summary-list__value">Yes</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> does salary pay minimum wage?</span></a>
+            <a href="./add-job-location?{{ job.title }}&location={{ job.location }}&salary={{ job.salaryFrom }}&contract={{ job.contract }}" class="govuk-link">Change<span class="govuk-visually-hidden"> does salary pay minimum wage?</span></a>
           </dd>
         </div>
       
@@ -155,7 +163,7 @@
           <dt class="govuk-summary-list__key">Work pattern</dt>
           <dd class="govuk-summary-list__value">Flexible shifts</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> work pattern</span></a>
+            <a href="./add-job-location?{{ job.title }}&location={{ job.location }}&salary={{ job.salaryFrom }}&contract={{ job.contract }}" class="govuk-link">Change<span class="govuk-visually-hidden"> work pattern</span></a>
           </dd>
         </div>
       
@@ -163,15 +171,22 @@
           <dt class="govuk-summary-list__key">Hours per week</dt>
           <dd class="govuk-summary-list__value">Zero hours</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> hours per week</span></a>
+            <a href="./add-job-location?{{ job.title }}&location={{ job.location }}&salary={{ job.salaryFrom }}&contract={{ job.contract }}" class="govuk-link">Change<span class="govuk-visually-hidden"> hours per week</span></a>
           </dd>
         </div>
       
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Contract type</dt>
+          {% if (data['contract'] != null ) %}
+          <dd class="govuk-summary-list__value">{{ job.contract }}</dd>
+
+          {% else %}
           <dd class="govuk-summary-list__value">Temporary</dd>
+
+          {% endif %}
+
           <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> contract type</span></a>
+            <a href="./add-job-location?{{ job.title }}&location={{ job.location }}&salary={{ job.salaryFrom }}&contract={{ job.contract }}" class="govuk-link">Change<span class="govuk-visually-hidden"> contract type</span></a>
           </dd>
         </div>
       
@@ -179,7 +194,7 @@
           <dt class="govuk-summary-list__key">Base location (optional)</dt>
           <dd class="govuk-summary-list__value">Workplace</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> base location (optional)</span></a>
+            <a href="./add-job-location?{{ job.title }}&location={{ job.location }}&salary={{ job.salaryFrom }}&contract={{ job.contract }}" class="govuk-link">Change<span class="govuk-visually-hidden"> base location (optional)</span></a>
           </dd>
         </div>
       </dl>
@@ -191,7 +206,7 @@
           <dt class="govuk-summary-list__key">Essential job criteria</dt>
           <dd class="govuk-summary-list__value">L1 0AA</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> essential job criteria</span></a>
+            <a href="./add-job-description?id={{ job.id }}" class="govuk-link">Change<span class="govuk-visually-hidden"> essential job criteria</span></a>
           </dd>
         </div>
       
@@ -199,23 +214,29 @@
           <dt class="govuk-summary-list__key">Desirable job criteria (optional)</dt>
           <dd class="govuk-summary-list__value">Not provided</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> desirable job criteria (optional)</span></a>
+            <a href="./add-job-description?id={{ job.id }}" class="govuk-link">Change<span class="govuk-visually-hidden"> desirable job criteria (optional)</span></a>
           </dd>
         </div>
       
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Job description</dt>
           <dd class="govuk-summary-list__value">
+            {% if (['description'] != null ) %}
+           {{ job.description }}
+  
+            {% else %}
             The role of a bricklayer involves multiple tasks. However, the ultimate goal of the job is to construct, build and repair buildings and other structures, such as housing estates, walls, chimneys or even decorative masonry work.<br>
             • Laying bricks<br>
             • Applying or removing grout with a trowel<br>
             • Strengthening and sealing foundations with the appropriate material, usually damp-resistant materials<br>
             • Repairing building blocks and chimneys<br>
             • Refurbishing decorative stonework<br>
-            • Measuring. Before laying bricks, the bricklayer needs to measure the build area to be able to place the first rows of bricks along courses
+            • Measuring. Before laying bricks, the bricklayer needs to measure the build area to be able to place the first rows of bricks along courses  
+            {% endif %}
+        
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job description</span></a>
+            <a href="./add-job-description?id={{ job.id }}" class="govuk-link">Change<span class="govuk-visually-hidden"> job description</span></a>
           </dd>
         </div>
       
@@ -223,7 +244,7 @@
           <dt class="govuk-summary-list__key">Offence exclusions</dt>
           <dd class="govuk-summary-list__value">No excluding offences</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> offence exclusions</span></a>
+            <a href="./add-job-description?id={{ job.id }}" class="govuk-link">Change<span class="govuk-visually-hidden"> offence exclusions</span></a>
           </dd>
         </div>
       </dl>
@@ -234,7 +255,7 @@
           <dt class="govuk-summary-list__key">Rolling opportunity?</dt>
           <dd class="govuk-summary-list__value">No</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> rolling opportunity?</span></a>
+            <a href="./add-job-apply?id={{ job.id }}" class="govuk-link">Change<span class="govuk-visually-hidden"> rolling opportunity?</span></a>
           </dd>
         </div>
       
@@ -242,7 +263,7 @@
           <dt class="govuk-summary-list__key">Closing date</dt>
           <dd class="govuk-summary-list__value">20 August 2024</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> closing date</span></a>
+            <a href="./add-job-apply?id={{ job.id }}" class="govuk-link">Change<span class="govuk-visually-hidden"> closing date</span></a>
           </dd>
         </div>
       
@@ -250,7 +271,7 @@
           <dt class="govuk-summary-list__key">Only for prison leavers?</dt>
           <dd class="govuk-summary-list__value">Yes</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> only for prison leavers?</span></a>
+            <a href="./add-job-apply?id={{ job.id }}" class="govuk-link">Change<span class="govuk-visually-hidden"> only for prison leavers?</span></a>
           </dd>
         </div>
       
@@ -258,7 +279,7 @@
           <dt class="govuk-summary-list__key">Job start date</dt>
           <dd class="govuk-summary-list__value">20 August 2024</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job start date</span></a>
+            <a href="./add-job-apply?id={{ job.id }}" class="govuk-link">Change<span class="govuk-visually-hidden"> job start date</span></a>
           </dd>
         </div>
       
@@ -266,7 +287,7 @@
           <dt class="govuk-summary-list__key">How to apply</dt>
           <dd class="govuk-summary-list__value">Email contact at employer</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> how to apply</span></a>
+            <a href="./add-job-apply?id={{ job.id }}" class="govuk-link">Change<span class="govuk-visually-hidden"> how to apply</span></a>
           </dd>
         </div>
       
@@ -274,7 +295,7 @@
           <dt class="govuk-summary-list__key">Supporting documentation required</dt>
           <dd class="govuk-summary-list__value">CV</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> supporting documentation required</span></a>
+            <a href="./add-job-apply?id={{ job.id }}" class="govuk-link">Change<span class="govuk-visually-hidden"> supporting documentation required</span></a>
           </dd>
         </div>
       </dl>
@@ -284,9 +305,20 @@
       <dl class="govuk-summary-list">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Current status</dt>
-          <dd class="govuk-summary-list__value">Open</dd>
+          
+          {% if (data['job-status'] != "empty") %}
+          <dd class="govuk-summary-list__value">{{ data['job-status'] }}</dd>
+
+          {% elif (['status'] != null ) %}
+          <dd class="govuk-summary-list__value">{{ job.status }}</dd>
+
+           {% else %}
+
+           <dd class="govuk-summary-list__value">Open</dd>
+           {% endif %}
+
           <dd class="govuk-summary-list__actions">
-            <a href="add-job-status" class="govuk-link">Change<span class="govuk-visually-hidden"> rolling opportunity?</span></a>
+            <a href="./add-job-status?id={{ job.id }}&status={{ job.status }}" class="govuk-link">Change<span class="govuk-visually-hidden"> rolling opportunity?</span></a>
           </dd>
         </div>
       
@@ -295,9 +327,16 @@
       
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Additional information</dt>
+          {% if (data['additional-info'] != "empty") %}
+          <dd class="govuk-summary-list__value">{{ data['additional-info'] }}</dd>
+
+          {% else %}
           <dd class="govuk-summary-list__value">Not provided</dd>
+
+          {% endif %}
+
           <dd class="govuk-summary-list__actions">
-            <a href="add-job-status" class="govuk-link">Change<span class="govuk-visually-hidden"> supporting documentation required</span></a>
+            <a href="./add-job-status?id={{ job.id }}" class="govuk-link">Change<span class="govuk-visually-hidden"> supporting documentation required</span></a>
           </dd>
         </div>
 </dl>
