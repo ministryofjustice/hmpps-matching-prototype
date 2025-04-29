@@ -9,15 +9,23 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-
+   
       {% set count = 0 %}
       {% set id = data['id'] %}
-      {% set valid_ids = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10","11", "12", "13", "14", "15", "16", "17", "18", "19", "20"] %}
+      {% if (data['duplicate'] == "true" ) %}
+      {% set valid_ids = ["19"] %}
+
+      {% else %}
+      {% set valid_ids = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10","11", "12", "13", "14", "15", "16", "17", "18", "20"] %}
+
+      {% endif %}
+
 
       {% set included_123456 = false %}
-      
+
+
       {% if id in valid_ids %}
-        {% for job in data.jobs %}
+      {% for job in data.jobs %}
           {% if job.id == id %}
             {% set current_id = job.id %}
     
@@ -25,7 +33,20 @@
             <a href="duplicate-job" type="submit" class="govuk-button govuk-button--secondary right" data-module="govuk-button">
               Duplicate job
             </a>
-      <h1 class="govuk-heading-l">{{ job.title }}</h1>
+           
+            {% if (data['duplicate-job-title'] != null ) %}
+            <h1 class="govuk-heading-l">{{ data['duplicate-job-title'] }}</h1>
+
+            {% else %}
+            <h1 class="govuk-heading-l">{{ job.title }}</h1>
+
+            {% endif %}
+
+
+
+
+
+
    
       </div>
 

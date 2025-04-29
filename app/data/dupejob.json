@@ -1,15 +1,17 @@
 [
     {
+        "title": "Apprentice plasterer",
         "vacancies": "1",
         "sector": "Construction and trade",
         "employer": "ABC Construction Ltd",
-        "dateAdded": "28 Apr 2024",
+        "dateAdded": "1 May 2025",
         "id": "19",
         "source": "NFN",
         "industrySector": "Construction",
         "location": "London",
-        "salaryFrom": "£18,000",
+        "salaryFrom": "18,000",
         "status": "Draft",
-        "statusColor": "grey"
+        "statusColor": "grey",
+        "author": "me"
     }
 ]
