@@ -5,11 +5,26 @@
 
   <!-- Breadcrumb -->
 
-  <span class="govuk-caption-l">Add a job - step 6 of 6</span>
+
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
 
   <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+
+            <a href="duplicate-job" type="submit" class="govuk-button govuk-button--secondary right" data-module="govuk-button">
+              Duplicate job
+            </a>
+            <h1 class="govuk-heading-l">{{ data['job-title'] }}</h1>
+   
+      </div>
+
+    </div>
+
+  <div class="govuk-grid-row">
+
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">Check your answers before adding the job</h1>
+
       <h2 class="govuk-heading-m">Job role and source</h2>
       <dl class="govuk-summary-list margin-bottom-4">
         <div class="govuk-summary-list__row">
@@ -325,8 +340,8 @@
 
       <form method="post" action="./jobs-list?new-job=true">
 
-      <button class="govuk-button">Add job and save</button>
-</form>
+        <button class="govuk-button">Update job and save</button>
+      </form>
 
     </div>
   </div>
