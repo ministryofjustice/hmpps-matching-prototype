@@ -306,9 +306,8 @@
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Current status</dt>
           
-          {% if (data['job-status'] != "empty") %}
+          {% if (data['job-status'] != null) %}
           <dd class="govuk-summary-list__value">{{ data['job-status'] }}</dd>
-
           {% elif (['status'] != null ) %}
           <dd class="govuk-summary-list__value">{{ job.status }}</dd>
 
@@ -327,7 +326,8 @@
       
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Additional information</dt>
-          {% if (data['additional-info'] != "empty") %}
+          {% if (data['additional-info'] != null) %}
+
           <dd class="govuk-summary-list__value">{{ data['additional-info'] }}</dd>
 
           {% else %}
