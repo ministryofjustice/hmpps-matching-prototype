@@ -1,0 +1,170 @@
+{% extends "./includes/template.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+  <!-- Breadcrumb -->
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="dps-home">Digital Prison Services</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="home">Work after leaving prison</a>
+      </li>
+    </ol>
+  </div>
+
+  <!-- Main page -->
+
+  <main class="govuk-main-wrapper">
+
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">
+      Add jobs and employers
+    </h1>
+
+  <!-- TABS -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <nav class="moj-sub-navigation govuk-!-margin-bottom-2" aria-label="Sub navigation">
+        <ul class="moj-sub-navigation__list">
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" aria-current="page" href="#">Employers</a>
+          </li>
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" href="upload-job-list">Jobs</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+
+  <!-- FILTERS -->
+
+  <div class="govuk-form-group filter-box govuk-!-margin-top-4">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-s govuk-!-margin-bottom-2">
+            Filter by
+          </h2>
+        </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="search">
+            Employer name
+          </label>
+          <input class="govuk-input" id="search" name="search" type="search" aria-describedby="search-hint">
+        </div>
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="sort">
+            Employer sector
+          </label>
+          <select class="govuk-select" id="type-of-work-filter" name="type-of-work-filter">
+            <option value="updated" selected>All employer sectors</option>
+            <option value="published">Animal care and farming</option>
+            <option value="views">Cleaning and maintenance</option>
+            <option value="comments">Construction and trade</option>
+            <option value="published">Driving and transport</option>
+            <option value="views">Hair, beauty and wellbeing</option>
+            <option value="comments">Hospitality and catering</option>
+            <option value="published">IT and digital</option>
+            <option value="views">Manufacturing and technical</option>
+            <option value="comments">Office or desk-based</option>
+            <option value="comments">Retail and sales</option>
+            <option value="published">Sport and fitness</option>
+            <option value="views">Training and support</option>
+            <option value="comments">Warehousing and storage</option>
+            <option value="comments">Waste management</option>
+            <option value="comments">Other</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <form method="post">
+          <button class="govuk-button govuk-!-margin-top-3 govuk-!-margin-bottom-0" data-module="govuk-button">
+            Apply filters
+          </button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <a href="upload-add-employer" style="float: right; color: black" type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    Add an employer
+  </a>
+
+  <table class="govuk-table govuk-!-margin-top-6" data-module="moj-sortable-table" id="prisonerTable">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header" aria-sort="ascending">Employer</th>
+        <th scope="col" class="govuk-table__header">Employer sector</th>
+        <th scope="col" class="govuk-table__header">Employer status</th>
+        <th scope="col" class="govuk-table__header" aria-sort="ascending">Date added</th>
+      </tr>
+    </thead>
+
+    <tbody class="govuk-table__body">
+
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="ABC Construction" href="#">ABC Construction</a></td>
+        <td class="govuk-table__cell">Construction and trade</td>
+        <td class="govuk-table__cell">Regional</td>
+        <td class="govuk-table__cell" data-sort-value="2024.02.04">4 Feb 2024</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Amazon" href="#">Amazon</a></td>
+        <td class="govuk-table__cell">Warehousing and storage</td>
+        <td class="govuk-table__cell">Key partner</td>
+        <td class="govuk-table__cell" data-sort-value="2023.12.30">30 Dec 2023</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Axis Ltd" href="#">Axis Ltd</a></td>
+        <td class="govuk-table__cell">Construction and trade</td>
+        <td class="govuk-table__cell">Local</td>
+        <td class="govuk-table__cell" data-sort-value="2024.02.14">14 Feb 2024</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="BB Builders" href="#">BB Builders</a></td>
+        <td class="govuk-table__cell">Construction and trade</td>
+        <td class="govuk-table__cell">Local</td>
+        <td class="govuk-table__cell" data-sort-value="2024.03.01">1 Mar 2024</td>
+      </tr>
+
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="BMW cars" href="#">BMW cars</a></td>
+        <td class="govuk-table__cell">Retail and sales</td>
+        <td class="govuk-table__cell">Gold</td>
+        <td class="govuk-table__cell" data-sort-value="2023.12.20">20 Dec 2023</td>
+      </tr>
+
+
+
+    </tbody>
+  </table>
+
+
+
+
+
+</div>
+
+
+{% endblock %}

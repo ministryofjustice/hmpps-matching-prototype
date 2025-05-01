@@ -1,0 +1,56 @@
+{% extends "./includes/template.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+        <nav aria-label="Back link navigation">
+            <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+        </nav>
+
+  <span class="govuk-caption-l">Add a job - step 4 of 5</span>
+  <h1 class="govuk-heading-l">How to apply</h1>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form action="/submit-job" method="post">
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="job-title">
+                    Job title
+                </label>
+                <input class="govuk-input" id="job-title" name="job-title" type="text" required>
+            </div>
+
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="job-description">
+                    Job description
+                </label>
+                <textarea class="govuk-textarea" id="job-description" name="job-description" rows="5" required></textarea>
+            </div>
+
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="job-location">
+                    Job location
+                </label>
+                <input class="govuk-input" id="job-location" name="job-location" type="text" required>
+            </div>
+
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="job-type">
+                    Job type
+                </label>
+                <select class="govuk-select" id="job-type" name="job-type" required>
+                    <option value="">Select a job type</option>
+                    <option value="full-time">Full-time</option>
+                    <option value="part-time">Part-time</option>
+                    <option value="contract">Contract</option>
+                </select>
+            </div>
+
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </form>
+        </div>
+        </div>
+</div>
+{% endblock %}

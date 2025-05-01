@@ -15,6 +15,7 @@ require('./routes/v13/routing.js')(router);
 require('./routes/v14/routing.js')(router);
 require('./routes/v15/routing.js')(router);
 require('./routes/v16/routing.js')(router);
+require('./routes/v17/routing.js')(router);
 
 
 
