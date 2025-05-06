@@ -169,7 +169,7 @@
   <tbody class="govuk-table__body">
 
     {% if (data['duplicate'] == "true" ) %}
-    {% for job in data.jobs %}
+    {% for job in data.jobs17 %}
         {% if job.id == "19" %}
             <tr class="govuk-table__row">
                 <td class="govuk-table__cell"><a href="./job-detail?id={{ job.id }}&duplicate=true">{{ data['duplicate-job-title'] }}</a></td>
@@ -210,7 +210,7 @@
 
     {% endif %}
      
-    {% for job in data.jobs %}
+    {% for job in data.jobs17 %}
   {% if job.id != "19" %}
     {% if data['my-jobs-filter'] == "Show only my jobs" and job.author == "me" %}
       <tr class="govuk-table__row">
