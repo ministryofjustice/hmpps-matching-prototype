@@ -131,6 +131,7 @@
             </div>
           </div>
         </div>
+        
       </div>
 
       <div class="govuk-grid-row">
@@ -162,7 +163,7 @@
       <th scope="col" class="govuk-table__header">Job sector</th>
       <th scope="col" class="govuk-table__header">Employer</th>
       <th scope="col" class="govuk-table__header govuk-table__header--numeric" aria-sort="ascending"><button type="button" data-index="0">Date added</button></th>
-      <th scope="col" class="govuk-table__header">Status</th>   
+      <th scope="col" class="govuk-table__header" aria-sort="ascending"><button type="button" data-index="0">Status</button></th>   
     </tr>
   </thead>
 
@@ -211,28 +212,29 @@
     {% endif %}
      
     {% for job in data.jobs17 %}
-  {% if job.id != "19" %}
-    {% if data['my-jobs-filter'] == "Show only my jobs" and job.author == "me" %}
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell"><a href="./job-detail?id={{ job.id }}">{{ job.title }}</a></td>
-        <td class="govuk-table__cell">{{ job.vacancies }}</td>
-        <td class="govuk-table__cell">{{ job.sector }}</td>
-        <td class="govuk-table__cell">{{ job.employer }}</td>
-        <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ job.dateAdded }}">{{ job.dateAdded }}</td>
-        <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--{{ job.statusColor }}">{{ job.status }}</span></td>
-      </tr>
-    {% elif data['my-jobs-filter'] != "Show only my jobs" %}
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell"><a href="./job-detail?id={{ job.id }}">{{ job.title }}</a></td>
-        <td class="govuk-table__cell">{{ job.vacancies }}</td>
-        <td class="govuk-table__cell">{{ job.sector }}</td>
-        <td class="govuk-table__cell">{{ job.employer }}</td>
-        <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ job.dateAdded }}">{{ job.dateAdded }}</td>
-        <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--{{ job.statusColor }}">{{ job.status }}</span></td>
-      </tr>
+    {% if job.id != "19" %}
+      {% if data['my-jobs-filter'] == "Show only my jobs" and job.author == "me" %}
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="./job-detail?id={{ job.id }}">{{ job.title }}</a></td>
+          <td class="govuk-table__cell">{{ job.vacancies }}</td>
+          <td class="govuk-table__cell">{{ job.sector }}</td>
+          <td class="govuk-table__cell">{{ job.employer }}</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ job.dateAdded }}">{{ job.dateAdded }}</td>
+          <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--{{ job.statusColor }}">{{ job.status }}</span></td>
+        </tr>
+      {% elif data['my-jobs-filter'] != "Show only my jobs" %}
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="./job-detail?id={{ job.id }}">{{ job.title }}</a></td>
+          <td class="govuk-table__cell">{{ job.vacancies }}</td>
+          <td class="govuk-table__cell">{{ job.sector }}</td>
+          <td class="govuk-table__cell">{{ job.employer }}</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ job.dateAdded }}">{{ job.dateAdded }}</td>
+          <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--{{ job.statusColor }}">{{ job.status }}</span></td>
+        </tr>
+      {% endif %}
     {% endif %}
-  {% endif %}
-{% endfor %}
+  {% endfor %}
+  
 
 
 
