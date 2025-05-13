@@ -7,7 +7,7 @@
 
   <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
 
-  <span class="govuk-caption-l">Add a job - step 2 of 6</span>
+  <span class="govuk-caption-l">Add a job - step 2 of 5</span>
 
   <h1 class="govuk-heading-l">Location and contract details</h1>
 
@@ -16,16 +16,51 @@
 
 
 
+        <!-- <div class="govuk-form-group">
 
-      {% if (data['title'] != "empty") %}
-      <form method="post" action="./job-detail">
-        {% else %}
-      <form method="post" action="./add-job-description">
-      {% endif %}
+          <label class="govuk-label" for="job-region">
+            Job location
+            </label>
+            <select class="govuk-select" id="job-region" name="job-region">
+              <option value="">Select a location</option>
+              <option value="north-east">North East</option>
+              <option value="north-west">North West</option>
+              <option value="yorkshire-humber">Yorkshire</option>
+              <option value="east-midlands">East Midlands</option>
+              <option value="west-midlands">West Midlands</option>
+              <option value="east-england">East of England</option>
+              <option value="south-east">South East</option>
+              <option value="south-west">South West</option>
+              <option value="london">London</option>
+            </select>
+          </div> -->
+
+
+
+        {% if (data['title'] != "empty") %}
+        <form method="post" action="./job-detail">
+          {% else %}
+        <form method="post" action="./add-job-description">
+        {% endif %}
+
+        
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="job-location">
+            Job location
+          </label>
+          <div id="job-location-hint" class="govuk-hint">
+            Enter town, city, county or post code
+          </div>
+          {% if (data['title'] != "empty") %}
+          <input class="govuk-input govuk-input--width-20" id="job-location" name="job-location" type="text" aria-describedby="job-location-hint" value="{{ data['location'] }}">
+          {% else %}
+          <input class="govuk-input govuk-input--width-20" id="job-location" name="job-location" type="text" aria-describedby="job-location-hint">
+          {% endif %}
+        </div>
 
         
 
-        <div class="govuk-form-group">
+        <!-- <div class="govuk-form-group">
           <label class="govuk-label" for="job-location">
             Job location
           </label>
@@ -37,7 +72,7 @@
           {% else %}
           <input class="govuk-input govuk-input--width-10" id="job-location" name="job-location" type="text" aria-describedby="job-location-hint">
           {% endif %}
-        </div>
+        </div> -->
 
         <div class="govuk-form-group">
           <label class="govuk-label" for="salary-from">

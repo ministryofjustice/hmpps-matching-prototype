@@ -32,13 +32,14 @@
       <nav class="moj-sub-navigation govuk-!-margin-bottom-2" aria-label="Sub navigation">
         <ul class="moj-sub-navigation__list">
           <li class="moj-sub-navigation__item">
-            <a class="moj-sub-navigation__link" href="employer-list">Employers</a>
-          </li>
-
-          <li class="moj-sub-navigation__item">
             <a class="moj-sub-navigation__link" aria-current="page" href="#">Jobs</a>
           </li>
 
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" href="employer-list">Employers</a>
+          </li>
+
+  
           
         </ul>
       </nav>
@@ -114,6 +115,7 @@
               </select>
               
             </div>
+            
         </div>
 
 
@@ -126,9 +128,10 @@
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="my-jobs-filter" name="my-jobs-filter" type="checkbox" value="Show only my jobs">
               <label class="govuk-label govuk-checkboxes__label" for="my-jobs-filter">
-                Show only my jobs
+                Show only my jobs (10)
               </label>
             </div>
+    
           </div>
         </div>
         
@@ -173,24 +176,14 @@
     {% for job in data.jobs17 %}
         {% if job.id == "19" %}
             <tr class="govuk-table__row">
-                <td class="govuk-table__cell"><a href="./job-detail?id={{ job.id }}&duplicate=true">{{ data['duplicate-job-title'] }}</a></td>
-                <td class="govuk-table__cell">{{ job.vacancies }}</td>
+              <td class="govuk-table__cell"><a href="./job-detail?id={{ job.id }}">{{ job.title }}</a></td>
+              <td class="govuk-table__cell">{{ job.vacancies }}</td>
                 <td class="govuk-table__cell">{{ job.sector }}</td>
                 <td class="govuk-table__cell">{{ job.employer }}</td>
                 <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ job.dateAdded }}">{{ job.dateAdded }}</td>
                 
-                {% if data['job-status'] == "Open" %}
-                    <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--green">Open</span></td>
-                {% elif data['job-status'] == "Closed" %}
-                    <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--red">Closed</span></td>
-                {% elif data['job-status'] == "Filled" %}
-                    <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--yellow">Filled</span></td>
-                    {% elif data['job-status'] == "Draft" %}
-                    <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--grey">Draft</span></td>
+                <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--green">Live</span></td>
 
-                {% else %}
-                    <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--{{ job.statusColor }}">{{ job.status }}</span></td>
-                {% endif %}
             </tr>
         {% endif %}
     {% endfor %}
