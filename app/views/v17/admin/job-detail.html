@@ -42,8 +42,10 @@
                 </h2>
               </div>
               <div class="govuk-notification-banner__content">
-                <p class="govuk-notification-banner__heading">Is this needed??
+                <p class="govuk-notification-banner__heading">Duplicating Apprentice plasterer
                 </p>
+                <p class="govuk-body">Update the details below before saving.</p>
+
               </div>
             </div>
           </div>
@@ -316,7 +318,13 @@
       
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Job start date</dt>
+          {% if (data['duplicate'] == "true" ) %}
           <dd class="govuk-summary-list__value">20 August 2024</dd>
+
+          {% else %} 
+          <dd class="govuk-summary-list__value">20 August 2024</dd>
+          {% endif %}
+
           <dd class="govuk-summary-list__actions">
             <a href="./add-job-apply?id={{ job.id }}" class="govuk-link">Change<span class="govuk-visually-hidden"> job start date</span></a>
           </dd>
