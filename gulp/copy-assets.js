@@ -5,7 +5,7 @@
 */
 
 const gulp = require('gulp')
-
+const fs = require('fs')
 const config = require('./config.json')
 
 gulp.task('copy-assets', function () {
@@ -24,10 +24,14 @@ gulp.task('copy-assets-documentation', function () {
     .pipe(gulp.dest(config.paths.public))
 })
 
-gulp.task('copy-assets-v6', function () {
-  return gulp.src([
-    `${config.paths.v6Assets}/**`,
-    `!${config.paths.v6Assets}/sass/**`
-  ])
-    .pipe(gulp.dest(config.paths.public + '/v6'))
+gulp.task('copy-assets-v6', function (done) {
+  const v6AssetDir = config.paths.v6Assets
+  if (fs.existsSync(v6AssetDir))
+    return gulp.src([
+      `${config.paths.v6Assets}/**`,
+      `!${config.paths.v6Assets}/sass/**`
+    ])
+      .pipe(gulp.dest(config.paths.public + '/v6'))
+  else
+    done()
 })
