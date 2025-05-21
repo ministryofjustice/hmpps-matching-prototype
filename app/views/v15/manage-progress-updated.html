@@ -1,0 +1,79 @@
+{% extends "./includes/template.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+
+    <form method="post">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Manage Adam Ahmed's application</h1>
+
+      <div class="govuk-form-group filter-box govuk-!-margin-top-4">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              <h2 class="govuk-heading-m">
+                <a class="govuk-link" href="job-description-vegetable">Vegetable packing operative</a>
+              </h2>
+            </div>
+        </div>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+              <p class="govuk-body">Employer: CDS Labour</p>
+            </div>
+            <div class="govuk-grid-column-one-third">
+              <p class="govuk-body">Location: Leeds, LS11</p>
+            </div>
+            <div class="govuk-grid-column-one-third">
+              <p class="govuk-body">Closing date: 10 Feb 2024</p>
+            </div>
+        </div>
+
+        <p class="govuk-body">How to apply: Email <a class="govuk-link" href="mailto:jobs@CDSLabour.com" target="_blank">jobs@CDSLabour.com</a></p>
+        <p class="govuk-body govuk-!-margin-bottom-1">Supporting documentation required: CV, Disclosure letter</p>
+      </div>
+
+
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Application status</th>
+              <th scope="col" class="govuk-table__header">Additional information</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td scope="row" class="govuk-table__cell">
+                Application submitted<br>
+                <span class="govuk-hint">22 December 2023, Ben Khan</span>
+              </td>
+              <td class="govuk-table__cell">None entered</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td scope="row" class="govuk-table__cell">
+                {{ data['application-status'] }}<br>
+                <span class="govuk-hint">22 January 2024, Ben Khan</span>
+              </td>
+              <td class="govuk-table__cell">{{ data['moreDetail'] }}</td>
+            </tr>
+          </tbody>
+        </table>
+
+      <p class="govuk-body govuk-!-margin-bottom-8"><a class="govuk-button" href="manage-progress-update">Update progress</a></p>
+
+        <!-- <button class="govuk-button" data-module="govuk-button">
+          Save and update
+        </button> -->
+
+
+  </div>
+
+</form>
+</main>
+</div>
+
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends "./includes/template.html" %}
+
+{% block content %}
+
+
+<!-- Breadcrumb -->
+<div class="govuk-width-container">
+
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="dps-home">Digital Prison Services</a>
+        </li>
+
+      </ol>
+    </div>
+</div>
+
+<!-- Main page -->
+    <div class="govuk-width-container">
+        <h1 class="govuk-heading-l govuk-!-margin-top-7">Work after leaving prison</h1>
+    </div>
+
+    <div class="homepage-content">
+        <div class="govuk-width-container">
+            <ul class="govuk-grid-row card-group">
+                <li class="govuk-grid-column-one-third card-group__item">
+                    <div class="card card--clickable">
+                        <h2 class="govuk-heading-m card__heading">
+                            <a class="govuk-link card__link govuk-link--no-visited-state" href="list-all">Get someone ready to work</a>
+                        </h2>
+                        <p class="govuk-body card__description">Record what support a prisoner needs to get work. View who has been assessed as ready to work.</p>
+                    </div>
+
+                </li>
+                <li class="govuk-grid-column-one-third card-group__item">
+                    <div class="card card--clickable">
+                        <h2 class="govuk-heading-m card__heading">
+                            <a class="govuk-link card__link govuk-link--no-visited-state" href="./matching-list">Match jobs and manage applications</a>
+                        </h2>
+                        <p class="govuk-body card__description">View jobs matched by work interests and release area. Manage the status of job applications.</p>
+                    </div>
+                </li>
+                <li class="govuk-grid-column-one-third card-group__item">
+                    <div class="card card--clickable">
+                        <h2 class="govuk-heading-m card__heading">
+                            <a class="govuk-link card__link govuk-link--no-visited-state" href="reporting-matching">Reporting data</a>
+                        </h2>
+                        <p class="govuk-body card__description">Create reports showing progress against Work after leaving prison metrics.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="govuk-width-container">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <h2 class="govuk-heading-m govuk-!-margin-top-6"><a class="govuk-link" href="./admin/jobs-list">Manage jobs and employers</a></h2>
+          <p class="govuk-body govuk-!-margin-bottom-8">Add and manage job vacancies and employer information.</p>
+        </div>
+      </div>
+    </div>
+
+{% endblock %}

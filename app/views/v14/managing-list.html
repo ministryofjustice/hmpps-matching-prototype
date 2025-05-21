@@ -1,0 +1,207 @@
+{% extends "./includes/template.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+  <!-- Breadcrumb -->
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="dps-home">Digital Prison Services</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="home">Work after leaving prison</a>
+      </li>
+    </ol>
+  </div>
+
+  <!-- Main page -->
+
+  <main class="govuk-main-wrapper">
+
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">
+      Match jobs and manage applications
+    </h1>
+
+  <!-- TABS -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <nav class="moj-sub-navigation govuk-!-margin-bottom-2" aria-label="Sub navigation">
+        <ul class="moj-sub-navigation__list">
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link"  href="matching-list">Match jobs</a>
+          </li>
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" aria-current="page" href="#">Manage applications</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+
+  <!-- FILTERS -->
+
+    <div class="govuk-form-group filter-box govuk-!-margin-top-4">
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <h2 class="govuk-heading-s govuk-!-margin-bottom-2">
+              Filter by
+            </h2>
+          </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="search">
+              Prisoner's name
+            </label>
+            <input class="govuk-input" id="search" name="search" type="search" aria-describedby="search-hint">
+          </div>
+        </div>
+
+        <div class="govuk-grid-column-one-third">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="job">
+              Job title or employer
+            </label>
+            <input class="govuk-input" id="job" name="job" type="search" aria-describedby="employer-hint">
+          </div>
+        </div>
+
+        <div class="govuk-grid-column-one-third">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="application-status">
+              Application status
+            </label>
+            <select class="govuk-select" id="application-status" name="application-status">
+              <option value="all" selected>All</option>
+              <option value="application">Application submitted</option>
+              <option value="application-unsuccessful">Application unsuccessful</option>
+              <option value="interview">Selected for interview</option>
+              <option value="interview-booked">Interview booked</option>
+              <option value="interview-unsuccessful">Unsuccessful at interview</option>
+              <option value="job-offer">Job offer</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <div class="govuk-checkboxes govuk-checkboxes--small govuk-!-margin-top-3" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="filter" name="filter" type="checkbox" value="Show prisoners who need support">
+              <label class="govuk-label govuk-checkboxes__label" for="filter">
+                Show prisoners who 'Need support'
+              </label>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <form method="post">
+            <button class="govuk-button govuk-!-margin-top-4 govuk-!-margin-bottom-0" data-module="govuk-button">
+              Apply filters
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+<!-- NUMBER OF RESULTS -->
+
+    <h3 class="govuk-heading-s">
+      4 results
+    </h3>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<!-- TABLE OF RESULTS -->
+
+    <table class="govuk-table govuk-!-margin-top-6" data-module="moj-sortable-table" id="prisonerTable">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header" aria-sort="ascending"><button type="button" data-index="0">Prisoner</button></th>
+          <th scope="col" class="govuk-table__header" aria-sort="none"><button type="button" data-index="1">Job</button></th>
+          <!-- <th scope="col" class="govuk-table__header">Status</th> -->
+          <th scope="col" class="govuk-table__header">Application status</th>
+          <th scope="col" class="govuk-table__header"></th>
+        </tr>
+      </thead>
+
+      <tbody class="govuk-table__body">
+
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Ahmed" href="./profile/tab1-overview">Ahmed, Adam</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G5823GP </span></td>
+          <td class="govuk-table__cell">Vegetable packing operative<br> <span class="govuk-hint govuk-!-margin-bottom-0"> CBS packing</span></td>
+          <td class="govuk-table__cell">Application submitted</td>
+          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="manage-progress-applied">Update progress</a></td>
+        </tr>
+
+        </tr><tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Charles" href="#">Charles, Jermaine</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G3892UH</span></td>
+          <td class="govuk-table__cell">Forklift operator<br> <span class="govuk-hint govuk-!-margin-bottom-0"> Amazon</span></td>
+          <td class="govuk-table__cell">Selected for interview</td>
+          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Update progress</a></td>
+        </tr>
+
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Charles" href="#">Charles, Jermaine</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G3892UH</span></td>
+          <td class="govuk-table__cell">Retail assistant<br> <span class="govuk-hint govuk-!-margin-bottom-0"> Iceland</span></td>
+          <td class="govuk-table__cell">Application submitted</td>
+          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Update progress</a></td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="McLaughlin" href="#">McLaughlin, Ross</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> G0143VW</span></td>
+          <td class="govuk-table__cell">Retail assistant<br> <span class="govuk-hint govuk-!-margin-bottom-0"> Iceland</span></td>
+          <td class="govuk-table__cell">Application submitted</td>
+          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Update progress</a></td>
+        </tr>
+
+
+
+      </tbody>
+    </table>
+
+
+</div>
+
+
+
+<script>
+  function myFunction() {
+    // Declare variables
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("filterName");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("prisonerTable");
+    tr = table.getElementsByTagName("tr");
+
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+</script>
+
+
+
+{% endblock %}

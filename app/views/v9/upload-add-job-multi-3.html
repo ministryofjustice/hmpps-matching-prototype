@@ -1,0 +1,123 @@
+{% extends "./includes/template.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+          <span class="govuk-caption-l">Add a job - step 3 of 5</span>
+          <h1 class="govuk-heading-l">
+            Requirements and job description
+          </h1>
+
+          <form method="post">
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="keyCriteria">
+              Add essential job requirement
+            </label>
+            <div id="keyCriteria-hint" class="govuk-hint">
+              For example, full UK driving licence.
+            </div>
+            <input class="govuk-input" id="keyCriteria" name="keyCriteria" type="text">
+            <p class="govuk-body govuk-!-margin-top-4"><a class="govuk-link" href="#">Add another essential job requirement</a></p>
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="jobDescription">
+              Job description
+            </label>
+            <div id="jobDescription-hint" class="govuk-hint">
+              A description of the role and key tasks. Include any benefits and training opportunities.
+            </div>
+            <textarea class="govuk-textarea" id="jobDescription" name="jobDescription" rows="5"></textarea>
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="desirableCriteria">
+              Desirable criteria (optional)
+            </label>
+            <!-- <div id="desirableCriteria-hint" class="govuk-hint">
+              A description of the role and key tasks. Include any benefits and training opportunities.
+            </div> -->
+            <textarea class="govuk-textarea" id="desirableCriteria" name="desirableCriteria" rows="4"></textarea>
+          </div>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend">
+                  Offence exclusions
+              </legend>
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="offenceExclusions" name="offenceExclusions" type="checkbox" data-behaviour="exclusive" value="None">
+                  <label class="govuk-label govuk-checkboxes__label" for="offenceExclusions">
+                    None
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="offenceExclusions-2" name="offenceExclusions" type="checkbox" value="Considered on a case by case basis">
+                  <label class="govuk-label govuk-checkboxes__label" for="offenceExclusions-2">
+                    Considered on a case by case basis
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="offenceExclusions-3" name="offenceExclusions" type="checkbox" value="Arson">
+                  <label class="govuk-label govuk-checkboxes__label" for="offenceExclusions-3">
+                    Arson
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="offenceExclusions-4" name="offenceExclusions" type="checkbox" value="Driving offences">
+                  <label class="govuk-label govuk-checkboxes__label" for="offenceExclusions-4">
+                    Driving offences
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="offenceExclusions-5" name="offenceExclusions" type="checkbox" value="Sexual offences">
+                  <label class="govuk-label govuk-checkboxes__label" for="offenceExclusions-5">
+                    Sexual offences
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="offenceExclusions-6" name="offenceExclusions" type="checkbox" value="Terrorism">
+                  <label class="govuk-label govuk-checkboxes__label" for="offenceExclusions-6">
+                    Terrorism
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="offenceExclusions-7" name="offenceExclusions" type="checkbox" value="Other" data-aria-controls="conditional-offenceExclusions">
+                  <label class="govuk-label govuk-checkboxes__label" for="offenceExclusions-7">
+                    Other
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-offenceExclusions">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="offenceExclusions-otherDetails">
+                      Give details
+                    </label>
+                    <input class="govuk-input" id="offenceExclusions-otherDetails" name="offenceExclusions-otherDetails">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+
+
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+
+        </form>
+
+        </div>
+      </div>
+  </main>
+</div>
+
+{% endblock %}

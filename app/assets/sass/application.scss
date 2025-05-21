@@ -19,6 +19,7 @@ $govuk-assets-path: '/govuk/assets/';
 
 // Components that aren't in Frontend
 @import "components/timeline";
+@import 'components/date-picker';
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
@@ -35,6 +36,21 @@ $govuk-assets-path: '/govuk/assets/';
 .filter-box-width-override-20 {
     width: 20%;
     float: left;
+}
+
+.reporting-stats h4 {
+  margin-bottom: 5px;
+}
+
+.reporting-stats p {
+  margin-bottom: 10px;
+}
+
+.reporting-big-number {
+  font-weight: 300;
+  font-size: 36px;
+  margin-bottom: 10px !important
+
 }
 
 
@@ -173,4 +189,40 @@ dd {
 dl dd,dl,p,.govuk-body,.govuk-body-m {
     margin-top: 0;
     /* margin-bottom:15px; */
+}
+
+// Style fixes
+
+.govuk-button-group.right {
+    float:right!important;
+}
+
+.govuk-button--secondary {
+    color: #000000!important;
+}
+
+.margin-bottom-3 {
+    margin-bottom: 30px;;
+}
+.margin-bottom-4 {
+    margin-bottom: 40px;;
+}
+
+
+.two-form-group {
+    float: left;
+    width: 300px;
+    margin-bottom: 0px;
+}
+
+.two-form-group .govuk-select {
+    max-width: 270px;
+}
+
+.govuk-tag {
+    font-weight: normal;
+}
+
+.govuk-button.right {
+    float: right;
 }

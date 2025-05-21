@@ -20,5 +20,9 @@ Example usage:
 module.exports = {
 
   // Insert values here
+  employers: require('./employers.json'),
+  jobs: require('./jobs.json'),
+  jobs17: require('./jobs17.json'),
+  dupejob: require('./dupejob.json')
 
 }
