@@ -19,12 +19,12 @@
  * @param {DatepickerConfig} config - Datepicker config
  * @constructor
  */
-function Datepicker($module, config) {
+function Datepicker ($module, config) {
   if (!$module) {
     return this
   }
   const defaultConfig = {
-    imagePath: '/assets/images/',
+    imagePath: '/assets/images/'
   }
   this.config = { ...defaultConfig, ...config }
 
@@ -41,7 +41,7 @@ function Datepicker($module, config) {
     'September',
     'October',
     'November',
-    'December',
+    'December'
   ]
 
   this.currentDate = new Date()
@@ -58,7 +58,7 @@ function Datepicker($module, config) {
     left: 37,
     up: 38,
     right: 39,
-    down: 40,
+    down: 40
   }
 
   this.$module = $module
@@ -367,10 +367,11 @@ Datepicker.prototype.setCurrentDate = function (focus = true) {
 
 Datepicker.prototype.selectDate = function (date) {
   this.$calendarButton.querySelector('span').innerText = `Choose date. Selected date is ${this.formattedDateHuman(
-    date,
+    date
   )}`
   this.$input.value = this.formattedDateFromDate(date)
 
+  // eslint-disable-next-line no-undef
   const changeEvent = new Event('change', { bubbles: true, cancelable: true })
   this.$input.dispatchEvent(changeEvent)
 
@@ -509,7 +510,7 @@ Datepicker.prototype.focusPreviousYear = function (event, focus = true) {
  * @param picker
  * @constructor
  */
-function DSCalendarDay(button, index, row, column, picker) {
+function DSCalendarDay (button, index, row, column, picker) {
   this.index = index
   this.row = row
   this.column = column
@@ -593,7 +594,7 @@ DSCalendarDay.prototype.keyPress = function (event) {
   }
 }
 
-function nodeListForEach(nodes, callback) {
+function nodeListForEach (nodes, callback) {
   if (window.NodeList.prototype.forEach) {
     return nodes.forEach(callback)
   }
