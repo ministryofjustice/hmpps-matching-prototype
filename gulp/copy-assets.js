@@ -25,8 +25,7 @@ gulp.task('copy-assets-documentation', function () {
 })
 
 gulp.task('copy-assets-v6', function (done) {
-  const v6AssetDir = config.paths.v6Assets
-  if (fs.existsSync(v6AssetDir))
+  if (fs.existsSync(config.paths.v6Assets))
     return gulp.src([
       `${config.paths.v6Assets}/**`,
       `!${config.paths.v6Assets}/sass/**`

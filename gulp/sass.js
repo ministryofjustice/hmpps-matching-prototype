@@ -44,9 +44,9 @@ gulp.task('sass-documentation', function () {
 // Backward compatibility with Elements
 
 gulp.task('sass-v6', function (done) {
-  const sassDir = config.paths.v6Assets + '/sass'
+  const sassDir = `${config.paths.v6Assets}/sass`
   if (fs.existsSync(sassDir))
-    return gulp.src(sassDir + '/*.scss', { sourcemaps: true })
+    return gulp.src(`${sassDir}/*.scss`, { sourcemaps: true })
       .pipe(sass.sync({
         outputStyle: 'expanded',
         logger: sass.compiler.Logger.silent,
