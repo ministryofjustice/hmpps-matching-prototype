@@ -25,6 +25,4 @@ module.exports = {
   jobs17: require('./jobs17.json'),
   dupejob: require('./dupejob.json')
 
-
-
 }
