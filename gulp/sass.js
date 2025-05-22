@@ -43,16 +43,20 @@ gulp.task('sass-documentation', function () {
 
 // Backward compatibility with Elements
 
-gulp.task('sass-v6', function () {
-  return gulp.src(config.paths.v6Assets + '/sass/*.scss', { sourcemaps: true })
-    .pipe(sass.sync({
-      outputStyle: 'expanded',
-      logger: sass.compiler.Logger.silent,
-      includePaths: [
-        'node_modules/govuk_frontend_toolkit/stylesheets',
-        'node_modules/govuk-elements-sass/public/sass',
-        'node_modules/govuk_template_jinja/assets/stylesheets'
-      ]
-    }).on('error', sass.logError))
-    .pipe(gulp.dest(config.paths.public + '/v6/stylesheets/', { sourcemaps: true }))
+gulp.task('sass-v6', function (done) {
+  const sassDir = `${config.paths.v6Assets}/sass`
+  if (fs.existsSync(sassDir))
+    return gulp.src(`${sassDir}/*.scss`, { sourcemaps: true })
+      .pipe(sass.sync({
+        outputStyle: 'expanded',
+        logger: sass.compiler.Logger.silent,
+        includePaths: [
+          'node_modules/govuk_frontend_toolkit/stylesheets',
+          'node_modules/govuk-elements-sass/public/sass',
+          'node_modules/govuk_template_jinja/assets/stylesheets'
+        ]
+      }).on('error', sass.logError))
+      .pipe(gulp.dest(config.paths.public + '/v6/stylesheets/', { sourcemaps: true }))
+  else
+    done()
 })
