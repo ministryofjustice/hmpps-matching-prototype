@@ -1,0 +1,271 @@
+{% extends "../includes/template.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+  <!-- Breadcrumb -->
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="../dps-home">Digital Prison Services</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="../home">Work after leaving prison</a>
+      </li>
+    </ol>
+  </div>
+
+  <!-- Main page -->
+
+  <main class="govuk-main-wrapper">
+
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">
+      Manage jobs and employers
+    </h1>
+
+  <!-- TABS -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <nav class="moj-sub-navigation govuk-!-margin-bottom-2" aria-label="Sub navigation">
+        <ul class="moj-sub-navigation__list">
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" aria-current="page" href="#">Jobs</a>
+          </li>
+
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" href="employer-list">Employers</a>
+          </li>
+
+  
+          
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+
+  <!-- FILTERS -->
+  <form method="post">
+
+    <div class="govuk-form-group filter-box govuk-!-margin-top-4">
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <h2 class="govuk-heading-s govuk-!-margin-bottom-2">
+              Filter by
+            </h2>
+          </div>
+      </div>
+
+      <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-one-third">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="job">
+              Job title or employer name
+            </label>
+            <input class="govuk-input" id="job" name="job" type="search" aria-describedby="employer-hint">
+          </div>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          <div class="govuk-form-group two-form-group">
+            <label class="govuk-label" for="job-sector">
+              Job sector
+            </label>
+            <select class="govuk-select" id="job-sector" name="job-sector">
+              <option value="">All job sectors</option>
+              <option value="animal-care-and-farming">Animal care and farming</option>
+              <option value="cleaning-and-maintenance">Cleaning and maintenance</option>
+              <option value="construction-and-trade">Construction and trade</option>
+              <option value="driving-and-transport">Driving and transport</option>
+              <option value="hair-beauty-and-wellbeing">Hair, beauty and wellbeing</option>
+              <option value="hospitality-and-catering">Hospitality and catering</option>
+              <option value="it-and-digital">IT and digital</option>
+              <option value="manufacturing-and-technical">Manufacturing and technical</option>
+              <option value="office-or-desk-based">Office or desk-based</option>
+              <option value="retail-and-sales">Retail and sales</option>
+              <option value="sport-and-fitness">Sport and fitness</option>
+              <option value="training-and-support">Training and support</option>
+              <option value="warehousing-and-storage">Warehousing and storage</option>
+              <option value="waste-management">Waste management</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+<!-- 
+          <div class="govuk-form-group two-form-group">
+            <label class="govuk-label" for="job-region">
+                Region
+              </label>
+              <select class="govuk-select" id="job-region" name="job-region">
+                <option value="all" selected>All regions</option>
+                <option value="north-east">North East</option>
+                <option value="north-west">North West</option>
+                <option value="yorkshire-humber">Yorkshire</option>
+                <option value="east-midlands">East Midlands</option>
+                <option value="west-midlands">West Midlands</option>
+                <option value="east-england">East of England</option>
+                <option value="south-east">South East</option>
+                <option value="south-west">South West</option>
+                <option value="london">London</option>
+           
+                
+              </select>
+              
+            </div> -->
+            
+        </div>
+
+
+        
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <div class="govuk-checkboxes govuk-checkboxes--small govuk-!-margin-top-3" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="my-jobs-filter" name="my-jobs-filter" type="checkbox" value="Show only my jobs">
+              <label class="govuk-label govuk-checkboxes__label" for="my-jobs-filter">
+                Show only my jobs (10)
+              </label>
+            </div>
+    
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <button class="govuk-button govuk-!-margin-top-4 govuk-!-margin-bottom-0" data-module="govuk-button">
+              Apply filters
+            </button>
+        </div>
+      </div>
+
+    </div>
+  </form>
+
+
+
+<!-- NUMBER OF RESULTS -->
+
+
+<div class="govuk-button-group right">
+  <a class="govuk-link govuk-button govuk-button--secondary" href="./add-job-source?title=empty">Add a job</a>
+</div>
+<!-- TABLE OF RESULTS -->
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header" aria-sort="ascending"><button type="button" data-index="0">Job title</button></th>
+      <th scope="col" class="govuk-table__header">Vacancies</th>
+      <th scope="col" class="govuk-table__header">Job sector</th>
+      <th scope="col" class="govuk-table__header">Employer</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric" aria-sort="ascending"><button type="button" data-index="0">Date added</button></th>
+      <th scope="col" class="govuk-table__header" aria-sort="ascending"><button type="button" data-index="0">Status</button></th>   
+    </tr>
+  </thead>
+
+  <tbody class="govuk-table__body">
+
+    {% if (data['duplicate'] == "true" ) %}
+    {% for job in data.jobs17 %}
+        {% if job.id == "19" %}
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="./job-detail?id={{ job.id }}">{{ job.title }}</a></td>
+              <td class="govuk-table__cell">{{ job.vacancies }}</td>
+                <td class="govuk-table__cell">{{ job.sector }}</td>
+                <td class="govuk-table__cell">{{ job.employer }}</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ job.dateAdded }}">{{ job.dateAdded }}</td>
+                
+                <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--green">Live</span></td>
+
+            </tr>
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
+
+
+    {% if (data['new-job'] == "true" ) %}
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="./new-job-detail">{{ data['job-title'] }}</a></td>
+      <td class="govuk-table__cell">2</td>
+      
+      <td class="govuk-table__cell">Cleaning and maintenance</td>
+      <td class="govuk-table__cell">XYZ Cleaning</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ job.dateAdded }}">1 April 2025</td>
+      <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--green">Open</span></td>
+    </tr>
+
+    {% endif %}
+     
+    {% for job in data.jobs17 %}
+    {% if job.id != "19" %}
+      {% if data['my-jobs-filter'] == "Show only my jobs" and job.author == "me" %}
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="./job-detail?id={{ job.id }}">{{ job.title }}</a></td>
+          <td class="govuk-table__cell">{{ job.vacancies }}</td>
+          <td class="govuk-table__cell">{{ job.sector }}</td>
+          <td class="govuk-table__cell">{{ job.employer }}</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ job.dateAdded }}">{{ job.dateAdded }}</td>
+          <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--{{ job.statusColor }}">{{ job.status }}</span></td>
+        </tr>
+      {% elif data['my-jobs-filter'] != "Show only my jobs" %}
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="./job-detail?id={{ job.id }}">{{ job.title }}</a></td>
+          <td class="govuk-table__cell">{{ job.vacancies }}</td>
+          <td class="govuk-table__cell">{{ job.sector }}</td>
+          <td class="govuk-table__cell">{{ job.employer }}</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ job.dateAdded }}">{{ job.dateAdded }}</td>
+          <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--{{ job.statusColor }}">{{ job.status }}</span></td>
+        </tr>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  
+
+
+
+
+
+  </tbody>
+</table>
+
+
+
+</div>
+
+
+
+<script>
+  function myFunction() {
+    // Declare variables
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("filterName");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("prisonerTable");
+    tr = table.getElementsByTagName("tr");
+
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+</script>
+
+
+
+{% endblock %}
