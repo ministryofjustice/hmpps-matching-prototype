@@ -1,0 +1,55 @@
+{% extends "../includes/template-slim.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+<!-- BREADCRUMB -->
+
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+  <span class="govuk-caption-l">Add a job - step 2 of 6</span>
+
+  <h1 class="govuk-heading-l">Location and contract details</h1>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {% if (data['title'] != "empty") %}
+
+      <form method="post" action="./job-detail">
+        {% else %}
+      <form method="post" action="./regional-add-job-contract">
+        {% endif %}
+
+
+<!-- REGIONAL JOB LOCATION -->
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="job-location">Enter the first hiring location</label>
+            <div id="job-location-hint" class="govuk-hint">Enter town, city, county or postcode</div>
+            {% if (data['title'] != "empty") %}
+            <input class="govuk-input govuk-input--width-20" id="job-location" name="job-location" type="text" aria-describedby="job-location-hint" value="{{ data['location'] }}">
+            {% else %}
+            <input class="govuk-input govuk-input--width-20" id="job-location" name="job-location" type="text" aria-describedby="job-location-hint">
+            {% endif %}
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="event-name">Enter the number of vacancies for this location (optional)</label>
+            <input class="govuk-input" id="event-name" name="eventName" type="text">
+          </div>
+
+
+          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">Add another location</button>
+
+          &nbsp;
+
+          <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}

@@ -7,9 +7,9 @@
 
   <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
 
-  <span class="govuk-caption-l">Add a job - step 2 of 5</span>
+  <span class="govuk-caption-l">Add a job - step 3 of 6</span>
 
-  <h1 class="govuk-heading-l">Location and contract details</h1>
+  <h1 class="govuk-heading-l">Contract details</h1>
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -20,49 +20,6 @@
         {% else %}
       <form method="post" action="./add-job-description">
         {% endif %}
-
-
-<!-- JOB LOCATION -->
-
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="job-location">Job location</label>
-            <div id="job-location-hint" class="govuk-hint">Enter town, city, county or postcode</div>
-            {% if (data['title'] != "empty") %}
-            <input class="govuk-input govuk-input--width-20" id="job-location" name="job-location" type="text" aria-describedby="job-location-hint" value="{{ data['location'] }}">
-            {% else %}
-            <input class="govuk-input govuk-input--width-20" id="job-location" name="job-location" type="text" aria-describedby="job-location-hint">
-            {% endif %}
-          </div>
-
-
-<!-- MINIMUM WAGE -->
-
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset"><label class="govuk-label margin-bottom-3">Do you know the number of vacancies for this role?</label>
-              <div class="govuk-radios">
-              <div class="govuk-radios" data-module="govuk-radios">
-
-
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="vacancies" name="contact" type="radio" value="vacNumber" data-aria-controls="vacTrue">
-                  <label class="govuk-label govuk-radios__label" for="contact">Yes</label>
-                </div>
-
-                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="vacTrue">
-                  <div class="govuk-form-group">
-                    <label class="govuk-label" for="vacNumber">Enter the number of vacancies.</label>
-                    <input class="govuk-input govuk-!-width-one-third" id="vacNumber" name="vacNumber" type="number" spellcheck="false">
-                  </div>
-                </div>
-
-
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="vacNumber">
-                  <label class="govuk-label govuk-radios__label" for="contact">No</label>
-                </div>
-              </div>
-            </fieldset>
-          </div>
 
 
 <!-- MINIMUM SALARY -->

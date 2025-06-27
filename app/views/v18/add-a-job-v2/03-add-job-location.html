@@ -1,0 +1,114 @@
+{% extends "../includes/template-slim.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+<!-- BREADCRUMB -->
+
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+  <span class="govuk-caption-l">Add a job - step 3 of 5</span>
+
+  <h1 class="govuk-heading-l">Hiring locations and vacancies</h1>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {% if (data['title'] != "empty") %}
+
+      <form method="post" action="./job-detail">
+        {% else %}
+      <form method="post" action="./04-add-job-location-loop">
+        {% endif %}
+
+
+<!-- VACANCIES -->
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Is this a national job?</legend>
+              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="changedName">Yes</label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="changedName-2">No</label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+
+
+
+          <!-- <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset"><label class="govuk-label margin-bottom-3">How many hiring locations does the job have?</label>
+              <div class="govuk-radios">
+              <div class="govuk-radios" data-module="govuk-radios">
+
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="locations" name="locations" type="radio" value="locations" data-aria-controls="locationsTrue">
+                  <label class="govuk-label govuk-radios__label" for="locations">One location or head office address</label>
+                </div>
+
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="locationsTrue">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="locations">Job location</label>
+                    <div id="locationPostcode" class="govuk-hint">Enter a postcode.</div>
+                    {% if (data['title'] != "empty") %}
+                    <input class="govuk-input govuk-input--width-20" id="job-location" name="job-location" type="text" aria-describedby="job-location-hint" value="{{ data['location'] }}">
+                    {% else %}
+                    <input class="govuk-input govuk-input--width-20" id="job-location" name="job-location" type="text" aria-describedby="job-location-hint">
+                    {% endif %}
+                  </div>
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="event-name">Enter the number of known vacancies at this location (optional)</label>
+                    <input class="govuk-input" id="event-name" name="eventName" type="text">
+                  </div>
+                </div>
+
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="vacNumber">
+                  <label class="govuk-label govuk-radios__label" for="contact">Multiple locations</label>
+                </div>
+              </div>
+            </fieldset>
+          </div> -->
+
+
+<!-- JOB LOCATION LOOP -->
+
+          <h2 class="govuk-heading-m">Add locations and vacancies</h1>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="job-location">First hiring location</label>
+            <div id="job-location-hint" class="govuk-hint">Enter the postcode of a hiring location. If the job is national, you can use a head office.</div>
+            {% if (data['title'] != "empty") %}
+            <input class="govuk-input govuk-input--width-20" id="job-location" name="job-location" type="text" aria-describedby="job-location-hint" value="{{ data['location'] }}">
+            {% else %}
+            <input class="govuk-input govuk-input--width-20" id="job-location" name="job-location" type="text" aria-describedby="job-location-hint">
+            {% endif %}
+          </div>
+
+
+<!-- VACANCIES -->
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="event-name">Enter the number of known vacancies at this location (optional)</label>
+            <input class="govuk-input" id="event-name" name="eventName" type="text">
+          </div>
+
+
+          <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}

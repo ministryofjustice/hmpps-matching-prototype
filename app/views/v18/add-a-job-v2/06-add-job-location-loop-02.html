@@ -1,0 +1,142 @@
+{% extends "../includes/template-slim.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+<!-- BREADCRUMB -->
+
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+  <span class="govuk-caption-l">Add a job - step 3 of 5</span>
+
+  <h1 class="govuk-heading-l">Hiring locations and vacancies</h1>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {% if (data['title'] != "empty") %}
+
+      <form method="post" action="./job-detail">
+        {% else %}
+      <form method="post" action="./07-add-job-contract">
+        {% endif %}
+
+
+<!-- VACANCIES -->
+
+
+         <!--  <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Is this a national job?</legend>
+              <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="changedName">Yes</label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="changedName-2">No</label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+ -->
+
+
+
+          <!-- <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset"><label class="govuk-label margin-bottom-3">How many hiring locations does the job have?</label>
+              <div class="govuk-radios">
+              <div class="govuk-radios" data-module="govuk-radios">
+
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="locations" name="locations" type="radio" value="locations" data-aria-controls="locationsTrue">
+                  <label class="govuk-label govuk-radios__label" for="locations">One location or head office address</label>
+                </div>
+
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="locationsTrue">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="locations">Job location</label>
+                    <div id="locationPostcode" class="govuk-hint">Enter a postcode.</div>
+                    {% if (data['title'] != "empty") %}
+                    <input class="govuk-input govuk-input--width-20" id="job-location" name="job-location" type="text" aria-describedby="job-location-hint" value="{{ data['location'] }}">
+                    {% else %}
+                    <input class="govuk-input govuk-input--width-20" id="job-location" name="job-location" type="text" aria-describedby="job-location-hint">
+                    {% endif %}
+                  </div>
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="event-name">Enter the number of known vacancies at this location (optional)</label>
+                    <input class="govuk-input" id="event-name" name="eventName" type="text">
+                  </div>
+                </div>
+
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="vacNumber">
+                  <label class="govuk-label govuk-radios__label" for="contact">Multiple locations</label>
+                </div>
+              </div>
+            </fieldset>
+          </div> -->
+
+
+
+          <h3 class="govuk-heading-m">You have added 2 locations for this job</h1>
+
+  <div class="govuk-form-group">
+    <dl class="govuk-summary-list hmrc-list-with-actions hmrc-list-with-actions--short">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key govuk-!-font-weight-regular hmrc-summary-list__key">Sheffield</dt>
+      <dt class="govuk-summary-list__key govuk-!-font-weight-regular hmrc-summary-list__key">20 vacancies</dt>
+      <dd class="govuk-summary-list__actions hmrc-summary-list__actions">
+        <ul class="govuk-summary-list__actions-list">
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#"><span aria-hidden="true">Change</span><span class="govuk-visually-hidden">Change</span></a></li>
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#"><span aria-hidden="true">Remove</span><span class="govuk-visually-hidden">Remove</span></a></li>
+        </ul>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key govuk-!-font-weight-regular hmrc-summary-list__key">Manchester</dt>
+      <dt class="govuk-summary-list__key govuk-!-font-weight-regular hmrc-summary-list__key">13 vacancies</dt>
+      <dd class="govuk-summary-list__actions hmrc-summary-list__actions">
+        <ul class="govuk-summary-list__actions-list">
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#"><span aria-hidden="true">Change</span><span class="govuk-visually-hidden">Change</span></a></li>
+          <li class="govuk-summary-list__actions-list-item"><a class="govuk-link" href="#"><span aria-hidden="true">Remove</span><span class="govuk-visually-hidden">Remove</span></a></li>
+        </ul>
+      </dd>
+    </div>
+    
+  </dl>
+
+
+
+</div>
+<form method="post" novalidate action="">
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="add-another-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend govuk-fieldset__legend--m">Do you need to add another location?</legend>
+      <div id="add-another-hint" class="govuk-hint"></div>
+      <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="add-another" name="add-another" type="radio" value="Yes">
+          <label class="govuk-label govuk-radios__label" for="add-another">Yes</label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="add-another-2" name="add-another" type="radio" value="No">
+          <label class="govuk-label govuk-radios__label" for="add-another-2">No</label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <button type="submit" class="govuk-button" data-module="govuk-button">
+    Continue
+  </button>
+</form>
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}

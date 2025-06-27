@@ -23,54 +23,49 @@
       <form method="post" action="./add-job-location">
         {% endif %}
 
+
+
+<!-- EMPLOYER NAME -->
+
         <div class="govuk-form-group">
-          <label class="govuk-label" for="employer-name">
-            Employer name
-          </label>
-          <span id="employer-name-hint" class="govuk-hint">
-            Start typing the name of the employer.
-          </span>
+          <label class="govuk-label" for="employer-name">Employer name</label>
+          <span id="employer-name-hint" class="govuk-hint">Start typing the name of the employer.</span>
           {% if (data['title'] != "empty") %}
           <input class="govuk-input" id="employer-name" value="{{ data['employer'] }}" name="employer-name" type="text" aria-describedby="employer-name-hint">
-
           {% else %}
           <input class="govuk-input" id="employer-name" name="employer-name" type="text" aria-describedby="employer-name-hint">
-
           {% endif %}
-
         </div>
 
         <details class="govuk-details">
           <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-              The employer is not listed
-            </span>
+            <span class="govuk-details__summary-text">The employer is not listed</span>
           </summary>
           <div class="govuk-details__text">
-            You must <a href="#">add the employer</a> before adding a job. </p>
-
-            <p>Any data you've already entered on this screen will be lost. 
-         
+            <p>You must <a href="#">add the employer</a> before adding a job.</p>
+            <p>Any data you've already entered on this screen will be lost.         
           </div>
         </details>
 
+
+
+<!-- JOB TITLE -->
+
         <div class="govuk-form-group">
-          <label class="govuk-label" for="job-title">
-            Job title
-          </label>
+          <label class="govuk-label" for="job-title">Job title</label>
           {% if (data['title'] != "empty") %}
           <input class="govuk-input" value="{{ data['job-title'] }}"  id="job-title" name="job-title" type="text">
-
           {% else %}
           <input class="govuk-input" id="job-title" name="job-title" type="text">
-
           {% endif %}
         </div>
 
+
+
+<!-- HMPPS REPORTING SECTOR -->
+
         <div class="govuk-form-group">
-          <label class="govuk-label" for="job-sector">
-            Job sector
-          </label>
+          <label class="govuk-label" for="job-sector">Job sector</label>
           <select class="govuk-select" id="job-sector" name="job-sector">
             {% if (data['title'] != "empty") %}
             <option value="{{ data['sector'] }}">{{ data['sector'] }}</option>
@@ -93,6 +88,10 @@
             <option value="other">Other</option>
           </select>
         </div>
+
+
+
+<!-- HMPPS REPORTING SECTOR -->
 
         <div class="govuk-form-group">
           <label class="govuk-label" for="hmpps-reporting-industry-sector">
@@ -126,22 +125,12 @@
           </select>
         </div>
 
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="number-of-vacancies">
-            Number of vacancies
-          </label>
-          {% if (data['title'] != "empty") %}
-          <input value="2" class="govuk-input govuk-input--width-10" id="number-of-vacancies" name="number-of-vacancies" type="number">
-          {% else %}
-          <input class="govuk-input govuk-input--width-10" id="number-of-vacancies" name="number-of-vacancies" type="number">
 
-          {% endif %}
-        </div>
+
+<!-- JOB SOURCE -->
 
         <div class="govuk-form-group">
-          <label class="govuk-label" for="job-source-2">
-            Job source
-          </label>
+          <label class="govuk-label" for="job-source-2">Job source</label>
           <select class="govuk-select" id="job-source-2" name="job-source-2">
             {% if (data['title'] != "empty") %}
             <option value="nfn">NFN</option>
@@ -177,77 +166,40 @@
           </select>
         </div>
 
+
+
+<!-- CHARITY -->
+
         <div class="govuk-form-group">
-          <label class="govuk-label" for="charity-supported">
-            Is this job supported by a charity? (Optional)
-          </label>
-
-          <span id="charity-supported-hint" class="govuk-hint">
-            Enter the name of the Third Sector organisation supporting the job.
-          </span>
-
+          <label class="govuk-label" for="charity-supported">Is this job supported by a charity? (Optional)</label>
+          <span id="charity-supported-hint" class="govuk-hint">Enter the name of the Third Sector organisation supporting the job.</span>
           <input class="govuk-input" id="charity-supported" name="charity-supported" type="text">
         </div>
 
 
+
+<!-- HIRING LOCATIONS -->
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="sign-in-with-hint-hint">
             <label class="govuk-label margin-bottom-3">How many hiring locations does the job have?</label>
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
-                <input
-                class="govuk-radios__input"
-                id="hiringLocations"
-                name="hiringLocations"
-                type="radio"
-                value="One specific hiring location"
-                aria-describedby="sign-in-with-hint-item-hint"
-                />
+                <input class="govuk-radios__input" id="hiringLocations" name="hiringLocations" type="radio" value="One specific hiring location" aria-describedby="sign-in-with-hint-item-hint"/>
                 <label class="govuk-label govuk-radios__label" for="sign-in-with-hint">One specific hiring location</label>
               </div>
               <div class="govuk-radios__item">
-                <input
-                class="govuk-radios__input"
-                id="hiringLocationsRegional"
-                name="hiringLocations"
-                type="radio"
-                value="Multiple hiring locations within a region"
-                aria-describedby="sign-in-with-hint-2-item-hint"
-                />
-                <label
-                class="govuk-label govuk-radios__label"
-                for="sign-in-with-hint-2"
-                >
-                Multiple hiring locations within a region
-                </label>
+                <input class="govuk-radios__input" id="hiringLocationsRegional" name="hiringLocations" type="radio" value="Multiple hiring locations within a region" aria-describedby="sign-in-with-hint-2-item-hint"/>
+                <label class="govuk-label govuk-radios__label" for="sign-in-with-hint-2">Multiple hiring locations within a region</label>
               </div>
               <div class="govuk-radios__item">
-                <input
-                class="govuk-radios__input"
-                id="hiringLocationsNational"
-                name="hiringLocations"
-                type="radio"
-                value="Multiple locations across England and Wales"
-                aria-describedby="sign-in-with-hint-2-item-hint"
-                />
-                <label
-                class="govuk-label govuk-radios__label"
-                for="sign-in-with-hint-2"
-                >
-                Multiple locations across England and Wales
-                </label>
-                <div
-                id="sign-in-with-hint-2-item-hint"
-                class="govuk-hint govuk-radios__hint"
-                >
-                Select this option even if the job locations have not been confirmed.
+                <input class="govuk-radios__input" id="hiringLocationsNational" name="hiringLocations" type="radio" value="Multiple locations across England and Wales" aria-describedby="sign-in-with-hint-2-item-hint"/>
+                <label class="govuk-label govuk-radios__label" for="sign-in-with-hint-2">Multiple locations across England and Wales</label>
+                <div id="sign-in-with-hint-2-item-hint" class="govuk-hint govuk-radios__hint">Select this option even if the job locations have not been confirmed.</div>
               </div>
-          </div>
+            </div>
+          </fieldset>
         </div>
-      </fieldset>
-    </div>
-
 
 
 

@@ -1,0 +1,312 @@
+{% extends "../includes/template-slim.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+  <!-- Breadcrumb -->
+
+  <span class="govuk-caption-l">Add a job - step 5 of 5</span>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Check your answers before adding the job</h1>
+      <h2 class="govuk-heading-m">Job role and source</h2>
+      <dl class="govuk-summary-list margin-bottom-4">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Employer name</dt>
+          {% if (data['employer-name'] == null ) %}
+          <dd class="govuk-summary-list__value">ABC Construction</dd>
+          {% else %}
+          <dd class="govuk-summary-list__value">{{ data['employer-name'] }}</dd>
+          {% endif %}
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> employer name</span></a>
+          </dd>
+        </div>
+      
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Job title</dt>
+          {% if (data['job-title'] == null ) %}
+          <dd class="govuk-summary-list__value">Bricklayer</dd>
+          {% else %}
+          <dd class="govuk-summary-list__value">{{ data['job-title'] }}</dd>
+          {% endif %}
+
+
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job title</span></a>
+          </dd>
+        </div>
+      
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Job sector</dt>
+          {% if (data['job-sector'] == null ) %}
+          <dd class="govuk-summary-list__value">Construction and trade</dd>
+          {% else %}
+          <dd class="govuk-summary-list__value">{{ data['job-sector'] }}</dd>
+          {% endif %}
+
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job sector</span></a>
+          </dd>
+        </div>
+      
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">HMPPS reporting industry sector</dt>
+          <dd class="govuk-summary-list__value">Construction</dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> NFN industry sector</span></a>
+          </dd>
+        </div>
+      
+      
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Job source</dt>
+          <dd class="govuk-summary-list__value">PEL</dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job source</span></a>
+          </dd>
+        </div>
+      
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Job source 2 (optional)</dt>
+          <dd class="govuk-summary-list__value">Not provided</dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job source 2 (optional)</span></a>
+          </dd>
+        </div>
+      
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Supported by a charity? (optional)</dt>
+          <dd class="govuk-summary-list__value">Not provided</dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> supported by a charity? (optional)</span></a>
+          </dd>
+        </div>
+      </dl>
+
+
+
+<!-- LOCATION AND CONTRACT DETAILS -->
+
+
+      <h2 class="govuk-heading-m">Location and contract details</h2>
+      <dl class="govuk-summary-list margin-bottom-4">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Job location</dt>
+          <dd class="govuk-summary-list__value">L1 0AA</dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job location</span></a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Hiring location</dt>
+          <dd class="govuk-summary-list__value">{{ data['hiringLocations'] }}</dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job location</span></a>
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Number of vacancies</dt>
+          {% if (data['number-of-vacancies'] == null ) %}
+          <dd class="govuk-summary-list__value">Not provided</dd>
+          {% else %}
+          <dd class="govuk-summary-list__value">{{ data['vacNumber'] }}</dd>
+          {% endif %}
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> number of vacancies</span></a>
+          </dd>
+        </div>
+
+      
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Salary from</dt>
+          <dd class="govuk-summary-list__value">£12.00</dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> salary from</span></a>
+          </dd>
+        </div>
+      
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Salary to (optional)</dt>
+          <dd class="govuk-summary-list__value">Not provided</dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> salary to (optional)</span></a>
+          </dd>
+        </div>
+      
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Salary period</dt>
+          <dd class="govuk-summary-list__value">Per hour</dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> salary period</span></a>
+          </dd>
+        </div>
+      
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Additional salary information (optional)</dt>
+          <dd class="govuk-summary-list__value">Not provided</dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> additional salary information (optional)</span></a>
+          </dd>
+        </div>
+      
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Does salary pay minimum wage?</dt>
+          <dd class="govuk-summary-list__value">Yes</dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> does salary pay minimum wage?</span></a>
+          </dd>
+        </div>
+      
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Work pattern</dt>
+          <dd class="govuk-summary-list__value">Flexible shifts</dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> work pattern</span></a>
+          </dd>
+        </div>
+      
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Hours per week</dt>
+          <dd class="govuk-summary-list__value">Zero hours</dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> hours per week</span></a>
+          </dd>
+        </div>
+      
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Contract type</dt>
+          <dd class="govuk-summary-list__value">Temporary</dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> contract type</span></a>
+          </dd>
+        </div>
+      
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Base location (optional)</dt>
+          <dd class="govuk-summary-list__value">Workplace</dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> base location (optional)</span></a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Requirements and job description</h2>
+
+      <dl class="govuk-summary-list margin-bottom-4">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Essential job criteria</dt>
+          <dd class="govuk-summary-list__value">L1 0AA</dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> essential job criteria</span></a>
+          </dd>
+        </div>
+      
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Desirable job criteria (optional)</dt>
+          <dd class="govuk-summary-list__value">£12.00</dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> desirable job criteria (optional)</span></a>
+          </dd>
+        </div>
+      
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Job description</dt>
+          <dd class="govuk-summary-list__value">
+
+            {% if (data['jobdescription'] == null ) %}
+            
+            The role of a bricklayer involves multiple tasks. However, the ultimate goal of the job is to construct, build and repair buildings and other structures, such as housing estates, walls, chimneys or even decorative masonry work.<br>
+            • Laying bricks<br>
+            • Applying or removing grout with a trowel<br>
+            • Strengthening and sealing foundations with the appropriate material, usually damp-resistant materials<br>
+            • Repairing building blocks and chimneys<br>
+            • Refurbishing decorative stonework<br>
+            • Measuring. Before laying bricks, the bricklayer needs to measure the build area to be able to place the first rows of bricks along courses
+           
+            {% else %}
+            {{ data['jobdescription'] }}
+
+            {% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job description</span></a>
+          </dd>
+        </div>
+      
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Offence exclusions</dt>
+          <dd class="govuk-summary-list__value">No excluding offences</dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> offence exclusions</span></a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">How to apply</h2>
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Rolling opportunity?</dt>
+          <dd class="govuk-summary-list__value">No<br>
+            Closing date: 20 August 2024
+
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> rolling opportunity?</span></a>
+          </dd>
+        </div>
+      
+
+      
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Only for prison leavers?</dt>
+          <dd class="govuk-summary-list__value">Yes</dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> only for prison leavers?</span></a>
+          </dd>
+        </div>
+      
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Job start date</dt>
+          <dd class="govuk-summary-list__value">20 August 2024</dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job start date</span></a>
+          </dd>
+        </div>
+      
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">How to apply</dt>
+          <dd class="govuk-summary-list__value">Email contact at employer</dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> how to apply</span></a>
+          </dd>
+        </div>
+      
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Supporting documentation required</dt>
+          <dd class="govuk-summary-list__value">CV</dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> supporting documentation required</span></a>
+          </dd>
+        </div>
+      </dl>
+
+
+     
+
+      <form method="post" action="./jobs-list?new-job=true">
+
+      <button class="govuk-button">Add job and save</button>
+</form>
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}
