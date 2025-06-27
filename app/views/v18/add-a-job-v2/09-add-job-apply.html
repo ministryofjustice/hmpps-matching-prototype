@@ -6,7 +6,9 @@
   <!-- Breadcrumb -->
 
   <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
-  <span class="govuk-caption-l">Add a job - step 4 of 5</span>
+
+  <span class="govuk-caption-l">Add a job - step 6 of 7</span>
+  
   <h1 class="govuk-heading-l">How to apply</h1>
 
   <div class="govuk-grid-row">
@@ -15,8 +17,11 @@
       {% if (data['title'] != "empty") %}
       <form method="post" action="./job-detail">
         {% else %}
-        <form method="post" action="./07-add-job-cya">
+        <form method="post" action="./10-add-job-cya">
           {% endif %}
+
+
+
 
 
         <div class="govuk-form-group">

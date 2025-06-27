@@ -10,7 +10,13 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">Check your answers before adding the job</h1>
-      <h2 class="govuk-heading-m">Job role and source</h2>
+
+
+
+<!-- EMPLOYER NAME AND TYPE -->
+
+      <h2 class="govuk-heading-m">Employer name and type</h2>
+
       <dl class="govuk-summary-list margin-bottom-4">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Employer name</dt>
@@ -23,6 +29,21 @@
             <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> employer name</span></a>
           </dd>
         </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">National employer</dt>
+          <dd class="govuk-summary-list__value">Yes</dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> employer name</span></a>
+          </dd>
+        </div>
+      </dl>
+
+
+
+<!-- JOB DESCRIPTION -->
+
+      <h2 class="govuk-heading-m">Job description</h2>
+        <dl class="govuk-summary-list margin-bottom-4">
       
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Job title</dt>
@@ -31,13 +52,9 @@
           {% else %}
           <dd class="govuk-summary-list__value">{{ data['job-title'] }}</dd>
           {% endif %}
-
-
-          <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job title</span></a>
-          </dd>
+          <dd class="govuk-summary-list__actions"><a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job title</span></a></dd>
         </div>
-      
+
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Job sector</dt>
           {% if (data['job-sector'] == null ) %}
@@ -45,20 +62,14 @@
           {% else %}
           <dd class="govuk-summary-list__value">{{ data['job-sector'] }}</dd>
           {% endif %}
-
-          <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job sector</span></a>
-          </dd>
+          <dd class="govuk-summary-list__actions"><a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job sector</span></a></dd>
         </div>
       
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">HMPPS reporting industry sector</dt>
           <dd class="govuk-summary-list__value">Construction</dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> NFN industry sector</span></a>
-          </dd>
+          <dd class="govuk-summary-list__actions"><a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> NFN industry sector</span></a></dd>
         </div>
-      
       
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Job source</dt>
@@ -87,43 +98,33 @@
 
 
 
+<!-- HIRING LOCATON AND VACANCIES -->
+
+      <h2 class="govuk-heading-m">Hiring locations and vacancies</h2>
+
+      <dl class="govuk-summary-list margin-bottom-4">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">First hiring location</dt>
+            <dd class="govuk-summary-list__value">3 Whip-Ma-Whop-Ma-Gate, York</dd>
+            <dd class="govuk-summary-list__value">20 vacancies</dd>
+            <dd class="govuk-summary-list__actions"><a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> employer name</span></a></dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Second hiring location</dt>
+          <dd class="govuk-summary-list__value">XM4 5HQ</dd>
+          <dd class="govuk-summary-list__value">13 vacancies</dd>
+          <dd class="govuk-summary-list__actions"><a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> employer name</span></a></dd>
+        </div>
+      </dl>
+
+
+
 <!-- LOCATION AND CONTRACT DETAILS -->
 
 
-      <h2 class="govuk-heading-m">Location and contract details</h2>
+      <h2 class="govuk-heading-m">Contract details</h2>
       <dl class="govuk-summary-list margin-bottom-4">
 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">Job location</dt>
-          <dd class="govuk-summary-list__value">L1 0AA</dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job location</span></a>
-          </dd>
-        </div>
-
-
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">Hiring location</dt>
-          <dd class="govuk-summary-list__value">{{ data['hiringLocations'] }}</dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job location</span></a>
-          </dd>
-        </div>
-
-
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">Number of vacancies</dt>
-          {% if (data['number-of-vacancies'] == null ) %}
-          <dd class="govuk-summary-list__value">Not provided</dd>
-          {% else %}
-          <dd class="govuk-summary-list__value">{{ data['vacNumber'] }}</dd>
-          {% endif %}
-          <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> number of vacancies</span></a>
-          </dd>
-        </div>
-
-      
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Salary from</dt>
           <dd class="govuk-summary-list__value">£12.00</dd>
