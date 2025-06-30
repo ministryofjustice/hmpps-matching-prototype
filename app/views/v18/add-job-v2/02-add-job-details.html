@@ -9,7 +9,7 @@
   <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
 
 
-    <span class="govuk-caption-l">Add a job - step 2 of 9</span>
+    <span class="govuk-caption-l">Add a job - step 2 of 6</span>
   <h1 class="govuk-heading-l">Job description</h1>
 
   <div class="govuk-grid-row">
@@ -32,6 +32,14 @@
           {% else %}
           <input class="govuk-input" id="job-title" name="job-title" type="text">
           {% endif %}
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--m" for="job-title">Job description</label>
+          <span id="job-description-hint" class="govuk-hint">
+            Describe the role and main tasks. Include any benefits and training opportunities.
+          </span>
+          <textarea class="govuk-textarea" id="job-description" name="jobdescription" rows="5" aria-describedby="job-description-hint"></textarea>
         </div>
 
 
@@ -108,7 +116,7 @@
         <h2 class="govuk-heading-m">Sources</h2>
 
         <div class="govuk-form-group">
-          <label class="govuk-label" for="job-source-2">Job source</label>
+          <label class="govuk-label" for="job-source-2">First job source</label>
           <select class="govuk-select" id="job-source-2" name="job-source-2">
             {% if (data['title'] != "empty") %}
             <option value="nfn">NFN</option>
@@ -127,7 +135,7 @@
         </div>
         <div class="govuk-form-group">
           <label class="govuk-label" for="job-source-2">
-            Job source 2 (optional)
+            Second job source (optional)
           </label>
           <select class="govuk-select" id="job-source-2" name="job-source-2">
 

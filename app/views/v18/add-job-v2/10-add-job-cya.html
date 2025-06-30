@@ -5,7 +5,7 @@
 
   <!-- Breadcrumb -->
 
-  <span class="govuk-caption-l">Add a job - step 5 of 5</span>
+  <span class="govuk-caption-l">Add a job - step 7 of 7</span>
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -54,7 +54,31 @@
           {% endif %}
           <dd class="govuk-summary-list__actions"><a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job title</span></a></dd>
         </div>
+      
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Job description</dt>
+          <dd class="govuk-summary-list__value">
 
+            {% if (data['jobdescription'] == null ) %}
+            
+            The role of a bricklayer involves multiple tasks. However, the ultimate goal of the job is to construct, build and repair buildings and other structures, such as housing estates, walls, chimneys or even decorative masonry work.<br>
+            • Laying bricks<br>
+            • Applying or removing grout with a trowel<br>
+            • Strengthening and sealing foundations with the appropriate material, usually damp-resistant materials<br>
+            • Repairing building blocks and chimneys<br>
+            • Refurbishing decorative stonework<br>
+            • Measuring. Before laying bricks, the bricklayer needs to measure the build area to be able to place the first rows of bricks along courses
+           
+            {% else %}
+            {{ data['jobdescription'] }}
+
+            {% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job description</span></a>
+          </dd>
+        </div>
+      
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Job sector</dt>
           {% if (data['job-sector'] == null ) %}
@@ -72,18 +96,18 @@
         </div>
       
         <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">Job source</dt>
+          <dt class="govuk-summary-list__key">First job source</dt>
           <dd class="govuk-summary-list__value">PEL</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job source</span></a>
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> first job source</span></a>
           </dd>
         </div>
       
         <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">Job source 2 (optional)</dt>
+          <dt class="govuk-summary-list__key">Second job source (optional)</dt>
           <dd class="govuk-summary-list__value">Not provided</dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job source 2 (optional)</span></a>
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden">Second job source (optional)</span></a>
           </dd>
         </div>
       
@@ -198,7 +222,7 @@
         </div>
       </dl>
 
-      <h2 class="govuk-heading-m">Requirements and job description</h2>
+      <h2 class="govuk-heading-m">Job requirements</h2>
 
       <dl class="govuk-summary-list margin-bottom-4">
         <div class="govuk-summary-list__row">
@@ -216,31 +240,7 @@
             <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> desirable job criteria (optional)</span></a>
           </dd>
         </div>
-      
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">Job description</dt>
-          <dd class="govuk-summary-list__value">
 
-            {% if (data['jobdescription'] == null ) %}
-            
-            The role of a bricklayer involves multiple tasks. However, the ultimate goal of the job is to construct, build and repair buildings and other structures, such as housing estates, walls, chimneys or even decorative masonry work.<br>
-            • Laying bricks<br>
-            • Applying or removing grout with a trowel<br>
-            • Strengthening and sealing foundations with the appropriate material, usually damp-resistant materials<br>
-            • Repairing building blocks and chimneys<br>
-            • Refurbishing decorative stonework<br>
-            • Measuring. Before laying bricks, the bricklayer needs to measure the build area to be able to place the first rows of bricks along courses
-           
-            {% else %}
-            {{ data['jobdescription'] }}
-
-            {% endif %}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job description</span></a>
-          </dd>
-        </div>
-      
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Offence exclusions</dt>
           <dd class="govuk-summary-list__value">No excluding offences</dd>
