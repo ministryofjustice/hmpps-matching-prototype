@@ -14,35 +14,30 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      {% if (data['title'] != "empty") %}
-
-      <form method="post" action="./job-detail">
-        {% else %}
       <form method="post" action="./06-add-job-location-loop-02">
-        {% endif %}
 
 
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">Add another hiring location</label></h1>
+          <div id="job-location-hint" class="govuk-hint">Enter the postcode.</div>
+          {% if (data['title'] != "empty") %}
+          <input class="govuk-input govuk-input--width-20" id="job-location" name="job-location" type="text" aria-describedby="job-location-hint" value="{{ data['location'] }}">
+          {% else %}
+          <input class="govuk-input govuk-input--width-20" id="job-location" name="job-location" type="text" aria-describedby="job-location-hint">
+          {% endif %}
+        </div>
 
-          <div class="govuk-form-group">
-            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">Add another hiring location</label></h1>
-            <div id="job-location-hint" class="govuk-hint">Enter the postcode.</div>
-            {% if (data['title'] != "empty") %}
-            <input class="govuk-input govuk-input--width-20" id="job-location" name="job-location" type="text" aria-describedby="job-location-hint" value="{{ data['location'] }}">
-            {% else %}
-            <input class="govuk-input govuk-input--width-20" id="job-location" name="job-location" type="text" aria-describedby="job-location-hint">
-            {% endif %}
-          </div>
 
 
 <!-- VACANCIES -->
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="event-name">Enter the number of known vacancies at this location (optional)</label>
+          <input class="govuk-input" id="event-name" name="eventName" type="text">
+        </div>
 
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="event-name">Enter the number of known vacancies at this location (optional)</label>
-            <input class="govuk-input" id="event-name" name="eventName" type="text">
-          </div>
 
 
-          <button class="govuk-button" data-module="govuk-button">Continue</button>
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
 
       </form>
 
