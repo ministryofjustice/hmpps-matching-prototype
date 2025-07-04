@@ -1,0 +1,90 @@
+{% extends "../includes/template-slim.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+<!-- BREADCRUMB -->
+
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+  <span class="govuk-caption-l">Add a job - step 3 of 6</span>
+
+  <h1 class="govuk-heading-l">Hiring locations and vacancies</h1>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form method="post" action="./04-add-job-location-loop">
+
+
+<!-- NATIONAL JOB -->
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend">
+      Is this a national job?
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+          No
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+
+<!-- JOB LOCATION LOOP -->
+
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="job-location">First hiring location</label>
+            <div id="job-location-hint" class="govuk-hint">Enter the postcode of a hiring location. If the job is national, you can use a head office.</div>
+            {% if (data['title'] != "empty") %}
+            <input class="govuk-input govuk-input--width-20" id="job-location" name="job-location" type="text" aria-describedby="job-location-hint" value="{{ data['location'] }}">
+            {% else %}
+            <input class="govuk-input govuk-input--width-20" id="job-location" name="job-location" type="text" aria-describedby="job-location-hint">
+            {% endif %}
+          </div>
+
+
+<!-- VACANCIES -->
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="event-name">Enter the number of known vacancies at this location (optional)</label>
+            <input class="govuk-input" id="event-name" name="eventName" type="text">
+          </div>
+
+<!-- COMMENTS -->
+     
+<div class="govuk-form-group">
+  <label class="govuk-label" for="more-detail">
+    Additional location information (optional)
+  </label>
+  <div id="more-detail-hint" class="govuk-hint">
+    If this is a national job, please describe the locations of the  employer, links can be added to external websites.
+  </div>
+  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+</div>
+
+
+         
+
+          <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}
