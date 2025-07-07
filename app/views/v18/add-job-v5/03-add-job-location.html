@@ -22,8 +22,8 @@
 
 
           <div class="govuk-form-group">
-            <label class="govuk-label" for="job-location">First hiring location</label>
-            <div id="job-location-hint" class="govuk-hint">Enter the postcode of a hiring location. If the job is national, you can use a head office.</div>
+            <label class="govuk-label" for="job-location">Add a hiring location</label>
+            <div id="job-location-hint" class="govuk-hint">Enter the postcode of a hiring location. You will be able to add more locations to this job listing if needed.</div>
             {% if (data['title'] != "empty") %}
             <input class="govuk-input govuk-input--width-20" id="job-location" name="job-location" type="text" aria-describedby="job-location-hint" value="{{ data['location'] }}">
             {% else %}
@@ -39,17 +39,16 @@
             <input class="govuk-input" id="event-name" name="eventName" type="text">
           </div>
 
+
 <!-- COMMENTS -->
-     
-<div class="govuk-form-group">
-  <label class="govuk-label" for="more-detail">
-    Additional location information (optional)
-  </label>
-  <div id="more-detail-hint" class="govuk-hint">
-    If this is a national job, please describe the locations of the  employer.
-  </div>
-  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
-</div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="more-detail">Additional location information (optional)</label>
+            <div id="more-detail-hint" class="govuk-hint">
+              For example, information about transport to this hiring location.
+            </div>
+            <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+          </div>
 
 
 
