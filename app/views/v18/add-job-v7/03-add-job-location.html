@@ -9,37 +9,15 @@
 
   <span class="govuk-caption-l">Add a job - step 3 of 6</span>
 
-  <h1 class="govuk-heading-l">Hiring locations and vacancies</h1>
+  <h1 class="govuk-heading-l">Hiring location and vacancies</h1>
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form method="post" action="./04-add-job-location-loop">
+      <form method="post" action="./07-add-job-contract">
 
 
-<!-- NATIONAL JOB -->
 
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend">
-      Is this a national job?
-    </legend>
-    <div class="govuk-radios" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
-        <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
-        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
-          No
-        </label>
-      </div>
-    </div>
-  </fieldset>
-</div>
 
 
 
@@ -47,7 +25,7 @@
 
 
           <div class="govuk-form-group">
-            <label class="govuk-label" for="job-location">First hiring location</label>
+            <label class="govuk-label" for="job-location">Hiring location (optional)</label>
             <div id="job-location-hint" class="govuk-hint">Enter the postcode of a hiring location. If the job is national, you can use a head office.</div>
             {% if (data['title'] != "empty") %}
             <input class="govuk-input govuk-input--width-20" id="job-location" name="job-location" type="text" aria-describedby="job-location-hint" value="{{ data['location'] }}">
@@ -68,10 +46,10 @@
      
 <div class="govuk-form-group">
   <label class="govuk-label" for="more-detail">
-    Additional location information (optional)
+    Additional location information
   </label>
   <div id="more-detail-hint" class="govuk-hint">
-    If this is a national job, please describe the locations of the  employer.
+    Give more information about this hiring location.
   </div>
   <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
 </div>
