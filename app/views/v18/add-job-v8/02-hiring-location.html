@@ -1,0 +1,58 @@
+{% extends "../includes/template-slim.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+
+  <!-- Breadcrumb -->
+
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+
+    <span class="govuk-caption-l">Add a job - step 2 of 8</span>
+  <h1 class="govuk-heading-l">Does the job have a single hiring location?</h1>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form method="post" action="./03-add-job-details">
+
+
+
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
+    <div id="signIn-hint" class="govuk-hint">
+      Select yes only if the job has a confirmed postcode or location.
+    </div>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="signIn" name="signIn" type="radio" value="government-gateway" aria-describedby="signIn-item-hint">
+        <label class="govuk-label govuk-radios__label" for="signIn">
+          Yes
+        </label>
+        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint" style="color:rgb(217, 54, 122);">
+          to be updated
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="govuk-one-login" aria-describedby="signIn-2-item-hint">
+        <label class="govuk-label govuk-radios__label" for="signIn-2">
+          No
+        </label>
+        <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint" style="color:rgb(217, 54, 122);">
+          to be updated
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}
