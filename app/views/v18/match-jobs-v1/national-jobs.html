@@ -1,0 +1,371 @@
+{% extends "../includes/template.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+  <!-- Breadcrumb -->
+
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+  <!-- Main page -->
+
+  <main class="govuk-main-wrapper">
+
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">
+      Jobs for Adam Ahmed
+    <span style="float: right"> <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">Print</button></span>
+    </h1>
+
+
+  <!-- TABS -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <nav class="moj-sub-navigation govuk-!-margin-bottom-7" aria-label="Sub navigation">
+        <ul class="moj-sub-navigation__list">
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" href="matched-jobs.html">Matched jobs</a>
+          </li>
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" aria-current="page" href=#">National jobs</a>
+          </li>
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" href="#">Other jobs chosen by prisoner</a>
+          </li>
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" href="#">Archived jobs</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+
+    <h2 class="govuk-heading-m">
+      Matched jobs
+    </h2>
+
+  <!-- FILTERS -->
+
+    <div class="govuk-form-group filter-box govuk-!-margin-top-4">
+      <div class="govuk-grid-row">
+
+        <div class="filter-box-width-override-60">
+          <div class="govuk-form-group">
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-2" style="padding-left: 15px">
+              Type of work interested in
+            </h3>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-grid-column-one-half">
+                <div class="govuk-checkboxes__item govuk-checkboxes--small">
+                  <input class="govuk-checkboxes__input" id="job-sectors-6" name="job-sectors" type="checkbox" value="Manufacturing and technical" checked>
+                  <label class="govuk-label govuk-checkboxes__label" for="job-sectors-6">
+                    Driving and transport
+                  </label>
+                </div>
+              </div>
+              <div class="govuk-grid-column-one-half">
+                <div class="govuk-checkboxes__item govuk-checkboxes--small">
+                  <input class="govuk-checkboxes__input" id="job-sectors-11" name="job-sectors" type="checkbox" value="Warehousing and storage" checked>
+                  <label class="govuk-label govuk-checkboxes__label" for="job-sectors-11">
+                    Hospitality and catering
+                  </label>
+                </div>
+              </div>
+              <div class="govuk-grid-column-one-half">
+                <div class="govuk-checkboxes__item govuk-checkboxes--small">
+                  <input class="govuk-checkboxes__input" id="job-sectors-11" name="job-sectors" type="checkbox" value="Warehousing and storage" checked>
+                  <label class="govuk-label govuk-checkboxes__label" for="job-sectors-11">
+                    Warehousing and storage
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <details class="govuk-details govuk-!-margin-bottom-4 govuk-!-margin-top-2" style="padding-left: 15px">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Show other types of work
+              </span>
+            </summary>
+            <div class="govuk-details__text" style="border-left: none; padding-left: 0px">
+
+              <div class="govuk-grid-row">
+                <div class="filter-box-width-override-60">
+                  <div class="govuk-form-group">
+                    <h3 class="govuk-heading-s govuk-!-margin-bottom-2" style="padding-left: 15px">
+                      Type of work interested in
+                    </h3>
+                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                      <div class="govuk-grid-column-one-half">
+                        <div class="govuk-checkboxes__item govuk-checkboxes--small govuk-checkboxes--small">
+                          <input class="govuk-checkboxes__input" id="job-sectors-1" name="job-sectors" type="checkbox" value="Animal care, farming and gardening">
+                          <label class="govuk-label govuk-checkboxes__label" for="job-sectors-1">
+                            Animal care and farming
+                          </label>
+                        </div>
+
+                        <div class="govuk-checkboxes__item govuk-checkboxes--small">
+                          <input class="govuk-checkboxes__input" id="job-sectors" name="job-sectors" type="checkbox" value=" Cleaning and maintenance">
+                          <label class="govuk-label govuk-checkboxes__label" for="job-sectors">
+                             Cleaning and maintenance
+                          </label>
+                        </div>
+
+                        <div class="govuk-checkboxes__item govuk-checkboxes--small">
+                          <input class="govuk-checkboxes__input" id="job-sectors-2" name="job-sectors" type="checkbox" value="Construction and trade">
+                          <label class="govuk-label govuk-checkboxes__label" for="job-sectors-2">
+                            Construction and trade
+                          </label>
+                        </div>
+
+                        <div class="govuk-checkboxes__item govuk-checkboxes--small">
+                          <input class="govuk-checkboxes__input" id="job-sectors-4" name="job-sectors" type="checkbox" value="Hair, beauty and wellbeing">
+                          <label class="govuk-label govuk-checkboxes__label" for="job-sectors-4">
+                            Hair, beauty and wellbeing
+                          </label>
+                        </div>
+
+                        <div class="govuk-checkboxes__item govuk-checkboxes--small">
+                          <input class="govuk-checkboxes__input" id="job-sectors-14" name="job-sectors" type="checkbox" value="IT and digital">
+                          <label class="govuk-label govuk-checkboxes__label" for="job-sectors-14">
+                            IT and digital
+                          </label>
+                        </div>
+
+                      <div class="govuk-checkboxes__item govuk-checkboxes--small">
+                          <input class="govuk-checkboxes__input" id="job-sectors-4" name="job-sectors" type="checkbox" value="Hair, beauty and wellbeing">
+                          <label class="govuk-label govuk-checkboxes__label" for="job-sectors-4">
+                            Manufacturing and technical
+                          </label>
+                        </div>
+
+
+                      </div>
+
+                      <div class="govuk-grid-column-one-half">
+
+                        <div class="govuk-checkboxes__item govuk-checkboxes--small">
+                          <input class="govuk-checkboxes__input" id="job-sectors-7" name="job-sectors" type="checkbox" value="Office or desk-based">
+                          <label class="govuk-label govuk-checkboxes__label" for="job-sectors-7">
+                            Office or desk-based
+                          </label>
+                        </div>
+
+                        <div class="govuk-checkboxes__item govuk-checkboxes--small">
+                          <input class="govuk-checkboxes__input" id="job-sectors-13" name="job-sectors" type="checkbox" value="Other" aria-controls="conditional-job-sectors" aria-expanded="false">
+                          <label class="govuk-label govuk-checkboxes__label" for="job-sectors-13">
+                            Other
+                          </label>
+                        </div>
+
+                        <div class="govuk-checkboxes__item govuk-checkboxes--small">
+                          <input class="govuk-checkboxes__input" id="job-sectors-8" name="job-sectors" type="checkbox" value="Retail and sales">
+                          <label class="govuk-label govuk-checkboxes__label" for="job-sectors-8">
+                            Retail and sales
+                          </label>
+                        </div>
+
+                        <div class="govuk-checkboxes__item govuk-checkboxes--small">
+                          <input class="govuk-checkboxes__input" id="job-sectors-9" name="job-sectors" type="checkbox" value="Sport and fitness">
+                          <label class="govuk-label govuk-checkboxes__label" for="job-sectors-9">
+                            Sport and fitness
+                          </label>
+                        </div>
+
+                        <div class="govuk-checkboxes__item govuk-checkboxes--small">
+                          <input class="govuk-checkboxes__input" id="job-sectors-10" name="job-sectors" type="checkbox" value="Training, support and education">
+                          <label class="govuk-label govuk-checkboxes__label" for="job-sectors-10">
+                            Training and support
+                          </label>
+                        </div>
+
+                        <div class="govuk-checkboxes__item govuk-checkboxes--small">
+                          <input class="govuk-checkboxes__input" id="job-sectors-12" name="job-sectors" type="checkbox" value="Waste management">
+                          <label class="govuk-label govuk-checkboxes__label" for="job-sectors-12">
+                            Waste management
+                          </label>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+            </div>
+            </div>
+          </details>
+
+        </div>
+
+        
+
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <form method="post">
+            <button class="govuk-button govuk-!-margin-bottom-1" data-module="govuk-button">
+              Apply filters
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+<!-- NUMBER OF RESULTS -->
+
+    <h3 class="govuk-heading-s">
+     9 results
+    </h3>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<!-- TABLE OF RESULTS -->
+
+     <table class="govuk-table govuk-!-margin-top-6" data-module="moj-sortable-table" id="prisonerTable">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header" aria-sort="ascending">Job role</th>
+          <th scope="col" class="govuk-table__header">Type of work</th>
+          <th scope="col" class="govuk-table__header" aria-sort="ascending">Vacancies</th>
+          <th scope="col" class="govuk-table__header" aria-sort="ascending">Closing date</th>
+        </tr>
+      </thead>
+
+      <tbody class="govuk-table__body">
+
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="#" href="#">Forklift operator</a><br> <span class="govuk-hint govuk-!-margin-bottom-0">DHL</span></td>
+          <td class="govuk-table__cell">Warehousing and storage</td>
+          <td class="govuk-table__cell" data-sort-value="50">
+            50
+          </td>
+          <td class="govuk-table__cell" data-sort-value="2024.02.10">10 Feb 2024</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="#" href="national-job-description">Back of House</a><br> <span class="govuk-hint govuk-!-margin-bottom-0">Greene King</span></td>
+          <td class="govuk-table__cell">Hospitality and catering</td>
+          <td class="govuk-table__cell" data-sort-value="150">
+            150
+          </td>
+          <td class="govuk-table__cell" data-sort-value="2024.02.02">2 Feb 2024</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="#" href="#">Heavy machinery handler</a>
+            <br> <span class="govuk-hint govuk-!-margin-bottom-0">HSS Hire</span>
+          </td>
+          <td class="govuk-table__cell">Manufacturing and technical</td>
+          <td class="govuk-table__cell" data-sort-value="20">
+            20
+          </td>
+          <td class="govuk-table__cell" data-sort-value="2024.01.01">1 Jan 2024</td>
+        </tr>
+
+         <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="#" href="#">Workshop operative / handler</a>
+            <br> <span class="govuk-hint govuk-!-margin-bottom-0">HSS Hire</span>
+          </td>
+          <td class="govuk-table__cell">Manufacturing and technical</td>
+          <td class="govuk-table__cell" data-sort-value="200">
+            200
+          </td>
+          <td class="govuk-table__cell" data-sort-value="2024.01.01">1 Jan 2024</td>
+        </tr>
+
+         <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="#" href="#">Delivery Driver</a>
+            <br> <span class="govuk-hint govuk-!-margin-bottom-0">Iceland</span>
+          </td>
+          <td class="govuk-table__cell">Driving and transport</td>
+          <td class="govuk-table__cell" data-sort-value="25">
+            25
+          </td>
+          <td class="govuk-table__cell" data-sort-value="2023.12.15">15 Dec 2023</td>
+        </tr>
+
+         <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="#" href="#">Fron of house</a>
+            <br> <span class="govuk-hint govuk-!-margin-bottom-0">Marston's</span>
+          </td>
+          <td class="govuk-table__cell">Hospitality and catering</td>
+          <td class="govuk-table__cell" data-sort-value="100">
+            100
+          </td>
+          <td class="govuk-table__cell" data-sort-value="2023.12.02">2 Dec 2023</td>
+        </tr>
+
+         <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="#" href="#">HGV Drivers/Loaders</a>
+            <br> <span class="govuk-hint govuk-!-margin-bottom-0">Suez</span>
+          </td>
+          <td class="govuk-table__cell">Driving and transport</td>
+          <td class="govuk-table__cell" data-sort-value="20">
+            20
+          </td>
+          <td class="govuk-table__cell" data-sort-value="2023.11.16">16 Nov 2023</td>
+        </tr>
+
+         <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="#" href="#">Catering Assistant</a>
+            <br> <span class="govuk-hint govuk-!-margin-bottom-0">Sodexo</span>
+          </td>
+          <td class="govuk-table__cell">Hospitality and catering</td>
+          <td class="govuk-table__cell" data-sort-value="10">
+            10
+          </td>
+          <td class="govuk-table__cell" data-sort-value="2023.10.31">31 Oct 2023</td>
+        </tr>
+
+         <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="#" href="#">Kitchen Team Member</a>
+            <br> <span class="govuk-hint govuk-!-margin-bottom-0">Wagamama</span>
+          </td>
+          <td class="govuk-table__cell">Manufacturing and technical</td>
+          <td class="govuk-table__cell" data-sort-value="60">
+            60
+          </td>
+          <td class="govuk-table__cell" data-sort-value="2023.10.5">5 Oct 2023</td>
+        </tr>
+
+      </tbody>
+    </table>
+
+
+</div>
+
+
+
+<script>
+  function myFunction() {
+    // Declare variables
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("filterName");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("prisonerTable");
+    tr = table.getElementsByTagName("tr");
+
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+</script>
+
+
+
+{% endblock %}
