@@ -20,11 +20,7 @@
       <dl class="govuk-summary-list margin-bottom-4">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Employer name</dt>
-          {% if (data['employer-name'] == null ) %}
-          <dd class="govuk-summary-list__value">ABC Construction</dd>
-          {% else %}
-          <dd class="govuk-summary-list__value">{{ data['employer-name'] }}</dd>
-          {% endif %}
+          <dd class="govuk-summary-list__value">Greene King</dd>
           <dd class="govuk-summary-list__actions">
             <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> employer name</span></a>
           </dd>
@@ -56,32 +52,25 @@
       
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Job title</dt>
-          {% if (data['job-title'] == null ) %}
-          <dd class="govuk-summary-list__value">Bricklayer</dd>
-          {% else %}
-          <dd class="govuk-summary-list__value">{{ data['job-title'] }}</dd>
-          {% endif %}
+          <dd class="govuk-summary-list__value">Kitchen assistant</dd>
           <dd class="govuk-summary-list__actions"><a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job title</span></a></dd>
         </div>
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Job description</dt>
           <dd class="govuk-summary-list__value">
+As a Kitchen Assistant, you will…
+<br>
+Help the kitchen service run smoothly by making sure it is well stocked and clean.
+Maintain hygiene levels and safety regulations in the kitchen to help guarantee the safety of your entire team and visitors.
+Communicate clearly with your team, ensuring they have everything they need.
+<br>
+What you’ll bring to the kitchen:
+<br>
+A positive can-do attitude to support your team.
+A passion for challenges and thriving in a fast-paced kitchen.
+Willingness to learn and expand your skills in the kitchen.
 
-            {% if (data['jobdescription'] == null ) %}
-            
-            The role of a bricklayer involves multiple tasks. However, the ultimate goal of the job is to construct, build and repair buildings and other structures, such as housing estates, walls, chimneys or even decorative masonry work.<br>
-            • Laying bricks<br>
-            • Applying or removing grout with a trowel<br>
-            • Strengthening and sealing foundations with the appropriate material, usually damp-resistant materials<br>
-            • Repairing building blocks and chimneys<br>
-            • Refurbishing decorative stonework<br>
-            • Measuring. Before laying bricks, the bricklayer needs to measure the build area to be able to place the first rows of bricks along courses
-           
-            {% else %}
-            {{ data['jobdescription'] }}
-
-            {% endif %}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job description</span></a>
@@ -90,13 +79,13 @@
 
          <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Job location</dt>
-          <dd class="govuk-summary-list__value"></dd>
+          <dd class="govuk-summary-list__value">LA22 9BU</dd>
           <dd class="govuk-summary-list__actions"><a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job title</span></a></dd>
         </div>
 
          <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Number of vacancies (optional)</dt>
-          <dd class="govuk-summary-list__value"></dd>
+          <dd class="govuk-summary-list__value">1</dd>
           <dd class="govuk-summary-list__actions"><a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job title</span></a></dd>
         </div>
 
@@ -109,23 +98,19 @@
       <dl class="govuk-summary-list margin-bottom-4">
        <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Job sector</dt>
-          {% if (data['job-sector'] == null ) %}
-          <dd class="govuk-summary-list__value">Construction and trade</dd>
-          {% else %}
-          <dd class="govuk-summary-list__value">{{ data['job-sector'] }}</dd>
-          {% endif %}
+          <dd class="govuk-summary-list__value">Hospitality and catering</dd>
           <dd class="govuk-summary-list__actions"><a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job sector</span></a></dd>
         </div>
       
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">NFN industry sector</dt>
-          <dd class="govuk-summary-list__value"></dd>
+          <dd class="govuk-summary-list__value">Hospitality and catering</dd>
           <dd class="govuk-summary-list__actions"><a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> NFN industry sector</span></a></dd>
         </div>
       
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Job source</dt>
-          <dd class="govuk-summary-list__value"></dd>
+          <dd class="govuk-summary-list__value">NFN</dd>
           <dd class="govuk-summary-list__actions">
             <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> first job source</span></a>
           </dd>
@@ -133,7 +118,7 @@
       
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Job source 2 (optional)</dt>
-          <dd class="govuk-summary-list__value"></dd>
+          <dd class="govuk-summary-list__value">Not provided</dd>
           <dd class="govuk-summary-list__actions">
             <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden">Second job source (optional)</span></a>
           </dd>
@@ -141,7 +126,7 @@
       
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Supported by a charity? (optional)</dt>
-          <dd class="govuk-summary-list__value"></dd>
+          <dd class="govuk-summary-list__value">Not provided</dd>
           <dd class="govuk-summary-list__actions">
             <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> supported by a charity? (optional)</span></a>
           </dd>
@@ -234,7 +219,9 @@
       <dl class="govuk-summary-list margin-bottom-4">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Essential job criteria</dt>
-          <dd class="govuk-summary-list__value">L1 0AA</dd>
+          <dd class="govuk-summary-list__value">Help the kitchen service run smoothly by making sure it is well stocked and clean.
+Maintain hygiene levels and safety regulations in the kitchen to help guarantee the safety of your entire team and visitors.
+Communicate clearly with your team, ensuring they have everything they need.</dd>
           <dd class="govuk-summary-list__actions">
             <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> essential job criteria</span></a>
           </dd>
@@ -242,7 +229,7 @@
       
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Desirable job criteria (optional)</dt>
-          <dd class="govuk-summary-list__value">£12.00</dd>
+          <dd class="govuk-summary-list__value">Not provided</dd>
           <dd class="govuk-summary-list__actions">
             <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> desirable job criteria (optional)</span></a>
           </dd>
@@ -282,7 +269,7 @@
       
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Job start date</dt>
-          <dd class="govuk-summary-list__value">20 August 2024</dd>
+          <dd class="govuk-summary-list__value">30 July 2024</dd>
           <dd class="govuk-summary-list__actions">
             <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job start date</span></a>
           </dd>

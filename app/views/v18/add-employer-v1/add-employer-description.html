@@ -1,0 +1,49 @@
+{% extends "../includes/template-slim.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+
+  <!-- Breadcrumb -->
+
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+
+    <span class="govuk-caption-l">Add an employer - step 2 of 4</span>
+  <h1 class="govuk-heading-l">Employer description</h1>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<form action="./add-employer-file-upload" method="post">
+ 
+
+  <div class="govuk-form-group">
+  <label class="govuk-label" for="more-detail">
+    This description will be viewed by PELS when viewing suggested jobs. Include information such as type of work, hiring locations where applicable and an overview of the application process.
+  </label>
+  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5"></textarea>
+</div>
+
+<div class="govuk-form-group">
+    <label class="govuk-label" for="employer-name">Employer website (optional)</label>
+   
+  
+      {% if (data['name'] != "empty") %}
+      <input class="govuk-input" id="employer-name" name="employer-name" type="text" value=" {{ data['name'] }}">
+      {% else %}
+      <input class="govuk-input" id="employer-name" name="employer-name" type="text" value="">
+      {% endif %}
+
+  </div>
+
+
+
+  <button class="govuk-button" type="submit">Continue</button>
+</form>
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}
