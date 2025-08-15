@@ -1,0 +1,167 @@
+{% extends "../includes/template-slim.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+<!-- BREADCRUMB -->
+
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+  <span class="govuk-caption-l">Add a job - step 4 of 6</span>
+
+  <h1 class="govuk-heading-l">Contract details</h1>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form method="post" action="./06-add-job-description-location">
+
+
+<!-- MINIMUM SALARY -->
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="salary-from">Salary from</label>
+            <div id="salary-from-hint" class="govuk-hint">Enter minimum salary amount using numbers.</div>
+            <div class="govuk-input__wrapper">
+              <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                {% if (data['title'] != "empty") %}
+                <input class="govuk-input govuk-input--width-10" id="salary-from" name="salary-from" type="text" spellcheck="false" value="{{ data['salary'] }}">
+                {% else %}
+                <input class="govuk-input govuk-input--width-10" id="salary-from" name="salary-from" type="text" spellcheck="false" >
+                {% endif %}
+              </div>
+          </div>
+
+
+<!-- SALARY TO -->
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="salary-to">Salary to (optional)</label>
+              <div class="govuk-input__wrapper">
+                <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                <input class="govuk-input govuk-input--width-10" id="salary-to" name="salary-to" type="text" spellcheck="false">
+              </div>
+        </div>
+
+
+<!-- SALARY PERIOD -->
+
+          <div class="govuk-form-group">
+          <label class="govuk-label" for="salary-period">Salary period</label>
+          <select class="govuk-select" id="salary-period" name="salary-period">
+            <option value="">Choose salary period</option>
+            <option value="per-day">Per day</option>
+            <option value="per-fortnight">Per fortnight</option>
+            <option value="per-hour">Per hour</option>
+            <option value="per-month">Per month</option>
+            <option value="per-week">Per week</option>
+            <option value="per-year">Per year</option>
+            <option value="per-year-pro-rata">Per year, pro rata</option>
+          </select>
+        </div>
+
+
+<!-- ADDITIONAL SALARY INFORMATION -->
+
+          <div class="govuk-form-group">
+          <label class="govuk-label" for="additional-salary-info">Additional salary information (optional)</label>
+          <input class="govuk-input" id="additional-salary-info" name="additional-salary-info" type="text">
+        </div>
+
+
+<!-- MINIMUM WAGE -->
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset"><label class="govuk-label margin-bottom-3">Does salary pay at least minimum wage?</label>
+              <div class="govuk-radios">
+                {% if (data['title'] != "empty") %}
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="minimum-wage-yes" name="minimum-wage" type="radio" value="yes" checked>
+                  <label class="govuk-label govuk-radios__label" for="minimum-wage-yes">Yes</label>
+                </div>
+                {% else %}
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="minimum-wage-yes" name="minimum-wage" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="minimum-wage-yes">Yes</label>
+                </div>
+                {% endif %}
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="minimum-wage-no" name="minimum-wage" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="minimum-wage-no">No</label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+
+<!-- WORK PATTERN -->
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="work-pattern">Work pattern</label>
+            <select class="govuk-select" id="work-pattern" name="work-pattern">
+              <option value="">Choose work pattern</option>
+              <option value="annualised-hours">Annualised hours</option>
+              <option value="compressed-hours">Compressed hours</option>
+              <option value="flexi-time">Flexi-time</option>
+              <option value="flexible-shifts">Flexible shifts</option>
+              <option value="job-share">Job share</option>
+              <option value="staggered-hours">Staggered hours</option>
+              <option value="term-time-hours">Term-time hours</option>
+              <option value="unsocial-hours">Unsocial hours</option>
+            </select>
+          </div>
+
+
+<!-- HOURS PER WEEK -->
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="hours-per-week">Hours per week</label>
+            <select class="govuk-select" id="hours-per-week" name="hours-per-week">
+              <option value="">Choose hours per week</option>
+              <option value="full-time-30-39">Full-time (more than 30-39 hours)</option>
+              <option value="full-time-40">Full-time (more than 40 hours)</option>
+              <option value="part-time-less-30">Part-time (less than 30 hours)</option>
+              <option value="zero-hours">Zero hours</option>
+            </select>
+          </div>
+
+
+<!-- CONTRACT TYPE -->
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="contract-type">Contract type</label>
+            <select class="govuk-select" id="contract-type" name="contract-type">
+              {% if (data['title'] != "empty") %}
+              <option value="{{ data['contract'] }}">{{ data['contract'] }}</option>
+              {% endif %}
+              <option value="">Choose contract type</option>
+              <option value="fixed-term-contract">Fixed term contract</option>
+              <option value="permanent">Permanent</option>
+              <option value="self-employment">Self-employment</option>
+              <option value="temporary">Temporary</option>
+            </select>
+          </div>
+
+
+<!-- BASE LOCATION -->
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="base-location">Base location (optional)</label>
+            <select class="govuk-select" id="base-location" name="base-location">
+              <option value="">Choose base location</option>
+              <option value="home-remote">Home/Remote</option>
+              <option value="hybrid">Hybrid</option>
+              <option value="workplace">Workplace</option>
+            </select>
+          </div>
+
+
+          <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}
