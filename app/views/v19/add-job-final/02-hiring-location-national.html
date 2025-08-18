@@ -10,7 +10,7 @@
 
 
     <span class="govuk-caption-l">Add a job - step 2 of 8</span>
-  <h1 class="govuk-heading-l">Does the job have a confirmed single hiring location?</h1>
+  <h1 class="govuk-heading-l" style="color: rgb(239, 30, 65);">Is this a national job?</h1>
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -21,17 +21,17 @@
 
         <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="signIn-hint">
-    <div id="signIn-hint" class="govuk-hint">
-      Select yes only if the job has a confirmed postcode or location. 
+    <div id="signIn-hint" class="govuk-hint" style="color: rgb(239, 30, 65);">
+      National jobs do not have a single location or postcode. Select yes only if you know the postcode or location for this job. 
     </div>
     <div class="govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="signIn" name="signIn" type="radio" value="yes" aria-describedby="signIn-item-hint">
-        <label class="govuk-label govuk-radios__label" for="signIn">Yes, the job has a single hiring postcode or location</label>
+        <input class="govuk-radios__input" id="signIn" name="signIn" type="radio" value="no" aria-describedby="signIn-item-hint">
+        <label class="govuk-label govuk-radios__label" for="signIn" style="color: rgb(239, 30, 65);">Yes, this is a national job</label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="no" aria-describedby="signIn-2-item-hint">
-        <label class="govuk-label govuk-radios__label" for="signIn-2">No, this is a national job with no single hiring location</label>
+        <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="yes" aria-describedby="signIn-2-item-hint">
+        <label class="govuk-label govuk-radios__label" for="signIn-2" style="color: rgb(239, 30, 65);">No, the job has a specific postcode or location</label>
       </div>
     </div>
   </fieldset>
