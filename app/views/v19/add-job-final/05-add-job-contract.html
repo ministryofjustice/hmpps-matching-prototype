@@ -7,21 +7,21 @@
 
   <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
 
-  <span class="govuk-caption-l">Add a job - step 4 of 6</span>
+  <span class="govuk-caption-l">Add a job - step 5 of 9</span>
 
   <h1 class="govuk-heading-l">Contract details</h1>
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form method="post" action="./06-add-job-description">
+      <form method="post" action="./05-add-job-workpattern">
 
 
 <!-- MINIMUM SALARY -->
 
           <div class="govuk-form-group">
             <label class="govuk-label" for="salary-from">Salary from</label>
-            <div id="salary-from-hint" class="govuk-hint">Enter minimum salary amount using numbers.</div>
+            <div id="salary-from-hint" class="govuk-hint">Enter the minimum salary amount using numbers.</div>
             <div class="govuk-input__wrapper">
               <div class="govuk-input__prefix" aria-hidden="true">£</div>
                 {% if (data['title'] != "empty") %}
@@ -33,10 +33,11 @@
           </div>
 
 
-<!-- SALARY TO -->
+<!-- MAXIMUM SALARY -->
 
           <div class="govuk-form-group">
             <label class="govuk-label" for="salary-to">Salary to (optional)</label>
+            <div id="salary-from-hint" class="govuk-hint">Enter the maximum salary amount using numbers.</div>
               <div class="govuk-input__wrapper">
                 <div class="govuk-input__prefix" aria-hidden="true">£</div>
                 <input class="govuk-input govuk-input--width-10" id="salary-to" name="salary-to" type="text" spellcheck="false">
@@ -96,7 +97,7 @@
 
 <!-- WORK PATTERN -->
 
-          <div class="govuk-form-group">
+          <!-- <div class="govuk-form-group">
             <label class="govuk-label" for="work-pattern">Work pattern</label>
             <select class="govuk-select" id="work-pattern" name="work-pattern">
               <option value="">Choose work pattern</option>
@@ -109,12 +110,12 @@
               <option value="term-time-hours">Term-time hours</option>
               <option value="unsocial-hours">Unsocial hours</option>
             </select>
-          </div>
+          </div> -->
 
 
 <!-- HOURS PER WEEK -->
 
-          <div class="govuk-form-group">
+          <!-- <div class="govuk-form-group">
             <label class="govuk-label" for="hours-per-week">Hours per week</label>
             <select class="govuk-select" id="hours-per-week" name="hours-per-week">
               <option value="">Choose hours per week</option>
@@ -123,12 +124,12 @@
               <option value="part-time-less-30">Part-time (less than 30 hours)</option>
               <option value="zero-hours">Zero hours</option>
             </select>
-          </div>
+          </div> -->
 
 
 <!-- CONTRACT TYPE -->
 
-          <div class="govuk-form-group">
+          <!-- <div class="govuk-form-group">
             <label class="govuk-label" for="contract-type">Contract type</label>
             <select class="govuk-select" id="contract-type" name="contract-type">
               {% if (data['title'] != "empty") %}
@@ -140,12 +141,12 @@
               <option value="self-employment">Self-employment</option>
               <option value="temporary">Temporary</option>
             </select>
-          </div>
+          </div> -->
 
 
 <!-- BASE LOCATION -->
 
-          <div class="govuk-form-group">
+          <!-- <div class="govuk-form-group">
             <label class="govuk-label" for="base-location">Base location (optional)</label>
             <select class="govuk-select" id="base-location" name="base-location">
               <option value="">Choose base location</option>
@@ -153,7 +154,7 @@
               <option value="hybrid">Hybrid</option>
               <option value="workplace">Workplace</option>
             </select>
-          </div>
+          </div> -->
 
 
           <button class="govuk-button" data-module="govuk-button">Continue</button>

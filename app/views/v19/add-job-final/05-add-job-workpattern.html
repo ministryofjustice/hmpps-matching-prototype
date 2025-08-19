@@ -7,21 +7,21 @@
 
   <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
 
-  <span class="govuk-caption-l">Add a job - step 5 of 9</span>
+  <span class="govuk-caption-l">Add a job - step 6 of 9</span>
 
-  <h1 class="govuk-heading-l">Contract details</h1>
+  <h1 class="govuk-heading-l">Working pattern</h1>
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form method="post" action="./06-add-job-description-location">
+      <form method="post" action="./06-add-job-description">
 
 
 <!-- MINIMUM SALARY -->
 
-          <div class="govuk-form-group">
+          <!-- <div class="govuk-form-group">
             <label class="govuk-label" for="salary-from">Salary from</label>
-            <div id="salary-from-hint" class="govuk-hint">Enter minimum salary amount using numbers.</div>
+            <div id="salary-from-hint" class="govuk-hint">Enter the minimum salary amount using numbers.</div>
             <div class="govuk-input__wrapper">
               <div class="govuk-input__prefix" aria-hidden="true">£</div>
                 {% if (data['title'] != "empty") %}
@@ -30,23 +30,24 @@
                 <input class="govuk-input govuk-input--width-10" id="salary-from" name="salary-from" type="text" spellcheck="false" >
                 {% endif %}
               </div>
-          </div>
+          </div> -->
 
 
-<!-- SALARY TO -->
+<!-- MAXIMUM SALARY -->
 
-          <div class="govuk-form-group">
+          <!-- <div class="govuk-form-group">
             <label class="govuk-label" for="salary-to">Salary to (optional)</label>
+            <div id="salary-from-hint" class="govuk-hint">Enter the maximum salary amount using numbers.</div>
               <div class="govuk-input__wrapper">
                 <div class="govuk-input__prefix" aria-hidden="true">£</div>
                 <input class="govuk-input govuk-input--width-10" id="salary-to" name="salary-to" type="text" spellcheck="false">
               </div>
-        </div>
+        </div> -->
 
 
 <!-- SALARY PERIOD -->
 
-          <div class="govuk-form-group">
+          <!-- <div class="govuk-form-group">
           <label class="govuk-label" for="salary-period">Salary period</label>
           <select class="govuk-select" id="salary-period" name="salary-period">
             <option value="">Choose salary period</option>
@@ -58,20 +59,20 @@
             <option value="per-year">Per year</option>
             <option value="per-year-pro-rata">Per year, pro rata</option>
           </select>
-        </div>
+        </div> -->
 
 
 <!-- ADDITIONAL SALARY INFORMATION -->
 
-          <div class="govuk-form-group">
+          <!-- <div class="govuk-form-group">
           <label class="govuk-label" for="additional-salary-info">Additional salary information (optional)</label>
           <input class="govuk-input" id="additional-salary-info" name="additional-salary-info" type="text">
-        </div>
+        </div> -->
 
 
 <!-- MINIMUM WAGE -->
 
-          <div class="govuk-form-group">
+          <!-- <div class="govuk-form-group">
             <fieldset class="govuk-fieldset"><label class="govuk-label margin-bottom-3">Does salary pay at least minimum wage?</label>
               <div class="govuk-radios">
                 {% if (data['title'] != "empty") %}
@@ -91,7 +92,7 @@
                 </div>
               </div>
             </fieldset>
-          </div>
+          </div> -->
 
 
 <!-- WORK PATTERN -->
@@ -131,9 +132,9 @@
           <div class="govuk-form-group">
             <label class="govuk-label" for="contract-type">Contract type</label>
             <select class="govuk-select" id="contract-type" name="contract-type">
-              {% if (data['title'] != "empty") %}
+              <!-- {% if (data['title'] != "empty") %}
               <option value="{{ data['contract'] }}">{{ data['contract'] }}</option>
-              {% endif %}
+              {% endif %} -->
               <option value="">Choose contract type</option>
               <option value="fixed-term-contract">Fixed term contract</option>
               <option value="permanent">Permanent</option>
