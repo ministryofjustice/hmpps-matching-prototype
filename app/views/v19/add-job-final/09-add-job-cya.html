@@ -21,7 +21,7 @@
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Employer name</dt>
           {% if not data['employer-name'] %}
-         <dd class="govuk-summary-list__value">ABC Construction</dd>
+         <dd class="govuk-summary-list__value">Greene King</dd>
           {% else %}
           <dd class="govuk-summary-list__value">{{ data['employer-name'] }}</dd>
           {% endif %}
@@ -42,14 +42,14 @@
           <dt class="govuk-summary-list__key">Location type</dt>
       
 
-  {% if data['nationalJob'] == "yes" %}
-   <dd class="govuk-summary-list__value"> National job</dd>
-  {% elseif data['nationalJob'] == "no" %}
-    <dd class="govuk-summary-list__value">Single hiring location</dd>
-  {% else %}
-   <dd class="govuk-summary-list__value"> Not provided</dd>
-  {% endif %}
- <dd class="govuk-summary-list__actions">
+          {% if data['nationalJob'] == "yes" %}
+           <dd class="govuk-summary-list__value"> National job</dd>
+          {% elseif data['nationalJob'] == "no" %}
+           <dd class="govuk-summary-list__value">Single hiring location</dd>
+          {% else %}
+           <dd class="govuk-summary-list__value"> Not provided</dd>
+            {% endif %}
+          <dd class="govuk-summary-list__actions">
             <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> employer name</span></a>
           </dd>
         </div>
@@ -80,6 +80,15 @@
             <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job description</span></a>
           </dd>
         </div>
+
+        {% if data['nationalJob'] == "no" %}
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">Job location</dt>
+          <dd class="govuk-summary-list__value">LA22 9BU</dd>
+          <dd class="govuk-summary-list__actions"><a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> job title</span></a></dd>
+        </div>
+        {% endif %}
+
 
          <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Number of vacancies (optional)</dt>
