@@ -30,14 +30,14 @@
               <div class="govuk-radios" data-module="govuk-radios">
 
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="national-job-yes" name="nationalJob" type="radio" value="yes">
+                  <input value="yes" class="govuk-radios__input" id="national-job-yes" name="nationalJob" type="radio" >
                   <label class="govuk-label govuk-radios__label" for="national-job-yes">
                       Yes, this is a national job
                 </label>
                 </div>
 
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="national-job-no" name="nationalJob" type="radio" value="no">
+                  <input value="no" class="govuk-radios__input" id="national-job-no" name="nationalJob" type="radio" >
                   <label class="govuk-label govuk-radios__label" for="national-job-no">
                   No, the job has a specific postcode
                 </label>
@@ -55,21 +55,7 @@
     </div>
   </div>
 
-  <script>
- 
-router.post('./03-add-job-details', function (req, res) {
-  var nationalJob = req.session.data['nationalJob']
 
-  if (nationalJob === 'no') {
-    // If it’s a national job
-    res.redirect('./03-add-job-details-location')
-  } else {
-    // If it needs a postcode
-    res.redirect('./03-add-job-details')
-  }
-})
-
-</script>
 
 </div>
 {% endblock %}
