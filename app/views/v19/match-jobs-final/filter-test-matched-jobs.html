@@ -185,40 +185,11 @@
 
        
  
+  
+  <div style="display: inline-flex; flex-direction: column; width: 400px;">
+  <!-- Offence filters --> 
         <div class="filter-box-width-override-20">
-          <div class="govuk-form-group">
-            <label class="govuk-heading-s govuk-!-margin-bottom-1" for="radius">
-              Search radius
-            </label>
-            <div id="radius-hint" class="govuk-body govuk-!-margin-bottom-2">
-              From release area <br>postcode
-            </div>
-            <select class="govuk-select" id="radius" name="radius">
-              <option value="10" selected>10 miles</option>
-              <option value="1">1 mile</option>
-              <option value="4">5 miles</option>
-              <option value="20">20 miles</option>
-              <option value="50">50 miles</option>
-              <option value="1000">National</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="filter-box-width-override-20">
-          <div class="govuk-form-group">
-            <label class="govuk-heading-s govuk-!-margin-bottom-1" for="release-area">
-              Release area postcode
-            </label>
-            <div id="release-area-hint" class="govuk-body govuk-!-margin-bottom-2">
-              Default is prisoner’s last recorded home address
-            </div>
-            <input class="govuk-input govuk-!-width-two-thirds" id="release-area" name="release-area" type="text" value="LS11 2AB">
-          </div>
-        </div>
-        
-        
-        <div class="filter-box-width-override-20">
-          <div class="govuk-form-group" style="width: 414px; margin-top: 25px; margin-bottom: 20px;">
+          <div class="govuk-form-group" style="width: 414px;  margin-bottom: 20px;">
             <label class="govuk-heading-s govuk-!-margin-bottom-1" for="radius">
               Hide jobs with offence exclusions
             </label>     
@@ -267,16 +238,55 @@
             </div>
           </div>
         </div>
-      
+
+  <!-- Location search -->
+   <div style="display: inline-flex; flex-direction: row;">
+              <div >
+          <div class="govuk-form-group" style="width: 200px;">
+            <label class="govuk-heading-s govuk-!-margin-bottom-1" for="radius">
+              Search radius
+            </label>
+            <div id="radius-hint" class="govuk-body govuk-!-margin-bottom-2">
+              From release area <br>postcode
+            </div>
+            <select class="govuk-select" id="radius" name="radius">
+              <option value="10" selected>10 miles</option>
+              <option value="1">1 mile</option>
+              <option value="4">5 miles</option>
+              <option value="20">20 miles</option>
+              <option value="50">50 miles</option>
+              <option value="1000">No restrictions</option>
+            </select>
+          </div>
+        </div>
+
+        <div >
+          <div class="govuk-form-group" style="width: 200px;">
+            <label class="govuk-heading-s govuk-!-margin-bottom-1" for="release-area">
+              Release area postcode
+            </label>
+            <div id="release-area-hint" class="govuk-body govuk-!-margin-bottom-2">
+              Default is prisoner’s last recorded home address
+            </div>
+            <input class="govuk-input govuk-!-width-two-thirds" id="release-area" name="release-area" type="text" value="LS11 2AB">
+          </div>
+        </div>
+    </div>
+  </div> 
 
   </div>
 
-      <div class="govuk-grid-row">
+      <div class="govuk-grid-row" style="margin-top: 20px;">
         <div class="govuk-grid-column-full">
           <form method="post">
+          <div style="display: flex; align-items: center;">
             <button class="govuk-button govuk-!-margin-bottom-1" data-module="govuk-button">
               Apply filters
             </button>
+            <a class="govuk-link govuk-link--no-visited-state" href="" style="font-size: 1.1875rem;margin-left: 20px;">
+              Clear filters
+            </a>
+            </div>
           </form>
         </div>
       </div>

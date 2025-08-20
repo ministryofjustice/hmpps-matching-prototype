@@ -182,27 +182,10 @@
         </div>
 
         <div style="display: inline-flex; flex-direction: column;">
-        <div class="filter-box-width-override-20">
-          <div class="govuk-form-group" style="width: 414px; margin-top: 25px; margin-bottom: 20px;">
-            <label class="govuk-heading-s govuk-!-margin-bottom-1" for="radius">
-              Employer
-            </label>     
-            <select class="govuk-select" id="radius" name="radius" style="width: 428px;">
-              <option value="1" selected>All employers</option>
-                      <option value="1">DHL</option>
-                      <option value="2">Greene King</option>
-                      <option value="1">HSS Hire</option>
-                      <option value="1">Iceland</option>
-                      <option value="1">Marston's</option>
-                      <option value="1">Suez</option>
-                      <option value="1">Sodexo</option>
-                      <option value="1">Wagamama</option>
-            </select>
-          </div>
-        </div>
+
 
          <div class="filter-box-width-override-20">
-          <div class="govuk-form-group" style="width: 414px; margin-top: 25px; margin-bottom: 20px;">
+          <div class="govuk-form-group" style="width: 414px;  margin-bottom: 20px;">
             <label class="govuk-heading-s govuk-!-margin-bottom-1" for="radius">
               Hide jobs with offence exclusions
             </label>     
@@ -251,16 +234,42 @@
             </div>
           </div>
         </div>
+
+
+        <div class="filter-box-width-override-20">
+          <div class="govuk-form-group" style="width: 414px; margin-bottom: 20px;">
+            <label class="govuk-heading-s govuk-!-margin-bottom-1" for="radius">
+              Employer
+            </label>     
+            <select class="govuk-select" id="radius" name="radius" style="width: 428px;">
+              <option value="1" selected>All employers</option>
+                      <option value="1">DHL</option>
+                      <option value="2">Greene King</option>
+                      <option value="1">HSS Hire</option>
+                      <option value="1">Iceland</option>
+                      <option value="1">Marston's</option>
+                      <option value="1">Suez</option>
+                      <option value="1">Sodexo</option>
+                      <option value="1">Wagamama</option>
+            </select>
+          </div>
+        </div>
+
         </div>
 
       </div>
       
-      <div class="govuk-grid-row">
+      <div class="govuk-grid-row" style="margin-top: 20px;">
         <div class="govuk-grid-column-full">
           <form method="post">
+          <div style="display: flex; align-items: center;">
             <button class="govuk-button govuk-!-margin-bottom-1" data-module="govuk-button">
               Apply filters
             </button>
+            <a class="govuk-link govuk-link--no-visited-state" href="" style="font-size: 1.1875rem;margin-left: 20px;">
+              Clear filters
+            </a>
+            </div>
           </form>
         </div>
       </div>
