@@ -20,9 +20,13 @@
       <dl class="govuk-summary-list margin-bottom-4">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Employer name</dt>
-          <dd class="govuk-summary-list__value">Greene King</dd>
+          {% if not data['employer-name'] %}
+         <dd class="govuk-summary-list__value">ABC Construction</dd>
+          {% else %}
+          <dd class="govuk-summary-list__value">{{ data['employer-name'] }}</dd>
+          {% endif %}
           <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> employer name</span></a>
+            <a href="./01-add-employer" class="govuk-link">Change<span class="govuk-visually-hidden"> employer name</span></a>
           </dd>
         </div>
         
@@ -36,8 +40,16 @@
       <dl class="govuk-summary-list margin-bottom-4">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Location type</dt>
-          <dd class="govuk-summary-list__value">National</dd>
-          <dd class="govuk-summary-list__actions">
+      
+
+  {% if data['nationalJob'] == "yes" %}
+   <dd class="govuk-summary-list__value"> National job</dd>
+  {% elseif data['nationalJob'] == "no" %}
+    <dd class="govuk-summary-list__value">Single hiring location</dd>
+  {% else %}
+   <dd class="govuk-summary-list__value"> Not provided</dd>
+  {% endif %}
+ <dd class="govuk-summary-list__actions">
             <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> employer name</span></a>
           </dd>
         </div>
@@ -121,7 +133,7 @@
         </dl>
 
 
-<!-- LOCATION AND CONTRACT DETAILS -->
+<!-- CONTRACT DETAILS -->
 
 
       <h2 class="govuk-heading-m">Contract details</h2>
@@ -167,6 +179,14 @@
           </dd>
         </div>
       
+      </dl>
+
+<!-- WORKING PATTERN -->
+
+      <h2 class="govuk-heading-m">Working pattern</h2>
+      <dl class="govuk-summary-list margin-bottom-4">
+
+      
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">Work pattern</dt>
           <dd class="govuk-summary-list__value">Flexible shifts</dd>
@@ -200,6 +220,8 @@
         </div>
       </dl>
 
+<!-- JOB REQUIREMENTS -->
+
       <h2 class="govuk-heading-m">Job requirements</h2>
 
       <dl class="govuk-summary-list margin-bottom-4">
@@ -228,6 +250,7 @@
         </div>
       </dl>
 
+<!-- HOW TO APPLY -->
       <h2 class="govuk-heading-m">How to apply</h2>
       <dl class="govuk-summary-list">
         <div class="govuk-summary-list__row">
@@ -285,4 +308,6 @@
   </div>
 
 </div>
+
+
 {% endblock %}

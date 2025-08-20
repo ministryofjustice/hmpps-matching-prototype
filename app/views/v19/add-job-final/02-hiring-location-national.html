@@ -30,13 +30,17 @@
               <div class="govuk-radios" data-module="govuk-radios">
 
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="signIn" name="signIn" type="radio" value="no" aria-describedby="signIn-item-hint">
-                  <label class="govuk-label govuk-radios__label" for="signIn">Yes, this is a national job</label>
+                  <input class="govuk-radios__input" id="national-job-yes" name="nationalJob" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="national-job-yes">
+                      Yes, this is a national job
+                </label>
                 </div>
 
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="signIn-2" name="signIn" type="radio" value="yes" aria-describedby="signIn-2-item-hint">
-                  <label class="govuk-label govuk-radios__label" for="signIn-2">No, the job has a specific postcode</label>
+                  <input class="govuk-radios__input" id="national-job-no" name="nationalJob" type="radio" value="no">
+                  <label class="govuk-label govuk-radios__label" for="national-job-no">
+                  No, the job has a specific postcode
+                </label>
                 </div>
 
               </div>
@@ -52,14 +56,19 @@
   </div>
 
   <script>
-  document.getElementById('hiringLocation').addEventListener('submit', function() {
-    const selectedValue = document.querySelector('input[name="signIn"]:checked')?.value;
-    if (selectedValue === 'yes') {
-      this.action = './03-add-job-details-location'; // Set a different action
-    } else if (selectedValue === 'no') {
-      this.action = './03-add-job-details';
-    }
-  });
+ 
+router.post('./03-add-job-details', function (req, res) {
+  var nationalJob = req.session.data['nationalJob']
+
+  if (nationalJob === 'no') {
+    // If it’s a national job
+    res.redirect('./03-add-job-details-location')
+  } else {
+    // If it needs a postcode
+    res.redirect('./03-add-job-details')
+  }
+})
+
 </script>
 
 </div>
