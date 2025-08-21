@@ -365,20 +365,19 @@
         </div>
       </dl>
 
-         
-{% endif %}
+<!--{% endif %}
 {% endfor %}
 
 {% else %}
 <p>Invalid ID provided. No job details available.</p>
-{% endif %}
+{% endif %}-->
 
 {% if (data['duplicate'] == "true" ) %}
 <form method="post" action="./jobs-list">
   <button class="govuk-button">Duplicate job and save</button>
 
 {% else %}
-<form method="post" action="./jobs-list?new-job=true" value="update">
+<form method="post" action="./jobs-list" value="update">
   <button class="govuk-button">Update job and save</button>
 
 {% endif %}

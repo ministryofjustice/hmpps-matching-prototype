@@ -15,7 +15,7 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-        <form id="hiringLocation" method="post" action="./03-add-job-details-location">
+        <form id="hiringLocation" method="post" action="03-add-job-details-location">
 
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="nationalJobs-hint">
@@ -30,14 +30,14 @@
               <div class="govuk-radios" data-module="govuk-radios">
 
                 <div class="govuk-radios__item">
-                  <input  class="govuk-radios__input" id="national-job-yes" >
+                  <input  class="govuk-radios__input" id="national-job-yes" name="nationalJob" type="radio" value="yes">
                   <label class="govuk-label govuk-radios__label" for="national-job-yes">
                       Yes, this is a national job
                 </label>
                 </div>
 
                 <div class="govuk-radios__item">
-                  <input  class="govuk-radios__input" id="national-job-no">
+                  <input  class="govuk-radios__input" id="national-job-no" name="nationalJob" type="radio" value="no">
                   <label class="govuk-label govuk-radios__label" for="national-job-no">
                   No, the job has a specific postcode
                 </label>

@@ -146,6 +146,19 @@ module.exports = function (router) {
     }
   })
 
+
+  router.post('/v19/edit-job-final/03-add-job-details-location', function (req, res) {
+  var nationalJob = req.session.data['nationalJob']
+
+  if (nationalJob === 'yes') {
+    // If it’s a national job
+    res.redirect('/v19/admin/job-detail')
+  } else {
+    // If it needs a postcode
+    res.redirect('/v19/edit-job-final/03-add-job-details-location')
+  }
+})
+
   //   // q1 Work on release
   //   router.post(version + 'q1-work-on-release', function (req, res) {
   //     if (req.session.data['work-on-release'] === "Yes")
