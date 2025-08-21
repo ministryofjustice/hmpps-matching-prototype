@@ -26,7 +26,7 @@
           <dd class="govuk-summary-list__value">{{ data['employer-name'] }}</dd>
           {% endif %}
           <dd class="govuk-summary-list__actions">
-            <a href="./01-add-employer" class="govuk-link">Change<span class="govuk-visually-hidden"> employer name</span></a>
+            <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> employer name</span></a>
           </dd>
         </div>
         
@@ -47,7 +47,7 @@
           {% elseif data['nationalJob'] == "no" %}
            <dd class="govuk-summary-list__value">Single hiring location</dd>
           {% else %}
-           <dd class="govuk-summary-list__value"> Not provided</dd>
+           <dd class="govuk-summary-list__value">National job</dd>
             {% endif %}
           <dd class="govuk-summary-list__actions">
             <a href="#" class="govuk-link">Change<span class="govuk-visually-hidden"> employer name</span></a>
@@ -98,7 +98,8 @@
 
       </dl>
 
-      <!-- HIRING LOCATON AND VACANCIES -->
+
+      <!-- JOB SECTOR AND SOURCES -->
 
       <h2 class="govuk-heading-m">Job sector and sources</h2>
 

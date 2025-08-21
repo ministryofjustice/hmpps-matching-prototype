@@ -162,10 +162,10 @@
     {% for job in data.jobs17 %}
         {% if job.id == "19" %}
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell"><a href="./job-detail?id={{ job.id }}">{{ job.title }}</a></td>
+              <td class="govuk-table__cell"><a href="./job-detail?id={{ job.id }}">Kitchen assistant</a></td>
               <td class="govuk-table__cell">{{ job.vacancies }}</td>
-                <td class="govuk-table__cell">{{ job.sector }}</td>
-                <td class="govuk-table__cell">{{ job.employer }}</td>
+                <td class="govuk-table__cell">Hospitality and catering</td>
+                <td class="govuk-table__cell">Greene King</td>
                 <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ job.dateAdded }}">{{ job.dateAdded }}</td>
                 
                 <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--green">Live</span></td>

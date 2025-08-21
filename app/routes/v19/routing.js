@@ -146,16 +146,7 @@ module.exports = function (router) {
     }
   })
 
-  //  Add a job - page 2
-router.post('/v19/add-job-final/03-add-job-details', function (req, res) {
-  var nationalJob = req.session.data['nationalJob']
 
-  if (nationalJob === 'yes') {
-    res.redirect('/v19/add-job-final/03-add-job-details')
-  } else {
-    res.redirect('/v19/add-job-final/03-add-job-details-location')
-  }
-})
 
 
   //   // q1 Work on release
