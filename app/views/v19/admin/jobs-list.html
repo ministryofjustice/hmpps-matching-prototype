@@ -152,7 +152,7 @@
       <th scope="col" class="govuk-table__header">Job sector</th>
       <th scope="col" class="govuk-table__header">Employer</th>
       <th scope="col" class="govuk-table__header govuk-table__header--numeric" aria-sort="ascending"><button type="button" data-index="0">Date added</button></th>
-      <th scope="col" class="govuk-table__header" aria-sort="ascending"><button type="button" data-index="0">Status</button></th>   
+   <!-- <th scope="col" class="govuk-table__header" aria-sort="ascending" ><button type="button" data-index="0">Status</button></th>   -->
     </tr>
   </thead>
 
@@ -168,7 +168,7 @@
                 <td class="govuk-table__cell">Greene King</td>
                 <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ job.dateAdded }}">{{ job.dateAdded }}</td>
                 
-                <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--green">Live</span></td>
+              <!--  <td class="govuk-table__cell" ><span class="govuk-tag govuk-tag--green">Live</span></td> -->
 
             </tr>
         {% endif %}
@@ -185,7 +185,7 @@
       <td class="govuk-table__cell">Cleaning and maintenance</td>
       <td class="govuk-table__cell">XYZ Cleaning</td>
       <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ job.dateAdded }}">1 April 2025</td>
-      <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--green">Open</span></td>
+     <!-- <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--green">Open</span></td> -->
     </tr>
 
     {% endif %}
@@ -199,7 +199,7 @@
           <td class="govuk-table__cell">{{ job.sector }}</td>
           <td class="govuk-table__cell">{{ job.employer }}</td>
           <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ job.dateAdded }}">{{ job.dateAdded }}</td>
-          <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--{{ job.statusColor }}">{{ job.status }}</span></td>
+         <!--  <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--{{ job.statusColor }}">{{ job.status }}</span></td> -->
         </tr>
       {% elif data['my-jobs-filter'] != "Show only my jobs" %}
         <tr class="govuk-table__row">
@@ -208,7 +208,7 @@
           <td class="govuk-table__cell">{{ job.sector }}</td>
           <td class="govuk-table__cell">{{ job.employer }}</td>
           <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ job.dateAdded }}">{{ job.dateAdded }}</td>
-          <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--{{ job.statusColor }}">{{ job.status }}</span></td>
+         <!--  <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--{{ job.statusColor }}">{{ job.status }}</span></td> -->
         </tr>
       {% endif %}
     {% endif %}
