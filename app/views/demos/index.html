@@ -1,0 +1,83 @@
+{% extends "demos-index.html" %}
+
+{% set pageName="Prototype demo area" %}
+
+{% block pageTitle %}
+  Prototype demo area
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full-width">
+
+ <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+
+<div class="govuk-!-padding-bottom-6"></div>
+  <div class="govuk-grid-column-full-width">
+
+
+        <h2 class="govuk-heading govuk-heading-m">Match jobs and manage applications</h2>
+
+        <p>A digital method of matching prisoners to jobs and managing the process of job applications.</p>
+
+        <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m"></caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Journey</th>
+              <th scope="col" class="govuk-table__header">Description</th>
+              <th scope="col" class="govuk-table__header">Action</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Manage jobs and employers</th>
+              <td class="govuk-table__cell">Admin area for brokers and PELs.</td>
+              <td class="govuk-table__cell"><a href="/v20/admin/employer-list">Start</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Add an employer</th>
+              <td class="govuk-table__cell">A way for brokers and PELs to add a new employer to the approved employer list.</td>
+              <td class="govuk-table__cell"><a href="/v20/add-employer-final/add-employer-details">Start</a></td>
+            </tr>
+              <th scope="row" class="govuk-table__header">Add a job</th>
+              <td class="govuk-table__cell">A way for brokers and PELs to add a new job to the job board.</td>
+              <td class="govuk-table__cell"><a href="/v20/add-job-final/01-add-employer">Start</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">View a job (admin)</th>
+              <td class="govuk-table__cell">A view of an individual job that allows brokers and PELs to make amendments or duplicate it.</td>
+              <td class="govuk-table__cell"><a href="/v20/admin/job-detail?id=1">Start</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Duplicate a job</th>
+              <td class="govuk-table__cell">A way for brokers and PELs to make copies of existing, live jobs</td>
+              <td class="govuk-table__cell"><a href="/v20/admin/job-detail?id=19&duplicate=true">Start</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">List of prisoners</th>
+              <td class="govuk-table__cell">A list of prisoners who can be matched to jobs</td>
+              <td class="govuk-table__cell"><a href="/v20/matching list">Start</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Matched jobs</th>
+              <td class="govuk-table__cell">A list of jobs that have been matched to a specific prisoner, which can be filtered and sorted</td>
+              <td class="govuk-table__cell"><a href="/v20/match-jobs-final/matched-jobs">Start</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+
+    
+   
+  </div>
+
+
+  </div>
+
+
+{% endblock %}

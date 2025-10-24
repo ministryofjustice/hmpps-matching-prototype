@@ -1,0 +1,42 @@
+{% extends "../includes/template-slim.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+
+  <!-- Breadcrumb -->
+
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+
+    <span class="govuk-caption-l">Add a job - step 1 of 8</span>
+  <h1 class="govuk-heading-l">Add the employer</h1>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form method="post" action="./02-hiring-location-national">
+
+
+
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-label--m" for="employer-name">Enter the employer name</label>
+          <!-- <span id="employer-name-hint" class="govuk-hint">Start typing the name of the employer.</span> -->
+          {% if (data['title'] != "empty") %}
+          <input class="govuk-input" id="employer-name" value="{{ data['employer'] }}" name="employer-name" type="text" aria-describedby="employer-name-hint">
+          {% else %}
+          <input class="govuk-input" id="employer-name" name="employer-name" type="text" aria-describedby="employer-name-hint">
+          {% endif %}
+        </div>
+
+        <p>If the employer is not listed you must <a href="#">add the employer</a> before you can create the job.</p>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}
