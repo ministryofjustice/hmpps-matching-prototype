@@ -62,7 +62,7 @@
   <div id="account-number-hint" class="govuk-hint" style="margin-bottom: 5px;">
    Default is prisoner's last recorded home address
   </div>
-  <input class="govuk-input govuk-!-width-full" id="full" name="full" type="text">
+  <input class="govuk-input govuk-!-width-full" id="full" name="full" type="text" value="SW1A 1AA"> 
 </div>
 
 <!-- search radius -->
@@ -123,10 +123,13 @@
 
 <hr class="govuk-section-break govuk-section-break--visible">
 
-<h3 class="govuk-heading-s govuk-!-margin-top-6"  style="margin-bottom: 5px;">Other types of work</h3>
+<div style="margin-bottom: 30px;">
+
+<h3 class="govuk-heading-s govuk-!-margin-top-6"  style="margin-bottom: 5px;"><a id="toggle-location-1" aria-expanded="true" aria-controls="location-panel-1" class="govuk-link" href="#/">
+  Other types of work</a></h3>
 <div id="status-checkboxes">
 
-<div class="govuk-form-group">
+<div class="govuk-form-group govuk-!-display-none" id="location-panel-1">
   <fieldset class="govuk-fieldset">
   <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" data-govuk-checkboxes-init="">
     
@@ -224,70 +227,23 @@
   </div>
   </fieldset>
 
-</div>
-
-</div>
-
-<!-- offences -->
-
- <hr class="govuk-section-break govuk-section-break--visible">
-
-<h3 class="govuk-heading-s govuk-!-margin-top-6"  style="margin-bottom: 5px;">Hide jobs with offence exclusions</h3>
-<div id="status-checkboxes">
-
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" data-govuk-checkboxes-init="">
-    
-    <div class="govuk-checkboxes__item">
-      <input class="govuk-checkboxes__input" id="status" name="status" type="checkbox" value="AWAITING_REVIEW">
-      <label class="govuk-label govuk-checkboxes__label" for="status">
-        Arson
-      </label>
-    </div>
-    
-    <div class="govuk-checkboxes__item">
-      <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="RETURNED">
-      <label class="govuk-label govuk-checkboxes__label" for="status-2">
-        Driving offences
-      </label>
-    </div>
-
-    <div class="govuk-checkboxes__item">
-      <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="RETURNED">
-      <label class="govuk-label govuk-checkboxes__label" for="status-2">
-        Murder
-      </label>
-    </div>
-
-     <div class="govuk-checkboxes__item">
-      <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="RETURNED">
-      <label class="govuk-label govuk-checkboxes__label" for="status-2">
-       Sexual offences
-      </label>
-    </div>
-
-    <div class="govuk-checkboxes__item">
-      <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="RETURNED">
-      <label class="govuk-label govuk-checkboxes__label" for="status-2">
-       Terrorism
-      </label>
-    </div>
-
-  </div>
-  </fieldset>
+  
 
 </div>
 
 </div> 
 
-<!-- Updated offences!! -->
+</div>
 
- <hr class="govuk-section-break govuk-section-break--visible">
+<!-- offences -->
+ 
+<hr class="govuk-section-break govuk-section-break--visible">
 
-<h3 class="govuk-heading-s govuk-!-margin-top-6"  style="margin-bottom: 5px;"><a id="toggle-location"
-      aria-expanded="true"
-      aria-controls="location-panel">Hide jobs with offence exclusions</a></h3>
+<div style="margin-bottom: 30px;">
+<h3 class="govuk-heading-s govuk-!-margin-top-6"  style="margin-bottom: 5px;"><a id="toggle-location" aria-expanded="true" aria-controls="location-panel" class="govuk-link" href="#/">
+  Hide jobs with offence exclusions</a></h3>
+
+
 <div id="status-checkboxes">
 
 <div class="govuk-form-group govuk-!-display-none" id="location-panel">
@@ -336,6 +292,8 @@
 
 </div> 
 
+</div>
+
 <!-- action buttons -->
   
 <div class="adjudication-report-side-filter__actions">
@@ -350,7 +308,7 @@
     </div>
 
 <!-- NUMBER OF RESULTS -->
-<div class="govuk-grid-column-three-quarters">
+<div class="govuk-grid-column-three-quarters" style="padding-left: 30px;">
    <h2 class="govuk-heading-m">
       Matched jobs
     </h2>
@@ -486,6 +444,25 @@
       } else {
         panel.classList.add('govuk-!-display-none');
         toggleButton.textContent = 'Hide jobs with offence exclusions';
+        toggleButton.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.getElementById('toggle-location-1');
+    const panel = document.getElementById('location-panel-1');
+
+    toggleButton.addEventListener('click', function () {
+      const isHidden = panel.classList.contains('govuk-!-display-none');
+      if (isHidden) {
+        panel.classList.remove('govuk-!-display-none');
+        toggleButton.textContent = 'Other types of work';
+        toggleButton.setAttribute('aria-expanded', 'true');
+      } else {
+        panel.classList.add('govuk-!-display-none');
+        toggleButton.textContent = 'Other types of work';
         toggleButton.setAttribute('aria-expanded', 'false');
       }
     });
