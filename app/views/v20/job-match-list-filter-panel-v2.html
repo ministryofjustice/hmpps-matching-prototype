@@ -90,32 +90,55 @@
 
 <hr class="govuk-section-break govuk-section-break--visible">
 
-<h3 class="govuk-heading-s govuk-!-margin-top-6"  style="margin-bottom: 5px;">Type of work interested in</h3>
+<div style="margin-bottom: 30px;">
+<h3 class="govuk-heading-s govuk-!-margin-top-6"  style="margin-bottom: 5px;"><a id="toggle-location-2" aria-expanded="true" aria-controls="location-panel-2" class="govuk-link" href="#/">
+  Type of work interested in</a></h3>
+  <div class="govuk-hint" style="margin-bottom: 5px;">
+   2 selected
+  </div>
+
+  <div style="border-color: rgb(136, 135, 135); width: 270px;height: 68px;border-width: 1px; border-style:solid; padding: 5px; border-radius: 5px;">
+
+  <button class="oselect__selected-options-button" type="button" style="width: 180px; display: flex; margin-bottom: 5px;">
+    <div class="oselect__selected-options-button-image" style="padding-right: 10px;"> 
+    <img class="oselect-remove-image" src="https://static.civilservicejobs.service.gov.uk/company/csr/images/oselect_remove_button.svg"></div><div class="oselect__selected-options-button-text">Construction and trade
+    </div>
+  </button>
+
+   <button class="oselect__selected-options-button" type="button" style="width: 200px; display: flex;">
+    <div class="oselect__selected-options-button-image" style="padding-right: 10px;"> 
+    <img class="oselect-remove-image" src="https://static.civilservicejobs.service.gov.uk/company/csr/images/oselect_remove_button.svg"></div><div class="oselect__selected-options-button-text">Construction and transport
+    </div>
+  </button>
+
+  </div>
+
 <div id="status-checkboxes">
 
-<div class="govuk-form-group">
+<div class="govuk-form-group govuk-!-display-none" id="location-panel-2">
   <fieldset class="govuk-fieldset">
   <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" data-govuk-checkboxes-init="">
     
     <div class="govuk-checkboxes__item">
       <input class="govuk-checkboxes__input" id="status" name="status" type="checkbox" value="AWAITING_REVIEW" checked>
       <label class="govuk-label govuk-checkboxes__label" for="status">
-        Construction and trade (1) 
+        Construction and trade
       </label>
-      
     </div>
     
     <div class="govuk-checkboxes__item">
       <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="RETURNED" checked>
       <label class="govuk-label govuk-checkboxes__label" for="status-2">
-        Construction and transport (2) 
+        Construction and transport 
       </label>
-      
     </div>
+
   </div>
   </fieldset>
 
 </div>
+
+</div> 
 
 </div>
 
@@ -431,6 +454,7 @@
     }
   }
 
+  // Offence locations
   document.addEventListener('DOMContentLoaded', function () {
     const toggleButton = document.getElementById('toggle-location');
     const panel = document.getElementById('location-panel');
@@ -449,7 +473,7 @@
     });
   });
 
-
+  // Other types of work
   document.addEventListener('DOMContentLoaded', function () {
     const toggleButton = document.getElementById('toggle-location-1');
     const panel = document.getElementById('location-panel-1');
@@ -463,6 +487,25 @@
       } else {
         panel.classList.add('govuk-!-display-none');
         toggleButton.textContent = 'Other types of work';
+        toggleButton.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  // Types of work interested in 
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.getElementById('toggle-location-2');
+    const panel = document.getElementById('location-panel-2');
+
+    toggleButton.addEventListener('click', function () {
+      const isHidden = panel.classList.contains('govuk-!-display-none');
+      if (isHidden) {
+        panel.classList.remove('govuk-!-display-none');
+        toggleButton.textContent = 'Type of work interested in';
+        toggleButton.setAttribute('aria-expanded', 'true');
+      } else {
+        panel.classList.add('govuk-!-display-none');
+        toggleButton.textContent = 'Type of work interested in';
         toggleButton.setAttribute('aria-expanded', 'false');
       }
     });
