@@ -1,0 +1,511 @@
+{% extends "./includes/template.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+  <!-- Breadcrumb -->
+
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+  <!-- Main page -->
+
+  <main class="govuk-main-wrapper">
+
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">
+      Jobs for Adam Ahmed
+    <span style="float: right"> <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">Print</button></span>
+    </h1>
+
+
+  <!-- TABS -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <nav class="moj-sub-navigation govuk-!-margin-bottom-7" aria-label="Sub navigation">
+        <ul class="moj-sub-navigation__list">
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" href="/v20/job-match-list-filter-panel-v2-NJ">Matched jobs</a>
+          </li>
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" aria-current="page" href="#">National jobs</a>
+          </li>
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" href="job-match-list-other">Other jobs chosen by prisoner</a>
+          </li>
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" href="job-match-list-archived">Archived jobs</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+
+
+  <!-- FILTERS -->
+
+   <div class="govuk-grid-row">
+ <div class="govuk-grid-column-one-quarter" style="background-color: #F1F0EF;">
+  
+
+<form method="POST" novalidate="novalidate" class="adjudication-report-side-filter" >
+
+  <!-- header -->
+ <h2 class="govuk-heading-m" style="margin-top: 30px;">Filter</h2>
+  
+<!-- employers -->
+
+<hr class="govuk-section-break govuk-section-break--visible">
+
+<div class="govuk-form-group">
+  <label class="govuk-heading-s" for="sort" style="margin-bottom: 5px;margin-top: 30px;">
+    Employer
+  </label>
+  <select class="govuk-select" id="sort" name="sort" style="width: 263px;">
+    <option value="1" selected>All employers</option>
+    <option value="5">Aldi</option>
+    <option value="10">Amazon</option>
+    <option value="20">Asda</option>
+    <option value="50">Greene King</option>
+    <option value="100">Iceland</option>
+    <option value="100">Timpson</option>
+  </select>
+</div>
+
+<!-- types of work -->
+
+<hr class="govuk-section-break govuk-section-break--visible">
+
+<div style="margin-bottom: 30px;">
+<h3 class="govuk-heading-s govuk-!-margin-top-6"  style="margin-bottom: 5px;"><a id="toggle-location-2" aria-expanded="true" aria-controls="location-panel-2" class="govuk-link" href="#/">
+  Type of work interested in</a></h3>
+  <div class="govuk-hint" style="margin-bottom: 5px;">
+   2 selected
+  </div>
+
+<div id="status-checkboxes">
+
+<div class="govuk-form-group govuk-!-display-none" id="location-panel-2">
+  <fieldset class="govuk-fieldset">
+  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" data-govuk-checkboxes-init="">
+    
+    <div class="govuk-checkboxes__item" >
+      <input class="govuk-checkboxes__input" id="toggle" name="status" type="checkbox" checked>
+      <label class="govuk-label govuk-checkboxes__label" for="status">
+        Construction and trade
+      </label>
+    </div>
+    
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="RETURNED" checked>
+      <label class="govuk-label govuk-checkboxes__label" for="status-2">
+        Driving and transport 
+      </label>
+    </div>
+
+  </div>
+  </fieldset>
+
+</div>
+
+</div> 
+
+  <div style="border-color: rgb(183, 183, 183); width: 270px;height: 68px;border-width: 1px; border-style:solid; padding: 5px; border-radius: 5px; background-color: white;" id="panel">
+
+  <button class="oselect__selected-options-button" type="button" style="width: 180px; display: flex; margin-bottom: 5px;">
+    <div class="oselect__selected-options-button-image" style="padding-right: 10px;"> 
+    <img class="oselect-remove-image" src="https://static.civilservicejobs.service.gov.uk/company/csr/images/oselect_remove_button.svg"></div><div class="oselect__selected-options-button-text">Construction and trade
+    </div>
+  </button>
+
+   <button class="oselect__selected-options-button" type="button" style="width: 200px; display: flex;">
+    <div class="oselect__selected-options-button-image" style="padding-right: 10px;"> 
+    <img class="oselect-remove-image" src="https://static.civilservicejobs.service.gov.uk/company/csr/images/oselect_remove_button.svg"></div><div class="oselect__selected-options-button-text">Driving and transport
+    </div>
+  </button>
+
+  </div>
+
+</div>
+
+<!-- other types of work -->
+
+<hr class="govuk-section-break govuk-section-break--visible">
+
+<div style="margin-bottom: 30px;">
+
+<h3 class="govuk-heading-s govuk-!-margin-top-6"  style="margin-bottom: 5px;"><a id="toggle-location-1" aria-expanded="true" aria-controls="location-panel-1" class="govuk-link" href="#/">
+  Other types of work</a></h3>
+<div id="status-checkboxes">
+
+<div class="govuk-form-group govuk-!-display-none" id="location-panel-1">
+  <fieldset class="govuk-fieldset">
+  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" data-govuk-checkboxes-init="">
+    
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="status" name="status" type="checkbox" value="AWAITING_REVIEW">
+      <label class="govuk-label govuk-checkboxes__label" for="status">
+        Animal care and <br>farming (1)
+      </label>
+    </div>
+    
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="RETURNED">
+      <label class="govuk-label govuk-checkboxes__label" for="status-2">
+        Cleaning and <br>maintenance (1)
+      </label>
+    </div>
+
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="RETURNED">
+      <label class="govuk-label govuk-checkboxes__label" for="status-2">
+        Hair, beauty and <br>wellbeing (1)
+      </label>
+    </div>
+
+     <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="RETURNED">
+      <label class="govuk-label govuk-checkboxes__label" for="status-2">
+       Hospitality and <br>catering (1)
+      </label>
+    </div>
+
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="RETURNED">
+      <label class="govuk-label govuk-checkboxes__label" for="status-2">
+       IT and digital (1)
+      </label>
+    </div>
+
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="RETURNED">
+      <label class="govuk-label govuk-checkboxes__label" for="status-2">
+       Manufacturing and technical (1)
+      </label>
+    </div>
+
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="RETURNED">
+      <label class="govuk-label govuk-checkboxes__label" for="status-2">
+       Office or desk-based (1)
+      </label>
+    </div>
+
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="RETURNED">
+      <label class="govuk-label govuk-checkboxes__label" for="status-2">
+       Retail and sales (1)
+      </label>
+    </div>
+
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="RETURNED">
+      <label class="govuk-label govuk-checkboxes__label" for="status-2">
+       Sport and fitness (1)
+      </label>
+    </div>
+
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="RETURNED">
+      <label class="govuk-label govuk-checkboxes__label" for="status-2">
+       Warehousing and <br>storage (1)
+      </label>
+    </div>
+
+     <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="RETURNED">
+      <label class="govuk-label govuk-checkboxes__label" for="status-2">
+      Training and support (1)
+      </label>
+    </div>
+
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="RETURNED">
+      <label class="govuk-label govuk-checkboxes__label" for="status-2">
+      Waste management (1)
+      </label>
+    </div>
+
+     <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="RETURNED">
+      <label class="govuk-label govuk-checkboxes__label" for="status-2">
+      Other (1)
+      </label>
+    </div>
+
+  </div>
+  </fieldset>
+
+  
+
+</div>
+
+</div> 
+
+</div>
+
+<!-- offences -->
+ 
+<hr class="govuk-section-break govuk-section-break--visible">
+
+<div style="margin-bottom: 30px;">
+<h3 class="govuk-heading-s govuk-!-margin-top-6"  style="margin-bottom: 5px;"><a id="toggle-location" aria-expanded="true" aria-controls="location-panel" class="govuk-link" href="#/">
+  Hide jobs with offence exclusions</a></h3>
+
+
+<div id="status-checkboxes">
+
+<div class="govuk-form-group govuk-!-display-none" id="location-panel">
+  <fieldset class="govuk-fieldset">
+  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes" data-govuk-checkboxes-init="">
+    
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="status" name="status" type="checkbox" value="AWAITING_REVIEW">
+      <label class="govuk-label govuk-checkboxes__label" for="status">
+        Arson
+      </label>
+    </div>
+    
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="RETURNED">
+      <label class="govuk-label govuk-checkboxes__label" for="status-2">
+        Driving offences
+      </label>
+    </div>
+
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="RETURNED">
+      <label class="govuk-label govuk-checkboxes__label" for="status-2">
+        Murder
+      </label>
+    </div>
+
+     <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="RETURNED">
+      <label class="govuk-label govuk-checkboxes__label" for="status-2">
+       Sexual offences
+      </label>
+    </div>
+
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="status-2" name="status" type="checkbox" value="RETURNED">
+      <label class="govuk-label govuk-checkboxes__label" for="status-2">
+       Terrorism
+      </label>
+    </div>
+
+  </div>
+  </fieldset>
+
+</div>
+
+</div> 
+
+</div>
+
+<!-- action buttons -->
+  
+<div class="adjudication-report-side-filter__actions">
+ 
+<button type="submit" data-prevent-double-click="true" class="govuk-button" data-module="govuk-button" data-qa="apply-filter-button" data-govuk-button-init="">
+  Apply
+</button>
+
+    <p class="govuk-body"><a href="/your-completed-reports" class="govuk-link govuk-link--no-visited-state">Clear filters</a></p>
+  </div>
+</form>
+    </div>
+
+<!-- NUMBER OF RESULTS -->
+<div class="govuk-grid-column-three-quarters" style="padding-left: 30px;">
+   <h2 class="govuk-heading-m">
+      Matched jobs
+    </h2>
+    <h3 class="govuk-heading-s">
+      3 results
+    </h3>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<!-- TABLE OF RESULTS -->
+
+    <table class="govuk-table govuk-!-margin-top-6" data-module="moj-sortable-table" id="prisonerTable">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header" aria-sort="ascending">Job role</th>
+          <th scope="col" class="govuk-table__header">Type of work</th>
+          <th scope="col" class="govuk-table__header" aria-sort="ascending">Job location</th>
+          <th scope="col" class="govuk-table__header" aria-sort="ascending">Closing date</th>
+        </tr>
+      </thead>
+
+      <tbody class="govuk-table__body">
+
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Forklift operator" href="job-description-forklift">Forklift operator</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> Amazon</span></td>
+          <td class="govuk-table__cell">Warehousing and storage</td>
+          <td class="govuk-table__cell" data-sort-value="4.1">
+            Leeds, LS12 8DC
+            <div class="timeline">
+               <ul>
+                 <li>
+                   <!-- <h3>1.5 miles<h3>
+                   <p>Public transport: 31 minutes</p>
+                   <p style="margin-bottom: 0px">Car: 27 minutes</p> -->
+                   <p class="govuk-!-padding-top-4 govuk-!-padding-bottom-1">4.1 miles</p>
+                 </li>
+                 <li>
+                 </li>
+               </ul>
+             </div>
+          </td>
+          <td class="govuk-table__cell" data-sort-value="2024.02.10">10 Feb 2024</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Warehouse handler" href="#">Warehouse handler</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> Amazon</span></td>
+          <td class="govuk-table__cell">Warehousing and storage</td>
+          <td class="govuk-table__cell" data-sort-value="5.0">
+            Leeds, LS14 3VG
+            <div class="timeline">
+               <ul>
+                 <li>
+                   <!-- <h3>1.5 miles<h3>
+                   <p>Public transport: 31 minutes</p>
+                   <p style="margin-bottom: 0px">Car: 27 minutes</p> -->
+                   <p class="govuk-!-padding-top-4 govuk-!-padding-bottom-1">5.0 miles</p>
+                 </li>
+                 <li>
+                 </li>
+               </ul>
+             </div>
+          </td>
+          <td class="govuk-table__cell" data-sort-value="2024.02.15">15 Feb 2024</td>
+        </tr>
+
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Workshop operative / handler" href="#">Workshop operative / handler</a>
+            <br> <span class="govuk-hint govuk-!-margin-bottom-0"> Exchange People</span>
+            <br> <strong class="govuk-tag govuk-tag--grey govuk-!-margin-top-3" style="text-transform: none; font-weight: 400; font-size: 19px; letter-spacing: 0px">Prisoner choice</strong>
+          </td>
+          <td class="govuk-table__cell">Manufacturing and technical</td>
+          <td class="govuk-table__cell" data-sort-value="9.5">
+            Wakefield, WF1 1AJ
+            <div class="timeline">
+               <ul>
+                 <li>
+                   <!-- <h3>1.5 miles<h3>
+                   <p>Public transport: 31 minutes</p>
+                   <p style="margin-bottom: 0px">Car: 27 minutes</p> -->
+                   <p class="govuk-!-padding-top-4 govuk-!-padding-bottom-1">9.5 miles</p>
+                 </li>
+                 <li>
+                 </li>
+               </ul>
+             </div>
+          </td>
+          <td class="govuk-table__cell" data-sort-value="2024.02.15">15 Feb 2024</td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+    </div>
+
+</div>
+
+
+
+<script>
+  function myFunction() {
+    // Declare variables
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("filterName");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("prisonerTable");
+    tr = table.getElementsByTagName("tr");
+
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+
+  // Offence locations
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.getElementById('toggle-location');
+    const panel = document.getElementById('location-panel');
+
+    toggleButton.addEventListener('click', function () {
+      const isHidden = panel.classList.contains('govuk-!-display-none');
+      if (isHidden) {
+        panel.classList.remove('govuk-!-display-none');
+        toggleButton.textContent = 'Hide jobs with offence exclusions';
+        toggleButton.setAttribute('aria-expanded', 'true');
+      } else {
+        panel.classList.add('govuk-!-display-none');
+        toggleButton.textContent = 'Hide jobs with offence exclusions';
+        toggleButton.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  // Other types of work
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.getElementById('toggle-location-1');
+    const panel = document.getElementById('location-panel-1');
+
+    toggleButton.addEventListener('click', function () {
+      const isHidden = panel.classList.contains('govuk-!-display-none');
+      if (isHidden) {
+        panel.classList.remove('govuk-!-display-none');
+        toggleButton.textContent = 'Other types of work';
+        toggleButton.setAttribute('aria-expanded', 'true');
+      } else {
+        panel.classList.add('govuk-!-display-none');
+        toggleButton.textContent = 'Other types of work';
+        toggleButton.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  // Types of work interested in 
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.getElementById('toggle-location-2');
+    const panel = document.getElementById('location-panel-2');
+
+    toggleButton.addEventListener('click', function () {
+      const isHidden = panel.classList.contains('govuk-!-display-none');
+      if (isHidden) {
+        panel.classList.remove('govuk-!-display-none');
+        toggleButton.textContent = 'Type of work interested in';
+        toggleButton.setAttribute('aria-expanded', 'true');
+      } else {
+        panel.classList.add('govuk-!-display-none');
+        toggleButton.textContent = 'Type of work interested in';
+        toggleButton.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+
+document.getElementById("toggle").addEventListener("change", function () {
+  document.getElementById("panel").style.display =
+    this.checked ? "block" : "none";
+});
+
+</script>
+
+
+
+{% endblock %}
