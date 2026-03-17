@@ -66,12 +66,12 @@
     <label class="govuk-label" for="employer-status">Employer status</label>
     <select class="govuk-select" id="employer-status" name="employer-status">
       <option value="">Choose employer status</option>
-      <option value="employer">Employer Partner</option>
-      <option value="national">National Platinum</option>
+      <option value="employer">National Platinum</option>
+      <option value="national">Regional Platinum</option>
       {% if (data['name'] != "empty") %}
-      <option value="regional" selected>Regional Platinum</option>
+      <option value="regional" selected>Employer Partner</option>
       {% else %}
-      <option value="regional">Regional Platinum</option>
+      <option value="regional">Employer Partner</option>
       {% endif %}
     </select>
     
