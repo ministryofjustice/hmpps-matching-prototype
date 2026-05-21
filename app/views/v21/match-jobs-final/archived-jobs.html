@@ -1,0 +1,123 @@
+{% extends "../includes/template.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+  <!-- Breadcrumb -->
+
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper">
+
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-7">
+      Jobs for Adam Ahmed
+    <span style="float: right"> <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">Print</button></span>
+    </h1>
+
+
+  <!-- TABS -->
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <nav class="moj-sub-navigation govuk-!-margin-bottom-7" aria-label="Sub navigation">
+        <ul class="moj-sub-navigation__list">
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" href="/v21/match-jobs-final/matched-jobs">Matched jobs</a>
+          </li>
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" href="/v21/match-jobs-final/national-jobs">National jobs</a>
+          </li>
+          <li class="moj-sub-navigation__item">
+            <a class="moj-sub-navigation__link" aria-current="page" href="#">Archived jobs</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+
+
+ <div class="govuk-grid-row">
+
+  <div style="padding-left: 15px;">
+   <h2 class="govuk-heading-m">
+      Archived jobs
+    </h2>
+    <p>
+      There are no archived jobs for Adam Ahmed.
+    </p>
+
+  </div>
+</div>
+
+</div>
+
+
+
+<script>
+  function myFunction() {
+    // Declare variables
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("filterName");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("prisonerTable");
+    tr = table.getElementsByTagName("tr");
+
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.getElementById('toggle-location');
+    const panel = document.getElementById('location-panel');
+
+    toggleButton.addEventListener('click', function () {
+      const isHidden = panel.classList.contains('govuk-!-display-none');
+      if (isHidden) {
+        panel.classList.remove('govuk-!-display-none');
+        toggleButton.textContent = 'Hide jobs with offence exclusions';
+        toggleButton.setAttribute('aria-expanded', 'true');
+      } else {
+        panel.classList.add('govuk-!-display-none');
+        toggleButton.textContent = 'Hide jobs with offence exclusions';
+        toggleButton.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.getElementById('toggle-location-1');
+    const panel = document.getElementById('location-panel-1');
+
+    toggleButton.addEventListener('click', function () {
+      const isHidden = panel.classList.contains('govuk-!-display-none');
+      if (isHidden) {
+        panel.classList.remove('govuk-!-display-none');
+        toggleButton.textContent = 'Other types of work';
+        toggleButton.setAttribute('aria-expanded', 'true');
+      } else {
+        panel.classList.add('govuk-!-display-none');
+        toggleButton.textContent = 'Other types of work';
+        toggleButton.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+
+</script>
+
+
+
+{% endblock %}

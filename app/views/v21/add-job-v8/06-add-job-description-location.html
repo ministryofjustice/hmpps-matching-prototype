@@ -1,0 +1,132 @@
+{% extends "../includes/template-slim.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+  <!-- Breadcrumb -->
+
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+    <span class="govuk-caption-l">Add a job - step 6 of 8</span>
+
+  <h1 class="govuk-heading-l">Job requirements</h1>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form method="post" action="./07-add-job-apply-location">
+
+
+
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="job-criteria">Essential job criteria</label>
+          <span id="job-criteria-hint" class="govuk-hint">
+            For example, full UK driving licence.
+          </span>
+          <textarea class="govuk-textarea" id="job-criteria" name="jobCriteria" rows="5" aria-describedby="job-criteria-hint"></textarea>
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="desirable-job-criteria">
+            Desirable job criteria (optional)
+          </label>
+          <textarea class="govuk-textarea" id="desirable-job-criteria" name="disirableJobCriteria" rows="5" aria-describedby="desirable-job-criteria-hint"></textarea>
+        </div>
+
+        
+
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="offence-exclusions-hint">
+            <label class="govuk-label" for="offence-exclusions">
+              Offence exclusions
+            </label>
+            <div id="offence-exclusions" class="govuk-hint">
+              Select all that apply.
+            </div>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="offence-exclusions" name="offence-exclusions" type="checkbox" value="none">
+                <label class="govuk-label govuk-checkboxes__label" for="offence-exclusions">
+                  None
+                </label>
+              </div>
+              
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="offence-exclusions-2" name="offence-exclusions" type="checkbox" value="case-by-case">
+                <label class="govuk-label govuk-checkboxes__label" for="offence-exclusions">
+                  Considered on a case by case basis
+                </label>
+              </div>              
+
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="offence-exclusions-2" name="offence-exclusions" type="checkbox" value="Arson">
+                <label class="govuk-label govuk-checkboxes__label" for="offence-exclusions">
+                  Arson
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="offence-exclusions-2" name="offence-exclusions" type="checkbox" value="Driving offences">
+                <label class="govuk-label govuk-checkboxes__label" for="offence-exclusions">
+                  Driving offences
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="offence-exclusions-2" name="offence-exclusions" type="checkbox" value="Murder">
+                <label class="govuk-label govuk-checkboxes__label" for="offence-exclusions">
+                  Murder
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="offence-exclusions-2" name="offence-exclusions" type="checkbox" value="Sexual offences">
+                <label class="govuk-label govuk-checkboxes__label" for="offence-exclusions">
+                  Sexual offences
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="offence-exclusions-2" name="offence-exclusions" type="checkbox" value="Terrorism">
+                <label class="govuk-label govuk-checkboxes__label" for="offence-exclusions">
+                  Terrorism
+                </label>
+              </div>
+             
+              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-offences-other">
+                  <label class="govuk-label govuk-checkboxes__label" for="offence-exclusions">
+                    Other
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-offences-other">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="offence-exclusions-other">
+                      Give details
+                    </label>
+                    <textarea class="govuk-textarea" id="offence-exclusions-other" name="offenceexclusionsother" rows="5" aria-describedby="job-description-hint"></textarea>
+                  </div>
+                </div>
+  
+              </div>
+
+
+            </div>
+          </fieldset>
+        </div>
+
+
+
+
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}

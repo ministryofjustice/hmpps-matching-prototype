@@ -1,0 +1,31 @@
+{% extends "../includes/template-slim.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+
+  <!-- Breadcrumb -->
+
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+  <h1 class="govuk-heading-l">Check the job details are correct</h1>
+
+  <p>Jobs cannot be deleted after they are published.</p>
+  <p>Make sure the details of this job are correct before you publish it. In particular, you should check the:</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>start and end dates</li>
+    <li>hours and salary</li>
+    <li>job location postcode, if there is one</li>
+  </ul>
+
+  <p>Job details can be changed after the job is created.</p>
+
+  <form action="./jobs-list" method="post">
+  <button class="govuk-button" type="submit">Publish the job</button>
+</form>
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}

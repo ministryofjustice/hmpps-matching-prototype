@@ -1,0 +1,149 @@
+{% extends "../includes/template-slim.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+
+  <!-- Breadcrumb -->
+
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+
+    <span class="govuk-caption-l">Add a job - step 4 of 9</span>
+  <h1 class="govuk-heading-l">Job sector and sources</h1>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form method="post" action="./05-add-job-contract">
+
+<!-- HMPPS REPORTING SECTOR -->
+
+        <h2 class="govuk-heading-m">Sectors</h2>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="job-sector">Job sector</label>
+          <select class="govuk-select" id="job-sector" name="job-sector">
+            {% if (data['title'] != "empty") %}
+            <option value="{{ data['sector'] }}">{{ data['sector'] }}</option>
+            {% endif %}
+            <option value="">Choose job sector</option>
+            <option value="Animal care and farming">Animal care and farming</option>
+            <option value="Cleaning and maintenance">Cleaning and maintenance</option>
+            <option value="Construction and trade">Construction and trade</option>
+            <option value="Driving and transport">Driving and transport</option>
+            <option value="Hair, beauty and wellbeing">Hair, beauty and wellbeing</option>
+            <option value="Hospitality and catering">Hospitality and catering</option>
+            <option value="IT and digital">IT and digital</option>
+            <option value="Manufacturing and technical">Manufacturing and technical</option>
+            <option value="Office or desk-based">Office or desk-based</option>
+            <option value="Retail and sales">Retail and sales</option>
+            <option value="Sport and fitness">Sport and fitness</option>
+            <option value="Training and support">Training and support</option>
+            <option value="Warehousing and storage">Warehousing and storage</option>
+            <option value="Waste management">Waste management</option>            
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+
+
+<!-- HMPPS REPORTING SECTOR -->
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="hmpps-reporting-industry-sector">
+            HMPPS reporting industry sector
+          </label>
+          <select class="govuk-select" id="hmpps-reporting-industry-sector" name="hmpps-reporting-industry-sector">
+            {% if (data['title'] != "empty") %}
+            <option value="{{ data['sector'] }}">{{ data['sector'] }}</option>
+            {% endif %}
+            <option value="">Choose HMPPS reporting industry sector</option>
+            <option value="administration">Administration and support services</option>
+            <option value="agriculture">Agriculture (including horticulture, forestry and fishing)</option>
+            <option value="arts-entertainment">Arts and entertainment</option>
+            <option value="construction">Construction</option>
+            <option value="education">Education</option>
+            <option value="energy">Energy</option>
+            <option value="finance">Finance (including insurance)</option>
+            <option value="health-social-work">Health and social work</option>
+            <option value="hospitality-catering">Hospitality and catering</option>
+            <option value="logistics">Logistics (including transportation and storage)</option>
+            <option value="manufacturing">Manufacturing</option>
+            <option value="mining">Mining</option>
+            <option value="other-services">Other services</option>
+            <option value="logistics">Logistics (including transportation and storage)</option>
+            <option value="professionals-scientists-technicians">Professionals, scientists and technicians (including accounting, legal, architecture, consultancy and engineering)</option>
+            <option value="property">Property</option>
+            <option value="public-administration-defence">Public administration and defence</option>
+            <option value="recycling-waste-management">Recycling and waste management (including water supply)</option>
+            <option value="retail">Retail (includes wholesale and motor vehicle repair)</option>
+            <option value="technology">Technology (includes information and communication)</option>
+          </select>
+        </div>
+
+
+
+<!-- JOB SOURCE -->
+
+        <h2 class="govuk-heading-m">Sources</h2>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="job-source-2">First job source</label>
+          <select class="govuk-select" id="job-source-2" name="job-source-2">
+            {% if (data['title'] != "empty") %}
+            <option value="nfn">NFN</option>
+            {% endif %}
+            <option value="">Choose source</option>
+            <option value="dwp">DWP</option>
+            <option value="eab">EAB</option>
+            <option value="education">Education</option>
+            <option value="iag">IAG</option>
+            <option value="nfn">NFN</option>
+            <option value="prison">Prison</option>
+            <option value="third-sector">Third Sector</option>
+            <option value="pel">PEL</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="job-source-2">
+            Second job source (optional)
+          </label>
+          <select class="govuk-select" id="job-source-2" name="job-source-2">
+
+            <option value="">Choose source</option>
+            <option value="dwp">DWP</option>
+            <option value="eab">EAB</option>
+            <option value="education">Education</option>
+            <option value="iag">IAG</option>
+            <option value="nfn">NFN</option>
+            <option value="prison">Prison</option>
+            <option value="third-sector">Third Sector</option>
+            <option value="pel">PEL</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+
+
+<!-- CHARITY -->
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="charity-supported">Is this job supported by a charity? (Optional)</label>
+          <span id="charity-supported-hint" class="govuk-hint">Enter the name of the Third Sector organisation supporting the job.</span>
+          <input class="govuk-input" id="charity-supported" name="charity-supported" type="text">
+        </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">
+          Continue 
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}
