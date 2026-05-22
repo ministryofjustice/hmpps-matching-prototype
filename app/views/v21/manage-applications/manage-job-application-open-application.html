@@ -1,0 +1,110 @@
+{% extends "../includes/template.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper" id="main-content">
+          
+  
+  
+
+
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l govuk-!-margin-bottom-2" data-qa="page-title">
+          Manage Adam Ahmed's application
+        </h1>
+
+        <div class="govuk-form-group filter-box govuk-!-margin-top-4">
+          <div class="govuk-grid-row">
+              <div class="govuk-grid-column-full">
+                <h2 class="govuk-heading-m" data-qa="job-title">
+                  <a class="govuk-link" href="#">Vegetable packing operative</a>
+                </h2>
+              </div>
+          </div>
+          <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-third">
+                <p class="govuk-body" data-qa="employer-name">Employer: CBS Labour</p>
+              </div>
+              <div class="govuk-grid-column-one-third">
+                <p class="govuk-body" data-qa="job-location">Location:SW19 6AW
+                </p>
+              </div>
+              <div class="govuk-grid-column-one-third">
+                <p class="govuk-body" data-qa="closing-date">Closing date: 14 Feb 2024</p>
+              </div>
+          </div>
+
+          <p class="govuk-body govuk-!-margin-bottom-1" data-qa="how-to-apply">How to apply: email cbslabour@jobapplication.com with a CV and Cover letter</p>
+        </div>
+
+        
+        <form class="form" method="post" novalidate="">
+    <input type="hidden" name="_csrf" value="9RWrVdSZ-XjqHkvUI5GCppi_2EeTRgbLCLdA">
+
+    
+        
+
+
+<table class="govuk-table" id="applicationHistory">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header" width="30%">Application status</th>
+        <th scope="col" class="govuk-table__header">Additional information</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell">
+            Application made<br>
+            <span class="govuk-hint">22 May 2026, Jane Doe</span>
+          </td>
+          <td class="govuk-table__cell">Sent off CV + cover letter</td>
+        </tr>
+
+          <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell">
+            Interview booked<br>
+            <span class="govuk-hint">26 May 2026, Jane Doe</span>
+          </td>
+          <td class="govuk-table__cell">Video call interview booked</td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+        
+<div class="govuk-button-group">
+         <a href="#"
+            role="button"
+            draggable="false"
+            class="govuk-button"
+            data-module="govuk-button">
+             Update progress
+         </a>
+
+         <a href="#"
+            role="button"
+            draggable="false"
+            class="govuk-button govuk-button--secondary"
+            data-module="govuk-button">
+            Return to job description
+          </a>
+
+  </div>
+
+
+    
+
+</form>
+        
+      </div>
+    </div>
+
+        </main>
+</div>
+
+{% endblock %}

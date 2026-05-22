@@ -7,6 +7,8 @@
 
   <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
 
+   <!-- Main page -->
+
   <main class="govuk-main-wrapper">
 
     <h1 class="govuk-heading-l govuk-!-margin-bottom-7">
@@ -23,13 +25,13 @@
       <nav class="moj-sub-navigation govuk-!-margin-bottom-7" aria-label="Sub navigation">
         <ul class="moj-sub-navigation__list">
           <li class="moj-sub-navigation__item">
-            <a class="moj-sub-navigation__link" aria-current="page" href="#">Matched jobs</a>
+            <a class="moj-sub-navigation__link"  href="/v21/match-jobs/matched-jobs">Matched jobs</a>
           </li>
           <li class="moj-sub-navigation__item">
-            <a class="moj-sub-navigation__link" href="/v21/match-jobs-final/national-jobs">National jobs</a>
+            <a class="moj-sub-navigation__link" aria-current="page" href="#">National jobs</a>
           </li>
           <li class="moj-sub-navigation__item">
-            <a class="moj-sub-navigation__link" href="/v21/match-jobs-final/archived-jobs">Archived jobs</a>
+            <a class="moj-sub-navigation__link" href="/v21/match-jobs/archived-jobs">Archived jobs</a>
           </li>
         </ul>
       </nav>
@@ -48,39 +50,23 @@
 
   <!-- header -->
  <h2 class="govuk-heading-m" style="margin-top: 30px;">Filter</h2>
-  
- <!-- release area -->
 
- <hr class="govuk-section-break govuk-section-break--visible">
-
-<div class="govuk-form-group">
-  <label class="govuk-heading-s" for="full" style="margin-bottom: 5px;margin-top: 30px;">
-    Release area postcode
-  </label>
-  <div id="account-number-hint" class="govuk-hint" style="margin-bottom: 5px;">
-   Default is prisoner's last recorded home address
-  </div>
-  <input class="govuk-input govuk-!-width-full" id="full" name="full" type="text" value="SW1A 1AA"> 
-</div>
-
-<!-- search radius -->
+<!-- employers -->
 
 <hr class="govuk-section-break govuk-section-break--visible">
 
 <div class="govuk-form-group">
   <label class="govuk-heading-s" for="sort" style="margin-bottom: 5px;margin-top: 30px;">
-    Search radius
+    Employer
   </label>
-  <div id="account-number-hint" class="govuk-hint" style="margin-bottom: 5px;">
-   From release area postcode
-  </div>
   <select class="govuk-select" id="sort" name="sort" style="width: 263px;">
-    <option value="1">1 mile</option>
-    <option value="5">5 miles</option>
-    <option value="10">10 mile</option>
-    <option value="20">20 mile</option>
-    <option value="50" selected>50 mile</option>
-    <option value="100">National</option>
+    <option value="1" selected>All employers</option>
+    <option value="5">Aldi</option>
+    <option value="10">Amazon</option>
+    <option value="20">Asda</option>
+    <option value="50">Greene King</option>
+    <option value="100">Iceland</option>
+    <option value="100">Timpson</option>
   </select>
 </div>
 
@@ -306,7 +292,7 @@
 <!-- NUMBER OF RESULTS -->
 <div class="govuk-grid-column-three-quarters" style="padding-left: 30px;">
    <h2 class="govuk-heading-m">
-      Matched jobs
+      National jobs
     </h2>
     <h3 class="govuk-heading-s">
       3 results
@@ -320,7 +306,7 @@
         <tr class="govuk-table__row">
           <th scope="col" class="govuk-table__header" aria-sort="ascending">Job role</th>
           <th scope="col" class="govuk-table__header">Type of work</th>
-          <th scope="col" class="govuk-table__header" aria-sort="ascending">Job location</th>
+          <th scope="col" class="govuk-table__header">Vacancies</th>
           <th scope="col" class="govuk-table__header" aria-sort="ascending">Closing date</th>
         </tr>
       </thead>
@@ -329,68 +315,27 @@
 
 
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Forklift operator" href="job-description-forklift">Forklift operator</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> Amazon</span></td>
+          <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Forklift operator" href="job-description-forklift-national">Forklift operator</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> Amazon</span></td>
           <td class="govuk-table__cell">Warehousing and storage</td>
-          <td class="govuk-table__cell" data-sort-value="4.1">
-            LS12 8DC
-            <div class="timeline">
-               <ul>
-                 <li>
-                   <!-- <h3>1.5 miles<h3>
-                   <p>Public transport: 31 minutes</p>
-                   <p style="margin-bottom: 0px">Car: 27 minutes</p> -->
-                   <p class="govuk-!-padding-top-4 govuk-!-padding-bottom-1">4.1 miles</p>
-                 </li>
-                 <li>
-                 </li>
-               </ul>
-             </div>
-          </td>
+          <td class="govuk-table__cell">1</td>
           <td class="govuk-table__cell" data-sort-value="2024.02.10">10 Feb 2024</td>
         </tr>
 
         <tr class="govuk-table__row">
           <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Warehouse handler" href="#">Warehouse handler</a><br> <span class="govuk-hint govuk-!-margin-bottom-0"> Amazon</span></td>
           <td class="govuk-table__cell">Warehousing and storage</td>
-          <td class="govuk-table__cell" data-sort-value="5.0">
-            LS14 3VG
-            <div class="timeline">
-               <ul>
-                 <li>
-                   <!-- <h3>1.5 miles<h3>
-                   <p>Public transport: 31 minutes</p>
-                   <p style="margin-bottom: 0px">Car: 27 minutes</p> -->
-                   <p class="govuk-!-padding-top-4 govuk-!-padding-bottom-1">5.0 miles</p>
-                 </li>
-                 <li>
-                 </li>
-               </ul>
-             </div>
-          </td>
-          <td class="govuk-table__cell" data-sort-value="2024.02.15">15 Feb 2024</td>
+          <td class="govuk-table__cell">1</td>
+          <td class="govuk-table__cell" data-sort-value="2024.02.15">No closing date</td>
         </tr>
 
         <tr class="govuk-table__row">
           <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" data-sort-value="Workshop operative / handler" href="#">Workshop operative / handler</a>
             <br> <span class="govuk-hint govuk-!-margin-bottom-0"> Exchange People</span>
+            <br> <strong class="govuk-tag govuk-tag--grey govuk-!-margin-top-3" style="text-transform: none; font-weight: 400; font-size: 19px; letter-spacing: 0px">Prisoner choice</strong>
           </td>
           <td class="govuk-table__cell">Manufacturing and technical</td>
-          <td class="govuk-table__cell" data-sort-value="9.5">
-            WF1 1AJ
-            <div class="timeline">
-               <ul>
-                 <li>
-                   <!-- <h3>1.5 miles<h3>
-                   <p>Public transport: 31 minutes</p>
-                   <p style="margin-bottom: 0px">Car: 27 minutes</p> -->
-                   <p class="govuk-!-padding-top-4 govuk-!-padding-bottom-1">9.5 miles</p>
-                 </li>
-                 <li>
-                 </li>
-               </ul>
-             </div>
-          </td>
-          <td class="govuk-table__cell" data-sort-value="2024.02.15">15 Feb 2024</td>
+          <td class="govuk-table__cell">2</td>
+          <td class="govuk-table__cell" data-sort-value="2024.02.15">No closing date</td>
         </tr>
 
       </tbody>

@@ -20,7 +20,7 @@
           <div class="govuk-grid-row">
               <div class="govuk-grid-column-full">
                 <h2 class="govuk-heading-m" data-qa="job-title">
-                  <a class="govuk-link" href="/v21/match-jobs-final/job-description-forklift">Forklift operator</a>
+                  <a class="govuk-link" href="/v21/match-jobs/job-description-forklift">Forklift operator</a>
                 </h2>
               </div>
           </div>
@@ -67,23 +67,71 @@
       
     </tbody>
   </table>
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="applicationStatus">
+    Application progress
+  </label>
+
+
+
+  <select class="govuk-select" id="applicationStatus" name="applicationStatus">
+  
+    
+    <option value="">Select application status</option>
+    
+  
+    
+    <option value="APPLICATION_MADE">Application made</option>
+    
+  
+    
+    <option value="APPLICATION_UNSUCCESSFUL">Application unsuccessful</option>
+    
+  
+    
+    <option value="SELECTED_FOR_INTERVIEW">Selected for interview</option>
+    
+  
+    
+    <option value="INTERVIEW_BOOKED">Interview booked</option>
+    
+  
+    
+    <option value="UNSUCCESSFUL_AT_INTERVIEW">Unsuccessful at interview</option>
+    
+  
+    
+    <option value="JOB_OFFER">Job offer</option>
+    
+  
+  </select>
+
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="additionalInformation">
+    Add additional information or feedback
+  </label>
+
+
+
+  <textarea class="govuk-textarea" id="additionalInformation" name="additionalInformation" rows="3"></textarea>
+
+</div>
+
+ <p class="govuk-body govuk-!-margin-bottom-8"><a class="govuk-link" href="manage-job-application-update.html" onclick="event.stopPropagation();" id="cancel-link">Cancel update</a></p>
         
 <div class="govuk-button-group">
-         <a href="manage-job-application-update-2.html"
+         <a href="manage-job-application-update-3.html"
             role="button"
             draggable="false"
             class="govuk-button"
             data-module="govuk-button">
-             Update progress
+             Save and update
          </a>
 
-         <a href="/v21/match-jobs-final/job-description-forklift"
-            role="button"
-            draggable="false"
-            class="govuk-button govuk-button--secondary"
-            data-module="govuk-button">
-            Return to job description
-          </a>
   </div>
 
 
