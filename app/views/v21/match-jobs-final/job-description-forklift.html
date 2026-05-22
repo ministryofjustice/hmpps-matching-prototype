@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="govuk-width-container">
-  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+  <a href="/v21/match-jobs-final/matched-jobs" onclick="history.back()" class="govuk-back-link">Back</a>
 
   <main class="govuk-main-wrapper " id="main-content" role="main">
       <div class="govuk-grid-row">
@@ -77,14 +77,23 @@
 
 
 
-          <div class="govuk-button-group">
-            <button type="submit" class="govuk-button" data-module="govuk-button">
-              Manage application
-            </button>
-            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-              Archive job
-            </button>
-          </div>
+  <div class="govuk-button-group">
+         <a href="/v21/manage-jobs/manage-job"
+            role="button"
+            draggable="false"
+            class="govuk-button"
+            data-module="govuk-button">
+             Manage application
+         </a>
+
+         <a href="job-description-forklift-archived.html"
+            role="button"
+            draggable="false"
+            class="govuk-button govuk-button--secondary"
+            data-module="govuk-button">
+            Archive job
+          </a>
+  </div>
 
         </div>
 

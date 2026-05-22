@@ -1,0 +1,148 @@
+{% extends "../includes/template.html" %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
+
+  <main class="govuk-main-wrapper" id="main-content">
+          
+  
+  
+
+
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l govuk-!-margin-bottom-2" data-qa="page-title">
+          Manage Adam Ahmed's application
+        </h1>
+
+        <div class="govuk-form-group filter-box govuk-!-margin-top-4">
+          <div class="govuk-grid-row">
+              <div class="govuk-grid-column-full">
+                <h2 class="govuk-heading-m" data-qa="job-title">
+                  <a class="govuk-link" href="/v21/match-jobs-final/job-description-forklift">Forklift operator</a>
+                </h2>
+              </div>
+          </div>
+          <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-third">
+                <p class="govuk-body" data-qa="employer-name">Employer: Amazon</p>
+              </div>
+              <div class="govuk-grid-column-one-third">
+                <p class="govuk-body" data-qa="job-location">Location:LS12 8DC
+                </p>
+              </div>
+              <div class="govuk-grid-column-one-third">
+                <p class="govuk-body" data-qa="closing-date">Closing date: 10 Feb 2024</p>
+              </div>
+          </div>
+
+          <p class="govuk-body govuk-!-margin-bottom-1" data-qa="how-to-apply">How to apply: email amazon@jobapplication.com with a CV and Cover letter</p>
+        </div>
+
+        
+        <form class="form" method="post" novalidate="">
+    <input type="hidden" name="_csrf" value="9RWrVdSZ-XjqHkvUI5GCppi_2EeTRgbLCLdA">
+
+    
+        
+
+
+<table class="govuk-table" id="applicationHistory">
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header" width="30%">Application status</th>
+        <th scope="col" class="govuk-table__header">Additional information</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      
+        <tr class="govuk-table__row">
+          <td scope="row" class="govuk-table__cell">
+            Application made<br>
+            <span class="govuk-hint">22 May 2026, Jane Doe</span>
+          </td>
+          <td class="govuk-table__cell">Sent off CV + cover letter</td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="applicationStatus">
+    Application progress
+  </label>
+
+
+
+  <select class="govuk-select" id="applicationStatus" name="applicationStatus">
+  
+    
+    <option value="">Select application status</option>
+    
+  
+    
+    <option value="APPLICATION_MADE">Application made</option>
+    
+  
+    
+    <option value="APPLICATION_UNSUCCESSFUL">Application unsuccessful</option>
+    
+  
+    
+    <option value="SELECTED_FOR_INTERVIEW">Selected for interview</option>
+    
+  
+    
+    <option value="INTERVIEW_BOOKED">Interview booked</option>
+    
+  
+    
+    <option value="UNSUCCESSFUL_AT_INTERVIEW">Unsuccessful at interview</option>
+    
+  
+    
+    <option value="JOB_OFFER">Job offer</option>
+    
+  
+  </select>
+
+</div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="additionalInformation">
+    Add additional information or feedback
+  </label>
+
+
+
+  <textarea class="govuk-textarea" id="additionalInformation" name="additionalInformation" rows="3"></textarea>
+
+</div>
+
+ <p class="govuk-body govuk-!-margin-bottom-8"><a class="govuk-link" href="manage-job-application-update.html" onclick="event.stopPropagation();" id="cancel-link">Cancel update</a></p>
+        
+<div class="govuk-button-group">
+         <a href="manage-job-application-update-3.html"
+            role="button"
+            draggable="false"
+            class="govuk-button"
+            data-module="govuk-button">
+             Save and update
+         </a>
+
+  </div>
+
+
+    
+
+</form>
+        
+      </div>
+    </div>
+
+        </main>
+</div>
+
+{% endblock %}
