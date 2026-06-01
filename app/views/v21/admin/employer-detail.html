@@ -18,7 +18,7 @@
       {% set included_123456 = false %}
       
       {% if id in valid_ids %}
-        {% for employer in data.employers %}
+        {% for employer in data.employersstatusupdate %}
           {% if employer.id == id %}
             {% set current_id = employer.id %}
 
