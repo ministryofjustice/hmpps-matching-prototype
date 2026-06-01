@@ -32,14 +32,14 @@
 
       <nav class="moj-sub-navigation govuk-!-margin-bottom-2" aria-label="Sub navigation">
         <ul class="moj-sub-navigation__list">
-          
           <li class="moj-sub-navigation__item">
             <a class="moj-sub-navigation__link" aria-current="page" href="#">Employers</a>
           </li>
-
           <li class="moj-sub-navigation__item">
-            <a class="moj-sub-navigation__link"  href="jobs-list">Jobs</a>
+            <a class="moj-sub-navigation__link"  href="#">Jobs</a>
           </li>
+          
+
     
         </ul>
       </nav>
@@ -152,7 +152,7 @@
 <!-- NUMBER OF RESULTS -->
 
 <div class="govuk-button-group right">
-  <a class="govuk-link govuk-button govuk-button--secondary" href="../add-employer-final/add-employer-details">Add an employer</a>
+  <a class="govuk-link govuk-button govuk-button--secondary" href="./add-employer-details?name=empty">Add an employer</a>
 
 </div>
 <!-- TABLE OF RESULTS -->
@@ -172,12 +172,12 @@
         <tr class="govuk-table__row">
           <td class="govuk-table__cell"><a href="./employer-detail?id={{ employer.id }}" data-sort-value="XYZ Property Ltd">XYZ Property Ltd</a></td>
           <td class="govuk-table__cell">Facilities management</td>
-          <td class="govuk-table__cell">{{ employer.status }}</td>
+          <td class="govuk-table__cell">Regional</td>
           <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="1 April 2025">1 April 2025</td>
         </tr>
 
     
-        {% for employer in data.employers %}
+        {% for employer in data.employersstatusupdate %}
         <tr class="govuk-table__row">
           <td class="govuk-table__cell"><a href="./employer-detail?id={{ employer.id }}" data-sort-value="{{ employer.name }}">{{ employer.name }}</a></td>
           <td class="govuk-table__cell">{{ employer.sector }}</td>
@@ -186,7 +186,7 @@
         </tr>
       {% endfor %}
         {% else %}
-        {% for employer in data.employers %}
+        {% for employer in data.employersstatusupdate %}
         <tr class="govuk-table__row">
           <td class="govuk-table__cell"><a href="./employer-detail?id={{ employer.id }}" data-sort-value="{{ employer.name }}">{{ employer.name }}</a></td>
           <td class="govuk-table__cell">{{ employer.sector }}</td>

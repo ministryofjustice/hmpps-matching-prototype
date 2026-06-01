@@ -9,13 +9,13 @@
   <a href="#" onclick="history.back()" class="govuk-back-link">Back</a>
 
 
-    <span class="govuk-caption-l">Add an employer - step 1 of 5</span>
+    <span class="govuk-caption-l">Add an employer - step 1 of 2</span>
   <h1 class="govuk-heading-l">Employer details</h1>
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-<form action="./add-employer-description" method="post">
+<form action="./add-employer-cya" method="post">
   <div class="govuk-form-group">
     <label class="govuk-label" for="employer-name">Employer name</label>
    
@@ -66,18 +66,27 @@
     <label class="govuk-label" for="employer-status">Employer status</label>
     <select class="govuk-select" id="employer-status" name="employer-status">
       <option value="">Choose employer status</option>
-      <option value="platinum">Platinum (key partner)</option>
-      <option value="gold">Gold</option>
+      <option value="platinum">National Platinum</option>
+      <option value="gold">Regional Platinum</option>
       {% if (data['name'] != "empty") %}
-      <option value="silver" selected>Silver</option>
+      <option value="silver" selected>Employer Partner</option>
       {% else %}
-      <option value="silver">Silver</option>
+      <option value="silver">Employer Partner</option>
       {% endif %}
     </select>
     
   </div>
 
-
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="employer-description">Employer description</label>
+    {% if (data['name'] != "empty") %}
+    <textarea class="govuk-textarea" id="employer-description" name="employer-description" rows="5">A regional construction company specialising in trade services.
+    </textarea>
+    {% else %}
+    <textarea class="govuk-textarea" id="employer-description" name="employer-description" rows="5"></textarea>
+    {% endif %}
+    
+  </div>
 
   <button class="govuk-button" type="submit">Continue</button>
 </form>
